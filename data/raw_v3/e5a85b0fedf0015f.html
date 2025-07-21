@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Stage Direction - Monitor
+|
+GitLab
+</title>
+<meta content='Stay informed on GitLabâs monitoring tools that provide real-time insights into system performance and application health, ensuring smooth operations.' name=description />
+<meta content='Stay informed on GitLabâs monitoring tools that provide real-time insights into system performance and application health, ensuring smooth operations.' name='twitter:description'/>
+<meta content='Stay informed on GitLabâs monitoring tools that provide real-time insights into system performance and application health, ensuring smooth operations.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Stage Direction - Monitor' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/monitor/template.html.md.erb' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/monitor/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Stage Direction - Monitor' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=e389f0af'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/monitor/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v6.6.0/css/all.css' integrity='sha384-h/hnnw1Bi4nbpD6kE7nYfCXzovi622sY5WBxww8ARKwpdLj5kUWjRuyiXaD1U2JT' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=e389f0af" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=e389f0af" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=e389f0af'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Stage Direction - Monitor
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/david'>
+<img
+src='/images/team/ddesanto-crop.jpg'
+class=codeowner-avatar-img
+alt='David DeSanto'
+title='David DeSanto'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/justinfarris'>
+<img
+src='/images/team/justinfarris-crop.jpg'
+class=codeowner-avatar-img
+alt='Justin Farris'
+title='Justin Farris'
+>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/monitor/template.html.md.erb" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li>Stage Direction - Monitor</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#what-we-do" id=markdown-toc-what-we-do>What we do</a> <ul>
+<li><a href="#vision" id=markdown-toc-vision>Vision</a></li>
+<li><a href="#composition" id=markdown-toc-composition>Composition</a> <ul>
+<li><a href="#the-analytics-section-does-not-include-all-analytics-in-gitlab" id=markdown-toc-the-analytics-section-does-not-include-all-analytics-in-gitlab>The Analytics section DOES NOT INCLUDE all analytics in GitLab</a></li>
+</ul>
+</li>
+<li><a href="#cross-stage-vision-for-gitlab-usage-analytics" id=markdown-toc-cross-stage-vision-for-gitlab-usage-analytics>Cross-stage vision for GitLab usage analytics</a></li>
+<li><a href="#how-we-do-it" id=markdown-toc-how-we-do-it>How we do it</a> <ul>
+<li><a href="#personas" id=markdown-toc-personas>Personas</a></li>
+</ul>
+</li>
+<li><a href="#right-to-win" id=markdown-toc-right-to-win>Right to Win</a></li>
+<li><a href="#product-principles" id=markdown-toc-product-principles>Product Principles</a></li>
+<li><a href="#where-were-going" id=markdown-toc-where-were-going>Where we're going</a> <ul>
+<li><a href="#1-year-plan" id=markdown-toc-1-year-plan>1 Year Plan</a></li>
+</ul>
+</li>
+<li><a href="#deployment-approaches" id=markdown-toc-deployment-approaches>Deployment approaches</a></li>
+<li><a href="#handbook-pages" id=markdown-toc-handbook-pages>Handbook Pages</a></li>
+</ul>
+</li>
+</ul>
+<h1 id=what-we-do>What we do</h1>
+<h2 id=vision>Vision</h2>
+<p>Our vision is to continue to extend DevOps across its most painful gap - measuring user value. The Analytics Section closes the DevOps loop. It is not enough to deploy an app and hope for the best. It is critical to understand and explore the data and signals that GitLab provides to make the best, insight-based decisions. We will do this by providing a comprehensive solution to gather and interact with data for both our users and internal teams.</p>
+<p>This will increase the value of GitLab as a platform since users will have a unified experience. They will know where to find definitive locations for the data they are interested in and have a single place to interact with it. It will also make our organization more efficient since teams can focus on building lovable features rather than re-building how we collect, store, and present data. We will create new product experiences where we can combine data from different features for user use cases that we uncover that would have previously been difficult to serve.</p>
+<p>We heard a collection of common questions when talking with users that helped us create this vision.</p>
+<p>Some of these were:</p>
+<ul>
+<li>How can I understand and connect all the different features that GitLab gives me?</li>
+<li>How are my teams using GitLab?</li>
+<li>How can I create reports and visualizations to answer business questions I have?</li>
+<li>What sort of data do you collect about usage and how can I view it as well?</li>
+<li>How do I interpret multiple GitLab reports together?</li>
+<li>Where should I focus my efforts on improving my product in future releases?</li>
+</ul>
+<p>We previously were primarily focused on helping customers measure the usage and performance of their deployed apps. This was done with our Product Analytics and Observability offerings. What we learned is that many customers either did not prioritize this highly or had solutions in place. What they do not have, and where our opportunity lies, is understanding how their teams are using GitLab or how to combine all the different data signals we provide today. We will use the technology we built for those use cases and adapt it to focus on our GitLab platform use cases instead. We will continue to listen to customers and engage with those that are interested in measuring their deployed apps and consider if and when to re-focus on deployed apps.</p>
+<h2 id=composition>Composition</h2>
+<p>The Analytics Section is comprised of a single Stage: the Monitor stage. This stage has two groups:</p>
+<ul>
+<li><a href="https://about.gitlab.com/direction/monitor/platform-insights">Platform Insights</a>
+<ul>
+<li>Custom Dashboards Foundation category</li>
+<li>Observability category</li>
+<li>Product Analytics category</li>
+</ul>
+<p>The Platform Insights group focuses on allowing users to analyze product data to uncover insights about how their teams are using GitLab and their apps are being used. This is done through preconfigured dashboard and reports as well as enabling users to build their own dashboards and reports.</p>
+</li>
+<li><a href="https://about.gitlab.com/direction/monitor/analytics-instrumentation">Analytics Instrumentation</a>
+<ul>
+<li>Service Ping category</li>
+<li>Application Instrumentation category</li>
+</ul>
+<p>The Analytics Instrumentation group focuses on empowering both internal and external users to send usage data to GitLab by providing SDKs and a stable reporting platform. Internally, this means tools like Service Ping and Snowplow as well as providing support to the groups that use them. External users will use the SDK that this group publishes to instrument their own apps. This group focuses on data unification efforts across the platform as part of the <a href="https://gitlab.com/groups/gitlab-org/architecture/gitlab-data-analytics/-/epics/3">product usage data</a> efforts.</p>
+</li>
+</ul>
+<h3 id=the-analytics-section-does-not-include-all-analytics-in-gitlab>The Analytics section DOES NOT INCLUDE all analytics in GitLab</h3>
+<p>Despite the name, the Analytics section doesn't encompass all analytics capabilities in GitLab. Categories like <a href="https://handbook.gitlab.com/handbook/product/categories/features/#manageoptimize-group">Value Stream Analytics</a> and capabilities like <a href="https://docs.gitlab.com/ee/user/group/#issues-analytics">Issue Analytics</a>, <a href="https://docs.gitlab.com/ee/user/project/releases/#release-metrics">Release Metrics</a>, or <a href="https://docs.gitlab.com/ee/user/analytics/ci_cd_analytics.html">CI/CD analytics</a> analytics those are not within the scope of the Analytics section.</p>
+<h2 id=cross-stage-vision-for-gitlab-usage-analytics>Cross-stage vision for GitLab usage analytics</h2>
+<p>We know that many groups and teams within GitLab as well as users rely on data to understand how they are using GitLab. There are multiple approaches to produce and consume data currently, which introduces confusion and friction. Our long-term vision is to unify these so that there is a Single Source of Truth for both how to record data about how GitLab is being used as well as how to consume it. There are additional details on this vision at our <a href="/direction/monitor/cross-stage-vision.html">cross-stage directional vision</a> page.</p>
+<h2 id=how-we-do-it>How we do it</h2>
+<h3 id=personas>Personas</h3>
+<p>The primary personas we address, in priority order, are:</p>
+<ol>
+<li><a href="https://handbook.gitlab.com/handbook/product/personas/#sasha-software-developer">Sasha - Software Developer</a></li>
+<li><a href="https://handbook.gitlab.com/handbook/product/personas/#parker-product-manager">Parker - Product Manager</a></li>
+</ol>
+<p>Some nuance can be added to our personas and how we approach them. Nearly all analytics questions, workflows, funnels, or any metrics gathering will require technical work to add instrumentation, test, and deploy it. This is the reason we are focusing on Sasha as our primary persona before Parker. We are addressing Sasha in the context that they are supporting Analytics efforts for their team. This means they are interested in how to do tasks related to adding instrumentation code, deploying it, and debugging it in support of analytics-related questions and projects. This is a more focused version of the Sasha overall persona.</p>
+<p>Both of these personas exist on our users' teams and they also exist on our own GitLab team. Our internal members share many of the same use cases and pain points as our external users. We keep this in mind when developing features and capabilities and try to dogfood as much as possible. We also need to remain mindful that while we share many use cases, we will not have <em>all</em> use cases our external users have, so we should not build only for ourselves and not validate with external users. This aligns with our <a href="https://handbook.gitlab.com/handbook/product/product-principles/#:~:text=You%E2%80%99re%20not%20the%20customer.">you're not the customer</a> product principle.</p>
+<h2 id=right-to-win>Right to Win</h2>
+<p>We have the right to win in this Section because:</p>
+<ul>
+<li><strong>The value stream delivery process is integrating</strong> - Gartnerâs market definition of Value Stream Delivery Platforms ends at Deployment today. We expect it to extend to Monitor and then the outer-loop. If we donât capture this market as part of our platform - someone else will.</li>
+<li><strong>Developer experience is key</strong> - The current market is broken by poor developer experience. Capturing User Engagement insights in digital products requires developers. We already capture developer workflow, and we know how to delight developers.</li>
+<li><strong>Our distribution models are disruptive</strong> - Our bottomâs up distribution model allows for adoption without displacement. Developers in larger organizations can instrument and utilize GitLabâs outer-loop categories alongside existing tools. In smaller organizations, they can utilize outer-loop tools as an alternative to using no tool.</li>
+<li><strong>We are trusted</strong> - User data, like code - is sensitive data. The focus against third-party ownership of user data, and our availability as a SaaS and self-managed platform allow us to leverage the trust weâve built as an open-source and transparent company. We are able to develop open-standards for data-storage, and enable contribution to how we handle data to ensure our users can trust it is safe.</li>
+<li><strong>The single DevOps Platform unlocks unique technical possibilities</strong> - GitLab stores our users source code, issues, vulnerability records, and other project info. This gives us the opportunity to do associations and correlations that will not be possible to do (or at least not easily) on a standalone analytics product.</li>
+</ul>
+<h2 id=product-principles>Product Principles</h2>
+<p>We will pursue this opportunity with the following principles:</p>
+<ul>
+<li><a href="https://handbook.gitlab.com/handbook/product/product-principles/#developer-first">Focus on Developers</a> - We have established relationships with them, and they are key to building an onramp to the product and a <a href="https://handbook.gitlab.com/handbook/company/strategy/#dual-flywheels">dual flywheel</a> to our strategy.</li>
+<li><a href="https://handbook.gitlab.com/handbook/product/product-principles/#configuration-principles">Works by Default</a> - The way we can establish bottom-up disruption is by making outer-loop categories available, on-by-default in every GitLab instance.</li>
+<li><a href="https://handbook.gitlab.com/handbook/product/product-principles/#prioritize-current-adopters">Focus on Next Generation Adopters</a> - Every company is becoming a software company, there are many more software experiences to be written than our written today. The market of tools spanning the outer-loop is segmenting and consolidating, there are many organizations who will be new to it. Focusing on them will allow us to concentrate our R&amp;D effort on future platform growth rather than integration with existing vendors.</li>
+<li><a href="https://handbook.gitlab.com/handbook/product/product-principles/#avoid-not-invented-here-syndrome">Integrate Open Source Standards</a> - We will stand on the shoulders of giants and use open-source standards, particularly when considering product analytics instrumentation.</li>
+<li><a href="https://handbook.gitlab.com/handbook/product/product-processes/#dogfood-everything">Dogfood</a> - We should be our own first customer, utilizing our outer-loop capabilities to drive GitLabâs Product Led Growth amongst developers in order to accelerate our learning cycles.</li>
+<li><a href="https://handbook.gitlab.com/handbook/product/product-principles/#our-product-principles">Start with the problem, not the solution.</a> - We will focus on what is impactful for our users and solves real problems for them. There will be temptations to record more data or create more views but we will not do so unless we can first identify who would want to use that and what they would use it for.</li>
+</ul>
+<h2 id=where-were-going>Where we're going</h2>
+<p>Thematically, our direction centers around:</p>
+<ul>
+<li><strong>Data Completeness</strong> - Adding the data that users need but are missing from the GitLab platform so that they can get the whole picture.</li>
+<li><strong>Experience Completeness</strong> - Adding experiences to allow customers to find what they need and consume data from GitLab in they ways they want so they don't need to leverage other tools.</li>
+<li><strong>Experience Usability</strong> - Providing a consistent experience across GitLab as it relates to consuming and creating data visualizations, and reporting so that users can easily complete their tasks and other GitLab teams have a solid foundation to build on top of.</li>
+</ul>
+<h3 id=1-year-plan>1 Year Plan</h3>
+<p>Our 1 year plan is to:</p>
+<ul>
+<li><strong>Build the platform which internal teams use for visualizing and reporting data within the GitLab product.</strong> - We will focus on providing a single method for creating visualizations, dashboards, and reporting within GitLab so teams can spend more time on addressing use cases and less time on rebuilding visualizations and so that customers will have consistent experiences across the product. We will allow teams to leverage data that they already have, not just from Product Analytics or Observability, to do this.</li>
+<li><strong>Unify the architecture used for product usage data</strong> - Right now there are multiple approaches within the product with respect to how data is stored and managed for different features. We will work to support the work being done in the <a href="https://internal.gitlab.com/handbook/product-usage-data-architecture/">product usage data</a> steering committe to provide a single way that product usage data is stored and managed.</li>
+<li><strong>Enhance our unified instrumentation approach</strong> - We recently introduced a unified instrumentation method for Product Analytics, called <a href="https://docs.gitlab.com/ee/development/internal_analytics/">internal event tracking</a>, which allows seamless data tracking within GitLab, eliminating the need to delve into the intricacies of Snowplow, Redis, or Redis HLL. Our ongoing commitment is to iterate and improve on this, with the ultimate objective of encouraging more internal teams to effortlessly and promptly instrument their features.</li>
+<li><strong>Provide customer access to usage data</strong> - In pursuit of our overarching goal to achieve the <a href="/direction/monitor/cross-stage-vision.html">cross-stage data vision</a>, we will work towards enhancing accessibility of usage data for our SAAS and self-managed customers</li>
+<li><strong>Dogfood everything we build</strong> - Dogfooding allows us to experience what our users experience - for better or worse. By using our own product, we can identify what needs to be fixed and better understand our users. Dogfooding Product Analytics in the <a href="https://handbook.gitlab.com">Internal Handbook</a> and starting to use our <a href="https://gitlab.com/groups/gitlab-org/-/epics/9610">new instrumentation approaches</a> will give us valuable feedback to iterate on.</li>
+<li><strong>Support the ongoing needs of GitLab in understanding our own users</strong> - GitLab relies on our existing instrumentation and metrics frameworks, such as Service Ping, Redis, and Snowplow, to make data-driven decisions. We will remain focused on ensuring these are robust, scalable, and address any issues that arise.</li>
+</ul>
+<h2 id=deployment-approaches>Deployment approaches</h2>
+<p>There is a discussion on the different deployment options related to our Product Analytics and Observability technology on our <a href="./deployments">deployments page</a>. This was particularly important for when we were asking customers to deploy ClickHouse and related services but since we will now focus on internal teams, it will be less work that we ask external users to do. It will also be updated over time as the <a href="https://gitlab.com/groups/gitlab-org/architecture/gitlab-data-analytics/-/epics/3">data unification efforts</a> make progress and decisions on how to best bundle these services with GitLab.</p>
+<h2 id=handbook-pages>Handbook Pages</h2>
+<ul>
+<li><a href="https://handbook.gitlab.com/handbook/engineering/development/analytics/analytics-instrumentation/">Analytics Instrumentation Group Engineering</a></li>
+<li><a href="https://handbook.gitlab.com/handbook/engineering/development/ops/monitor/observability/">Observability Group Engineering</a></li>
+</ul>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/monitor/template.html.md.erb" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/monitor/template.html.md.erb" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=e389f0af'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/scripts.js?cacheBust=e389f0af"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+doc_id,url,title,num_words
+fdb2927c2e2f9845,https://handbook.gitlab.com/handbook/values,GitLab Values | The GitLab Handbook,18477
+77db59ae45f2a4c4,https://about.gitlab.com/features,Self-Managed Feature Comparison,334
+17ab3450ad613f5f,https://handbook.gitlab.com/handbook/company/okrs,General guidance to OKRs | The GitLab Handbook,892
+97781fb8deddf4bf,https://handbook.gitlab.com/handbook/engineering/devops/ops/general-planning,General Planning Process - Ops Sub-department | The GitLab Handbook,709
+00752cc7059051ad,https://handbook.gitlab.com/handbook/engineering/infrastructure-platforms/gitlab-delivery/distribution/merge_requests,Distribution Team Merge Request Handling | The GitLab Handbook,1086
+3f88b65db410c0fc,https://handbook.gitlab.com/handbook/company/working-groups/product-career-development-framework,Product Career Development Framework Working Group | The GitLab Handbook,414
+c564d85dddb6c495,https://handbook.gitlab.com/handbook/product/categories/gitlab-the-product/single-application,Advantages of a single application | The GitLab Handbook,3035
+50ab860422fd76d5,https://handbook.gitlab.com/handbook/product/ux,UX Department | The GitLab Handbook,2926
+3f9651aa1fa289fb,https://handbook.gitlab.com/handbook/company/culture,GitLab Culture | The GitLab Handbook,631
+c09f8d34ad6fbae5,https://about.gitlab.com/company,About GitLab,597
+c6722ad6d9ef3ef5,https://handbook.gitlab.com/handbook/security/product-security/security-platforms-architecture/security-interlock/customer-zero-triage-process,Customer Zero Triage Process | The GitLab Handbook,519
+aa415bff0040bdff,https://handbook.gitlab.com/handbook/finance,Finance | The GitLab Handbook,1404
+ec040f8aec0e6557,https://handbook.gitlab.com/handbook/company/esg,"GitLab Environmental, Social, and Governance (ESG) | The GitLab Handbook",8246
+b26303113a711f22,https://handbook.gitlab.com/handbook/support/license-and-renewals/workflows/customersdot/customerdot_account,CustomerDot Account Related Problems | The GitLab Handbook,813
+7dfcace3dc05ea2d,https://handbook.gitlab.com/handbook/people-group/celebrations,"New Hires, Celebrations and Significant Life Events | The GitLab Handbook",808
+c9f064743d382f84,https://handbook.gitlab.com/handbook/company/vision,GitLab Vision | The GitLab Handbook,647
+373816db39230e81,https://handbook.gitlab.com/handbook/support/license-and-renewals/workflows/working_internal_requests,Handling L&R Internal Requests | The GitLab Handbook,288
+2e4aacc246dde179,https://handbook.gitlab.com/handbook/sales/field-operations/field-enablement/sales-manager-best-practices,Sales Manager Best Practices | The GitLab Handbook,364
+08a96a443ad56d37,https://handbook.gitlab.com/handbook/people-group/talent-assessment,Talent Assessment | The GitLab Handbook,13579
+4ac1fcfb7d854892,https://handbook.gitlab.com/handbook/customer-success/professional-services-engineering/project-mgmt,Professional Services Project Management | The GitLab Handbook,2513
+b75bba90b8f29e3b,https://handbook.gitlab.com/handbook/engineering/development,Development | The GitLab Handbook,254
+80dc24d55d96595b,https://handbook.gitlab.com/handbook/communication,GitLab Communication | The GitLab Handbook,22841
+a4ddfad6be917a6d,https://handbook.gitlab.com/handbook/legal/employment-law,"Legal, Employment at GitLab: A Strategic Partnership | The GitLab Handbook",760
+d5d8b9bb99bf371d,https://handbook.gitlab.com/handbook/engineering/development/sec/security-risk-management/security-insights,"Security Risk Management, Security Insights | The GitLab Handbook",2893
+f0c8d450fc1da288,https://handbook.gitlab.com/handbook/sales/commercial,Commercial Sales | The GitLab Handbook,10301
+491bbd794462ea7a,https://handbook.gitlab.com/handbook/security/security-assurance,Security Assurance | The GitLab Handbook,800
+e7a8c38aeb063a22,https://handbook.gitlab.com/handbook/security/security-operations,Security Operations | The GitLab Handbook,207
+d0bb8e548a7baa9e,https://handbook.gitlab.com/handbook/marketing/brand-and-product-marketing/product-and-solution-marketing/pmm-professional-development,Product Marketing Professional Development | The GitLab Handbook,690
+02d27a57c91cf120,https://handbook.gitlab.com/handbook/product/personas,Personas | The GitLab Handbook,6858
+15f778841481ee2e,https://handbook.gitlab.com/handbook/people-group,People Group | The GitLab Handbook,4015
+6a2c89bd0813c3ea,https://handbook.gitlab.com/handbook/resellers/channel-tools-resources,Channel Partner Tools and Resources | The GitLab Handbook,1272
+c911ba549c7b2269,https://handbook.gitlab.com/docs/development,Handbook Development | The GitLab Handbook,3086
+7e97630cf2a4989d,https://handbook.gitlab.com/handbook/alliances,GitLab Alliances Handbook | The GitLab Handbook,787
+3d3082a769a1dd1c,https://handbook.gitlab.com/handbook/marketing/blog,Blog Handbook | The GitLab Handbook,2999
+edc58472cb6a1822,https://handbook.gitlab.com/handbook/finance/spending-company-money,Spending Company Money | The GitLab Handbook,480
+314cb8f17db74cfc,https://handbook.gitlab.com/handbook/engineering/infrastructure-platforms/production-engineering/ops/roadmaps/fy26/disaster-recovery,FY26 - Disaster Recovery | The GitLab Handbook,442
+4b5db9fe0b5afc90,https://handbook.gitlab.com/handbook/engineering/development/sec/secure/secret-detection/runbooks/secret-push-protection-troubleshooting,Secret push protection troubleshooting | The GitLab Handbook,635
+69f3837b794f2b4f,https://handbook.gitlab.com/handbook/support/support-pods/ci-cd,CI/CD Support Pod | The GitLab Handbook,445
+a2f6486b9d1d9926,https://handbook.gitlab.com/handbook/security/corporate/end-user-services/how-to-articles/google-workspace/google-calendar-delegation,How To Use Google Calendar Delegate | The GitLab Handbook,388
+27979e83ec7ba57d,https://handbook.gitlab.com/handbook/company/e-group-weekly,E-Group Weekly | The GitLab Handbook,550
+7b891cb8164e5032,https://handbook.gitlab.com/handbook/product/ux/ux-research/when-to-conduct-ux-research,When to conduct UX Research | The GitLab Handbook,1659
+73663b846aa76f2b,https://handbook.gitlab.com/handbook/company/working-groups/fedramp-execution,FedRAMP Execution Working Group | The GitLab Handbook,272
+694de1b4f11924ac,https://handbook.gitlab.com/handbook/security/security-operations/trustandsafety/intellectual-property-on-gitlab-com,Intellectual property on gitlab.com | The GitLab Handbook,1670
+d036e91d10c8ce61,https://handbook.gitlab.com/handbook/engineering/workflow,Engineering Workflow | The GitLab Handbook,9544
+8645bf4ca039f626,https://handbook.gitlab.com/handbook/marketing/developer-relations/cocreate,GitLab Co-Create Initiative | The GitLab Handbook,994
+37c90a39039f011a,https://handbook.gitlab.com/handbook/company/culture/all-remote/remote-work-glossary,Remote Work Glossary | The GitLab Handbook,849
+730e23b9b1e083f5,https://handbook.gitlab.com/handbook/customer-experience/about-cx,About Customer Experience (CX) | The GitLab Handbook,487
+88f20a8adb7713be,https://handbook.gitlab.com/handbook/security/security-and-technology-policies/audit-logging-policy,GitLab Audit Logging Policy | The GitLab Handbook,306
+fe824eebe46a710c,https://handbook.gitlab.com/handbook/engineering/infrastructure-platforms/data-access/database-framework,Database Framework Group | The GitLab Handbook,2134
+8ad64ecc7e28b50e,https://handbook.gitlab.com/handbook/enterprise-data/organization/programs/data-for-product-managers,Data For Product Managers | The GitLab Handbook,3375
+0eb17eb7f7946df4,https://handbook.gitlab.com/handbook/labor-and-employment-notices,Labor and Employment Notices | The GitLab Handbook,2566
+863f9758a45555ee,https://handbook.gitlab.com/handbook/customer-success/csm/workshops,Workshops and Enablement Sessions | The GitLab Handbook,2271
+494bc32911377996,https://handbook.gitlab.com/handbook/marketing/developer-relations/workflows-tools/forum,Forum workflow | The GitLab Handbook,4562
+4b8658a3b6deb8e5,https://handbook.gitlab.com/handbook/marketing/brand-and-product-marketing,Brand and Product Marketing | The GitLab Handbook,499
+0d83e83c914ab042,https://handbook.gitlab.com/handbook/company/working-groups/webpack,webpack | The GitLab Handbook,455
+5a0815281066d5d1,https://handbook.gitlab.com/handbook/company/amas,AMAs | The GitLab Handbook,1126
+f84d9ae1d7ba434f,https://handbook.gitlab.com/handbook/marketing,Marketing | The GitLab Handbook,4000
+00ff475ef529bb29,https://handbook.gitlab.com/handbook/finance/growth-and-development,Finance Growth and Development | The GitLab Handbook,716
+f61b6dcd40758af3,https://handbook.gitlab.com/handbook/marketing/developer-relations/developer-advocacy,Developer Advocacy | The GitLab Handbook,1948
+6abff9418e48a1f6,https://handbook.gitlab.com/handbook/engineering/infrastructure-platforms/data-access/database-framework/doc/fdw-sharding,PostgreSQL 11 sharding with foreign data wrappers and partitioning | The GitLab Handbook,1248
+196e608a1a5a33a8,https://handbook.gitlab.com/handbook/product/ux/ux-research/ux-cloud-sandbox,UX Cloud Sandbox | The GitLab Handbook,1833
+3e172c657788c116,https://handbook.gitlab.com/handbook/legal/api-terms,GitLab API Terms of Use | The GitLab Handbook,1509
+7cf5b7b00334a126,https://handbook.gitlab.com/handbook/company/culture/all-remote/all-remote-vs-hybrid-remote-comparison,All-Remote Benefits vs. Hybrid-Remote Benefits Checklist | The GitLab Handbook,1263
+c8af72f1bb349932,https://handbook.gitlab.com/handbook/eba/vp-scheduling,VP Scheduling | The GitLab Handbook,1049
+6ffcfcd0fde76c81,https://handbook.gitlab.com/handbook/engineering/development/performance-indicators,Development Department Performance Indicators | The GitLab Handbook,2426
+bd8b04a14f7b1dca,https://handbook.gitlab.com/handbook/about/maintenance,Content Websites | The GitLab Handbook,892
+75e4386ba74e9a44,https://handbook.gitlab.com/handbook/support/support-pods/code-contributions,Code Contributions Support Pod | The GitLab Handbook,621
+13576f134a059d21,https://handbook.gitlab.com/handbook/engineering/development/principles,Engineering Principles | The GitLab Handbook,3155
+8fdd59df0d635bbc,https://handbook.gitlab.com/handbook/marketing/blog/release-posts,GitLab Release Posts | The GitLab Handbook,17474
+1051fbc2ecb2136c,https://handbook.gitlab.com/handbook/company/family-and-friends-day,Family and Friends Day | The GitLab Handbook,1397
+9bfbcf778c1dc09f,https://handbook.gitlab.com/handbook/company/working-groups/frontend-vision,Frontend Vision Group | The GitLab Handbook,599
+52d0796688b3b6c6,https://handbook.gitlab.com/handbook/marketing/corporate-communications,Corporate Communications Handbook | The GitLab Handbook,2086
+2bc7891cb60a45d1,https://handbook.gitlab.com/handbook/support/support-pods/sec,Sec Support Pod | The GitLab Handbook,686
+c02e2af27bd85046,https://handbook.gitlab.com/handbook/customer-success/professional-services-engineering/professional-services-delivery-methodology/archetype-definition,Archetype Definition | The GitLab Handbook,302
+536a4fbfb4f4ec23,https://handbook.gitlab.com/handbook/support/workflows/account_verification,Account Ownership Verification | The GitLab Handbook,1288
+ffc5372879a4e7f8,https://about.gitlab.com/solutions/devops-platform,GitLab - The DevOps Platform | GitLab,377
+df379259fa71b860,https://handbook.gitlab.com/handbook/security/corporate/end-user-services/supported-apps/zoom/zoom-tips,Zoom Tips | The GitLab Handbook,1908
+95e720d746c5d6ec,https://handbook.gitlab.com/handbook/marketing/digital-experience/contentful-cms/wishlist,Known knowns & feature wishlist | The GitLab Handbook,232
+d260129071eaca62,https://handbook.gitlab.com/handbook/legal/policies/website-terms-of-use,GitLab Website Terms of Use | The GitLab Handbook,1333
+d4f017f56d2e5a9e,https://handbook.gitlab.com/handbook/sales/field-operations/customer-success-operations/renewal-ops,Renewals Operations Team | The GitLab Handbook,973
+d80ddb4d073a3f4d,https://handbook.gitlab.com/handbook/engineering/devops/ops/verify/pipeline-authoring/team-resources,Pipeline Authoring Group Resources | The GitLab Handbook,540
+03d2c4f5f541b4da,https://handbook.gitlab.com/handbook/people-group/people-compliance,Global People Compliance at GitLab | The GitLab Handbook,228
+f9cff70f7361b3e7,https://handbook.gitlab.com/handbook/support/workflows/working_with_support_ops,Working with Customer Support Operations | The GitLab Handbook,1167
+c544dc3d9fdfc454,https://handbook.gitlab.com,The GitLab Handbook,260
+0e608de8c5544afb,https://handbook.gitlab.com/handbook/security/customer-support-operations/workflows/zendesk/ticket-fields,Ticket fields | The GitLab Handbook,439
+66ff418cd7f0096b,https://handbook.gitlab.com/handbook/engineering/infrastructure-platforms/developer-experience/dashboards,Developer Experience Dashboards | The GitLab Handbook,357
+bfbc9d17c9e6efce,https://handbook.gitlab.com/handbook/engineering/releases/backports,Backports | The GitLab Handbook,1172
+f17a9757dd708d8d,https://handbook.gitlab.com/handbook/company/infrastructure-standards/realms/sandbox,Sandbox Cloud Realm | The GitLab Handbook,3635
+4e3c4b41a45daf47,https://handbook.gitlab.com/handbook/security/product-security/application-security/vulnerability-management,Application Vulnerability Management Procedure | The GitLab Handbook,1951
+a552a607c1570337,https://handbook.gitlab.com/handbook/security/product-security,Product Security | The GitLab Handbook,906
+6be058fefb492515,https://handbook.gitlab.com/handbook/people-group/offboarding,GitLab Offboarding | The GitLab Handbook,6016
+700c4e1ce8007a4c,https://handbook.gitlab.com/handbook/security/corporate/systems/google/chrome,Google Chrome | The GitLab Handbook,284
+ece6b60b5616d02e,https://handbook.gitlab.com/handbook/legal/risk-management-dispute-resolution,Risk Management and Dispute Resolution | The GitLab Handbook,1224
+d7de65139dfee45c,https://handbook.gitlab.com/handbook/product,Product Handbook | The GitLab Handbook,1266
+14981b8fc39c4149,https://handbook.gitlab.com/handbook/hiring/talent-acquisition-framework/offer-process,Talent Acquisition Job Offer Process | The GitLab Handbook,3048
+eafb80d907932db3,https://handbook.gitlab.com/handbook/sales/prospect-engagement-best-practices,Associating emails to Salesforce | The GitLab Handbook,659
+16fbde6421e08ddc,https://handbook.gitlab.com/handbook/sales/field-communications/field-flash-newsletter/edition-2020-08-06,Field Flash Newsletter - Edition 2020-08-06 | The GitLab Handbook,1349
+af4a4508703f9408,https://handbook.gitlab.com/handbook/finance/procurement,The GitLab Procurement Team | The GitLab Handbook,5290
+393044121fecb44c,https://handbook.gitlab.com/handbook/marketing/positioning-faq,GitLab Positioning FAQs | The GitLab Handbook,1630
+ede81bab14bdc503,https://handbook.gitlab.com/handbook/customer-success/professional-services-engineering/engagement-mgmt/scoping-information/migrations,Professional Services EM Scoping - Migrations | The GitLab Handbook,3718
+ab9b7e62bceaf67d,https://handbook.gitlab.com/handbook/security/corporate/end-user-services/supported-apps/zoom,Zoom | The GitLab Handbook,315
+ff8ef10c57a268ed,https://handbook.gitlab.com/handbook/support/workflows/working-with-issues,Working with Issues | The GitLab Handbook,2068
+e3e0d0e1ce236d65,https://handbook.gitlab.com/handbook/security/threat-management,Security Threat Management | The GitLab Handbook,250
+92fac1bf9fe5d595,https://handbook.gitlab.com/handbook/about,About the Handbook | The GitLab Handbook,852
+e8371da278fb8f8c,https://handbook.gitlab.com/handbook/finance/financial-planning-and-analysis,Financial Planning & Analysis | The GitLab Handbook,6670
+39798a2924214e43,https://handbook.gitlab.com/handbook/support/workflows/how-to-wir-podcast,How to do a WIR Podcast | The GitLab Handbook,909
+1d1ce677c5337d45,https://handbook.gitlab.com/handbook/engineering/infrastructure-platforms/tenant-scale/cells_and_organizations,Cells and Organizations | The GitLab Handbook,568
+6d779986c7305b9b,https://handbook.gitlab.com/handbook/engineering/ai/custom-models,Custom Models Group | The GitLab Handbook,2151
+5e9eda8d42e795ff,https://handbook.gitlab.com/handbook/people-group/givelab-volunteer-initiatives,GiveLab Volunteer Initiatives | The GitLab Handbook,593
+babcf91145f20245,https://handbook.gitlab.com/handbook/leadership/biggest-tailwinds,Biggest Tailwinds | The GitLab Handbook,220
+c85ba03378d1f632,https://handbook.gitlab.com/handbook/company/mission,GitLab Mission | The GitLab Handbook,1633
+98dc31665f6cfc60,https://handbook.gitlab.com/handbook/security/corporate/systems/linux/setup,Linux Desktop OS Setup Guide | The GitLab Handbook,523
+ea52c7890416e5c6,https://handbook.gitlab.com/handbook/product/product-processes,Product Processes | The GitLab Handbook,20226
+6cf161a65d0dc3e4,https://handbook.gitlab.com/handbook/engineering,Engineering | The GitLab Handbook,5338
+87b80f0634113a5f,https://handbook.gitlab.com/handbook/marketing/sales-development/tanuki-tech,Tanuki Tech | The GitLab Handbook,1962
+cddfc025ff75cd93,https://handbook.gitlab.com/handbook/board-meetings,Board of Directors and Corporate Governance | The GitLab Handbook,3100
+fcb6b9eb9735c68c,https://handbook.gitlab.com/handbook/total-rewards/benefits/general-and-entity-benefits/pty-benefits-australia,PTY LTD Benefits | The GitLab Handbook,6858
+ef0ad310ed95dc27,https://handbook.gitlab.com/handbook/product/categories,"Product sections, stages, groups, and categories | The GitLab Handbook",10863
+ede8b9c05d097887,https://handbook.gitlab.com/handbook/engineering/infrastructure-platforms/developer-experience,Developer Experience | The GitLab Handbook,868
+289de548581ae030,https://handbook.gitlab.com/handbook/engineering/infrastructure-platforms/gitlab-delivery/build/maintenance,Distribution Team Infrastructure and Maintenance | The GitLab Handbook,446
+666ec297ed515f4a,https://handbook.gitlab.com/handbook/marketing/marketing-strategy-and-platforms,Marketing Strategy & Platforms | The GitLab Handbook,480
+6c786b05edb8f03a,https://handbook.gitlab.com/handbook/hiring,Hiring & Talent Acquisition Handbook | The GitLab Handbook,4673
+f609fab7f12a634b,https://handbook.gitlab.com/handbook/company/culture/all-remote/live-doc-meetings,GitLab Meeting Best Practices: Live Doc Meetings | The GitLab Handbook,1539
+9584300e91bd25fb,https://handbook.gitlab.com/handbook/security,Security at GitLab | The GitLab Handbook,2607
+47c7fea8d56b1520,https://handbook.gitlab.com/handbook/engineering/testing/pipeline-triage,Pipeline Triage | The GitLab Handbook,5115
+8d1865f948f79e59,https://handbook.gitlab.com/handbook/total-rewards,GitLab's Guide to Total Rewards | The GitLab Handbook,274
+e75a041a42800fac,https://handbook.gitlab.com/handbook/marketing/channel-marketing/hyperscalers,Hyperscaler Campaign | The GitLab Handbook,1688
+8d187acdd84c7a95,https://handbook.gitlab.com/handbook/security/corporate/systems/1password/setup,1Password Setup Guide | The GitLab Handbook,325
+477603f21f6e351f,https://handbook.gitlab.com/handbook/people-group/general-onboarding,GitLab Onboarding | The GitLab Handbook,1252
+db31c1b509c1816a,https://handbook.gitlab.com/handbook/product/ux/collaborators-playbook,Design collaborator's playbook | The GitLab Handbook,971
+c49d65f986027c3e,https://handbook.gitlab.com/handbook/product/ux/ux-research/how-to-conduct-ux-research-workshops,How to Conduct UX Research Workshops | The GitLab Handbook,1392
+cf251ae3495cdb98,https://handbook.gitlab.com/handbook/customer-success/csm/segment/cse,CSEs | The GitLab Handbook,974
+2c277cfab3a01d01,https://handbook.gitlab.com/handbook/customer-success/csm/gainsight/c360-overview,Customer 360 | The GitLab Handbook,535
+f5b110dce7015620,https://handbook.gitlab.com/handbook/business-technology,IT Enterprise Applications | The GitLab Handbook,914
+c6d47609edce70b6,https://handbook.gitlab.com/handbook/legal/publiccompanyresources,Corporate & Compliance Legal | The GitLab Handbook,274
+44ed9d2e7e7d0df9,https://handbook.gitlab.com/handbook/company/culture/all-remote/guide/finance,Remote Guide for Finance Teams | The GitLab Handbook,1448
+bd26664cee962fba,https://handbook.gitlab.com/handbook/marketing/team-member-social-media-policy,Team Member Social Media Policy | The GitLab Handbook,2969
+8d6bb15c0c4045e5,https://about.gitlab.com/community/contribute,Contribute to GitLab | GitLab,528
+730628eeaa71fb32,https://handbook.gitlab.com/handbook/engineering/open-source,Open Source at GitLab | The GitLab Handbook,750
+b2b972e3249f2335,https://handbook.gitlab.com/handbook/customer-success/professional-services-engineering/education-services/gitbasicshandsonlab2,GitLab with Git Fundamentals - Hands-on Lab: Work With Git Locally | The GitLab Handbook,2646
+9caf46749cab4ede,https://handbook.gitlab.com/handbook/about/changelog,Handbook Changelog | The GitLab Handbook,854
+f7698e2466cbc6b0,https://handbook.gitlab.com/handbook/sales,Sales | The GitLab Handbook,2886
+b2b3f890f57e1cbb,https://about.gitlab.com/sales,Sales,1158
+090c5f609f36b65e,https://handbook.gitlab.com/handbook/marketing/growth,Growth Direction | The GitLab Handbook,1278
+aa6ccf1b21bd076f,https://handbook.gitlab.com/handbook/support,Support Team Handbook | The GitLab Handbook,6475
+24b3c5019ab234d6,https://handbook.gitlab.com/handbook/sales/field-operations/field-enablement/gtm-enablement,Go-to-Market (GTM) Enablement motion | The GitLab Handbook,1948
+cb3bb3847a255c2b,https://handbook.gitlab.com/handbook/engineering/ai/search,Global Search Group | The GitLab Handbook,3014
+84668c5dfdebd5c4,https://handbook.gitlab.com/handbook/customer-success/professional-services-engineering/education-services/ilt-labs/sysadminhandsonlab1k8s,GitLab System Admin - Hands-On Lab: Exploring the Kubernetes Admin Dashboard | The GitLab Handbook,339
+786d040399471af5,https://handbook.gitlab.com/handbook/company/pricing,Pricing model | The GitLab Handbook,8741
+2f6dc9ee9b2cbb3f,https://handbook.gitlab.com/handbook/product/product-management,GitLab Product Management | The GitLab Handbook,5830
+2107c2d1bd4593c4,https://handbook.gitlab.com/handbook/about/escalation,Handbook Escalation | The GitLab Handbook,728
+264cb6e5bcf5d328,https://handbook.gitlab.com/handbook/company/culture/inclusion/tmrg-gitlab-pride,TMRG - GitLab Pride | The GitLab Handbook,288
+84c131d396b55567,https://handbook.gitlab.com/handbook/product/ux/ux-research-coordination/research-coordinator-fill-in,How to fill in for a UX Research Operations Coordinator | The GitLab Handbook,1462
+896e0d0f385a8d5f,https://handbook.gitlab.com/handbook/total-rewards/stock-options,Equity Compensation | The GitLab Handbook,4083
+b0f1b1fa47494389,https://handbook.gitlab.com/handbook/enterprise-data,Enterprise Data Team | The GitLab Handbook,2358
+99aad03d78463054,https://about.gitlab.com/topics/single-application,Why a single application for DevOps?,435
+8449946f6f132948,https://handbook.gitlab.com/handbook/support/support-pods/licensing-and-renewals,Licensing and Renewals Support Pod | The GitLab Handbook,238
+5d210782a023ce9b,https://handbook.gitlab.com/handbook/solutions-architects,Solutions Architects Handbook | The GitLab Handbook,1731
+1cae35db7fbea86e,https://handbook.gitlab.com/handbook/marketing/brand-and-product-marketing/brand-video,Brand Video | The GitLab Handbook,966
+cfc8977092db1982,https://handbook.gitlab.com/handbook/marketing/sales-development,Sales Development | The GitLab Handbook,26797
+82dc8dc74588e174,https://handbook.gitlab.com/handbook/people-group/team-member-relations,Team Member Relations at GitLab | The GitLab Handbook,1741
+bc2cd3a897306544,https://handbook.gitlab.com/handbook/legal/product,Product and Intellectual Property | The GitLab Handbook,1114
+4b7ac30b9f51882b,https://handbook.gitlab.com/handbook/people-group/anti-harassment,Anti-Harassment Policy | The GitLab Handbook,5496
+3abae6198a94966f,https://handbook.gitlab.com/handbook/people-group/acceptable-use-policy,GitLab Internal Acceptable Use Policy | The GitLab Handbook,2441
+5d2150996cb82fdd,https://about.gitlab.com/upcoming-releases,"GitLab upcoming releases
+|
+GitLab",567
+efa7ec0f7b98d4fb,https://handbook.gitlab.com/handbook/resellers,GitLab Channel Partner Program | The GitLab Handbook,861
+a063c6bb72e05315,https://about.gitlab.com/platform,Platform,814
+38b6cd044474fb30,https://handbook.gitlab.com/handbook/engineering/infrastructure-platforms/feature-support,Infrastructure Feature Support | The GitLab Handbook,363
+f6ad6e65b4eb14ae,https://handbook.gitlab.com/handbook/security/corporate/services,CorpSec Services | The GitLab Handbook,321
+d7ed853bc6f01e91,https://handbook.gitlab.com/handbook/customer-success,Customer Success | The GitLab Handbook,1523
+c092a93840b97245,https://handbook.gitlab.com/handbook/legal,"Legal & Corporate Affairs (""LACA"") | The GitLab Handbook",1918
+82572d3035307819,https://handbook.gitlab.com/handbook/marketing/localization/engineering,Localization Engineering | The GitLab Handbook,999
+cfb2991e891b70e6,https://handbook.gitlab.com/handbook/legal/dmca,Content Removal Guidelines | The GitLab Handbook,1572
+0d7a62777ee4a0f7,https://handbook.gitlab.com/handbook/support/license-and-renewals/workflows/self-managed/creating_licenses,Creating a license key | The GitLab Handbook,847
+fb6979f826464532,https://handbook.gitlab.com/handbook/legal/trade-compliance,Trade Compliance | The GitLab Handbook,466
+41be1cb4453db188,https://handbook.gitlab.com/handbook,The Handbook | The GitLab Handbook,503
+b6b5727f503b514d,https://handbook.gitlab.com/handbook/ceo/office-of-the-ceo,Office of the CEO | The GitLab Handbook,2793
+1654e1850ce168b9,https://handbook.gitlab.com/handbook/people-group/learning-and-development,Learning & Development | The GitLab Handbook,1757
+7a2aa7f47f6f21ed,https://handbook.gitlab.com/handbook/product/ux/ux-research/research-in-the-ai-space,Doing UX research in the AI space | The GitLab Handbook,2361
+46854408794ea776,https://handbook.gitlab.com/handbook/support/enhanced-support-offerings/offering-assigned-support-engineer/becoming-and-being-an-ase,Becoming and Being an ASE | The GitLab Handbook,683
+852806d0c792b0b5,https://handbook.gitlab.com/handbook/customer-success/professional-services-engineering/professional-services-delivery-methodology/iteration-scheduling,Iteration Scheduling | The GitLab Handbook,448
+c542e51edb1e700f,https://handbook.gitlab.com/handbook/sales/commercial/high_velocity_sales_first_orders,High Velocity Sales and First Orders (formerly Global Digital SMB) | The GitLab Handbook,5756
+438d886bbcca5ff6,https://handbook.gitlab.com/handbook/solutions-architects/tools-and-resources/pov/ai,Artificial Intelligence POV Scope and Acceptance | The GitLab Handbook,3105
+99f82c7703beff33,https://handbook.gitlab.com/handbook/sales/field-operations/sales-operations/go-to-market/chorus,Learn How to Use Chorus.ai | The GitLab Handbook,1253
+8cdb98bb3d389b9f,https://handbook.gitlab.com/handbook/marketing/developer-relations,Developer Relations | The GitLab Handbook,3222
+75180cec97d150f3,https://handbook.gitlab.com/handbook/company/culture/inclusion,"Diversity, Inclusion & Belonging | The GitLab Handbook",4801
+55e45b4872ecde5d,https://handbook.gitlab.com/handbook/engineering/development/sec/secure/vulnerability-research/cna,"Application Security Testing, Vulnerability Research - CNA Processes | The GitLab Handbook",470
+84e81dc5ae57461b,https://handbook.gitlab.com/handbook/engineering/infrastructure-platforms/cost-management/how-to-engage,How to Engage | The GitLab Handbook,432
+dc78399b1bee2b31,https://handbook.gitlab.com/handbook/product/ux/product-design/ux-roadmaps/ux-theme-workshops,UX Theme Workshops | The GitLab Handbook,2508
+b31be2cf4b48b8ac,https://handbook.gitlab.com/handbook/finance/expenses,Global Travel and Expense Policy | The GitLab Handbook,9232
+1a822c3dcc19a393,https://handbook.gitlab.com/handbook/marketing/brand-and-product-marketing/product-and-solution-marketing/roles-personas/day-in-the-life-secopsengineer-persona,Day in the Life for the Security Operations Engineer persona | The GitLab Handbook,707
+8d3f3fb1ef676a08,https://handbook.gitlab.com/handbook/marketing/developer-relations/developer-advocacy/cfps,Developer Advocacy CFPs | The GitLab Handbook,623
+7302b05bb5b13788,https://handbook.gitlab.com/handbook/legal/legalops,Stategy & Legal Operations | The GitLab Handbook,582
+29a14e03905edf3e,https://handbook.gitlab.com/handbook/security/customer-support-operations/docs/zendesk/apps,Apps | The GitLab Handbook,5247
+7438deee030032b8,https://handbook.gitlab.com/handbook/legal/privacy,GitLab Privacy | The GitLab Handbook,2044
+16105bae6249d13e,https://handbook.gitlab.com/handbook/finance/accounting,Accounting and Reporting | The GitLab Handbook,10024
+5ef2d952b10ebad3,https://about.gitlab.com,The most-comprehensive AI-powered DevSecOps platform,312
+12c4a7409e2b4a2b,https://handbook.gitlab.com/handbook/security/customer-support-operations/frequently-asked-questions,FAQs | The GitLab Handbook,470
+df5d0fbf1cb81b2d,https://handbook.gitlab.com/handbook/security/security-assurance/security-risk,Security Risk Team | The GitLab Handbook,1018
+f460e274c2ff6825,https://handbook.gitlab.com/handbook/marketing/marketing-operations/marketing-technology-tiering-system,Marketing Technology Tiering System | The GitLab Handbook,1182
+374875291388247d,https://handbook.gitlab.com/handbook/customer-success/professional-services-engineering/working-with,Working with Professional Services | The GitLab Handbook,1353
+c0c3d446a6e5de0a,https://handbook.gitlab.com/handbook/legal/gitlab-related-party-transactions-policy,GitLab Related Party Transactions Policy | The GitLab Handbook,1993
+41ae4d3a64493818,https://handbook.gitlab.com/handbook/legal/esg,Sustainability | The GitLab Handbook,4445
+f4b4fe6d916ff1e7,https://handbook.gitlab.com/handbook/customer-success/demo-systems/tutorials/getting-started/configuring-group-cluster,Configuring GitLab with group-level Kubernetes cluster | The GitLab Handbook,1365
+054b06ee3a1f148f,https://handbook.gitlab.com/handbook/about/handbook-usage,GitLab Handbook Usage | The GitLab Handbook,5027
+8f74b3cb68e3d56b,https://handbook.gitlab.com/handbook/product/categories/gitlab-the-product,GitLab the Product | The GitLab Handbook,3041
+f076d4af39124613,https://handbook.gitlab.com/handbook/engineering/infrastructure,Infrastructure | The GitLab Handbook,1921
+7d2efca848afc3b9,https://handbook.gitlab.com/handbook/about/editing-handbook,Editing the Handbook | The GitLab Handbook,3250
+b95440742537d106,https://handbook.gitlab.com/handbook/solutions-architects/processes/technical-win,Technical Win | The GitLab Handbook,680
+ae5e643f7cc0aca7,https://handbook.gitlab.com/handbook/marketing/developer-relations/cocreate/on-site-engineer-guide,Co-Create On-Site Engineer Guide | The GitLab Handbook,1552
+19f09547905861b6,https://handbook.gitlab.com/handbook/marketing/developer-relations/contributor-success/merge-request-coach-lifecycle,Merge Request Coach Lifecycle | The GitLab Handbook,669
+ab08c57863d06d80,https://handbook.gitlab.com/handbook/tools-and-tips,Tools and tips | The GitLab Handbook,9475
+872a53a14a8034e0,https://handbook.gitlab.com/handbook/marketing/integrated-marketing,Integrated Marketing | The GitLab Handbook,887
+a3e002a5b5b7c75b,https://handbook.gitlab.com/handbook/security/corporate/end-user-services/supported-apps/google-workspace/google-mail,Google Mail (Gmail) | The GitLab Handbook,625
+77d86dbde230bca9,https://handbook.gitlab.com/handbook/marketing/lifecycle-marketing/email-best-practices,Email Best Practices | The GitLab Handbook,2293
+e2bbf442061d5e0b,https://handbook.gitlab.com/handbook/sales/field-manager-development,Field Manager Development Program | The GitLab Handbook,807
+568682b6b311a9e5,https://handbook.gitlab.com/handbook/ceo,CEO | The GitLab Handbook,2384
+2fe0b0b900d792cb,https://handbook.gitlab.com/handbook/leadership,Leadership | The GitLab Handbook,4563
+604e11694d4155e7,https://handbook.gitlab.com/handbook/marketing/lifecycle-marketing,Lifecycle Marketing | The GitLab Handbook,1990
+8939b02db7375832,https://handbook.gitlab.com/handbook/sales/field-operations,Field Operations | The GitLab Handbook,761
+b23e1baa0466508a,https://handbook.gitlab.com/handbook/resellers/channel-program-guide/mdf,Marketing Development Funds | The GitLab Handbook,2960
+f15ceb932172bbfb,https://handbook.gitlab.com/handbook/company/working-groups/clickhouse-datastore,ClickHouse Working Group | The GitLab Handbook,836
+ff9b4157887029f6,https://handbook.gitlab.com/handbook/engineering/infrastructure-platforms/gitlab-delivery/distribution,Distribution | The GitLab Handbook,3174
+3ad21f4359c9155b,https://handbook.gitlab.com/handbook/engineering/devops/dev/create/engineering-managers/training,Engineering Managers Training Opportunities | The GitLab Handbook,309
+1bac663407f16108,https://handbook.gitlab.com/handbook/finance/accounts-payable,Accounts Payable | The GitLab Handbook,1627
+86e7f3c77b7f7413,https://handbook.gitlab.com/handbook/support/workflows/team/weekly_team_call,Weekly Support Team Call | The GitLab Handbook,465
+1116610997579985,https://handbook.gitlab.com/handbook/support/partnerships/open,Open Partners | The GitLab Handbook,396
+513c42e24763b02b,https://handbook.gitlab.com/handbook/engineering/gitlab-com/policies/teleport,GitLab Teleport Access Policy | The GitLab Handbook,240
+7ca3883c0c0d006b,https://handbook.gitlab.com/handbook/ceo/office-of-the-ceo/jihu-support/release-certification,Release Certification | The GitLab Handbook,1101
+19bda4742882f022,https://handbook.gitlab.com/handbook/product-development/how-we-work/product-development-flow,Product Development Flow | The GitLab Handbook,6055
+b343684ec7a1eb86,https://handbook.gitlab.com/handbook/product/product-processes/product-safe-guidance,Product Manager SAFE Guidance | The GitLab Handbook,1016
+99081ef364306c76,https://handbook.gitlab.com/handbook/acquisitions,Acquisitions Handbook | The GitLab Handbook,1027
+1a1dd180c12dc561,https://handbook.gitlab.com/handbook/marketing/brand-and-product-marketing/product-and-solution-marketing/demo/ct-demos,Click Through Demos | The GitLab Handbook,319
+f73f0c8429ff34d9,https://handbook.gitlab.com/handbook/customer-success/csm,Customer Success Management Handbook | The GitLab Handbook,2229
+fe1dfb6309816e1e,https://handbook.gitlab.com/handbook/engineering/careers/matrix/quality/software-engineer-in-test/associate,Quality Department SET Career Framework: Associate | The GitLab Handbook,354
+257dd6f9e73d08d6,https://handbook.gitlab.com/handbook/tools-and-tips/mac,macOS tools and tips | The GitLab Handbook,1035
+02457bc096d30994,https://handbook.gitlab.com/handbook/finance/tax,The GitLab Tax Team | The GitLab Handbook,1718
+39465cbc6691c4a8,https://handbook.gitlab.com/handbook/marketing/brand-and-product-marketing/product-and-solution-marketing/mrnci,Market Strategy and Insights | The GitLab Handbook,223
+9be12d1842da01ec,https://handbook.gitlab.com/handbook/entity/gmbh-germany,GitLab GmbH (Germany) information & benefits | The GitLab Handbook,5078
+0b27416887d11be6,https://handbook.gitlab.com/handbook/product/product-principles,Product Principles | The GitLab Handbook,11190

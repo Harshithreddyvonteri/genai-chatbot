@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+CI Section Direction
+|
+GitLab
+</title>
+<meta content='This page highlights GitLab&#39;s continuous integration direction.' name=description />
+<meta content='This page highlights GitLab&#39;s continuous integration direction.' name='twitter:description'/>
+<meta content='This page highlights GitLab&#39;s continuous integration direction.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='CI Section Direction' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/ci/index.html.md.erb' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/ci/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='CI Section Direction' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=e389f0af'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/ci/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v6.6.0/css/all.css' integrity='sha384-h/hnnw1Bi4nbpD6kE7nYfCXzovi622sY5WBxww8ARKwpdLj5kUWjRuyiXaD1U2JT' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=e389f0af" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=e389f0af" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=e389f0af'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+CI Section Direction
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/mflouton'>
+<div class=codeowners-single>
+<img
+src='/images/team/mikeflouton-crop.jpg'
+class=codeowner-avatar-img
+alt='Mike Flouton'
+title='Mike Flouton'
+>
+<div class=codeowners-single-labels>
+<div class=codeowners-description>
+Mike Flouton
+</div>
+<div class=codeowners-handle>
+@mflouton
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/ci/index.html.md.erb" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li>CI Section Direction</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#what-we-do" id=markdown-toc-what-we-do>What we do</a> <ul>
+<li><a href="#ci-section-mission" id=markdown-toc-ci-section-mission>CI Section Mission</a></li>
+<li><a href="#ci-section-vision" id=markdown-toc-ci-section-vision>CI Section Vision</a> <ul>
+<li><a href="#3-year-strategy" id=markdown-toc-3-year-strategy>3-year strategy</a></li>
+<li><a href="#market-predictions" id=markdown-toc-market-predictions>Market predictions</a></li>
+<li><a href="#themes" id=markdown-toc-themes>Themes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#why-we-do-it" id=markdown-toc-why-we-do-it>Why we do it</a> <ul>
+<li><a href="#market-landscape-for-continuous-integration-tools" id=markdown-toc-market-landscape-for-continuous-integration-tools>Market Landscape for Continuous Integration Tools</a></li>
+<li><a href="#gitlab-ci-section-current-position" id=markdown-toc-gitlab-ci-section-current-position>GitLab CI Section Current Position</a> <ul>
+<li><a href="#continuous-integration-adoption-path" id=markdown-toc-continuous-integration-adoption-path>Continuous Integration Adoption Path</a></li>
+</ul>
+</li>
+<li><a href="#swot" id=markdown-toc-swot>SWOT</a> <ul>
+<li><a href="#core-competencies-for-ci-section" id=markdown-toc-core-competencies-for-ci-section>Core competencies for CI Section</a></li>
+<li><a href="#competitive-landscape" id=markdown-toc-competitive-landscape>Competitive Landscape</a></li>
+<li><a href="#ci-section-jobs-to-be-done" id=markdown-toc-ci-section-jobs-to-be-done>CI Section Jobs To Be Done</a></li>
+</ul>
+</li>
+<li><a href="#who-is-it-for" id=markdown-toc-who-is-it-for>Who is it for?</a> <ul>
+<li><a href="#today" id=markdown-toc-today>Today</a></li>
+<li><a href="#medium-term-1-2-years" id=markdown-toc-medium-term-1-2-years>Medium Term (1-2 years)</a></li>
+</ul>
+</li>
+<li><a href="#how-we-do-it" id=markdown-toc-how-we-do-it>How we do it</a> <ul>
+<li><a href="#cross-section-efforts" id=markdown-toc-cross-section-efforts>Cross-section efforts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id=what-we-do>What we do</h1>
+<p>The CI section is responsible for many of the experiences in GitLab after a developer commits changes to a project (source code repository). The DRI for this page is <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#106;&#112;&#111;&#114;&#116;&#101;&#114;&#064;&#103;&#105;&#116;&#108;&#097;&#098;&#046;&#099;&#111;&#109;">Jackie Porter</a>, Director of Product and I welcome contributions - please open a merge request or send me an <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#060;&#106;&#112;&#111;&#114;&#116;&#101;&#114;&#064;&#103;&#105;&#116;&#108;&#097;&#098;&#046;&#099;&#111;&#109;&#062;">email</a>.</p>
+<h2 id=ci-section-mission>CI Section Mission</h2>
+<p>Our mission for the CI Section is to empower all users to easily contribute to the automated building, testing, and optimization of code for GitLab customers and the Open Source Community.</p>
+<h2 id=ci-section-vision>CI Section Vision</h2>
+<p>Our <strong>vision</strong> is that in the next five years, GitLab CI/CD is the brand synonymous with CI/CD and recognized as the industry standard.</p>
+<p>We are going to accomplish this by making the process of configuring, managing, and tuning CI/CD pipelines as frictionless as possible.</p>
+<p>The CI Section is comprised of two stages: Verify and Package. For a deeper view of the direction of each specific stage please visit the respective Direction Pages linked below:</p>
+<ul>
+<li><a href="/direction/verify/">Verify</a></li>
+<li><a href="/direction/package/">Package</a></li>
+</ul>
+<h3 id=3-year-strategy>3-year strategy</h3>
+<p>Inherited from GitLab's company <a href="https://handbook.gitlab.com/handbook/company/mission/">mission</a>, the CI section aims to support universal contribution from everyone in the software build and packaging processes.
+To accomplish this target, focusing on reducing complexity in the developer and platform operator workflow by prioritizing <a href="https://handbook.gitlab.com/handbook/handbook/product/product-principles/#simplicity">simplicity</a> in our design,
+building with flexibility in mind for the <a href="https://handbook.gitlab.com/handbook/handbook/product/product-principles/#avoid-enforced-workflows-but-allow-enterprise-flexibility">enterprise workflow</a>,
+and becoming an ecosystem for CI tools by <a href="https://handbook.gitlab.com/handbook/handbook/product/product-principles/#integrate-other-applications-thoughtfully">thoughtfully integrating with other applications</a> are the foundation for the strategy.</p>
+<p>In addition to enabling developers with CI capabilities, we will also focus on supporting platform engineers with best-in-class tools for managing code, artifacts, and costs.</p>
+<p>Organizations need a solution to effectively manage two sides of the software cost picture: developer cost and compute cost. There is a high demand for a single source to view and optimize builds and infrastructure <a href="https://docs.google.com/presentation/d/1QAO0m08Om15AC2W0pZp0cfxCImgmww-qvwyKtlMQIBk/edit#slide=id.g13a5341bed7_0_2">internal research</a>.</p>
+<p>As we look into the future of build and package, migration and use case support will be a core focus. Journeys away from current tools are challenging. Our goal is to give you tools that can help make it easy to consolidate on GitLab so that you can save money on licensing costs and improve user experience.</p>
+<p>With a win/win scenario in mind, the three year outcomes we would want to support as a section are as follows:</p>
+<ul>
+<li>Manage code, binaries and packages at scale with actionable analytics and dashboards to support platform team decision making</li>
+<li>Enable platform teams to share operational definitions (infrastructure, environments, deployment pipelines, monitoring configuration) with development teams, and for development teams to easily contribute improvements to their definition</li>
+<li>Efficiency and cost optimizations are surfaced for action by operators</li>
+<li>Meet compliance and supply chain security requirements by improving the traceability of artifacts throughout the build, test, deploy process</li>
+<li>Build a system that supports the vendor ecosystem to meet enterprises where they are in their CI journey, helping teams onboard faster and more easily transition into GitLab's next-generation CI tools</li>
+</ul>
+<h3 id=market-predictions>Market predictions</h3>
+<p>In three years the CI market will:</p>
+<ul>
+<li>View CI a critical capability for bridging between Dev, Sec &amp; Ops to create truly high-performing DevSecOps organizations</li>
+<li>View package management an integrated requirement for any CI/CD platform</li>
+<li>Have CI emerge as a critical lever for operational excellence in businesses</li>
+<li>Demand a higher standard of security for the software build process</li>
+<li>Use AI in development best-practices and infrastructure automation - a new domain we intend to lead</li>
+</ul>
+<h3 id=themes>Themes</h3>
+<p>The CI Section is contributing actively to our <a href="/direction/#fy24-product-investment-themes">Yearly Themes</a>. In FY25, we plan to execute on:</p>
+<ol>
+<li>Drive Use Case Adoption by delivering features that will amplify our paid usage as well as security and governance feature sets. The capabilities we expect to deliver in FY25 fall into two areas:
+<ul>
+<li>Continuous Integration: <a href="https://gitlab.com/groups/gitlab-org/-/epics/11650">Merge Trains to Complete</a>, <a href="https://gitlab.com/groups/gitlab-org/-/epics/10866">External CI Jobs</a>, <a href="https://gitlab.com/groups/gitlab-org/-/epics/11024">Cache Service</a>, <a href="https://gitlab.com/groups/gitlab-org/-/epics/8349">GitLab Events</a>, <a href="https://gitlab.com/groups/gitlab-org/-/epics/11535">GitHub Actions compatibility</a>, <a href="https://gitlab.com/groups/gitlab-org/-/epics/10723">GitLab Secrets Manager</a>, <a href="https://gitlab.com/groups/gitlab-org/-/epics/11564">CI/CD Catalog to GA</a>, <a href="https://gitlab.com/groups/gitlab-org/-/epics/12070">CI/CD Insights</a>, and <a href="https://gitlab.com/groups/gitlab-org/-/epics/12099">Runner Fleet Dashboard to GA</a></li>
+<li>Seamless migration from Artifactory: <a href="https://gitlab.com/groups/gitlab-org/-/epics/3610">Maven Dependency Proxy</a>, <a href="https://gitlab.com/groups/gitlab-org/-/epics/3608">npm Dependency Proxy</a>, <a href="https://gitlab.com/groups/gitlab-org/-/epics/5521">Container Registry for Self-Managed GA</a>, and <a href="https://gitlab.com/groups/gitlab-org/-/epics/3612">PyPI Dependency Proxy</a></li>
+</ul>
+</li>
+<li>Strengthen our SaaS Deployments to Drive SAM Growth by delivering <a href="https://gitlab.com/groups/gitlab-org/-/epics/10877">Custom Hosted Runners</a> as the flagship capability.
+Runner SaaS will also extend reach by offering <a href="https://gitlab.com/groups/gitlab-org/-/epics/8442">hosted ARM compute</a>, <a href="https://gitlab.com/groups/gitlab-org/-/epics/8267">GA of macOS runners</a>, <a href="https://gitlab.com/gitlab-org/ci-cd/shared-runners/infrastructure/-/issues/107">large macOS M2 runners</a>, and <a href="https://gitlab.com/groups/gitlab-org/-/epics/2162">GA of Windows Runners</a>.</li>
+</ol>
+<h1 id=why-we-do-it>Why we do it</h1>
+<h3 id=market-landscape-for-continuous-integration-tools>Market Landscape for Continuous Integration Tools</h3>
+<p>The total addressable market (TAMkt) for DevOps tools delivering against the Verify stage is $3.4B in 2024 and is expected to grow to $3.9B by 2026 (13.95% CAGR) and the Package stage is $1.39B in 2024 with growth to $2B in 2026 (18.30% CAGR)
+<a href="https://docs.google.com/spreadsheets/d/1LO57cmXHDjE4QRf6NscRilpYA1mlXHeLFwM_tWlzcwI/edit?ts=5ddb7489#gid=1474156035">(i)</a>.
+The Verify and Package Stages combined represents a significant portion of GitLab's expanding addressable market (23% of 2024 TAMkt).</p>
+<h3 id=gitlab-ci-section-current-position>GitLab CI Section Current Position</h3>
+<p>The CI Section has continued to maintain a superior experience for individual and small teams of software and DevOps engineers with market share increasing each month as evidenced in our
+<a href="https://internal.gitlab.com/handbook/company/performance-indicators/product/ops-section/#verifypipeline-execution---gmau-smau---unique-users-triggering-pipelines">Verify product performance indicators (internal)</a> and <a href="https://internal.gitlab.com/handbook/company/performance-indicators/product/ops-section/#packagepackage---smau-gmau---count-of-users-publishing-packages">Package Product performance indicators(internal)</a>.</p>
+<p>Delivering on the enterprise use case is steadily increasing as evidenced in our
+<a href="https://app.periscopedata.com/app/gitlab/758607/Centralized-SMAU-GMAU-Dashboard?widget=10040188">Verify Paid user-product performance indicators (internal)</a> and <a href="https://app.periscopedata.com/app/gitlab/758607/Centralized-SMAU-GMAU-Dashboard?widget=10123560&amp;udv=0">Package Paid user product performance indicators (internal)</a>.</p>
+<p>To continue this growth, the CI Section needs to invest more in the scaling requirements for large organizations,
+deliver on solutions for helping organizations build secure and compliant software, as well as prioritize the usability of our core CI and Packaging capabilities.</p>
+<h4 id=continuous-integration-adoption-path>Continuous Integration Adoption Path</h4>
+<p>Within the context of GitLab usage, there are three triggers for when CI/Packaging is an appropriate next step:</p>
+<ol>
+<li>Pushing code</li>
+<li>Creating a merge request</li>
+<li>Automating repetitive tasks</li>
+</ol>
+<p>The entry point for adoption is often through the <a href="https://docs.gitlab.com/ee/ci/yaml/gitlab_ci_yaml.html">.gitlab-ci.yml</a>, or <a href="https://docs.gitlab.com/ee/ci/">documentation</a> and public forums.</p>
+<p>Some prerequisites for adopting CI are as follows:</p>
+<ol>
+<li>GitLab account</li>
+<li>Familiarity with git</li>
+<li>GitLab project</li>
+<li>Enabled shared runners on GitLab SaaS OR configured self-managed runners</li>
+</ol>
+<h3 id=swot>SWOT</h3>
+<p>The CI vision has some significant strengths, weaknesses, opportunties, and threats to becoming the leading platform for building, testing, and optimizing code:</p>
+<table>
+<thead>
+<tr>
+<th>STRENGTHS<br/>Internal resources to exploit</th>
+<th>WEAKNESSES<br/>Internal Concerns to mitigate</th>
+<th>OPPORTUNITIES<br/>External resources to exploit</th>
+<th>THREATS<br/>External Concerns to mitigate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>We are one of the core adoption paths for our users at GitLab<br/><br/>Developer first approach for experiences <br/><br/>Meaningful insights from use of the DevOps platform</td>
+<td>Lack of usage data-informed product decisions <br/><br/>Ineffectively managed Technical debt/bugs<br/><br/>Over indexing to Enterprise Product Management</td>
+<td>Reduce friction between all functions of development in a single-platform <br/><br/>Empower developers to manage operations, quality, and security by baking those activities into GitLab <br/><br/> Embrace platform engineering by making it easy to manage CI practices at scale</td>
+<td>Competition is a concern for leaders in markets <br/><br/>GitHub<br/><br/>Circle CI<br/><br/>JFrog <br/><br/>HashiCorp<br/><br/>Public cloud providers<br/><br/>New market entrants</td>
+</tr>
+</tbody>
+</table>
+<h4 id=core-competencies-for-ci-section>Core competencies for CI Section</h4>
+<p>As organizations migrate to a <a href="https://about.gitlab.com/direction/#why-is-this-important">cloud-first strategy</a>, the CI Section must work to adapt to changing needs in scale, performance, and usability. The Verify and Package Stages must simultaneously support the trend toward microservices architecture and infrastructure as code while balancing the needs of monorepos.</p>
+<p>In response to the rise in supply chain attacks, there is an ever-increasing pace of government-issued <a href="https://www.whitehouse.gov/wp-content/uploads/2022/09/M-22-18.pdf">directives</a>, standards, and regulations focused on the security and integrity of the software supply chain. This means we must add features and capabilities that enable customers to efficiently meet the most stringent secure CI/CD and software chains of custody requirements. To adequately deliver on these expectations of the Enterprise market, the Verify and Package Stages must practice the following principles: <strong>security on-by-default</strong>, <strong>developer productivity</strong>, and <strong>cost effectiveness</strong>.</p>
+<p>In FY25, we will achieve this by adding support for:</p>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/2340">Continuous vulnerability scanning for the container registry</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/7856">Improved UX for signed container registry images</a></li>
+</ul>
+<h4 id=competitive-landscape>Competitive Landscape</h4>
+<p>Our top competitors for the CI Section are GitHub and Jfrog. Secondarily, there are emerging competitors we are watching carefully such as JetBrains and Harness.io. In the install base, more specific to Verify Stage, we have strong users of Jenkins/Cloudbees, and for Package stage there is some usage of Nexus for Artifact management.</p>
+<p>See the Package competitor <a href="/direction/package/#competitive-landscape-2">page</a></p>
+<h4 id=ci-section-jobs-to-be-done>CI Section Jobs To Be Done</h4>
+<p>Some of the core JTBDs for our three year vision and strategies are as follows:</p>
+<ul>
+<li>Once I have a stable development and operations organization, I want to author a CI pipeline so others in my team can leverage CI to increase the efficiency of their tasks.</li>
+<li>When implementing CI/CD practices across the organization, I want to ensure consistency and standardization of CI/CD workflows to ensure compliance and to ease and increase CI/CD adoption across my teams.</li>
+<li>When I build my project, I want to review upstream dependencies and test result data, so that I can stop and review dependencies and test failures before bugs get into production.</li>
+<li>When analysing configured CI tasks at a higher level for my organization, I want an overall understanding of the historical data about them, so I can identify trends and opportunities for improvements.</li>
+<li>When administering runners for a GitLab instance or group, I need to perform general administrative functions as quickly and efficiently as possible.</li>
+<li>When securing an end-to-end software supply chain I want to access immutable historical verisons of builds, artifacts, dependencies, so that I can fulfill legal or regulatory requirements.</li>
+</ul>
+<h3 id=who-is-it-for>Who is it for?</h3>
+<p>We identify the <a href="https://handbook.gitlab.com/handbook/handbook/product/personas/#user-personas">personas</a> the CI Section features are built for. In order to be transparent about personas we support today and personas we aim to support in the future we use the following categorization of personas listed in priority order.</p>
+<ul>
+<li>ð©- Targeted with strong support</li>
+<li>ð¨- Targeted but incomplete support</li>
+<li>â¬ï¸- Not targeted but might find value</li>
+</ul>
+<h4 id=today>Today</h4>
+<p>To capitalize on the <a href="#opportunities">opportunities</a> listed above, the Ops section has features that make it useful to the following personas today.</p>
+<ol>
+<li>ð© <a href="https://handbook.gitlab.com/handbook/handbook/product/personas/#sasha-software-developer">Sasha - Software Developer</a></li>
+<li>ð© <a href="https://handbook.gitlab.com/handbook/handbook/product/personas/#devon-devops-engineer">Devon - DevOps Engineer</a></li>
+<li>ð¨ <a href="https://handbook.gitlab.com/handbook/handbook/product/personas/#allison-application-ops">Allison - Application Ops</a></li>
+<li>ð¨ <a href="https://handbook.gitlab.com/handbook/handbook/product/personas/#ingrid-infrastructure-operator">Ingrid - Infrastructure Operator</a></li>
+<li>ð¨ <a href="https://handbook.gitlab.com/handbook/handbook/product/personas/#simone-software-engineer-in-test">Simone - Software Engineer in Test</a></li>
+<li>â¬ï¸ <a href="https://handbook.gitlab.com/handbook/handbook/product/personas/#delaney-development-team-lead">Delaney - Development Team Lead</a></li>
+</ol>
+<h4 id=medium-term-1-2-years>Medium Term (1-2 years)</h4>
+<p>As we execute our <a href="#3-year-strategy">3-year strategy</a>, our medium term (1-2 year) goal is to provide a single application that enables collaboration between cloud native development and platform teams.</p>
+<ol>
+<li>ð© <a href="https://handbook.gitlab.com/handbook/handbook/product/personas/#sasha-software-developer">Sasha - Software Developer</a></li>
+<li>ð© <a href="https://handbook.gitlab.com/handbook/handbook/product/personas/#devon-devops-engineer">Devon - DevOps Engineer</a></li>
+<li>ð© <a href="https://handbook.gitlab.com/handbook/handbook/product/personas/#allison-application-ops">Allison - Application Ops</a></li>
+<li>ð¨ <a href="https://handbook.gitlab.com/handbook/handbook/product/personas/#ingrid-infrastructure-operator">Ingrid - Infrastructure Operator</a></li>
+<li>ð¨ <a href="https://handbook.gitlab.com/handbook/handbook/product/personas/#simone-software-engineer-in-test">Simone - Software Engineer in Test</a></li>
+<li>ð¨ <a href="https://handbook.gitlab.com/handbook/handbook/product/personas/#delaney-development-team-lead">Delaney - Development Team Lead</a></li>
+</ol>
+<h2 id=how-we-do-it>How we do it</h2>
+<h3 id=cross-section-efforts>Cross-section efforts</h3>
+<p>There are several key cross-functional investments that will further our competitive position, security posture, and customer experience. The efforts are outlined below:</p>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Teams</th>
+<th>Target Investment Year</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CI Steps</td>
+<td>Pipeline Authoring; Runner Core</td>
+<td>FY24</td>
+</tr>
+<tr>
+<td>CI/CD Migration Tooling</td>
+<td>Pipeline Execution; Pipeline Authoring</td>
+<td>Not Yet Defined</td>
+</tr>
+<tr>
+<td>CI/CD Visibility</td>
+<td>Pipeline Execution; Observability; Runner Fleet</td>
+<td>FY25</td>
+</tr>
+<tr>
+<td>Observability and AI Optimization</td>
+<td>Pipeline Execution; Observability; Runner Fleet</td>
+<td>FY26</td>
+</tr>
+<tr>
+<td>Caching</td>
+<td>Pipeline Authoring; Runner Core</td>
+<td>FY25</td>
+</tr>
+<tr>
+<td>CI job queueing</td>
+<td>Pipeline Execution; Runner Core; Runner SaaS?</td>
+<td>FY26</td>
+</tr>
+<tr>
+<td>Runner priority - routing jobs to a specific runner</td>
+<td>Pipeline Execution; Runner Core; Runner SaaS?</td>
+<td>FY25</td>
+</tr>
+<tr>
+<td>CI log rendering user experience</td>
+<td>Pipeline Execution; Pipeline Authoring; Runner Core</td>
+<td>FY25</td>
+</tr>
+<tr>
+<td>Events</td>
+<td>Pipeline Execution; Package; Runner SaaS</td>
+<td>FY25</td>
+</tr>
+<tr>
+<td>Runner Next (re-architecture of Runner Core)</td>
+<td>Runner Core</td>
+<td>FY24-FY25</td>
+</tr>
+<tr>
+<td>GCP/GitLab Console Integration</td>
+<td>Runner Core; Package</td>
+<td>FY24-FY25</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/ci/index.html.md.erb" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/ci/index.html.md.erb" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=e389f0af'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/scripts.js?cacheBust=e389f0af"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

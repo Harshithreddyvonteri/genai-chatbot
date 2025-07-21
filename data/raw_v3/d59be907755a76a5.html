@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Section Direction - Ops
+|
+GitLab
+</title>
+<meta content='The GitLab Ops Section is comprised of the Verify, Package, Deploy and Monitor stages of the DevOps lifecycle.' name=description />
+<meta content='The GitLab Ops Section is comprised of the Verify, Package, Deploy and Monitor stages of the DevOps lifecycle.' name='twitter:description'/>
+<meta content='The GitLab Ops Section is comprised of the Verify, Package, Deploy and Monitor stages of the DevOps lifecycle.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Section Direction - Ops' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/ops/template.html.md.erb' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/ops/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Section Direction - Ops' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=e389f0af'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/ops/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v6.6.0/css/all.css' integrity='sha384-h/hnnw1Bi4nbpD6kE7nYfCXzovi622sY5WBxww8ARKwpdLj5kUWjRuyiXaD1U2JT' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=e389f0af" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=e389f0af" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=e389f0af'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Section Direction - Ops
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/david'>
+<img
+src='/images/team/ddesanto-crop.jpg'
+class=codeowner-avatar-img
+alt='David DeSanto'
+title='David DeSanto'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/mflouton'>
+<img
+src='/images/team/mikeflouton-crop.jpg'
+class=codeowner-avatar-img
+alt='Mike Flouton'
+title='Mike Flouton'
+>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/ops/template.html.md.erb" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li>Section Direction - Ops</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#what-we-do" id=markdown-toc-what-we-do>What We Do</a> <ul>
+<li><a href="#ops-section-vision" id=markdown-toc-ops-section-vision>Ops Section Vision</a></li>
+<li><a href="#composition" id=markdown-toc-composition>Composition</a></li>
+<li><a href="#3-year-strategy" id=markdown-toc-3-year-strategy>3 Year Strategy</a> <ul>
+<li><a href="#market-predictions" id=markdown-toc-market-predictions>Market Predictions</a></li>
+<li><a href="#themes" id=markdown-toc-themes>Themes</a></li>
+<li><a href="#ops-section-plan" id=markdown-toc-ops-section-plan>Ops Section Plan</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#why-we-do-it" id=markdown-toc-why-we-do-it>Why We Do It</a> <ul>
+<li><a href="#impact" id=markdown-toc-impact>Impact</a></li>
+<li><a href="#market" id=markdown-toc-market>Market</a></li>
+<li><a href="#current-position" id=markdown-toc-current-position>Current Position</a></li>
+<li><a href="#challenges" id=markdown-toc-challenges>Challenges</a></li>
+<li><a href="#opportunities" id=markdown-toc-opportunities>Opportunities</a></li>
+<li><a href="#useful-resources" id=markdown-toc-useful-resources>Useful Resources</a></li>
+<li><a href="#performance-indicators" id=markdown-toc-performance-indicators>Performance Indicators</a> <ul>
+<li><a href="#performance-indicator-goals" id=markdown-toc-performance-indicator-goals>Performance Indicator Goals</a></li>
+</ul>
+</li>
+<li><a href="#personas-and-jobs-to-be-done" id=markdown-toc-personas-and-jobs-to-be-done>Personas and Jobs to Be Done</a> <ul>
+<li><a href="#who-is-it-for" id=markdown-toc-who-is-it-for>Who is it for?</a> <ul>
+<li><a href="#today" id=markdown-toc-today>Today</a></li>
+<li><a href="#medium-term-1-2-years" id=markdown-toc-medium-term-1-2-years>Medium Term (1-2 years)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id=what-we-do>What We Do</h1>
+<h2 id=ops-section-vision>Ops Section Vision</h2>
+<p>Our Vision for the Ops section is to set up developers for efficient and safe software delivery using the best practices in CI/CD, operations and integrated security.</p>
+<p><img src="/direction/ops/OpsSectionVision.png" alt="Ops Section Vision"/>
+</p>
+<h2 id=composition>Composition</h2>
+<p>
+<style>.diagramwrapper *{box-sizing:border-box}.diagramwrapper{width:100%;display:flex}.diagramwrapper .box{width:calc(100% - 390px);padding:10px;display:flex;background-color:#fff}.diagramwrapper .box svg{width:100%}.diagramwrapper .circle{width:50px;height:50px;margin-right:15px;border:#999 1px solid;border-radius:50%;display:inline-block;background-color:#fff;padding:0}.diagramwrapper .circle svg{fill:#524684;width:30px;margin:10px}.diagramwrapper .stages{display:flex;width:360px;margin-left:30px;flex-wrap:wrap}.diagramwrapper .stage{width:180px;display:flex;margin:auto 0}.diagramwrapper .stagename{display:inline-block;font-family:Source Sans Pro,sans-serif;font-weight:bold;font-size:20px;line-height:24px}</style><div class=diagramwrapper><div class=box><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1025 500" role=img aria-label="GitLab DevSecOps Lifecycle">
+<style>
+      .text {
+        font-family: Inter,Source Sans Pro,sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        fill: #2b2838;
+        letter-spacing: .02em;
+        dominant-baseline: middle;
+        text-anchor: middle;
+      }
+      .text2 {
+        font-size: 26px;
+        fill: #2b2838;
+      }
+      .devsecops {
+        font-size: 56px;
+        fill: black;
+      }
+      .mix {
+        mix-blend-mode: color-burn;
+      }
+      .line {
+        fill: none;
+        stroke: #2b2838;
+        stroke-width: 2px;
+      }
+      .highlighted {
+        font-size: 22px;
+      }
+      .highlightedline {
+        stroke-width: 3px;
+      }
+      .white_fill {
+        fill: #fff;
+      }
+      .faded {
+        fill: #a09fa4;
+      }
+      .fadestroke {
+        stroke: #a09fa4;
+      }
+      .lightline{
+        stroke: #d3d0d4;
+        stroke-width: 3px;
+      }</style>
+<linearGradient id=linear-gradient x1=18 y1=250 x2=1007 y2=250 gradientTransform="matrix(1, 0, 0, 1, 0, 0)" gradientUnits=userSpaceOnUse>
+<stop offset=0 stop-color="#e6dcf4"/>
+<stop offset=1 stop-color="#ffd0be"/>
+</linearGradient>
+<linearGradient id=linear-gradient-2 x1="720.88" y1="337.91" x2="370.24" y2="74.18" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" gradientUnits=userSpaceOnUse>
+<stop offset=0 stop-color="#2b2838" stop-opacity=".24"/>
+<stop offset=1 stop-color="#45424d" stop-opacity=0 />
+</linearGradient>
+<linearGradient id=linear-gradient-3 x1="304.12" y1="162.09" x2="654.76" y2="425.82" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" gradientUnits=userSpaceOnUse>
+<stop offset=0 stop-color="#2b2838" stop-opacity=".24"/>
+<stop offset=1 stop-color="#45424d" stop-opacity=0 />
+</linearGradient>
+<path id=background fill="#fff" d="M 0,0 L 1025,0 L 1025,500 L 0,500"/><path id=upper_arc class="line fadestroke" d="M 0,250 a238,238 0 0,1 238,-238 L 787,12 a238,238 0 0,1 238,238"/><path id=lower_arc class="line fadestroke" d="M 0,250 a238,238 0 0,0 238,238 L 787,488 a238,238 0 0,0 238,-238"/><path id=clear_1 fill="#fff" d="M -3,190 L -3,310 L 1028,310 L 1028,190"/>
+<path id=clear_2 fill="#fff" d="M 422,0 L 603,0 L 603,500 L 422,500"/>
+<path id=loop fill="url(#linear-gradient)" d="M 512.5,181.18 L 370.24,74.18 a220,220 0 1,0 0,351.64 L 512.5,318.8 L 654.76,425.82 a220,220 0 1,0 0,-351.64"/>
+<path id=cutout_1 fill="#fff" d="M 421,250 L 304.12,162.09 a110,110 0 1,0 0,175.82"/>
+<path id=cutout_2 fill="#fff" d="M 604,250 L 720.88,162.09 a110,110 0 1,1 0,175.82"/>
+<path id=shadow_1 fill="url(#linear-gradient-2)" class=mix d="M 512.5,181.18 L 421,250 L 304.12,162.09 L 370.24,74.18"/>
+<path id=shadow_2 fill="url(#linear-gradient-3)" class=mix d="M 512.5,318.8 L 604,250 L 720.88,337.91 L 654.76,425.82"/><path id=deploy_operate class=line d="M 898,130 a165,165 0 0,1 0,240"/><path id=operate_monitor class=line d="M 898,370 a165,165 0 0,1 -210.18,11.86 L 672,370"/><path id=build_test class=line d="M 127,370 a165,165 0 0,0 226,0"/><path id=test_release class=line d="M 353,370 L 672,130"/><path id=release_deploy class=line d="M 672,130 a165,165 0 0,1 226,0"/><path id=build_box fill="#2b2838" d="M 88,355 L 166,355 L 166,371 C 166,378 159,385 152,385 L 88,385Z"/><path id=test_box fill="#2b2838" d="M 317,355 L 389,355 L 389,371 C 389,378 382,385 375,385 L 317,385Z"/><path id=release_box fill="#2b2838" d="M 619,115 L 725,115 L 725,131 C 725,138 718,145 711,145 L 619,145Z"/><path id=deploy_box fill="#2b2838" d="M 850,115 L 946,115 L 946,131 C 946,138 939,145 932,145 L 850,145Z"/><path id=operate_box fill="#2b2838" d="M 844,355 L 952,355 L 952,371 C 952,378 945,385 938,385 L 844,385Z"/><path id=monitor_box fill="#2b2838" d="M 619,355 L 725,355 L 725,371 C 725,378 718,385 711,385 L 619,385Z"/><path class=lightline fill=none d="M 421,256 L 304.12,168.09 a104,104 0 1,0 -64.12,185.91 L 225,341"/>
+<path class=lightline fill=none d="M 604,256 L 720.88,168.09 a104,104 0 1,1 64.12,185.91 L 800,341"/>
+<path fill="#fff" class=lightline d="M 357,205 L 668,205 a45,45 0 0,1 0,90 L 357,295 a45,45 0 0,1 0,-90"/>
+<path d="M536.514 419L536.448 418.82L529.663 401.124C529.526 400.778 529.281 400.483 528.965 400.283C528.73 400.131 528.461 400.039 528.184 400.01C527.905 399.981 527.624 400.018 527.363 400.118C527.1 400.216 526.866 400.376 526.676 400.583C526.488 400.789 526.35 401.037 526.274 401.306L521.695 415.326H503.151L498.571 401.306C498.495 401.037 498.357 400.79 498.169 400.584C497.979 400.378 497.745 400.219 497.484 400.119C497.221 400.02 496.941 399.982 496.662 400.011C496.384 400.04 496.116 400.133 495.88 400.283C495.565 400.483 495.32 400.778 495.183 401.124L488.403 418.824L488.331 419C487.355 421.551 487.235 424.35 487.989 426.976C488.743 429.601 490.33 431.911 492.511 433.556L492.536 433.575L492.594 433.62L502.914 441.355L508.034 445.224L511.145 447.575C511.51 447.851 511.955 448 512.411 448C512.869 448 513.314 447.851 513.679 447.575L516.789 445.224L521.909 441.355L532.303 433.575L532.331 433.553C534.513 431.909 536.1 429.6 536.854 426.975C537.609 424.35 537.489 421.551 536.514 419Z" fill="#E24329"/>
+<path d="M536.514 419L536.448 418.82C533.141 419.499 530.028 420.899 527.328 422.923L512.431 434.186L521.916 441.355L532.309 433.575L532.339 433.553C534.517 431.908 536.104 429.599 536.858 426.974C537.61 424.349 537.49 421.55 536.514 419Z" fill="#FC6D26"/>
+<path d="M502.914 441.355L508.034 445.224L511.145 447.575C511.51 447.851 511.954 448 512.411 448C512.869 448 513.314 447.851 513.679 447.575L516.789 445.224L521.909 441.355L512.425 434.186L502.914 441.355Z" fill="#FCA326"/>
+<path d="M497.519 422.923C494.82 420.9 491.706 419.5 488.403 418.824L488.331 419C487.355 421.551 487.235 424.35 487.989 426.976C488.743 429.601 490.33 431.911 492.511 433.556L492.536 433.575L492.594 433.62L502.914 441.355L512.405 434.186L497.519 422.923Z" fill="#FC6D26"/>
+<text x="50%" y=255 class="text devsecops">DevSecOps</text><text x=353 y=131 class="text faded">Plan</text><text x=127 y=131 class="text faded">Code</text><text x=127 y=371 class="text highlighted white_fill">Build</text><text x=353 y=371 class="text highlighted white_fill">Test</text><text x=672 y=131 class="text highlighted white_fill">Release</text><text x=898 y=131 class="text highlighted white_fill">Deploy</text><text x=898 y=371 class="text highlighted white_fill">Operate</text><text x=672 y=371 class="text highlighted white_fill">Monitor</text><text x="50%" y=13 class="text text2 faded">Security</text><text x="50%" y=488 class="text text2 faded">Compliance</text></svg></div><div class=stages><div class=stage><div class=circle><svg id=Layer_1 data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46"><path d="M10.92,17.32a3.67,3.67,0,0,0-2.39-3.43,14.76,14.76,0,0,1,27.89-3.28,1,1,0,1,0,1.81-.83,16.75,16.75,0,0,0-31.7,3.94,3.66,3.66,0,0,0-2.79,2.6H1a1,1,0,0,0,0,2H3.74a3.66,3.66,0,0,0,7.18-1ZM7.25,19a1.67,1.67,0,1,1,1.67-1.67A1.67,1.67,0,0,1,7.25,19Z"/><path d="M45,16.32H42.26a3.66,3.66,0,1,0-5,4.32,14.68,14.68,0,0,1-5.43,8,.94.94,0,0,0-.19.14,14.76,14.76,0,0,1-21.36-4.59,1,1,0,0,0-1.73,1A16.78,16.78,0,0,0,31.32,31.3v12L23.48,39a1,1,0,0,0-1,0L14.68,43.3V34.44a1,1,0,0,0-2,0V45a1,1,0,0,0,1.49.88L23,41l8.83,4.89a1.07,1.07,0,0,0,.49.12,1.06,1.06,0,0,0,.51-.14,1,1,0,0,0,.49-.86V30a16.7,16.7,0,0,0,5.89-9,3.64,3.64,0,0,0,3-2.62H45a1,1,0,0,0,0-2ZM38.75,19a1.67,1.67,0,1,1,1.67-1.67A1.67,1.67,0,0,1,38.75,19Z"/><path d="M26.57,13.6l-5.31,5.31-1.83-1.82A1,1,0,0,0,18,18.5L20.55,21A1,1,0,0,0,22,21l6-6a1,1,0,0,0-1.41-1.41Z"/></svg></div><div class=stagename>Verify</div></div><div class=stage><div class=circle><svg id=Layer_1 data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46"><path d="M33,16.92H22.33a3.47,3.47,0,0,0-6.67,0H13a1,1,0,0,0,0,2h2.64a3.47,3.47,0,0,0,6.67,0H33a1,1,0,0,0,0-2Zm-14,2.5a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,19,19.42Z"/><path d="M33,27.08H30.34a3.47,3.47,0,0,0-6.67,0H13a1,1,0,1,0,0,2H23.67a3.47,3.47,0,0,0,6.67,0H33a1,1,0,0,0,0-2Zm-6,2.5a1.5,1.5,0,1,1,1.5-1.5A1.51,1.51,0,0,1,27,29.58Z"/><path d="M1,24a1,1,0,0,0,1-1,21.63,21.63,0,0,1,.17-2.67L6.6,18.71a1,1,0,0,0,.62-.64,16.31,16.31,0,0,1,1.14-2.73,1,1,0,0,0,0-.89l-2-4.28a21.25,21.25,0,0,1,3.79-3.79l4.28,2a1,1,0,0,0,.89,0,16.67,16.67,0,0,1,2.73-1.14,1,1,0,0,0,.64-.62l1.62-4.43a20.75,20.75,0,0,1,5.34,0L27.29,6.6a1,1,0,0,0,.64.62,16.67,16.67,0,0,1,2.73,1.14,1,1,0,0,0,.89,0l4.28-2a21.25,21.25,0,0,1,3.79,3.79l-2,4.28a1,1,0,0,0,0,.89,16.31,16.31,0,0,1,1.14,2.73,1,1,0,0,0,.62.64l5,1.82a1,1,0,1,0,.69-1.88L40.54,17a18.86,18.86,0,0,0-.9-2.15l2-4.38a1,1,0,0,0-.1-1,22.73,22.73,0,0,0-5-5,1,1,0,0,0-1-.1l-4.38,2A19.65,19.65,0,0,0,29,5.46L27.35.92a1,1,0,0,0-.79-.64,23,23,0,0,0-7.12,0,1,1,0,0,0-.79.64L17,5.46a19.65,19.65,0,0,0-2.15.9l-4.38-2a1,1,0,0,0-1,.1,22.73,22.73,0,0,0-5,5,1,1,0,0,0-.1,1l2,4.38A18.86,18.86,0,0,0,5.46,17L.92,18.65a1,1,0,0,0-.64.79A22.29,22.29,0,0,0,0,23,1,1,0,0,0,1,24Z"/><path d="M45,22a1,1,0,0,0-1,1,21.63,21.63,0,0,1-.17,2.67L39.4,27.29a1,1,0,0,0-.62.64,16.31,16.31,0,0,1-1.14,2.73,1,1,0,0,0,0,.89l2,4.28a21.25,21.25,0,0,1-3.79,3.79l-4.28-2a1,1,0,0,0-.89,0,16.67,16.67,0,0,1-2.73,1.14,1,1,0,0,0-.64.62l-1.62,4.43a20.75,20.75,0,0,1-5.34,0L18.71,39.4a1,1,0,0,0-.64-.62,16.67,16.67,0,0,1-2.73-1.14,1,1,0,0,0-.89,0l-4.28,2a21.25,21.25,0,0,1-3.79-3.79l2-4.28a1,1,0,0,0,0-.89,16.31,16.31,0,0,1-1.14-2.73,1,1,0,0,0-.62-.65l-5-1.81a1,1,0,1,0-.69,1.88L5.46,29a18.86,18.86,0,0,0,.9,2.15l-2,4.38a1,1,0,0,0,.1,1,22.73,22.73,0,0,0,5,5,1,1,0,0,0,1,.1l4.38-2a19.65,19.65,0,0,0,2.15.9l1.65,4.54a1,1,0,0,0,.79.64,22.77,22.77,0,0,0,7.12,0,1,1,0,0,0,.79-.64L29,40.54a19.65,19.65,0,0,0,2.15-.9l4.38,2a1,1,0,0,0,1-.1,22.73,22.73,0,0,0,5-5,1,1,0,0,0,.1-1l-2-4.38a19.65,19.65,0,0,0,.9-2.15l4.54-1.65a1,1,0,0,0,.64-.79A22.29,22.29,0,0,0,46,23,1,1,0,0,0,45,22Z"/></svg></div><div class=stagename>Configure</div></div><div class=stage><div class=circle><svg id=Layer_1 data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46"><path d="M46,25.7A3.5,3.5,0,1,0,41.5,29V44H4.5V31.82a1,1,0,0,0-2,0V45a1,1,0,0,0,1,1h39a1,1,0,0,0,1-1V29A3.5,3.5,0,0,0,46,25.7Zm-3.5,1.5A1.5,1.5,0,1,1,44,25.7,1.5,1.5,0,0,1,42.5,27.2Z"/><path d="M7,24.32A3.5,3.5,0,0,0,4.5,21V6h37V18.19a1,1,0,0,0,2,0V5a1,1,0,0,0-1-1H3.5a1,1,0,0,0-1,1V21A3.49,3.49,0,1,0,7,24.32Zm-5,0a1.5,1.5,0,1,1,1.5,1.5A1.5,1.5,0,0,1,2,24.32Z"/><path d="M28.47,29.82a1,1,0,0,0,1.42,0l4.1-4.1a1,1,0,0,0,0-1.42l-4.1-4.1a1,1,0,0,0-1.42,0,1,1,0,0,0,0,1.41l3.4,3.4-3.4,3.4A1,1,0,0,0,28.47,29.82Z"/><path d="M17.53,20.2a1,1,0,0,0-1.42,0L12,24.3a1,1,0,0,0,0,1.42l4.1,4.1a1,1,0,0,0,.71.29,1,1,0,0,0,.71-1.7L14.13,25l3.4-3.4A1,1,0,0,0,17.53,20.2Z"/><path d="M24.37,18,19.73,31.39a1,1,0,0,0,.62,1.28,1.26,1.26,0,0,0,.33,0,1,1,0,0,0,.94-.67l4.65-13.42a1,1,0,0,0-1.9-.66Z"/></svg></div><div class=stagename>Package</div></div><div class=stage><div class=circle><svg id=Layer_1 data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46"><path d="M41.75,33.26a1,1,0,0,0-1,1V42a2,2,0,0,1-2,2H7.25a2,2,0,0,1-2-2V34.26a1,1,0,0,0-2,0V42a4,4,0,0,0,4,4h31.5a4,4,0,0,0,4-4V34.26A1,1,0,0,0,41.75,33.26Z"/><path d="M4.25,16.32h37.5a1,1,0,0,0,1-1V10.5a4,4,0,0,0-4-4H7.25a4,4,0,0,0-4,4v4.82A1,1,0,0,0,4.25,16.32Zm1-5.82a2,2,0,0,1,2-2h31.5a2,2,0,0,1,2,2v3.82H5.25Z"/><path d="M45,28.25H42.75V20.32a1,1,0,0,0-2,0v7.93H36.58a3.48,3.48,0,0,0-3.33-2.5,3.66,3.66,0,0,0-1.33.26l-4.73-5.87a1,1,0,0,0-1.7.25l-6.2,15.39-3.66-4.55a3.45,3.45,0,0,0,.62-2,3.49,3.49,0,0,0-6.83-1H5.25V20.32a1,1,0,0,0-2,0v7.93H1a1,1,0,0,0,0,2H9.42a3.48,3.48,0,0,0,4.66,2.24l4.73,5.87a1,1,0,0,0,.77.38h.15a1,1,0,0,0,.78-.62l6.2-15.39,3.66,4.55a3.49,3.49,0,1,0,6.21,3H45a1,1,0,0,0,0-2Zm-33.75,1a1.5,1.5,0,1,1,1.5,1.5A1.5,1.5,0,0,1,11.25,29.25Zm22,1.5a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,33.25,30.75Z"/></svg></div><div class=stagename>Monitor</div></div><div class=stage><div class=circle><svg id=Layer_1 data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46"><path d="M43.29,26.4a3.49,3.49,0,0,0,0-6.8A20.54,20.54,0,0,0,26.52,2.81a3.5,3.5,0,0,0-6.86,0A20.51,20.51,0,0,0,2.89,19.56a3.49,3.49,0,0,0,0,6.88A20.44,20.44,0,0,0,10.3,39a1.06,1.06,0,0,0,.63.21,1,1,0,0,0,.62-1.78A18.34,18.34,0,0,1,4.89,26.21a3.49,3.49,0,0,0,0-6.42,18.52,18.52,0,0,1,15-15,3.49,3.49,0,0,0,6.48,0,18.55,18.55,0,0,1,15,14.93,3.48,3.48,0,0,0,0,6.54A18.55,18.55,0,0,1,23.09,41.5H6.84a3.5,3.5,0,1,0,0,2H23.09A20.55,20.55,0,0,0,43.29,26.4ZM3.5,24.5A1.5,1.5,0,1,1,5,23,1.5,1.5,0,0,1,3.5,24.5ZM23.09,5a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,23.09,5ZM42.5,21.5A1.5,1.5,0,1,1,41,23,1.5,1.5,0,0,1,42.5,21.5ZM3.5,44A1.5,1.5,0,1,1,5,42.5,1.5,1.5,0,0,1,3.5,44Z"/><path d="M45.92,42.12a1.15,1.15,0,0,0-.21-.33l-2.5-2.5a1,1,0,0,0-1.42,1.42l.8.79H35.75a1,1,0,0,0,0,2h6.84l-.8.79a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l2.5-2.5a1,1,0,0,0,.21-.33A1,1,0,0,0,45.92,42.12Z"/><path d="M21.35,28a1,1,0,0,0,.7-.29l6-6a1,1,0,0,0,0-1.41,1,1,0,0,0-1.41,0L21.35,25.6l-1.83-1.83a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42l2.53,2.53A1,1,0,0,0,21.35,28Z"/></svg></div><div class=stagename>Release</div></div></div></div>
+</p>
+<p>The Ops Section is comprised of five stages: Verify, Package, Deploy and Monitor. For a deeper view of the direction of each specific stage please visit the respective Direction Pages linked below:</p>
+<ul>
+<li><a href="/direction/verify">Verify</a></li>
+<li><a href="/direction/package/">Package</a></li>
+<li><a href="/direction/deploy/">Deploy</a></li>
+<li><a href="/direction/monitor/">Monitor</a></li>
+</ul>
+<p><a href="https://drive.google.com/drive/folders/1Yl9TVh8-ArHH7nmaVI5JjVeiAyyi2a84">Market analysts (internal)</a> often describe these stages as automated software quality (ASQ, partially correlated with Verify, Package and Deploy), IT automation and configuration management (ITACM, correlated with Deploy), and IT operations management (ITOM, partially correlated with Monitor). The Ops section also covers CI/CD (Verify/Deploy), IT Infrastructure Monitoring/APM (Monitor), CDRA (Deploy), Infrastructure Configuration (Deploy) and Package and Binary Management (Package) <a href="/analysts/">analyst categories</a>.</p>
+<p>In some contexts, "ops" refers to operators. Operators were the counterparts to Developers represented in the original coining of the term <a href="https://en.wikipedia.org/wiki/DevOps">DevOps</a>. That definition highlighted the rift between the two groups and a need for collaboration. At GitLab, we use "ops" to mean operations - any component of the value stream delivery platform after a developer commits code. Our <a href="https://handbook.gitlab.com/handbook/product/product-principles/#developer-first">developer first perspective</a> means our use of the word "ops" is focused on enabling developers to configure tools and perform operations tasks <strong>first</strong>. We have support for <a href="#today">platform operations and SRE teams</a> who provide Pipelines, Infrastructure and alert response tools to development teams, and ambitious plans to <a href="#medium-term-1-2-years">support traditional operators in the future</a>.</p>
+<h2 id=3-year-strategy>3 Year Strategy</h2>
+<p>GitLab's Ops strategy follows that of <a href="https://handbook.gitlab.com/handbook/company/strategy/">GitLab's company strategy</a>. Just like our company <a href="https://handbook.gitlab.com/handbook/company/mission/#mission">mission</a>, we will enable <strong>everyone to contribute</strong> beyond application code to other digital artifacts that increasingly define the performance, reliability, and resilience of the world's software. We will pursue that mission and capitalize on the opportunities (such as, developer buyer power, IT skills gaps, a move towards Kubernetes, and our roots in source-control and CI) by utilizing a <a href="https://handbook.gitlab.com/handbook/company/strategy/#dual-flywheels">dual-flywheel</a> approach. This approach starts with attracting developers performing DevOps tooling and operations tasks to our Free/Core tier. As we build best of breed tools for them we will <a href="/community/contribute/">co-create</a> to drive product improvements. This will generate revenue for higher product tiers and additional investment for supporting the modern development teams.</p>
+<p>More specifically, we will achieve this by enabling <a href="https://handbook.gitlab.com/handbook/product/product-principles/#discoverability-without-being-annoying">easy-to-discover</a>, <a href="https://handbook.gitlab.com/handbook/product/product-principles/#configuration-principles">working-by-default</a>, workflows that support doing powerful, complex actions with a minimum configuration. We want to take advantage of our single application so that, while each team may have their own views or dashboards in the product that support their day to day, the information is available everywhere and to everyone, embedded naturally into their day-to-day workflow where it's relevant. For example:</p>
+<ul>
+<li>Allow platform teams to share operational definitions (infrastructure, environments, deployment pipelines, monitoring configuration) with development teams and for development teams to easily contribute improvements to their definition</li>
+<li>At scale management of deployments with actionable analytics and dashboards to support management of development teams</li>
+<li>Operational tasks that ensure reliability, like chaos engineering and performance testing, are shifted left</li>
+<li>Software Engineers and Testers looking at an individual issue can see which environment(s) that issue has been deployed to</li>
+<li>Satisfying compliance needs and supply chain security by improving the traceability of artifacts throughout the build, test, deploy process</li>
+<li>Incident responders can immediately see details of the last deploy, recent code changes and errors, traces and logs needed to help them get their service back up quickly</li>
+</ul>
+<p>The end result is that even complex delivery flows become part of everyone's primary way of working. There isn't a context shift (or even worse, a switch into a different tool) needed to start thinking about delivery or operations - that information is there, in context, from your first commit. The centerpiece of this strategy is our <a href="/direction/ops/#get-things-done-easily">Get Things Done Easily theme</a>.</p>
+<h3 id=market-predictions>Market Predictions</h3>
+<p><img src="/direction/ops/OpsSectionTAMExpansion.png" alt="Ops Section TAM Expansion"/>
+</p>
+<p>The Ops Section stages represent over 50% of GitLab's future CSM expansion.
+In three years the Ops market will:</p>
+<ul>
+<li>Consider CI a critical capability for bridging between Dev, Sec &amp; Ops to create truly high-performing DevSecOps organizations</li>
+<li>Consider Package management an integrated requirement for any CI/CD platform</li>
+<li>Provide seamless progressive delivery capabilities as a critical tool for enabling lean product-focused development</li>
+<li>Consolidate around Kubernetes as the de facto multi-cloud abstraction layer which application delivery teams interact with to deploy and maintain software</li>
+<li>Have adapted DevSecOps processes to also include infrastructure and observability into CI/CD pipelines providing more responsive, more secure, and higher quality production applications</li>
+</ul>
+<h3 id=themes>Themes</h3>
+<p>Our Ops Section themes are additive to our overall <a href="/direction/#fy24-product-investment-themes">Yearly Themes</a>. In FY24, we plan to execute on:</p>
+<ol>
+<li>World-class DevSecOps by delivering <a href="https://gitlab.com/groups/gitlab-org/-/epics/8349">GitLab Events</a>, <a href="https://gitlab.com/groups/gitlab-org/-/epics/7462">CI/CD Catalog</a>, enabling GitOps in GitLab with Flux, integrating a cluster overview under Environments, and prioritizing usability of our key workflows</li>
+<li>Advanced security and compliance by delivering <a href="https://about.gitlab.com/direction/supply-chain/#current-position-and-vision">SLSA 4 framework requirements</a>, investing in <a href="https://about.gitlab.com/direction/software_supply_chain_security/pipeline_security/secrets_management/">Secrets Management Direction</a></li>
+<li>Observability, analytics, &amp; feedback via our investment in <a href="https://gitlab.com/groups/gitlab-org/opstrace/-/epics/45">end-to-end error tracking</a>.</li>
+<li>GitLab Data Science support with SaaS Runner GPU improvements</li>
+</ol>
+<h3 id=ops-section-plan>Ops Section Plan</h3>
+<p>Our plan is to continue to lean into <a href="https://handbook.gitlab.com/handbook/product/product-principles/#drive-product-usage">adoption through usability</a> and <a href="https://handbook.gitlab.com/handbook/product/product-principles/#discoverability-without-being-annoying">discoverability</a> in our core stages of Verify, Package, and Deploy. This will mean sustained focus on onboarding users and organizations from <a href="https://handbook.gitlab.com/handbook/product/product-principles/#multi-feature-usage-adoption-journey">SCM, to CI to Deployment</a>.</p>
+<p>For the Monitor stage, we will pursue our common progression product approach to breadth, namely:</p>
+<ol>
+<li>Create MVCs which showcase the possibility of new categories in a single-application</li>
+<li>Leverage the high rate of learning provided by dogfooding to achieve viability</li>
+<li>Shift focus to awareness and acquisition of viable capabilities by increasing SMAU &amp; GMAU</li>
+<li>Begin building completeness and tier value as a result of increased SMAU</li>
+</ol>
+<p>As a result our <a href="#performance-indicators">performance indicators</a> and tier strategies are aligned to the maturity of each stage.</p>
+<p>In doing so, over the next 12 months we will choose <strong>NOT</strong> to:</p>
+<ul>
+<li>Invest in Verify stage features like:
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/issues/36171">Tracking accessibility results over time</a>.</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/5864">Merge Trains API Support</a>.</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/issues/3583">Automatic flaky test minimization</a>.</li>
+<li>Creation and <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/334558">management</a> of tests (automated or manual).</li>
+<li>Real-time pipeline and job statuses</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/6498">Pipeline Simulation</a> or local pipeline debugging, even though it is a highly requested feature</li>
+</ul>
+</li>
+<li>Invest in some specific Package stage features like:
+<ul>
+<li><a href="/direction/package/">Dependency Firewall</a>, as we'll focus on making the <a href="/direction/package#dependency-proxy">Dependency Proxy</a> functional and complete.</li>
+<li>Package manager formats and features that are not NPM, Maven, C++, .NET, Linux, Ruby, Python, PHP, or Go or community contributed.</li>
+</ul>
+</li>
+<li>Invest in specific Deploy stage features like:
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/issues/8373">Service Now Integration</a> to control rollbacks or other pipeline actions is not in the cards.</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/4517">Continuous Delivery for Machine Learning</a> - Add support for training and testing pipelines for Machine Learning</li>
+</ul>
+</li>
+<li>Invest heavily in ease of use and experience for individuals attaching Kubernetes clusters to projects. While there are use cases for project-level attachment, it is a higher priority to provide Infrastructure Platform teams with an enhanced cloud-native management experience.</li>
+<li>Invest heavily in automated cluster cost-optimization efforts - We will pursue this as our adoption by platform teams increases.</li>
+</ul>
+<h1 id=why-we-do-it>Why We Do It</h1>
+<h2 id=impact>Impact</h2>
+<p>The <a href="#composition">Ops Section stages</a> are at the forefront of GitLab's single DevOps platform vision of enabling everyone to contribute. These stages represent <strong>half</strong> of GitLab's Total Addressable Market expansion during the next five years and the <a href="#market">markets</a> where we have some of the lowest current penetration. As a result the opportunity and impact from R&amp;D investment in these stages are the highest in the company.</p>
+<p><a href="https://handbook.gitlab.com/handbook/product/performance-indicators/#ops---section-cmau---sum-of-ops-section-smau">User growth</a> in Ops Section stages improves <a href="https://handbook.gitlab.com/handbook/product/performance-indicators/#stages-per-organization-spo">Stages per Organization</a> beyond typical SCM customers - providing the value of a single DevOps platform to our customers. Adding new types of users in turn increases <a href="https://handbook.gitlab.com/handbook/product/performance-indicators/#unique-monthly-active-users-umau">unique active users</a>, while adding paid tier features increases Average Revenue Per User (ARPU) and broad adoption across users in our customers' organizations increases net retention. All of these are critical drivers of our GitLab's business performance.</p>
+<p>We would appreciate your feedback on this direction page. Please take <a href="https://forms.gle/ex9zZ4sKmE1FKiHr9">our survey</a>, <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#106;&#112;&#111;&#114;&#116;&#101;&#114;&#064;&#103;&#105;&#116;&#108;&#097;&#098;&#046;&#099;&#111;&#109;">email Jackie Porter</a> or <a href="https://gitlab.com/gitlab-com/www-gitlab-com/edit/master/source/direction/ops/template.html.md.erb">propose an MR</a> to this page!</p>
+<h2 id=market>Market</h2>
+<p><img src="/direction/ops/OpsSectionMarket.png" alt="Ops Section Market by Stage"/>
+</p>
+<p>The total addressable market (TAMkt) for <strong>DevOps tools</strong> targeting <a href="https://internal.gitlab.com/handbook/product/investment/">these stages</a> was <a href="https://docs.google.com/spreadsheets/d/1LO57cmXHDjE4QRf6NscRilpYA1mlXHeLFwM_tWlzcwI/edit?ts=5ddb7489#gid=947614257">$5.2B in 2019 and is expected to grow to $10.7B by 2024 (18.8% CAGR) (internal)</a>. This analysis is considered conservative as it focuses only on developers and doesn't <a href="https://handbook.gitlab.com/handbook/customer-success/csm/">include additional potential users</a>.
+This is a deep <a href="https://en.wikipedia.org/wiki/Profit_pools">profit pool</a> and represents a significant portion of GitLab's expanding addressable market. As organizations further adopt DevOps, developer focused ops tools account for a larger share of market. This market has traditionally targeted IT Architects, System Admins and Operators where large hardware budgets enabled expensive IT tools to flourish.</p>
+<p>The <a href="https://drive.google.com/file/d/1VvnJ5Q5PJzPKZ_oYBHGNuc6D7mtMmIZ_/view">market is well established (internal)</a>, but the participants are evolving rapidly. Existing leaders in single stages of the DevOps lifecycle are expanding to build <a href="https://drive.google.com/file/d/1HuRjVqH4D8qEuWkhv77XT6PEnnpml2gn/view?usp=sharing">value stream delivery platforms (internal)</a>, what GitLab calls complete DevOps platforms delivered as a single application. These existing players are doing so via <a href="https://devops.com/digital-ai-the-companies-formerly-known-as-xebia-labs-collabnet-plus/">acquisition</a> and product development. The leaders run the gamut from GitHub with their strong position in the SCM market and their growing capabilities to <a href="/direction/verify/continuous_integration/#competitive-landscape">compete in CI/CD</a>, to Delivery focused tools such as Harness and JFrog, to <a href="/direction/monitor/#landscape">Grafana, DataDog and New Relic with their strong positions in Observability</a> and expansion into deployment and incident response. All are pivoting to pursue the value stream delivery platform market.</p>
+<h2 id=current-position>Current Position</h2>
+<p>Despite many strong players, GitLab's market share in the Ops section is growing, especially in the Verify, Package, and Deploy stages. For Monitor, our unique perspective as a single and complete DevOps application positions us for growth.</p>
+<p>You can see how users currently use our various stages in our <a href="https://internal.gitlab.com/handbook/company/performance-indicators/product/ops-section/">Ops Section product performance indicators (internal)</a> and <a href="https://app.periscopedata.com/app/gitlab/781120/Ops-Section-Dashboard?">Ops Section Usage Dashboard (internal)</a>.</p>
+<p>We are <a href="https://handbook.gitlab.com/handbook/product/categories/ops/#who-we-are">continually investing in R&amp;D</a> in all Ops Section stages. The maturity of each stage and category can be found in our <a href="/direction/#maturity">maturity page</a>. Our <a href="https://internal.gitlab.com/handbook/product/investment/#scoring-results">investment in the Ops section stages (internal)</a> is critical to both enabling enterprise users to continue on their DevOps maturity journey and completing our <a href="/direction/#vision">complete DevOps platform vision</a>. Driving adoption across multiple Ops stages enables <a href="https://handbook.gitlab.com/handbook/product/product-principles/#prioritize-current-adopters">early adopters</a> to recognize the <a href="https://handbook.gitlab.com/handbook/product/categories/gitlab-the-product/#single-application">benefit of a single application</a>.</p>
+<h2 id=challenges>Challenges</h2>
+<p><img src="/direction/ops/OpsSectionChallenges.png" alt="Ops Section Challenges"/>
+</p>
+<p>We face a wide range of market challenges (in priority order):</p>
+<ol>
+<li>GitLab created a new market for <a href="https://handbook.gitlab.com/handbook/marketing/strategic-marketing/messaging/#short-single-sentence">DevOps platforms delivered as a single application</a>. We were an early entrant in this market <a href="https://handbook.gitlab.com/handbook/product/categories/gitlab-the-product/single-application/">before it was defined</a> but there are many, and will be more, fast followers. Key players include large established tech firms (Microsoft, Atlassian), growth companies that have established positions in specific stages (Harness, DataDog), and newly consolidated platforms from acquisition (JFrog, CollabNet/VersionOne/XebiaLabs). <a href="https://drive.google.com/file/d/1HuRjVqH4D8qEuWkhv77XT6PEnnpml2gn/view?usp=sharing">By 2023, the number of companies switching to VSDPs is expected to quadruple (internal)</a>.</li>
+<li>Few companies have been able to successfully bridge between Developer and Operator personas. Building tools that satisfy both sets of <a href="https://handbook.gitlab.com/handbook/product/ux/jobs-to-be-done/">jobs-to-be-done</a> is difficult. Without deeply understanding new personas (such as <a href="https://handbook.gitlab.com/handbook/product/personas/#ingrid-infrastructure-operator">Platform Engineers</a>) and tasks, market entrants' products result in a checklist of modules that lack a cohesive experience for users.</li>
+<li>In recent years we've seen the emergence of large <a href="https://en.wikipedia.org/wiki/Cloud_computing#Public_cloud">public cloud infrastructure providers</a> moving from a focus on infrastructure services for operators towards developer tools. These providers could challenge current notions of <a href="https://en.wikipedia.org/wiki/Multicloud">multi-cloud</a> by creating great, integrated experiences in their tools for developers to create, verify, and deploy applications to the provider's infrastructure. Microsoft, with their acquisiton of GitHub and it's burgeoning preference for Azure deployments is a first example. There is a possibility that these provider-centric ecosystems present organizations with a choice of investing in a best-of-breed platform with a small subset of projects or a sufficient enough platform used by all.</li>
+<li>Beyond the key players, there is also rapid innovation. This makes for a market where there is proliferation of new technology concurrent to consolidation of the winning technologies into comprehensive platform players. Ease of deployment for CI/CD and operational tools has aided this expansion. Developers and operations teams can easily instrument and utilize new technologies alongside their existing software development pipelines with less risk, and in quicker time frames than under previous models where it required diligent planning and months of installation and configuration.</li>
+<li>The macroeconomic environment in 2023 has slowed from prior year's growth, as indicated by a recent <a href="https://www.gartner.com/en/newsroom/press-releases/2023-01-18-gartner-forecasts-worldwide-it-spending-to-grow-2-percent-in-2023">Gartner Report on IT Spending in 2023</a>. This poses a headwind toward all software providers and the industry as a whole could face increased pressure.</li>
+</ol>
+<p>Outside of market challenges we have some internal ones as well:</p>
+<ul>
+<li>While we are focused on it - generally we are still not <a href="https://handbook.gitlab.com/handbook/values/#dogfooding">dogfooding</a> the Deploy and Monitor stage features sufficiently. Within GitLab we don't have a dedicated Platform Team that serves as our internal model for our <a href="#medium-term-1-2-years">Primary Target Persona</a>. This has the effect of <a href="https://handbook.gitlab.com/handbook/values/#dogfooding">slowing our rate of learning</a>, and putting us in the position of not having immediate real-world validation of product investments.</li>
+<li>Our <a href="https://handbook.gitlab.com/handbook/product/categories/#hierarchy">Product Hierarchy</a> means we have groups narrowly focused on stages or categories. This has the effect of limiting our ability to deliver truly <a href="https://en.wikipedia.org/wiki/Customer_delight">delightful</a> experiences for users. We've started tracking the <a href="https://internal.gitlab.com/handbook/company/performance-indicators/product/ops-section/#ops---section-spo---ops-section-contribution-to-stages-per-organization">Ops section's contribution to Stage Per Organization</a> to further mitigate this challenge.</li>
+<li>Contributing to a growing, large monolith can be slower and more risky than building independent services and applications. We have seen our cycle time slowed down by long MR reviews. We have also experienced the risk of not building for scale first by introducing functionalities only to see that new service cause outages.</li>
+<li>Having a large scope means having to make more trade-offs. These trade-offs often mean divesting from further-horizon investment in favor of short term gain. Being able to stay disciplined to our <a href="https://internal.gitlab.com/handbook/product/investment/#investment-types">investment allocation - internal</a> will be important to penetrate new markets.</li>
+</ul>
+<h2 id=opportunities>Opportunities</h2>
+<p>Given the above challenges, there are key opportunities we must take advantage of (in priority order):</p>
+<ol>
+<li><strong>Rise of the Platform Engineer:</strong> Gartner has <a href="https://www.gartner.com/en/articles/what-is-platform-engineering">suggested</a> that "platform engineering is an emerging technology that can accelerate the delivery of applications." The 2022 report expects that by 2026 80% of enterpises will establish a platform team to improve developer experience and effectiveness with resuable services and tools related to delivery. GitLab is well positioned as a unified platform to deliver on the emerging platform engineering trend.</li>
+<li><strong>Cross-Use Case Workflows:</strong> As a single DevSecOps platform, a single user may action and span multiple <a href="https://handbook.gitlab.com/handbook/use-cases/#specific-use-cases">use cases</a> in their daily experience with GitLab. We have an opportunity to prompt users to explore new functionality within their existing workflow. For example, we can prompt users without CI/CD on projects that contain Terraform code to utilize our <a href="https://docs.gitlab.com/ee/user/infrastructure/#terraform-integration-in-merge-requests">Terraform MR review widget</a>. Doing so will organically <a href="https://handbook.gitlab.com/handbook/marketing/growth/">inspire more adoption and usage of cross-platform tools</a>. This usage will result in an improvement of productivity for our users, supporting the expansion of seats to include more users within an organization's instance.</li>
+<li><strong>DevOps Adoption Pains:</strong> For many organizations their <a href="https://services.google.com/fh/files/misc/state-of-devops-2019.pdf">DevOps journey is currently stalled as they attempt to adopt continuous delivery in an effort to increase their deployment frequency</a>. GitLab's <a href="https://docs.gitlab.com/ee/ci/">common method for defining CI and CD workflows</a> allows organizations to use the same tools their teams love for CI when overcoming this new challenge. DevOps transformations are also hampered by a <a href="https://docs.google.com/presentation/d/1tt6-XqnhCmsx8Jfy39hit8OgggeaFUUxxU7TnNsG4Qk/edit#slide=id.p19">lack of IT operations skills (internal)</a>. Most organizations have taken to creating <a href="https://hackernoon.com/how-to-build-a-platform-team-now-the-secrets-to-successful-engineering-8a9b6a4d2c8">infrastructure platform teams</a> to <a href="https://drive.google.com/file/d/1GexcUo4FzmhmV30tnjn7x3hyk1plEK4-/view">minimize the amount of operations expertise required by DevOps team members (internal)</a>. Those teams' traditional operations tools are not integrated within the development team's workflow, and force an unneeded tradeoff between reliability and speed. This tradeoff results in increased down-time and problems with recovering from disaster - or slowed business agility. Value Stream Delivery Platforms like GitLab can <a href="https://drive.google.com/file/d/1hJq-JKveNbxA2FryoBxcurMRZuYJ3b4e/view?usp=sharing">move a team from reactive to proactive reliability without sacrificing development velocity (internal)</a>. GitLab's combination of Create, Verify, Deploy and Monitor allow our users to <a href="https://gitlab.com/groups/gitlab-org/-/epics/4358">measure all four aspects of their delivery performance</a>. Improving the resuability, standardization, and enforcement of best practices via Shared Resource Library or <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/360996">Service Catalog</a> is top of mind to mitigate the DevOps implementation challenges of enterprises.</li>
+<li><strong>Increasing Developer buying power:</strong> In the move to DevOps, <a href="http://videos.cowen.com/detail/videos/recent/video/6040056480001?autoStart=true">tools focused on enabling developers garner an increased share of wallet</a>. <a href="https://docs.google.com/presentation/d/1tt6-XqnhCmsx8Jfy39hit8OgggeaFUUxxU7TnNsG4Qk/edit#slide=id.p4">71% of organizations (internal)</a> will achieve full DevOps adoption on some projects within a year. <a href="https://docs.google.com/presentation/d/1tt6-XqnhCmsx8Jfy39hit8OgggeaFUUxxU7TnNsG4Qk/edit#slide=id.p14">35% of DevOps implementations include Monitor stage capabilities, 30% include Deploy stage ones (internal)</a>. This increasing buyer power is driven by the cultural and organizational changes (often called Digital Transformation Initiatives) needed for DevOps to deliver software faster. This also applies to traditional IT teams who will, <a href="https://drive.google.com/file/d/1fM_ejuOeGIXgxlCQuqQ1MGbb4_x4iA2l/view">by 2024 see 30% of their focus move from IT ops to continuous engineering</a> via role shifts like moving from system admin roles to SRE roles.</li>
+<li><strong>Market Recognition:</strong> The IT market has recognized the value of GitLab's core proposition, a <a href="https://handbook.gitlab.com/handbook/product/categories/gitlab-the-product/single-application/">complete DevOps platform delivered as a single application</a>. We know because single-function companies <a href="https://azure.microsoft.com/en-us/blog/accelerating-devops-with-github-and-azure/">are consolidating</a>, and analysts have <a href="https://www.gartner.com/en/documents/3979558/the-future-of-devops-toolchains-will-involve-maximizing-">created a new category - VSDP</a> - to describe that proposition. One key value driver for this market is the shifting-left of traditional Ops tasks ensuring reliability doesn't have to come at the expense of speed.</li>
+<li><strong>IaC and GitOps are strong first steps towards AIOps:</strong> AIOps strives to provide self-learning, self-healing IT operations massively impacting IT operations professionals and their tools. However, it is <a href="https://drive.google.com/file/d/1GexcUo4FzmhmV30tnjn7x3hyk1plEK4-/view">early in the hype cycle (internal)</a> and being successful will depend on DevOps teams first defining their infrastructure, operations, and observability as code. IT Operations teams are first adopting automation and programmable infrastructure (Automated Ops) in order to keep up with developer velocity. Experience with developer tools like source control and CI/CD tooling are becoming requirements for operations teams, <a href="https://drive.google.com/file/d/19_tb0tyogGZ7viyN1H3aueID7ah-_mHl/view">often replacing inefficient CMDB tools in the process</a>. GitLab's roots in SCM and CI and the entire <a href="https://handbook.gitlab.com/handbook/marketing/brand-and-product-marketing/product-and-solution-marketing/usecase-gtm/gitops/">GitOps</a>, <a href="/direction/delivery/infrastructure_as_code/">Infrastructure as Code</a>, and Observability as Code movements will help us attract and add value for <a href="#who-is-it-for">Ops personas</a> and set us up for future AIOps success.</li>
+<li><strong>Continuing commoditization of tooling:</strong> Well-funded technology companies (Google, Netflix, Lyft, Spotify etc.) that are focused on scaling have a history of releasing open source software that leap-frog vendor software. Examples include Kubernetes, Prometheus, and many of the foundational projects in CNCF. In the observability space, <a href="https://drive.google.com/file/d/1fM_ejuOeGIXgxlCQuqQ1MGbb4_x4iA2l/view">70% of instrumentation is expected to be open-source by 2025</a>. DevOps vendors have to continue to move up the value chain as previously specialized software gets commoditized. GitLab has the opportunity to mind the <a href="https://redmonk.com/sogrady/2020/10/06/developer-experience-gap/">Developer Experience Gap</a> and provide an easy to use and effective software development toolchain.</li>
+</ol>
+<h2 id=useful-resources>Useful Resources</h2>
+<p>Below are some additional resources to learn more about Ops:</p>
+<ul>
+<li><a href="https://www.amazon.com/dp/1942788002/">The DevOps Handbook: How to Create World-Class Agility, Reliability, and Security in Technology Organizations</a></li>
+<li><a href="https://www.amazon.com/Accelerate-Software-Performing-Technology-Organizations/dp/1942788339">Accelerate: The Science of DevOps: Building and Scaling High Performing Technology Organizations</a></li>
+</ul>
+<h2 id=performance-indicators>Performance Indicators</h2>
+<p>The performance of the Ops section is defined as the total adoption of its stages as measured by the <a href="https://internal.gitlab.com/handbook/company/performance-indicators/product/ops-section/#ops---section-cmau---sum-of-ops-section-smau">Ops Section Total Stages Monthly Active Users (internal)</a>) (Ops Section CMAU). Ops Section TMAU is a sum of all SMAUs across the five stages in the Ops Section (Verify, Package, Deploy &amp; Monitor).</p>
+<p>To increase the Ops Section TMAU, the product groups are focused on driving their stage adoption. We are especially focused on increasing adoption of the Verify and Deploy stages by driving CI usage from existing SCM users and driving CD usage from existing CI users. This will activate users into Ops Section TMAU and enable them to continue to adopt other Ops section stages as described on Ops section adoption journey (see also the <a href="https://handbook.gitlab.com/handbook/product/growth/#adoption-journey">product-wide adoption journey</a>):</p>
+<div class=mermaid>graph LR
+%% Define Styling
+classDef OpsStage fill:#11f,color:#fff
+classDef OtherStage fill:#ddd,color:#888
+%%% Define Stages
+P[Plan]:::OtherStage
+C[Create]:::OtherStage
+V[Verify]:::OpsStage
+Pa[Package]:::OpsStage
+R[Release]:::OpsStage
+Co[Configure]:::OpsStage
+M[Monitor]:::OpsStage
+S[Secure]:::OtherStage
+D[Govern]:::OtherStage
+%% Define Connections
+C -.- P
+P -.-> M
+V -.- S
+C ==> V
+V ==> R
+V ==> Pa
+V ==> Co
+R ==> M
+R -.- Co
+Co -.- D
+Co ==> M
+M -.- D
+subgraph "Legend"
+Legend1[Ops Stage]:::OpsStage == Critical Path==> Legend2[Other Stage]:::OtherStage
+Legend1 -. Additional Path .-> Legend2
+end
+</div>
+<p>The majority of our <a href="https://handbook.gitlab.com/handbook/product/categories/#ops-section">Ops section product groups</a> are focused on driving adoption first, and then monetization within their category scope. Some groups are well placed to focus on monetization right away by adding tier value for <a href="https://handbook.gitlab.com/handbook/marketing/brand-and-product-marketing/product-and-solution-marketing/roles-personas/buyer-persona/">buyer personas</a> (e.g. development manager, director) on top of existing stages which already have heavy usage.</p>
+<p>See more details about our <a href="/company/kpis/#layers-of-kpis">Product Performance Indicators</a> in our <a href="https://internal.gitlab.com/handbook/company/performance-indicators/product/ops-section/">Ops Section Product Performance Indicators page</a>.</p>
+<h3 id=performance-indicator-goals>Performance Indicator Goals</h3>
+<p>We track our quarterly Product Performance Indicator goals in our <a href="https://internal.gitlab.com/handbook/company/performance-indicators/product/ops-section/">internal handbook page</a>. We track our long-term Product Performance Indicator goals here.</p>
+<h2 id=personas-and-jobs-to-be-done>Personas and Jobs to Be Done</h2>
+<h3 id=who-is-it-for>Who is it for?</h3>
+<p>We identify the <a href="https://handbook.gitlab.com/handbook/product/personas/#user-personas">personas</a> the Ops section features are built for. In order to be transparent about personas we support today and personas we aim to support in the future we use the following categorization of personas listed in priority order.</p>
+<ul>
+<li>ð©- Targeted with strong support</li>
+<li>ð¨- Targeted but incomplete support</li>
+<li>â¬ï¸- Not targeted but might find value</li>
+</ul>
+<h4 id=today>Today</h4>
+<p>To capitalize on the <a href="#opportunities">opportunities</a> listed above, the Ops section has features that make it useful to the following personas today.</p>
+<ol>
+<li>ð© <a href="https://handbook.gitlab.com/handbook/product/personas/#sasha-software-developer">Sasha - Software Developer</a></li>
+<li>ð© <a href="https://handbook.gitlab.com/handbook/product/personas/#devon-devops-engineer">Devon - DevOps Engineer</a></li>
+<li>ð¨ <a href="https://handbook.gitlab.com/handbook/product/personas/#ingrid-infrastructure-operator">Ingrid - Infrastructure Operator</a></li>
+<li>ð¨ <a href="https://handbook.gitlab.com/handbook/product/personas/#allison-application-ops">Allison - Application Ops</a></li>
+<li>ð¨ <a href="https://handbook.gitlab.com/handbook/product/personas/#simone-software-engineer-in-test">Simone - Software Engineer in Test</a>
+â</li>
+<li>â¬ï¸ <a href="#composition">Ops Teams</a></li>
+<li>â¬ï¸ Central IT / System Admins</li>
+</ol>
+<h4 id=medium-term-1-2-years>Medium Term (1-2 years)</h4>
+<p>As we execute our <a href="#3-year-strategy">3-year strategy</a>, our medium term (1-2 year) goal is to provide a single application that enables collaboration between cloud native development and platform teams.</p>
+<ol>
+<li>ð© <a href="https://handbook.gitlab.com/handbook/product/personas/#sasha-software-developer">Sasha - Software Developer</a></li>
+<li>ð© <a href="https://handbook.gitlab.com/handbook/product/personas/#devon-devops-engineer">Devon - DevOps Engineer</a></li>
+<li>ð© <a href="https://handbook.gitlab.com/handbook/product/personas/#ingrid-infrastructure-operator">Ingrid - Infrastructure Operator</a></li>
+<li>ð© <a href="https://handbook.gitlab.com/handbook/product/personas/#allison-application-ops">Allison - Application Ops</a></li>
+<li>ð© <a href="https://handbook.gitlab.com/handbook/product/personas/#simone-software-engineer-in-test">Simone - Software Engineer in Test</a></li>
+<li>ð© <a href="https://handbook.gitlab.com/handbook/product/personas/#delaney-development-team-lead">Delaney - Development Team Lead</a></li>
+<li>ð© <a href="https://handbook.gitlab.com/handbook/product/personas/#rachel-release-manager">Rachel - Release Manager</a></li>
+<li>ð¨ <a href="#composition">Ops Teams</a></li>
+<li>â¬ï¸ Central IT / System Admins</li>
+</ol>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/ops/template.html.md.erb" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/ops/template.html.md.erb" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=e389f0af'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/scripts.js?cacheBust=e389f0af"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

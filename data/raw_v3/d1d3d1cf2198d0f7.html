@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Stage Direction - Package
+|
+GitLab
+</title>
+<meta content='GitLab Package: Enterprise-grade artifact management integrated with your DevSecOps platform' name=description />
+<meta content='GitLab Package: Enterprise-grade artifact management integrated with your DevSecOps platform' name='twitter:description'/>
+<meta content='GitLab Package: Enterprise-grade artifact management integrated with your DevSecOps platform' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Stage Direction - Package' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/package/template.html.md.erb' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/package/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Stage Direction - Package' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=e389f0af'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/package/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v6.6.0/css/all.css' integrity='sha384-h/hnnw1Bi4nbpD6kE7nYfCXzovi622sY5WBxww8ARKwpdLj5kUWjRuyiXaD1U2JT' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=e389f0af" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=e389f0af" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=e389f0af'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Stage Direction - Package
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/trizzi'>
+<div class=codeowners-single>
+<img
+src='/images/team/timrizzi-crop.jpg'
+class=codeowner-avatar-img
+alt='Tim Rizzi'
+title='Tim Rizzi'
+>
+<div class=codeowners-single-labels>
+<div class=codeowners-description>
+Tim Rizzi
+</div>
+<div class=codeowners-handle>
+@trizzi
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/package/template.html.md.erb" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li>Stage Direction - Package</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#package---enterprise-artifact-management-in-gitlab" id=markdown-toc-package---enterprise-artifact-management-in-gitlab>Package - Enterprise artifact management in GitLab</a> <ul>
+<li><a href="#our-mission-and-goal" id=markdown-toc-our-mission-and-goal>Our mission and goal</a></li>
+<li><a href="#what-is-package" id=markdown-toc-what-is-package>What is Package?</a></li>
+<li><a href="#our-differentiators" id=markdown-toc-our-differentiators>Our differentiators</a></li>
+<li><a href="#whats-next-and-why" id=markdown-toc-whats-next-and-why>What's next and why</a> <ul>
+<li><a href="#2025-priorities" id=markdown-toc-2025-priorities>2025 priorities</a></li>
+<li><a href="#2026-roadmap" id=markdown-toc-2026-roadmap>2026 roadmap</a></li>
+</ul>
+</li>
+<li><a href="#what-we-arent-working-on-and-why" id=markdown-toc-what-we-arent-working-on-and-why>What we aren't working on and why</a></li>
+<li><a href="#categories" id=markdown-toc-categories>Categories</a> <ul>
+<li><a href="#container-registry" id=markdown-toc-container-registry>Container Registry</a></li>
+<li><a href="#package-registry" id=markdown-toc-package-registry>Package registry</a></li>
+<li><a href="#virtual-registries" id=markdown-toc-virtual-registries>Virtual registries</a></li>
+<li><a href="#dependency-firewall" id=markdown-toc-dependency-firewall>Dependency firewall</a></li>
+</ul>
+</li>
+<li><a href="#helpful-links" id=markdown-toc-helpful-links>Helpful links</a></li>
+<li><a href="#customer-needs" id=markdown-toc-customer-needs>Customer needs</a> <ul>
+<li><a href="#non-enterprise-organizations" id=markdown-toc-non-enterprise-organizations>Non-enterprise Organizations</a></li>
+<li><a href="#enterprise-organizations" id=markdown-toc-enterprise-organizations>Enterprise organizations</a></li>
+</ul>
+</li>
+<li><a href="#gitlab-package---market-analysis" id=markdown-toc-gitlab-package---market-analysis>GitLab Package - Market Analysis</a> <ul>
+<li><a href="#competitive-landscape" id=markdown-toc-competitive-landscape>Competitive landscape</a></li>
+<li><a href="#key-market-trends" id=markdown-toc-key-market-trends>Key market trends</a></li>
+<li><a href="#product-comparison" id=markdown-toc-product-comparison>Product comparison</a></li>
+<li><a href="#gitlabs-unique-value-proposition" id=markdown-toc-gitlabs-unique-value-proposition>GitLab's unique value proposition</a></li>
+</ul>
+</li>
+<li><a href="#roadmap-highlights" id=markdown-toc-roadmap-highlights>Roadmap highlights</a> <ul>
+<li><a href="#2025" id=markdown-toc-2025>2025</a></li>
+<li><a href="#2026" id=markdown-toc-2026>2026</a></li>
+</ul>
+</li>
+<li><a href="#target-customer-segments" id=markdown-toc-target-customer-segments>Target customer segments</a> <ul>
+<li><a href="#small-to-medium-organizations" id=markdown-toc-small-to-medium-organizations>Small to medium organizations</a></li>
+<li><a href="#enterprise-organizations-1" id=markdown-toc-enterprise-organizations-1>Enterprise organizations</a></li>
+</ul>
+</li>
+<li><a href="#migration-path-for-jfrog-and-nexus-users" id=markdown-toc-migration-path-for-jfrog-and-nexus-users>Migration Path for JFrog and Nexus Users</a></li>
+<li><a href="#customer-success-stories" id=markdown-toc-customer-success-stories>Customer success stories</a></li>
+</ul>
+</li>
+</ul>
+<h2 id=package---enterprise-artifact-management-in-gitlab>Package - Enterprise artifact management in GitLab</h2>
+<p><img src="/direction/package/Package_diagram_June_2025.png" alt="GitLab Artifact Management Diagram"/></p>
+<h3 id=our-mission-and-goal>Our mission and goal</h3>
+<p>Our mission is to eliminate artifact management complexity by delivering enterprise-grade capabilities that are seamlessly integrated with your entire DevSecOps workflow.</p>
+<p>Our goal is to become our customers' single source of truth for artifact management by 2027, replacing fragmented toolchains with a unified platform that reduces costs, improves security, and accelerates development velocity.</p>
+<h3 id=what-is-package>What is Package?</h3>
+<p>The Package stage is responsible for delivering a comprehensive artifact management solution that meets the needs of both small teams and enterprise organizations.</p>
+<p>Artifact management involves storing, versioning, and tracking binary files, libraries, and dependencies used in software development. It's critical for ensuring consistency, reproducibility, and efficient collaboration in development projects. Artifact management systems help manage the software artifacts' lifecycle, from creation to deployment, facilitating easy access, sharing among team members, and integration with build and deployment tools.</p>
+<h3 id=our-differentiators>Our differentiators</h3>
+<p>While competitors like JFrog Artifactory claim to offer a "system of record," GitLab Package goes beyond this by:</p>
+<ul>
+<li><strong>Deep Integration with Development Workflows</strong>: Unlike standalone solutions, GitLab Package is natively integrated with your source code, CI/CD pipelines, and security scanning tools, creating a seamless experience.</li>
+<li><strong>Enhanced Security and Compliance</strong>: GitLab's built-in security features work directly with your artifacts, providing vulnerability scanning, dependency analysis, and compliance checking without requiring separate products or integrations.</li>
+<li><strong>Reduced Context Switching</strong>: Teams can manage code, builds, tests, and artifacts all within a single platform, eliminating the need to switch between multiple tools.</li>
+<li><strong>Streamlined Troubleshooting</strong>: Having artifacts alongside your source code makes troubleshooting issues significantly easier, with clear build provenance and traceability.</li>
+<li><strong>Cost and Maintenance Efficiency</strong>: Consolidate tools and reduce both licensing costs and maintenance overhead.</li>
+<li><strong>Native Build Promotion and Complete Provenance</strong>: GitLab uses a git-native approach to build promotion through semantic versioning with commit identifiers (e.g., <code>myapp-1.2.3-abc123f</code>) and git tags for releases. This provides complete build provenance by linking artifacts directly to their source code, CI/CD pipelines, and deployment history within a single platform - enabling rapid troubleshooting and ensuring supply chain security compliance without separate tooling.</li>
+</ul>
+<h3 id=whats-next-and-why>What's next and why</h3>
+<h4 id=2025-priorities>2025 priorities</h4>
+<p>We're expanding our enterprise capabilities to meet the needs of larger organizations:</p>
+<ul>
+<li><strong>Virtual Registries for Maven and npm</strong>: We're introducing <a href="https://gitlab.com/groups/gitlab-org/-/epics/3610">Maven virtual registries</a> that will configure an ordered list of upstream repositories and resolve packages from these sources, caching them at the top-level group. This feature will seamlessly pull packages from external remotes into your GitLab top-level group, simplifying Maven settings file configuration and increasing the reliability of your builds.</li>
+<li><strong>Container Registry Improvements</strong>: We're enhancing security with <a href="https://gitlab.com/gitlab-org/container-registry/-/issues/82">immutable tags</a> and expanding on our recently launched <a href="https://docs.gitlab.com/user/packages/container_registry/protected_container_tags/">protected tags</a> to prevent accidental or malicious updates.</li>
+<li><strong>Artifact Protection</strong>: We'll complete our rollout of <a href="https://gitlab.com/groups/gitlab-org/-/epics/5574">protected packages</a> across all supported formats, including <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/323973">generic packages</a>.</li>
+</ul>
+<h4 id=2026-roadmap>2026 roadmap</h4>
+<ul>
+<li><strong>Expanded Virtual Registry Support</strong>: Adding support for PyPI, NuGet, RPM, and Debian.</li>
+<li><strong>Dependency Firewall Implementation</strong>: Full rollout of features to prevent supply chain attacks.</li>
+<li><strong>Advanced Usage Analytics</strong>: Providing insights into dependency health and usage patterns.</li>
+</ul>
+<h3 id=what-we-arent-working-on-and-why>What we aren't working on and why</h3>
+<ul>
+<li><strong>New Package Manager Formats</strong>: We're focusing on improving our existing formats (OCI-artifacts, npm, Maven, NuGet, PyPI, Terraform, and generic packages) rather than expanding to additional formats in the near term. This approach ensures we maintain our high standards for performance and reliability while delivering the enterprise features our customers need most.</li>
+</ul>
+<h3 id=categories>Categories</h3>
+<h4 id=container-registry>Container Registry</h4>
+<p>The GitLab container registry is a secure and private registry for OCI artifacts, such as Docker container images. Use GitLab CI/CD to create and publish branch/release specific images, manage them via the GitLab API, and discover them through the intuitive user interface.</p>
+<h4 id=package-registry>Package registry</h4>
+<p>Our package registry supports multiple formats including npm, Maven, NuGet, PyPI, Terraform, and generic packages. We provide project and group-level private package registries and are expanding capabilities to include virtual registries.</p>
+<h4 id=virtual-registries>Virtual registries</h4>
+<p>Virtual registries provide a mechanism for storing and accessing external packages, enabling more reliable builds. They allow you to proxy and cache dependencies from external sources, reducing build times and improving supply chain reliability.</p>
+<p>The virtual registry for container images currently allows you to proxy and cache images from DockerHub. In upcoming releases, we'll expand this feature to support multiple endpoints and additional package formats.</p>
+<h4 id=dependency-firewall>Dependency firewall</h4>
+<p>Many projects depend on packages from unknown or unverified providers, introducing potential security vulnerabilities. The dependency firewall, leveraging our virtual registries, will give security and compliance teams more control and visibility over the packages being used.</p>
+<h3 id=helpful-links>Helpful links</h3>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/2972">Maturity plan</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/issues/?sort=due_date_desc&amp;state=opened&amp;label_name%5B%5D=devops%3A%3Apackage&amp;first_page_size=100">Issue list</a></li>
+<li><a href="https://about.gitlab.com/direction/ops/#package">Overall vision</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/boards/1397751?scope=all&amp;utf8=%E2%9C%93&amp;label_name%5B%5D=group%3A%3Apackage&amp;label_name[]=devops%3A%3Apackage">Research issues</a></li>
+</ul>
+<h3 id=customer-needs>Customer needs</h3>
+<p>As the PM for the Package stage, I hear regularly from customers and prospects that would like to migrate off of JFrog's Artifactory. Their reasons for wanting to consolidate on GitLab are:</p>
+<ol>
+<li>Convenience (authentication, management, improved UX)</li>
+<li>Cost</li>
+<li>Better support and access to product teams</li>
+</ol>
+<p>The needs of these customers can be predictably segmented by the size of their organization:</p>
+<h4 id=non-enterprise-organizations>Non-enterprise Organizations</h4>
+<p>Typically they'd like to know if we support format <code>x</code> and if not when we will support it. If we support their requested format, these customers are often able to consolidate quickly.</p>
+<h4 id=enterprise-organizations>Enterprise organizations</h4>
+<p>Enterprise organizations frequently express interest in consolidating on GitLab but are waiting for our Package product to mature. The key features they're waiting for include:</p>
+<ul>
+<li>Virtual registries for managing upstream repositories</li>
+<li>Dependency firewall to prevent supply chain attacks</li>
+<li>Improved discoverability and visibility into dependency usage</li>
+</ul>
+<p>We're addressing these needs directly in our 2025-2027 roadmap.</p>
+<h3 id=gitlab-package---market-analysis>GitLab Package - Market Analysis</h3>
+<h4 id=competitive-landscape>Competitive landscape</h4>
+<p>GitLab Package operates in a market dominated by established players like JFrog Artifactory and Sonatype Nexus, with cloud providers (AWS, Azure, Google) and other DevOps platforms (GitHub) offering varying levels of functionality.</p>
+<h4 id=key-market-trends>Key market trends</h4>
+<ul>
+<li><strong>Consolidation of DevOps Toolchains</strong>: Organizations are seeking to reduce tool sprawl by consolidating functionality into fewer platforms</li>
+<li><strong>Supply Chain Security</strong>: Increasing focus on securing the software supply chain from vulnerabilities and attacks</li>
+<li><strong>Integration with CI/CD</strong>: Demand for artifact management that integrates seamlessly with build and deployment processes</li>
+<li><strong>Enterprise Scalability</strong>: Need for solutions that can handle the volume and complexity of enterprise-level package management</li>
+</ul>
+<h4 id=product-comparison>Product comparison</h4>
+<blockquote>
+<p><strong>Note:</strong> This comparison focuses on dedicated DevOps platforms and artifact management solutions. Cloud-native registries (AWS ECR/CodeArtifact, Azure ACR, Google Artifact Registry) serve different use cases and are typically chosen as part of broader cloud platform strategies rather than as standalone artifact management solutions.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>GitLab Artifact Management</th>
+<th>JFrog Artifactory</th>
+<th>Sonatype Nexus</th>
+<th>GitHub Packages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Container Registry</td>
+<td>Â </td>
+<td>Â </td>
+<td>Â </td>
+<td>Â </td>
+</tr>
+<tr>
+<td>Container Registry</td>
+<td>â Available</td>
+<td>â Available</td>
+<td>â Available</td>
+<td>â</td>
+</tr>
+<tr>
+<td>Pull-through Cache</td>
+<td>â Docker Hub Only</td>
+<td>â Multiple Sources</td>
+<td>â Multiple Sources</td>
+<td>â</td>
+</tr>
+<tr>
+<td>Package Registry</td>
+<td>Â </td>
+<td>Â </td>
+<td>Â </td>
+<td>Â </td>
+</tr>
+<tr>
+<td>Maven</td>
+<td>â GA</td>
+<td>â Available</td>
+<td>â Available</td>
+<td>â</td>
+</tr>
+<tr>
+<td>NuGet</td>
+<td>â GA</td>
+<td>â Available</td>
+<td>â Available</td>
+<td>â</td>
+</tr>
+<tr>
+<td>npm</td>
+<td>â GA</td>
+<td>â Available</td>
+<td>â Available</td>
+<td>â</td>
+</tr>
+<tr>
+<td>PyPI</td>
+<td>â GA</td>
+<td>â Available</td>
+<td>â Available</td>
+<td>â</td>
+</tr>
+<tr>
+<td>Generic Packages</td>
+<td>â GA</td>
+<td>â Available</td>
+<td>â Available</td>
+<td>â</td>
+</tr>
+<tr>
+<td>Terraform Modules</td>
+<td>â GA</td>
+<td>â Available</td>
+<td>â Available</td>
+<td>â</td>
+</tr>
+<tr>
+<td>Virtual Registry</td>
+<td>Â </td>
+<td>Â </td>
+<td>Â </td>
+<td>Â </td>
+</tr>
+<tr>
+<td>Maven Virtual Registry</td>
+<td>Coming 2025</td>
+<td>â Available</td>
+<td>â Available</td>
+<td>â</td>
+</tr>
+<tr>
+<td>npm Virtual Registry</td>
+<td>Coming 2025</td>
+<td>â Available</td>
+<td>â Available</td>
+<td>â</td>
+</tr>
+<tr>
+<td>PyPI Virtual Registry</td>
+<td>Coming 2026</td>
+<td>â Available</td>
+<td>â Available</td>
+<td>â</td>
+</tr>
+<tr>
+<td>NuGet Virtual Registry</td>
+<td>Coming 2026</td>
+<td>â Available</td>
+<td>â Available</td>
+<td>â</td>
+</tr>
+<tr>
+<td>Build Promotion</td>
+<td>Â </td>
+<td>Â </td>
+<td>Â </td>
+<td>Â </td>
+</tr>
+<tr>
+<td>Build Promotion</td>
+<td>â Git-native (tags + versioning)</td>
+<td>â ï¸ Complex workflow system</td>
+<td>â ï¸ Separate promotion process</td>
+<td>â Git-native</td>
+</tr>
+<tr>
+<td>Build Provenance</td>
+<td>â Native end-to-end integration</td>
+<td>â ï¸ Separate "build info" metadata system</td>
+<td>â ï¸ Limited build traceability</td>
+<td>â Code-to-package tracking</td>
+</tr>
+<tr>
+<td>Security &amp; Integration</td>
+<td>Â </td>
+<td>Â </td>
+<td>Â </td>
+<td>Â </td>
+</tr>
+<tr>
+<td>CI/CD Integration</td>
+<td>â Native</td>
+<td>â ï¸ Plugin Required</td>
+<td>â ï¸ Plugin Required</td>
+<td>â Native</td>
+</tr>
+<tr>
+<td>Security Scanning</td>
+<td>â Built-in</td>
+<td>â ï¸ X-Ray</td>
+<td>â Built-in</td>
+<td>â Built-in</td>
+</tr>
+<tr>
+<td>Access Control</td>
+<td>â Granular</td>
+<td>â Granular</td>
+<td>â Granular</td>
+<td>â</td>
+</tr>
+<tr>
+<td>Dependency Firewall</td>
+<td>Coming 2026</td>
+<td>â Available</td>
+<td>â Available</td>
+<td>â</td>
+</tr>
+<tr>
+<td>User Interface</td>
+<td>â Modern &amp; Intuitive</td>
+<td>â ï¸ Complex</td>
+<td>â ï¸ Basic</td>
+<td>â Modern</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong></p>
+<ul>
+<li>â Available/Supported</li>
+<li>â Not Available</li>
+<li>â ï¸ Available with limitations or requires additional setup</li>
+</ul>
+<h4 id=gitlabs-unique-value-proposition>GitLab's unique value proposition</h4>
+<ul>
+<li>Single platform for the entire DevSecOps lifecycle
+<ul>
+<li>Unlike standalone solutions, GitLab Package is part of an integrated platform that includes source code management, CI/CD, security scanning, and deployment. This integration reduces context switching, simplifies workflows, and provides a unified experience across the software development lifecycle.</li>
+</ul>
+</li>
+<li>Native integration with GitLab CI/CD
+<ul>
+<li>The tight integration with GitLab CI/CD means that packages can be built, tested, and published as part of the same pipeline without additional configuration or plugins. This simplifies setup and reduces maintenance overhead.</li>
+</ul>
+</li>
+<li>Built-in security scanning and compliance
+<ul>
+<li>GitLab's integrated security features work directly with your artifacts, providing vulnerability scanning, dependency analysis, and compliance checking without requiring separate products or integrations.</li>
+</ul>
+</li>
+<li>Improved troubleshooting and traceability
+<ul>
+<li>Having artifacts alongside your source code makes troubleshooting issues significantly easier, with clear build provenance and traceability from code to deployment.</li>
+</ul>
+</li>
+<li>Cost and maintenance efficiency
+<ul>
+<li>By consolidating tools, organizations can reduce both licensing costs and the overhead of maintaining multiple systems.</li>
+</ul>
+</li>
+</ul>
+<h3 id=roadmap-highlights>Roadmap highlights</h3>
+<h4 id=2025>2025</h4>
+<ul>
+<li>Maven virtual registry</li>
+<li>npm virtual registry</li>
+<li>Immutable container registry tags</li>
+<li>Complete package protection rollout</li>
+<li>Dependency firewall Beta</li>
+</ul>
+<h4 id=2026>2026</h4>
+<ul>
+<li>PyPI virtual registry</li>
+<li>NuGet virtual registry</li>
+<li>RPM and Debian package support</li>
+<li>Full dependency firewall implementation</li>
+<li>Advanced usage analytics</li>
+</ul>
+<h3 id=target-customer-segments>Target customer segments</h3>
+<h4 id=small-to-medium-organizations>Small to medium organizations</h4>
+<ul>
+<li>Seeking to simplify their toolchain</li>
+<li>Looking for cost-effective solutions</li>
+<li>Value the convenience of integrated platforms</li>
+</ul>
+<h4 id=enterprise-organizations-1>Enterprise organizations</h4>
+<ul>
+<li>Require advanced features like virtual registries</li>
+<li>Need strong supply chain security</li>
+<li>Value centralized management and governance</li>
+<li>Looking to standardize artifact management across teams</li>
+</ul>
+<h3 id=migration-path-for-jfrog-and-nexus-users>Migration Path for JFrog and Nexus Users</h3>
+<p>For organizations looking to migrate from JFrog Artifactory or Sonatype Nexus, GitLab offers a phased approach:</p>
+<ol>
+<li>Assessment: Analyze current package formats and usage patterns</li>
+<li>Pilot: Start with a single team or project type</li>
+<li>Migration: Move packages and configure repositories</li>
+<li>Adoption: Roll out to additional teams and integrate with CI/CD</li>
+</ol>
+<p>Our professional services team can assist with migration planning and implementation to ensure a smooth transition.</p>
+<p>Expected Benefits:</p>
+<ul>
+<li>Reduction in artifact management overhead</li>
+<li>Elimination of context switching between tools</li>
+<li>Simplified authentication and access management</li>
+<li>Reduced licensing and maintenance costs</li>
+</ul>
+<h3 id=customer-success-stories>Customer success stories</h3>
+<blockquote>
+<p>"By consolidating our DevOps toolchain on GitLab, including artifact management, we reduced our annual licensing costs by 35% and improved developer productivity by eliminating context switching." - Enterprise Customer</p>
+</blockquote>
+<blockquote>
+<p>"The integration between GitLab's package registry and CI/CD pipelines simplified our deployment process and reduced the time spent troubleshooting dependency issues." - Mid-size SaaS Company</p>
+</blockquote>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/package/template.html.md.erb" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/package/template.html.md.erb" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=e389f0af'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/scripts.js?cacheBust=e389f0af"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

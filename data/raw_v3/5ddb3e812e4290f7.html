@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Product Direction - Delivery
+|
+GitLab
+</title>
+<meta content='GitLab&#39;s Delivery Group are responsible for delivering GitLab to our SaaS and Self-Managed Customers' name=description />
+<meta content='GitLab&#39;s Delivery Group are responsible for delivering GitLab to our SaaS and Self-Managed Customers' name='twitter:description'/>
+<meta content='GitLab&#39;s Delivery Group are responsible for delivering GitLab to our SaaS and Self-Managed Customers' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Product Direction - Delivery' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/gitlab_delivery/template.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/gitlab_delivery/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Product Direction - Delivery' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=e389f0af'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/gitlab_delivery/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v6.6.0/css/all.css' integrity='sha384-h/hnnw1Bi4nbpD6kE7nYfCXzovi622sY5WBxww8ARKwpdLj5kUWjRuyiXaD1U2JT' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=e389f0af" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=e389f0af" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=e389f0af'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Product Direction - Delivery
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/fzimmer'>
+<img
+src='/images/team/fabianzimmer-crop.jpg'
+class=codeowner-avatar-img
+alt='Fabian Zimmer'
+title='Fabian Zimmer'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/swiskow'>
+<img
+src='/images/team/samwiskow-crop.jpg'
+class=codeowner-avatar-img
+alt='Sam Wiskow'
+title='Sam Wiskow'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/mbruemmer'>
+<img
+src='/images/team/martinbruemmer-crop.jpg'
+class=codeowner-avatar-img
+alt='Martin BrÃ¼mmer'
+title='Martin BrÃ¼mmer'
+>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/gitlab_delivery/template.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li>Product Direction - Delivery</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#overview" id=markdown-toc-overview>Overview</a></li>
+<li><a href="#challenges" id=markdown-toc-challenges>Challenges</a> <ul>
+<li><a href="#open-core-staying-secure" id=markdown-toc-open-core-staying-secure>Open Core, Staying Secure</a></li>
+<li><a href="#tight-logical-coupling" id=markdown-toc-tight-logical-coupling>Tight Logical Coupling</a></li>
+<li><a href="#high-operational-load" id=markdown-toc-high-operational-load>High Operational Load</a></li>
+</ul>
+</li>
+<li><a href="#3-5-year-strategy" id=markdown-toc-3-5-year-strategy>3-5 Year Strategy</a> <ul>
+<li><a href="#releases-are-fully-automated-on-a-schedule-and-published-in-advance" id=markdown-toc-releases-are-fully-automated-on-a-schedule-and-published-in-advance>Releases are Fully Automated, on a schedule and published in advance.</a></li>
+<li><a href="#no-release-blocks-another-type-of-release" id=markdown-toc-no-release-blocks-another-type-of-release>No release blocks another type of release</a></li>
+<li><a href="#team-members-can-understand-the-state-of-a-release-in-under-a-minute" id=markdown-toc-team-members-can-understand-the-state-of-a-release-in-under-a-minute>Team Members can understand the state of a release in under a minute</a></li>
+<li><a href="#continuous-deployment-for-the-graduation-ring" id=markdown-toc-continuous-deployment-for-the-graduation-ring>Continuous Deployment for the Graduation Ring</a></li>
+<li><a href="#finer-grained-control-of-deployments" id=markdown-toc-finer-grained-control-of-deployments>Finer Grained Control of Deployments</a></li>
+<li><a href="#enable-experimental-deployments" id=markdown-toc-enable-experimental-deployments>Enable Experimental Deployments</a></li>
+</ul>
+</li>
+<li><a href="#1-year-plus-plan" id=markdown-toc-1-year-plus-plan>1-Year Plus Plan</a> <ul>
+<li><a href="#automating-releases" id=markdown-toc-automating-releases>Automating Releases</a> <ul>
+<li><a href="#release-environments-validate-all-backported-changes" id=markdown-toc-release-environments-validate-all-backported-changes>Release Environments validate all backported changes</a></li>
+<li><a href="#maintenance-policy-for-bug-fixes-and-security-fixes-is-the-same" id=markdown-toc-maintenance-policy-for-bug-fixes-and-security-fixes-is-the-same>Maintenance policy for bug fixes and security fixes is the same</a></li>
+</ul>
+</li>
+<li><a href="#non-blocking-releases" id=markdown-toc-non-blocking-releases>Non-Blocking Releases</a> <ul>
+<li><a href="#internal-releases" id=markdown-toc-internal-releases>Internal Releases</a></li>
+<li><a href="#non-blocking-release-branches" id=markdown-toc-non-blocking-release-branches>Non-blocking release branches</a></li>
+<li><a href="#release-trains-on-branches-to-unblock-different-release-types" id=markdown-toc-release-trains-on-branches-to-unblock-different-release-types>Release trains on branches to unblock different release types</a></li>
+</ul>
+</li>
+<li><a href="#better-release-information-for-team-members" id=markdown-toc-better-release-information-for-team-members>Better Release Information for Team Members</a> <ul>
+<li><a href="#release-status-in-a-single-pane-of-glass" id=markdown-toc-release-status-in-a-single-pane-of-glass>Release Status in a Single Pane of Glass</a></li>
+<li><a href="#greater-instrumentation-of-release-states" id=markdown-toc-greater-instrumentation-of-release-states>Greater instrumentation of release states</a></li>
+<li><a href="#push-based-delivery" id=markdown-toc-push-based-delivery>Push Based Delivery</a></li>
+</ul>
+</li>
+<li><a href="#ring-based-deployments" id=markdown-toc-ring-based-deployments>Ring Based Deployments</a> <ul>
+<li><a href="#zero-downtime-ring-based-deployment-for-gitlabcom" id=markdown-toc-zero-downtime-ring-based-deployment-for-gitlabcom>Zero Downtime, Ring Based Deployment for gitlab.com</a></li>
+<li><a href="#z-score--metric-based-deployment-safety-metric-for-alerting" id=markdown-toc-z-score--metric-based-deployment-safety-metric-for-alerting>Z Score / Metric Based deployment Safety Metric for Alerting</a></li>
+</ul>
+</li>
+<li><a href="#experimental-releases" id=markdown-toc-experimental-releases>Experimental Releases</a></li>
+<li><a href="#release-channels-on-com" id=markdown-toc-release-channels-on-com>Release Channels on .com</a></li>
+<li><a href="#what-were-not-doing" id=markdown-toc-what-were-not-doing>What we're not doing</a></li>
+</ul>
+</li>
+<li><a href="#whats-next" id=markdown-toc-whats-next>What's Next</a></li>
+<li><a href="#prioritization-framework" id=markdown-toc-prioritization-framework>Prioritization Framework</a></li>
+</ul>
+<h2 id=overview>Overview</h2>
+<p>The <a href="https://handbook.gitlab.com/handbook/engineering/infrastructure/team/delivery/">Delivery Group</a> enables GitLab Engineering to deliver features in a safe, scalable, and efficient fashion to both GitLab.com and self-managed customers. The Group deploys changes to GitLab.com <a href="https://handbook.gitlab.com/handbook/engineering/deployments-and-releases/">continuously</a> throughout the day and also ensures that GitLab's monthly, security, and patch releases are made available to our SaaS Platforms and self-managed customers on a <a href="https://handbook.gitlab.com/handbook/engineering/releases/">predictable schedule</a>.</p>
+<h2 id=challenges>Challenges</h2>
+
+<h3 id=open-core-staying-secure>Open Core, Staying Secure</h3>
+<p>Since GitLab is <a href="https://handbook.gitlab.com/handbook/values/#public-by-default">public by default</a> and operates both SaaS platforms as well as a self-managed offering, there are some unique challenges as part of day to day operations. GitLab's <a href="https://handbook.gitlab.com/handbook/company/stewardship/#business-model">business model</a> is based around an open core and we believe in maintaining transparency over the source code that is part of GitLab, even where this introduces additional challenges.</p>
+<p>However, as a typical part of business for a software company in recent times, we are required to implement security fixes and remediations on a regular basis. In order to keep both ourselves and our customers safe and secure, we must discuss and implement these security fixes whilst maintaining confidentiality until the fixed release is made available to all of our customers. As a result, we have two streams of code that flow into GitLab and divergence can add complexity.</p>
+<h3 id=tight-logical-coupling>Tight Logical Coupling</h3>
+<p>GitLab is made up of a series of components that have a tight logical coupling and strong forward/backward compatibility requirements. Our GitLab.com deployments and managed versioning release processes span many parts of the organization and are reflective of our organization structure, <a href="https://en.wikipedia.org/wiki/Conway%27s_law">see Conwayâs Law</a>. This can make the process highly resistant to change, as there is a significant organizational burden to coordinate and align on the changes that need to be made across a process, where each department has their own metrics and responsibilities. Visibility across processes is low and it has prevented Delivery from truly evolving the process as opposed to iterating on sections over time.</p>
+<h3 id=high-operational-load>High Operational Load</h3>
+<p>Delivery models the <a href="https://teamtopologies.com/key-concepts">complex subsystem team pattern</a> and is responsible for ensuring that GitLab is delivered to customers, without outages, multiple times a day. The team has deep expertise in the architecture, deployment patterns, and hands-on remediations involved in deploying and releasing GitLab. Onboarding, operating, and maintaining these systems have a high cognitive and operational load. As a consequence, project work that could evolve our deployment capabilities and unlock new business opportunities can be deprioritized over âkeep the lights on workâ which prevents/mitigates user impact.</p>
+<h2 id=3-5-year-strategy>3-5 Year Strategy</h2>
+
+<h3 id=releases-are-fully-automated-on-a-schedule-and-published-in-advance>Releases are Fully Automated, on a schedule and published in advance.</h3>
+<p>To maximize predictability for customers and efficiency for GitLab, releases should be fully automated and manual steps should be eliminated from business as usual work.
+We will work towards a system where release manager interventions are driven by actionable notifications that supply the right context to team members.
+The release schedule will be published in advance and driven by our SLOs/SLAs and input metrics/PIs.
+A regular schedule will provide predictability inside GitLab and therefore stability to Customers of GitLab.</p>
+<h3 id=no-release-blocks-another-type-of-release>No release blocks another type of release</h3>
+<p>Patch releases currently block monthly releases and vice versa.
+This is primarily driven by two problems - broken mirroring and potential to leak security fixes.
+We want to have the flexibility to perform a patch release in the middle of a monthly release or perform the monthly release without leaking a security vulnerability.
+Over time we will work towards overhauling our tools and processes to remove blocking from all releases.
+This will enable us to release changes to customers at any time and increase results for customers, particularly in the dimension of delivering bug and security fixes sooner.</p>
+<h3 id=team-members-can-understand-the-state-of-a-release-in-under-a-minute>Team Members can understand the state of a release in under a minute</h3>
+<p>Release managers field a lot of questions on the state of the release and what is happening as part of their shift.
+We also use several slack channels as a rolling feed of release information.
+This can be hard to use both for release managers and engineers and other team members that donât use the channels and chatops every day.
+Team members at GitLab should be able to quickly understand the state of a release, what they need to do and when they can expect to see updates.
+We will work towards pull based and push based systems for team members in order to minimize toil and maximize throughput and results for customers.
+The first iteration of our pull based system can be seen in the <a href="https://dashboards.gitlab.net/d/delivery-release_info/delivery3a-release-information?orgId=1&amp;from=now-7d&amp;to=now">Release Dashboard</a> (Internal).</p>
+<h3 id=continuous-deployment-for-the-graduation-ring>Continuous Deployment for the Graduation Ring</h3>
+<p>Delivery::Deployments is working on the first version of a ring based deployment system as described in the <a href="https://docs.gitlab.com/ee/architecture/blueprints/cells/infrastructure/deployments.html">Cells application deployment blueprint</a>.
+The first iterations of this can be viewed in the <a href="https://gitlab.com/gitlab-com/gl-infra/cells-tissue">Cells Tissue</a> project.
+When we have a fully operational series of rings, Delivery::Deployments will focus on automating the promotion of packages into the rings that Delivery are responsible for.
+This would mean continuous deployment for all cells in ring 0 up to and including the graduation ring where we graduate packages for release to customers, Dedicated and the higher rings of Cells.</p>
+<h3 id=finer-grained-control-of-deployments>Finer Grained Control of Deployments</h3>
+<p>Our unique business situation, offering both a number of SaaS products and a self managed product that are open source, has necessitated a tight coupling between deployments and releases of GitLab.
+This has ensured the organization can move at the fastest speed possible whilst sacrificing some flexibility.
+Over time we want to enable all teams at GitLab to move at their own pace, getting value to customers sooner.
+This will also be essential to support our goal of experimental deployments, enabling our teams to get the best version of features out to customers.</p>
+<h3 id=enable-experimental-deployments>Enable Experimental Deployments</h3>
+<p>We want to be able to enable experimental deployments that help teams at GitLab test product functionality, features, core dependencies, and performance all while reducing risk associated with unknowns servicing customers at the scale of GitLab.com.
+Experimental deployments will be the basis of different release 'channels' at GitLab, meaning that customers who want the latest and greatest can subscribe to an 'experimental' or 'beta' channel whilst customers that optimise for stability can stick to the GA release channel.
+How this will shape up over time will depend on internal and external demand for this kind of release.</p>
+<p>This will help us to be more secure and more performant over time which will increase results for customers.</p>
+<h2 id=1-year-plus-plan>1-Year Plus Plan</h2>
+
+<p>For FY 25, weâre investing in the following capabilities, which are linked to our <a href="#3-5-year-strategy">group 3-5 year strategy</a>:</p>
+<h3 id=automating-releases>Automating Releases</h3>
+<h4 id=release-environments-validate-all-backported-changes>Release Environments validate all backported changes</h4>
+<p>Today when we release a patch of a previous minor version, we are not always able to reliably validate our changes in a reasonable time frame.
+We have released the first iterations of 'Release Environments', for the current stable version, which are live installations of GitLab that look like customer installations of GitLab.
+With Release Environments, we provide a surface on which to test older versions of GitLab that we are releasing to customers.
+We will work toward all releases within the maintenance policy being validated as part of our release process - e.g. omnibus, Kubernetes, GET, etc.
+This will provide maximum confidence that the changes we make will not have any negative impact on customers.
+Over time, by providing release environments on our stable branches for many flavors of GitLab, we will ensure that there is always a place to test and verify the latest changes, increasing organizational efficiency.</p>
+<h4 id=maintenance-policy-for-bug-fixes-and-security-fixes-is-the-same>Maintenance policy for bug fixes and security fixes is the same</h4>
+<p>Today the <a href="https://docs.gitlab.com/ee/policy/maintenance.html">Maintenance Policy</a> for bug fixes and security fixes are asymetrical.
+Extending the bug fix policy to be in line with the security fix policy will mean that more customers get more fixes sooner.
+We support this unofficially today in delivery thanks to the improvements weâve made on the security releases last year.
+A large piece of work will be aligning this new policy with stage teams and getting them to commit to backporting fixes to two previous minor versions.
+We hope to align the maintenance policy in FY25.</p>
+<h3 id=non-blocking-releases>Non-Blocking Releases</h3>
+<h4 id=internal-releases>Internal Releases</h4>
+<p>Internal releases are an important emerging need now that we are supporting multiple internal GitLab installations (.com &amp; Dedicated) and plan to support even more as Cells are added to production infrastructure.
+We need a way to ensure that we can remediate vulnerabilities on GitLab managed systems before those vulnerabilities are disclosed publicly.
+Additionally, internal releases will provide the first iterations of the mechanism that evolve to power our non-blocking releases and highly flexible release tools.</p>
+<h4 id=non-blocking-release-branches>Non-blocking release branches</h4>
+<p>We will update our branching strategy around stable branches to enable non-blocking release trains, prevent the leak of security vulnerabilities and resolve the issues around broken mirroring in the security mirrors.
+This will help us to maximise customer results in our decision making and lower the impact of any compromise to GitLab.</p>
+<h4 id=release-trains-on-branches-to-unblock-different-release-types>Release trains on branches to unblock different release types</h4>
+<p>One of the capabilities that we have envisioned is a release train that helps engineers to understand when and where releases are happening as well as what changes a release will contain.
+Delivery will provide the tooling and mechanics of the release train, including visuals and notifications of the status.
+The release train will start on a fixed timeline toward a release and notify GitLab engineers that a release is happening and any changes that can get on the release train will be deployed with the next release.
+This will also feed into our push based system for release information with engineers getting direct feedback about their changes and inclusion in versions of GitLab.</p>
+<h3 id=better-release-information-for-team-members>Better Release Information for Team Members</h3>
+<h4 id=release-status-in-a-single-pane-of-glass>Release Status in a Single Pane of Glass</h4>
+<p>Centralizing release information in a single place will lower the context required to discover release information, lower the dependency on release managers and decrease toil for all team members.
+We have completed our initial iteration, displaying information about the monthly release on the <a href="https://dashboards.gitlab.net/d/delivery-release_info/delivery3a-release-information?orgId=1&amp;from=now-7d&amp;to=now">Release Dashboard</a>. We will iterate here to expand to patch releases as well as other supplementary release information.</p>
+<h4 id=greater-instrumentation-of-release-states>Greater instrumentation of release states</h4>
+<p>Having greater understanding and instrumentation of the release states will give us more granular and detailed information that we can display to users.
+This will further lower the context required for team-members to understand the release states and increase organizational efficiency across the board for GitLab.
+Weâre starting with an âannouncedâ state for the monthly release to let team-members know a release candidate has been picked.</p>
+<h4 id=push-based-delivery>Push Based Delivery</h4>
+<p>As well as the pull based self-serve solutions for release information, engineers in particular will benefit from a push based system that allows them to get instant and/or direct feedback about their changes and what release the changes will be included into.
+We will build push based notification into our releases, in combination with the delivery of a release train, that enables engineers to get feedback about releases in relation to their changes.
+This will help to lower the context around releases and allow engineers to focus on delivering their work, decreasing context switching and improving customer results.</p>
+<h3 id=ring-based-deployments>Ring Based Deployments</h3>
+<h4 id=zero-downtime-ring-based-deployment-for-gitlabcom>Zero Downtime, Ring Based Deployment for gitlab.com</h4>
+<p>Building on the insight we have gathered from running GitLab.com and applying our zero downtime expertise to GitLab Dedicated, we will deliver a zero downtime, ring based deployment system that will enable GitLab to evolve into a cellular architecture.
+The first iterations of this can be viewed in the <a href="https://gitlab.com/gitlab-com/gl-infra/cells-tissue">Cells Tissue</a> project.</p>
+<h4 id=z-score--metric-based-deployment-safety-metric-for-alerting>Z Score / Metric Based deployment Safety Metric for Alerting</h4>
+<p>We will introduce a deployment safety metric which will allow us to reason about how ânormalâ any deployment is compared to previous deployments.
+Over time, this will allow us to grow confidence in more unattended deployments and promotions and build automation to take action when we observe known problematic behaviors.
+This is a key requirement for moving towards continuous deployment and specifically, automatic promotion of packages for gitlab.com.
+Once we have a trusted deployment saftey metric, we can begin to increase the level of automation around promotion to production.</p>
+<h3 id=experimental-releases>Experimental Releases</h3>
+<h3 id=release-channels-on-com>Release Channels on .com</h3>
+<p>As we mature the tooling that allows us to perform experimental deployments, we expect that we will be able to open specific release 'channels' that customers are able to subscribe to.
+These release channels may come with added incentives to participate in our experiments and/or beta programs whilst maintaining stability for a GA channel, for the majority of the fleet.</p>
+<h3 id=what-were-not-doing>What we're not doing</h3>
+<p>As part of being a <a href="https://teamtopologies.com/key-concepts">complicated subsystem team</a> with a high operational load, we have to be deliberate about the work that we take on. There are a few things that weâre interested in, but canât take on right now:</p>
+<ul>
+<li>Supporting Teams with non standard release processes in automating their deployments and implementing the <a href="https://gitlab.com/gitlab-org/release/docs/-/blob/master/components/index.md">component requirements</a></li>
+</ul>
+<h2 id=whats-next>What's Next</h2>
+<p>For a Look at the work in progress and what's next, you can stay up to date with our in progress epic and our roadmap epics:</p>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-com/gl-infra/-/epics/170">Current work in progress</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-com/gl-infra/-/epics/1276">Releases Roadmap</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-com/gl-infra/-/epics/1277">Deployments Roadmap</a></li>
+</ul>
+<h2 id=prioritization-framework>Prioritization Framework</h2>
+<p>Because Delivery are responsible for deploying our multi-tenant SaaS offering (gitlab.com) as well as releasing GitLab packages for Dedicated and Self Managed, we prioritize "Keep the lights on" activities (e.g. deployment failures, incidents, release management) above all else to ensure we provide customers a high level of service that continually meets our reliability and performance SLAs. Aside from this our work assumes the normal <a href="https://handbook.gitlab.com/handbook/product/product-processes/#how-we-prioritize-work">product prioritization process</a> and the top priority is just a reflection of our operational responsibilities.</p>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/gitlab_delivery/template.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/gitlab_delivery/template.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=e389f0af'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/scripts.js?cacheBust=e389f0af"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

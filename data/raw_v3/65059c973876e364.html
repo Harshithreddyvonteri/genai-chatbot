@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Software Supply Chain Security Direction
+|
+GitLab
+</title>
+<meta content='Software needs to be developed in a way that properly protects it from supply chain attacks. This page highlights GitLab&#39;s direction.' name=description />
+<meta content='Software needs to be developed in a way that properly protects it from supply chain attacks. This page highlights GitLab&#39;s direction.' name='twitter:description'/>
+<meta content='Software needs to be developed in a way that properly protects it from supply chain attacks. This page highlights GitLab&#39;s direction.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Software Supply Chain Security Direction' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/supply-chain/index.html.md.erb' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/supply-chain/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Software Supply Chain Security Direction' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=e389f0af'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/supply-chain/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v6.6.0/css/all.css' integrity='sha384-h/hnnw1Bi4nbpD6kE7nYfCXzovi622sY5WBxww8ARKwpdLj5kUWjRuyiXaD1U2JT' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=e389f0af" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=e389f0af" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=e389f0af'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Software Supply Chain Security Direction
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/sarahwaldner'>
+<img
+src='/images/team/sarahwaldner-crop.jpg'
+class=codeowner-avatar-img
+alt='Sarah Waldner'
+title='Sarah Waldner'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/david'>
+<img
+src='/images/team/ddesanto-crop.jpg'
+class=codeowner-avatar-img
+alt='David DeSanto'
+title='David DeSanto'
+>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/supply-chain/index.html.md.erb" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li>Software Supply Chain Security Direction</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#background" id=markdown-toc-background>Background</a></li>
+<li><a href="#how-sscs-applies-to-gitlab" id=markdown-toc-how-sscs-applies-to-gitlab>How SSCS applies to GitLab</a></li>
+<li><a href="#current-position-and-vision" id=markdown-toc-current-position-and-vision>Current Position and Vision</a> <ul>
+<li><a href="#source" id=markdown-toc-source>Source</a> <ul>
+<li><a href="#internal-sources" id=markdown-toc-internal-sources>Internal Sources</a></li>
+<li><a href="#external-sources" id=markdown-toc-external-sources>External Sources</a></li>
+</ul>
+</li>
+<li><a href="#build" id=markdown-toc-build>Build</a> <ul>
+<li><a href="#build-execution" id=markdown-toc-build-execution>Build Execution</a></li>
+<li><a href="#provenance-and-signing" id=markdown-toc-provenance-and-signing>Provenance and Signing</a></li>
+</ul>
+</li>
+<li><a href="#consumption" id=markdown-toc-consumption>Consumption</a> <ul>
+<li><a href="#binary-acceptance" id=markdown-toc-binary-acceptance>Binary Acceptance</a></li>
+</ul>
+</li>
+<li><a href="#management-process" id=markdown-toc-management-process>Management Process</a></li>
+<li><a href="#tool-security" id=markdown-toc-tool-security>Tool Security</a></li>
+</ul>
+</li>
+<li><a href="#strategy" id=markdown-toc-strategy>Strategy</a></li>
+<li><a href="#highlighted-epics-and-issues" id=markdown-toc-highlighted-epics-and-issues>Highlighted epics and issues</a></li>
+<li><a href="#whats-next--why" id=markdown-toc-whats-next--why>What's next &amp; why</a></li>
+<li><a href="#what-are-we-not-doing" id=markdown-toc-what-are-we-not-doing>What are we not doing</a></li>
+<li><a href="#competitive-landscape" id=markdown-toc-competitive-landscape>Competitive landscape</a></li>
+<li><a href="#frameworks" id=markdown-toc-frameworks>Frameworks</a></li>
+<li><a href="#north-stars" id=markdown-toc-north-stars>North Stars</a></li>
+<li><a href="#analyst-landscape" id=markdown-toc-analyst-landscape>Analyst Landscape</a></li>
+</ul>
+<p>The <a href="https://about.gitlab.com/direction/security/">Sec Section</a> coordinates GitLab's overall direction for <a href="/solutions/supply-chain/">Software Supply Chain Security (SSCS)</a>.
+Many groups are involved in delivering a comprehensive, quality secure supply chain experience at GitLab.</p>
+<p>Our goal is to deliver capabilities in the GitLab platform that gives users confidence in the integrity and security of their software supply chain.
+This direction page is intended to facilitate collaboration and describe the product capabilities that would contribute to this vision.</p>
+<h2 id=background>Background</h2>
+<p>In today's software-driven world, your applications aren't just what you code - they're built from hundreds of components from across the global software supply chain. While this accelerates innovation, it also introduces new risks. GitLab gives you visibility into these risks and provides ways to remediate them.</p>
+<p>Software Supply Chain Security (SSCS) seeks to manage the full spectrum of security risks that may be introduced by people, processes, or technology throughout planning, building, deploying, and operating an application, from concept to sunset. Recent high-profile attacks like SolarWinds have shown that compromised dependencies can have devastating consequences. Meanwhile, new regulations like the <a href="https://www.cisa.gov/topics/cybersecurity-best-practices/executive-order-improving-nations-cybersecurity">US Executive Order on Cybersecurity</a> and <a href="https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act">EU Cyber Resilience Act</a> are making supply chain security a compliance requirement.</p>
+<p>Shared understanding of SSCS's scope has evolved significantly over the past few years. What was once rooted rather narrowly in managing third-party dependency risk has evolved into a robust set of standards and approaches that address practices across the full spectrum of software development activities. A central concern of SSCS and its primary "output" is a software artifact's<sup id="fnref:1" role=doc-noteref><a href="#fn:1" class=footnote rel=footnote>1</a></sup> chain of custody. This chain of custody materializes in a variety of ways:</p>
+<ul>
+<li>A software bill of materials (SBoM) specifies what comprises a software artifact, including any third-party code, along with other facts about where it's coming from and how it was producedâanalogous to an "ingredient label" for the product.</li>
+<li><a href="https://slsa.dev/spec/v1.0/levels">Supply-chain Levels for Software Artifacts</a> (SLSA) specifies guidelines and appropriate types of evidence about other parts of the software production process. Continuing the SBOM-as-ingredient-list analogy, SLSA <a href="https://slsa.dev/spec/v1.0/about#slsa-in-laypersons-terms">is described</a> as "the food safety handling guidelines that make an ingredient list credible". SLSA is not a single standard, so organizations and products satisfy different tracks and levels of its guidelines.</li>
+<li>NIST's <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218.pdf">Secure Software Development Framework</a> (SSDF) and accompanying practical guides from the Enduring Security Framework partnership (<a href="https://www.cisa.gov/sites/default/files/publications/ESF_SECURING_THE_SOFTWARE_SUPPLY_CHAIN_DEVELOPERS.PDF">example</a>) outline a core set of high-level secure software development practices that can be integrated into any SDLC implementation. They categorize these practices into four groups: prepare the organization, protect the software, produce well-secured software, and respond to vulnerabilities.</li>
+</ul>
+<p>Together, these concepts, documents, and standards are increasingly being embedded in industry requirements and regulations. Although the supply chain security space is still rapidly evolving, the U.S. Government has already begun implementing requirements for federal vendors. We expect that supply chain requirements will continue to evolve for the foreseeable future as part of federal regulations, regulated-industry standards, and individual organizational requirements.</p>
+<p>As a single application for the DevSecOps lifecycle, GitLab is uniquely positioned to meet all of the requirements.</p>
+<h2 id=how-sscs-applies-to-gitlab>How SSCS applies to GitLab</h2>
+<p>SSCS applies to GitLab in more than one way:</p>
+<ol>
+<li>As a company building a product:
+<ol>
+<li>We produce software artifacts for customers, and these customers require us to make assertions about the quality and provenance of the artifacts we provide.</li>
+<li>We consume software artifacts from other sources, including open-source software that we redistribute to our customers as part of our product.</li>
+</ol>
+</li>
+<li>As a product enabling customers to build their own products:
+<ol>
+<li>We enable customers to securely produce and consume software.</li>
+<li>We host software projects, and build and distribute software artifacts, making us a key part of the supply chain.</li>
+</ol>
+</li>
+</ol>
+<p>This direction focuses on the capabilities we provide to customers, so they can securely produce and consume software.</p>
+<h2 id=current-position-and-vision>Current Position and Vision</h2>
+<p>We believe that there are five main aspects to consider when providing for a secure end-to-end software supply chain.</p>
+<ol>
+<li><strong>Source</strong> - includes the controls needed to be confident that both internal and external source code is safe from vulnerabilities and has not been compromised in any way.</li>
+<li><strong>Build</strong> - includes rigorous requirements for the security and isolation of build environments as well as the automatic generation of provenance.</li>
+<li><strong>Consumption</strong> - includes the ability to validate authenticity and source of any executed binaries. Supports requirements for securing the underlying host infrastructure itself.</li>
+<li><strong>Management Process</strong> - this component spans across all other aspects of SSCS and includes both the tools and processes necessary to provide for ongoing visibility into compliance SSCS requirements.</li>
+<li><strong>Tool Security</strong> - this component spans across all other aspects of SSCS and includes the adoption of best practices for managing the security of the underlying tools themselves.</li>
+</ol>
+<p>The state of GitLab product capabilities required to address each of the five aspects of SSCS currently spans the spectrum from vision items to complete features:</p>
+<h3 id=source>Source</h3>
+<p>The approach for protecting code sources can be subdivided by thinking about protection for Internal Sources separately from protection for External Sources.</p>
+<p><strong>Status Legend / Key</strong></p>
+<table>
+<thead>
+<tr>
+<th>Icon</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>â</td>
+<td>Feature is considered complete</td>
+</tr>
+<tr>
+<td>ð¨</td>
+<td>Feature exists and still has areas for improvement</td>
+</tr>
+<tr>
+<td>â</td>
+<td>Feature is part of the vision and has not yet been built inside GitLab</td>
+</tr>
+</tbody>
+</table>
+<h4 id=internal-sources>Internal Sources</h4>
+<table>
+<thead>
+<tr>
+<th>Key Requirements</th>
+<th>Status</th>
+<th>GitLab Group</th>
+<th>Current Capabilities</th>
+<th>Future Vision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Version control and code history</td>
+<td>â</td>
+<td><code>Create:Source Code</code></td>
+<td><a href="https://about.gitlab.com/topics/version-control/how-implement-version-control/">Version control</a> and code history retention is fully supported in GitLab as part of Git.</td>
+<td>Â </td>
+</tr>
+<tr>
+<td>Developer identity verification</td>
+<td>â</td>
+<td><code>Create:Source Code</code></td>
+<td><a href="https://docs.gitlab.com/ee/user/project/repository/signed_commits/gpg.html">GPG key signing</a> is and <a href="https://docs.gitlab.com/ee/user/project/repository/signed_commits/ssh.html">SSH key signing</a> are both fully supported by GitLab. Additionally, <a href="https://docs.gitlab.com/ee/push_rules/push_rules.html">push rules</a> can be configured to reject commits that are not GPG key signed. On GitLab.com, commits made through the webUI are signed by default using an SSH key. Self managed instance administrators can configure default signing through the webUI to happen through either SSH or openPGP.</td>
+<td>To further mature in this area, we are <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/364428">considering also adding support for GitSign</a> to sign all commits that are made in the GitLab UI by using the user's GitLab OIDC identity. This work is blocked due to the lack of a Ruby Sigstore library.</td>
+</tr>
+<tr>
+<td>Enforced two-person code review and security review for vulnerabilities</td>
+<td>â</td>
+<td><code>Create:Code Review</code></td>
+<td>GitLab has a <a href="https://docs.gitlab.com/ee/user/project/merge_requests/approvals/">robust approval system</a> capable of requiring two-person review, including from an approver who is also not the code owner.</td>
+<td>Although this feature is generally considered to be complete, improvements are ongoing.</td>
+</tr>
+<tr>
+<td>Branch protection rules and vulnerability approval rules</td>
+<td>â</td>
+<td><code>Create:Source Code</code> and <code>SRM:Security Policies</code></td>
+<td>GitLab fully supports the ability to create <a href="https://docs.gitlab.com/ee/push_rules/push_rules.html#enabling-push-rules">branch protection rules</a> and <a href="https://docs.gitlab.com/ee/user/application_security/#security-approvals-in-merge-requests">approval rules</a></td>
+<td>Â </td>
+</tr>
+<tr>
+<td>Dependency protection rules</td>
+<td>â</td>
+<td><code>Package:Package</code></td>
+<td>Â </td>
+<td>The vision is to empower users to create <a href="https://gitlab.com/groups/gitlab-org/-/epics/9825">container image</a> and <a href="https://gitlab.com/groups/gitlab-org/-/epics/5574">package</a> protection rules to further restrict who can update your critical dependencies.</td>
+</tr>
+<tr>
+<td>Ability to restrict merge access by defining project maintainers</td>
+<td>â</td>
+<td><code>SSCS:Authorization</code></td>
+<td>GitLab fully <a href="https://docs.gitlab.com/ee/user/project/members/">supports this requirement</a>.</td>
+<td>Â </td>
+</tr>
+<tr>
+<td>Multiple types of code scanning: Secret Detection, SAST, DAST, API Fuzzing, Coverage Guided Fuzzing</td>
+<td>â</td>
+<td><code>AST</code></td>
+<td>Users can run a wide variety of scanners natively through GitLab. They can manage the results and require approval for merge requests where new vulnerabilities are identified.</td>
+<td>Although this feature is generally considered to be complete for the purposes of SSCS, improvements are ongoing. Among other things, GitLab strives to continually expand the coverage, accuracy, and language support of our scanners.</td>
+</tr>
+<tr>
+<td>Controlled development environments</td>
+<td>â</td>
+<td><code>Create:Remote Development</code></td>
+<td>Currently GitLab has integrations with tools such as <a href="https://docs.gitlab.com/ee/integration/gitpod.html">GitPod</a> that allow software engineers to do their development in a remote environment.</td>
+<td>The <a href="https://about.gitlab.com/direction/create/remote_development/workspaces">future vision</a> is for GitLab to host a remote environment that is tightly integrated with GitLab and that can be managed and updated centrally. Centrally managing this environment reduces the number of tools that need to be installed on individual development environments and can help to protect against malware and code tampering.</td>
+</tr>
+</tbody>
+</table>
+<h4 id=external-sources>External Sources</h4>
+<table>
+<thead>
+<tr>
+<th>Key Requirements</th>
+<th>Status</th>
+<th>GitLab Group</th>
+<th>Current Capabilities</th>
+<th>Future Vision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SCA scanning</td>
+<td>â</td>
+<td><code>AST:Composition Analysis</code></td>
+<td>Users can continuously scan both their application dependencies and their system dependencies for vulnerabilities. They can manage the results of these scans within GitLab and can require approval for merge requests where new vulnerabilities are identified.</td>
+<td>Although this feature is generally considered to be complete for the purposes of SSCS, improvements are ongoing. Among other things, GitLab strives to continually expand the coverage, accuracy, and language support of our scanners.</td>
+</tr>
+<tr>
+<td>Dependency risk analysis</td>
+<td>â</td>
+<td><code>AST:Composition Analysis</code></td>
+<td>Â </td>
+<td>This includes the ability to analyze metadata available for a dependency, as well as analyzing the source code itself to generate an overarching risk score for the dependency. Among other things, some of this data might include whether or not the dependency is well maintained, whether it has supply chain security protections in place, whether not not it contains known malicious code or obfuscated code.</td>
+</tr>
+<tr>
+<td>Automated dependency updates</td>
+<td>â</td>
+<td><code>AST:Composition Analysis</code></td>
+<td>GitLab has the ability to <a href="https://docs.gitlab.com/ee/user/application_security/vulnerabilities/index.html#resolve-a-vulnerability">generate merge requests</a> that can attempt to fix container scanning and some dependency scanning vulnerabilities.</td>
+<td>The vision is to automatically generate merge requests to keep dependencies up-to-date with the latest versions.</td>
+</tr>
+<tr>
+<td>Dependency graph</td>
+<td>â</td>
+<td><code>AST:Composition Analysis</code></td>
+<td>Â </td>
+<td>GitLab has plans to add a <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/366168">dependency tree visualization</a> feature into GitLab for easier visualization of the dependencies that exist between external sources.</td>
+</tr>
+<tr>
+<td>Binary scanning of dependencies</td>
+<td>â</td>
+<td><code>AST:Composition Analysis</code></td>
+<td>Â </td>
+<td>Basic SCA scanning compares installed package names and versions to a database of known vulnerabilities. Binary scanning takes this one step further by inspecting the contents of the binary itself using static analysis tools to detect potential vulnerabilities.</td>
+</tr>
+<tr>
+<td>Behavioral analysis of dependencies</td>
+<td>â</td>
+<td><code>AST:Composition Analysis</code></td>
+<td>Â </td>
+<td>The vision is for users to be able to analyze the behavior of their dependencies using GitLab. Observing key events such as system calls, network connectivity, and file reads during the test stage of the CI pipeline can provide insights into whether or not an upstream dependency has potentially become compromised in some way.</td>
+</tr>
+<tr>
+<td>Verification of provenance</td>
+<td>â</td>
+<td><code>AST:Composition Analysis</code></td>
+<td>Â </td>
+<td>The vision is to allow users to verify and validate published attestation or provenance for upstream dependencies (if it exists) as part of the CI pipeline and alert on any dependencies that do not meet established criteria.</td>
+</tr>
+<tr>
+<td>Dependency firewall</td>
+<td>â</td>
+<td><code>Package:Package</code></td>
+<td>Â </td>
+<td>The vision is to <a href="https://gitlab.com/groups/gitlab-org/-/epics/5133">build a dependency firewall into GitLab</a>. This would allow users to configure rules to prevent use of dependencies that do not match established rules. This can help protect against typosquatting attacks and can block packages that have concerning characteristics.</td>
+</tr>
+</tbody>
+</table>
+<h3 id=build>Build</h3>
+<h4 id=build-execution>Build Execution</h4>
+<table>
+<thead>
+<tr>
+<th>Key Requirements</th>
+<th>Status</th>
+<th>GitLab Group</th>
+<th>Current Capabilities</th>
+<th>Future Vision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Support for scripted builds from code</td>
+<td>â</td>
+<td><code>Verify</code></td>
+<td>GitLab supports the ability to run <a href="https://docs.gitlab.com/ee/ci/">CI/CD pipelines</a> and both execute and deploy scripted builds from code.</td>
+<td>Â </td>
+</tr>
+<tr>
+<td>Secure, ephemeral, and isolated build environment</td>
+<td>â</td>
+<td><code>Verify:Runner</code></td>
+<td>This is supported as long as the runners are <a href="https://docs.gitlab.com/runner/security/">properly secured</a>. Use of non-privileged Docker executors is recommended.</td>
+<td>Â </td>
+</tr>
+<tr>
+<td>Support for hermetic builds</td>
+<td>â</td>
+<td><code>Verify:Runner</code></td>
+<td>GitLab supports the ability to <a href="https://docs.gitlab.com/runner/security/#network-segmentation">limit network access to runners</a>. Runners do require connectivity to the GitLab server.</td>
+<td>Â </td>
+</tr>
+<tr>
+<td>Machine identity verification for all sources</td>
+<td>â</td>
+<td><code>Verify</code></td>
+<td>Users who desire this feature would currently need to build/script this verification themselves.</td>
+<td>The vision for this is to include some additional verification checks to be confident that all sources are coming from trusted, verified locations.</td>
+</tr>
+</tbody>
+</table>
+<h4 id=provenance-and-signing>Provenance and Signing</h4>
+<table>
+<thead>
+<tr>
+<th>Key Requirements</th>
+<th>Status</th>
+<th>GitLab Group</th>
+<th>Current Capabilities</th>
+<th>Future Vision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Build output signing</td>
+<td>â</td>
+<td><code>Verify:Runner</code></td>
+<td>GitLab currently supports a <a href="https://docs.gitlab.com/ee/ci/yaml/signing_examples.html">native integration with Sigstore</a> which allows users to easily sign their builds through Cosign.</td>
+<td>Future work is planned to allow the GitLab Runner to <a href="https://gitlab.com/groups/gitlab-org/-/epics/9212">sign build outputs automatically</a> without requiring manual configuration on the part of users.</td>
+</tr>
+<tr>
+<td>Provenance/Attestation generation for build outputs</td>
+<td>ð¨</td>
+<td><code>Verify:Runner</code></td>
+<td>Currently GitLab can be used to <a href="https://docs.gitlab.com/ee/ci/runners/configure_runners.html#artifact-provenance-metadata">generate a provenance metadata document</a> for all build artifacts. Users who wish to have this document signed can do so through our <a href="https://gitlab.com/groups/gitlab-org/-/epics/9212">integration with Sigstore</a>.</td>
+<td>Future work is planned to allow the GitLab Runner to <a href="https://gitlab.com/groups/gitlab-org/-/epics/9212">sign attestation files automatically</a> without requiring manual configuration on the part of users.</td>
+</tr>
+<tr>
+<td>Release evidence generation</td>
+<td>ð¨</td>
+<td><code>Release:Release</code></td>
+<td>Generation and publication of <a href="https://docs.gitlab.com/ee/user/project/releases/#release-evidence">release evidence</a> is currently supported.</td>
+<td>Release evidence will ideally be expanded to include an SBOM of all dependencies as well as the provenance/attestation that was generated at the time the build was created.</td>
+</tr>
+<tr>
+<td>SBOM generation and management</td>
+<td>ð¨</td>
+<td><code>AST:Composition Analysis</code></td>
+<td>GitLab is currently able to generate a SBOM of application and system dependencies. This is displayed on the Dependency List page where users can easily view all the included packages along with their version and any vulnerabilities that have been detected. Additionally, a JSON CycloneDX formatted artifact can be produced in the CI pipeline.</td>
+<td>In the future, GitLab plans to add support for <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/407453">exporting the dependency list</a> in SPDX and CycloneDX formats. Eventually this SBOM is envisioned to be signed and included in any generated provenance/attestation documents that are produced.</td>
+</tr>
+</tbody>
+</table>
+<h3 id=consumption>Consumption</h3>
+<h4 id=binary-acceptance>Binary Acceptance</h4>
+<table>
+<thead>
+<tr>
+<th>Key Requirements</th>
+<th>Status</th>
+<th>GitLab Group</th>
+<th>Current Capabilities</th>
+<th>Future Vision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Binary authorization enforcement to validate and verify provenance</td>
+<td>â</td>
+<td><code>Configure:Configure</code></td>
+<td>Â </td>
+<td>GitLab already supports continuous deployment through the GitLab Kubernetes Agent. Ideally this will be extended to validate and verify the provenance/attestation for container images prior to deploying them in production. In addition, regular scans might be done to verify on an ongoing basis that Binary Authorization has been set up within the production environment and to further validate and confirm that all running deployments meet established policies. One tool that might be used for this in the future is <a href="https://github.com/grafeas/kritis">Kritis</a></td>
+</tr>
+<tr>
+<td>Validation and verification of source machine identities</td>
+<td>â</td>
+<td><code>Configure:Configure</code></td>
+<td>This requirement is met by default for users who deploy to production using GitLab for continuous deployment. The <a href="https://docs.gitlab.com/ee/user/clusters/agent/">GitLab Kubernetes Agent</a> automatically verifies and validates the authenticity of the GitLab server certificate that it connects to.</td>
+<td>Â </td>
+</tr>
+</tbody>
+</table>
+<h3 id=management-process>Management Process</h3>
+<table>
+<thead>
+<tr>
+<th>Key Requirements</th>
+<th>Status</th>
+<th>GitLab Group</th>
+<th>Current Capabilities</th>
+<th>Future Vision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reporting on adherence to compliance standards</td>
+<td>ð¨</td>
+<td><code>SSCS:Compliance</code></td>
+<td>GitLab support several <a href="https://docs.gitlab.com/ee/user/compliance/compliance_report">compliance reports</a> natively in GitLab. Additional data can also be collected through the API or monitored through GitLab Audit Events.</td>
+<td>Work on a centralized dashboard showing compliance with <a href="https://slsa.dev/">SLSA</a> and other similar standards is part of GitLab's vision.</td>
+</tr>
+<tr>
+<td>Enforcement of secure settings</td>
+<td>ð¨</td>
+<td><code>SRM:Security Policies</code></td>
+<td>Security and compliance teams can currently enforce a wide variety of controls, including requiring scans to be run, enforcing security-related configuration settings, and maintaining requirements related to merge request approvals.</td>
+<td>The vision is for Security and Compliance teams to be able to enforce <strong>all</strong> aspects of SSCS in a way that other users are unable to disable or change those settings.</td>
+</tr>
+<tr>
+<td>Credential management</td>
+<td>ð¨</td>
+<td><code>SSCS:Authentication</code></td>
+<td>Self managed users are currently able to enforce requirements related to <a href="https://docs.gitlab.com/ee/security/ssh_keys_restrictions.html">SSH keys</a>, <a href="https://docs.gitlab.com/ee/administration/settings/account_and_limit_settings.html#limit-the-lifetime-of-ssh-keys">SSH access</a>, and <a href="https://docs.gitlab.com/ee/administration/settings/account_and_limit_settings.html#limit-the-lifetime-of-personal-access-tokens">Personal Access Tokens (PAT)</a>.</td>
+<td>The vision is to <a href="https://gitlab.com/groups/gitlab-org/-/epics/5188">provide SaaS users with feature parity</a> for managing SSH keys, SSH access, and PAT access policies.</td>
+</tr>
+</tbody>
+</table>
+<h3 id=tool-security>Tool Security</h3>
+<table>
+<thead>
+<tr>
+<th>Key Requirements</th>
+<th>Status</th>
+<th>GitLab Group</th>
+<th>Current Capabilities</th>
+<th>Future Vision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Audit logs</td>
+<td>ð¨</td>
+<td><code>SSCS:Compliance</code></td>
+<td>GitLab has a robust <a href="https://docs.gitlab.com/ee/administration/audit_events.html">audit logging system</a> in place today.</td>
+<td>Additional audit events are regularly being added into GitLab.</td>
+</tr>
+<tr>
+<td>Access controls</td>
+<td>ð¨</td>
+<td><code>SSCS:Authorization</code></td>
+<td>GitLab supports multiple <a href="https://docs.gitlab.com/ee/administration/auth/">authentication and authorization</a> options today, including <a href="https://docs.gitlab.com/ee/user/custom_roles.html">support for custom roles</a>.</td>
+<td>GitLab is planning to add support for <a href="https://gitlab.com/groups/gitlab-org/-/epics/12264">additional custom permissions</a> so that users can be configured with the least privileges required to do their job.</td>
+</tr>
+<tr>
+<td>Threat detection</td>
+<td>â</td>
+<td><code>SSCS:Authentication</code> and <code>SSCS:Compliance</code></td>
+<td>Users can integrate external systems with GitLab to analyze suspicious behavior.</td>
+<td>GitLab has an opportunity to leverage anomaly detection and machine learning to detect and stop threats. This can be used to analyze user behavior as well as activity on the GitLab server itself.</td>
+</tr>
+</tbody>
+</table>
+<h2 id=strategy>Strategy</h2>
+<p>In the long-term, our strategy is to become a complete provider for all aspects of software supply chain security. Providing all of these aspects within a single application not only supports GitLab's broader <a href="https://handbook.gitlab.com/handbook/source/handbook/product/single-application">Single Application Strategy</a> but also provides numerous tangible benefits for users.</p>
+<p>Among other things, using a single application:</p>
+<ul>
+<li>minimizes the number of different tools that need to be hardened and monitored.</li>
+<li>reduces the number of potential points of security failure as data is transferred between various tools.</li>
+<li>enables seamless interoperability.</li>
+<li>simplifies visibility and traceability for audits.</li>
+</ul>
+<h2 id=highlighted-epics-and-issues>Highlighted epics and issues</h2>
+<p>There are a few epics and important issues you can check out to see where we're headed. More will be added here as we develop this vision further.</p>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/8226">Dependency Management Vision</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/6207">Artifact Data Store</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/5135">Release Evidence Viability</a></li>
+</ul>
+<h2 id=whats-next--why>What's next &amp; why</h2>
+<p>Although we support <a href="https://docs.gitlab.com/ee/ci/yaml/signing_examples.html">signing of build artifacts through Sigstore</a>, the user experience for signed container images in GitLab is not ideal as signatures show up on a separate line item from the container image that they have signed. In 16.11 we plan to address this by associating container images with their signatures in the UI to make it easier to see which images are signed and to more easily validate those signatures.</p>
+<p>Additionally, we are continuing ongoing work to explore whether we can automatically sign build artifacts natively in the GitLab Runner. Automatic signing is believed to be the best way to get widespread adoption of signing.</p>
+<p>A full list of the SSCS working group's current priorities can be viewed <a href="https://handbook.gitlab.com/handbook/company/working-groups/software-supply-chain-security/#priorities-and-progress">on this working group page</a>.</p>
+<h2 id=what-are-we-not-doing>What are we not doing</h2>
+<p>Sigstore currently has two key limitations that impact GitLab:</p>
+<ol>
+<li>Sigstore does not have a Ruby library</li>
+<li>Sigstore does not have good support for deploying and running a self managed Sigstore instance</li>
+</ol>
+<p>We do not currently plan to address either of these limitations directly and instead are hoping to work with the wider community to find alternate solutions. Because of these feature gaps, we do not plan on adding support for our Sigstore integration for self managed instances. We also are limited in our ability to natively validate Sigstore signatures within GitLab due to the lack of Ruby support.</p>
+<h2 id=competitive-landscape>Competitive landscape</h2>
+<p>There have been indications that Tekton and Sigstore are tools representing a leader in software supply chain security. One example of how this has been used in practice can be found in this <a href="https://dlorenc.medium.com/zero-trust-supply-chain-security-e3fb8b6973b8">blog</a>.</p>
+<p><a href="https://github.com/sigstore/cosign#registry-support">CoSign</a> is an open source tool that can be used for container signing.</p>
+<p><a href="https://grafeas.io/">Grafeas</a> is an open-source artifact metadata datastore tool which offers flexible, universal artifact metadata storage - a key foundation for software supply chain security.</p>
+<h2 id=frameworks>Frameworks</h2>
+<p><strong>Supply chain Levels for Software Artifacts (SLSA)</strong></p>
+<p>The <a href="https://slsa.dev/">SLSA framework</a> is an open source specification that is primarily focused on preventing artifacts from being tampered with as they are coded, developed, and published. Our vision for SSCS includes adding native support for SLSA with the objective of eventually fully supporting all the way up to SLSA level 3. GitLab already supports users who want to attain SLSA L1. GitLab is currently exploring ways to natively generate the required provenance data for SLSA as part of its Runner that does the build. For more details on SLSA, view the <a href="https://slsa.dev/spec/v1.0/requirements">SLSA requirements</a>.</p>
+<p><strong>The Update Framework (TUF)</strong></p>
+<p><a href="https://github.com/theupdateframework/specification/blob/master/tuf-spec.md#the-update-framework-specification">The Update Framework (TUF)</a> is an open source specification for that provides instructions on how to organize, sign, and interact with metadata to secure package managers. Our vision for SSCS includes adding native support for TUF in the future by including the required metadata in the software provenance that we plan to generate and by validating signatures at each step of the software lifecycle. TUF leverages a Kritis store to manage metadata from in-toto. TUF recommends the use of an OCI image-spec container registry, aligned with our Container Registry's <a href="https://docs.gitlab.com/ee/architecture/blueprints/container_registry_metadata_database/#new-features-and-breaking-changes">documentation</a>. Some gaps to consider for GitLab are the rotation of secrets and key management, which is a part of <a href="https://about.gitlab.com/direction/software_supply_chain_security/pipeline_security/secrets_management/">Secrets Management direction</a>.
+TUF also recommends the <a href="/direction/delivery/deployment_management/">verification of deployments</a>.
+For more details on TUF, view the <a href="https://project.linuxfoundation.org/hubfs/CNCF_SSCP_v1.pdf">CNCF TUF specifications</a>.</p>
+<h2 id=north-stars>North Stars</h2>
+<p>A FY23 theme for the <a href="/direction/verify/verify">Verify Stage</a> is to support pipeline safety throughout the software development lifecycle to automatically ensure compliance and security. This is complimented by Software Composition Analysis Group's <a href="https://about.gitlab.com/direction/application_security_testing/composition-analysis/dependency-scanning/">Dependency Scanning direction</a> on SBOM.</p>
+<p>We aim to make a seamless experience for verifying trust at every step in the software chain.</p>
+<h2 id=analyst-landscape>Analyst Landscape</h2>
+<p>Gartner has published some information on this topic in a paper titled <a href="https://www.gartner.com/en/documents/4003625-how-software-engineering-leaders-can-mitigate-software-supply-chain-security-risks">How Software Engineering Leaders Can Mitigate Software Supply Chain Security Risks</a>. Gartner has also published a market guide for <a href="https://www.gartner.com/en/documents/3986057/market-guide-for-compliance-automation-tools-in-devops">Compliance Automation Tools in DevOps</a>.</p>
+<p>Last Reviewed: 2025-02-10</p>
+<p>Last Updated: 2025-02-10</p>
+<div class=footnotes role=doc-endnotes>
+<ol>
+<li id="fn:1" role=doc-endnote>
+<p>A "software artifact" is a generic term that may refer to software binaries, container images, packages, or other ways of distributing software.Â <a href="#fnref:1" class=reversefootnote role=doc-backlink>&#8617;</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/supply-chain/index.html.md.erb" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/supply-chain/index.html.md.erb" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=e389f0af'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/scripts.js?cacheBust=e389f0af"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

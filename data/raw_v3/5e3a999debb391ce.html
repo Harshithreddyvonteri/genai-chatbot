@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Delivery Direction
+|
+GitLab
+</title>
+<meta content='The job of delivery software in front of the user is a critical step in DevOps. This page highlights GitLab&#39;s related direction.' name=description />
+<meta content='The job of delivery software in front of the user is a critical step in DevOps. This page highlights GitLab&#39;s related direction.' name='twitter:description'/>
+<meta content='The job of delivery software in front of the user is a critical step in DevOps. This page highlights GitLab&#39;s related direction.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Delivery Direction' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/delivery/index.html.md.erb' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/delivery/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Delivery Direction' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=e389f0af'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/delivery/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v6.6.0/css/all.css' integrity='sha384-h/hnnw1Bi4nbpD6kE7nYfCXzovi622sY5WBxww8ARKwpdLj5kUWjRuyiXaD1U2JT' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=e389f0af" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=e389f0af" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=e389f0af'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Delivery Direction
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/mflouton'>
+<div class=codeowners-single>
+<img
+src='/images/team/mikeflouton-crop.jpg'
+class=codeowner-avatar-img
+alt='Mike Flouton'
+title='Mike Flouton'
+>
+<div class=codeowners-single-labels>
+<div class=codeowners-description>
+Mike Flouton
+</div>
+<div class=codeowners-handle>
+@mflouton
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/delivery/index.html.md.erb" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li>Delivery Direction</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#overview" id=markdown-toc-overview>Overview</a> <ul>
+<li><a href="#what-is-delivery" id=markdown-toc-what-is-delivery>What is Delivery?</a></li>
+<li><a href="#organization-at-gitlab" id=markdown-toc-organization-at-gitlab>Organization at GitLab</a></li>
+<li><a href="#relationship-to-continuous-delivery-and-deployment" id=markdown-toc-relationship-to-continuous-delivery-and-deployment>Relationship to Continuous Delivery and Deployment</a></li>
+</ul>
+</li>
+<li><a href="#gitlabs-delivery-vision" id=markdown-toc-gitlabs-delivery-vision>GitLab's Delivery Vision</a></li>
+<li><a href="#jobs-to-be-done" id=markdown-toc-jobs-to-be-done>Jobs To Be done</a> <ul>
+<li><a href="#market" id=markdown-toc-market>Market</a></li>
+</ul>
+</li>
+<li><a href="#product-principles" id=markdown-toc-product-principles>Product principles</a> <ul>
+<li><a href="#embrace-the-cloud-native-ecosystem" id=markdown-toc-embrace-the-cloud-native-ecosystem>Embrace the cloud-native ecosystem</a></li>
+<li><a href="#aim-for-experienced-cloud-users-but-make-it-easy-to-get-started-for-new-users" id=markdown-toc-aim-for-experienced-cloud-users-but-make-it-easy-to-get-started-for-new-users>Aim for experienced cloud users, but make it easy to get started for new users</a></li>
+<li><a href="#provide-an-integrated-experience" id=markdown-toc-provide-an-integrated-experience>Provide an integrated experience</a></li>
+<li><a href="#be-enterprise-ready" id=markdown-toc-be-enterprise-ready>Be enterprise ready</a></li>
+</ul>
+</li>
+<li><a href="#strategy" id=markdown-toc-strategy>Strategy</a> <ul>
+<li><a href="#kubernetes-first" id=markdown-toc-kubernetes-first>Kubernetes First</a></li>
+<li><a href="#focus-on-environments" id=markdown-toc-focus-on-environments>Focus on Environments</a></li>
+<li><a href="#strengths" id=markdown-toc-strengths>Strengths</a></li>
+<li><a href="#weaknesses" id=markdown-toc-weaknesses>Weaknesses</a></li>
+<li><a href="#opportunities" id=markdown-toc-opportunities>Opportunities</a></li>
+<li><a href="#threats" id=markdown-toc-threats>Threats</a></li>
+</ul>
+</li>
+<li><a href="#roadmap" id=markdown-toc-roadmap>Roadmap</a> <ul>
+<li><a href="#current-position" id=markdown-toc-current-position>Current Position</a></li>
+<li><a href="#focus-for-fy25" id=markdown-toc-focus-for-fy25>Focus for FY25</a> <ul>
+<li><a href="#integrating-flux-with-the-agent-for-kubernetes" id=markdown-toc-integrating-flux-with-the-agent-for-kubernetes>Integrating Flux with the agent for Kubernetes</a></li>
+<li><a href="#turn-environments-a-central-place-for-delivery-data" id=markdown-toc-turn-environments-a-central-place-for-delivery-data>Turn environments a central place for delivery data</a></li>
+<li><a href="#building-out-a-flexible-delivery-framework" id=markdown-toc-building-out-a-flexible-delivery-framework>Building out a flexible delivery framework</a></li>
+</ul>
+</li>
+<li><a href="#what-we-arent-focused-on-now" id=markdown-toc-what-we-arent-focused-on-now>What we aren't focused on now</a></li>
+</ul>
+</li>
+<li><a href="#key-capabilities-for-delivery" id=markdown-toc-key-capabilities-for-delivery>Key Capabilities for Delivery</a></li>
+</ul>
+<p>
+<style>.diagramwrapper *{box-sizing:border-box}.diagramwrapper{width:100%;display:flex}.diagramwrapper .box{width:calc(100% - 240px);padding:10px;display:flex;background-color:#fff}.diagramwrapper .box svg{width:100%}.diagramwrapper .circle{width:80px;height:80px;margin-right:20px;border:#999 1px solid;border-radius:50%;display:inline-block;background-color:#fff;padding:0}.diagramwrapper .circle svg{fill:#524684;width:50px;margin:15px}.diagramwrapper .stages{display:flex;width:210px;margin-left:30px;flex-wrap:wrap}.diagramwrapper .stage{width:210px;display:flex;margin:auto 0}.diagramwrapper .stagename{display:inline-block;font-family:Source Sans Pro,sans-serif;font-weight:bold;font-size:20px;line-height:40px}</style><div class=diagramwrapper><div class=box><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1025 500" role=img aria-label="GitLab DevSecOps Lifecycle">
+<style>
+      .text {
+        font-family: Inter,Source Sans Pro,sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        fill: #2b2838;
+        letter-spacing: .02em;
+        dominant-baseline: middle;
+        text-anchor: middle;
+      }
+      .text2 {
+        font-size: 26px;
+        fill: #2b2838;
+      }
+      .devsecops {
+        font-size: 56px;
+        fill: black;
+      }
+      .mix {
+        mix-blend-mode: color-burn;
+      }
+      .line {
+        fill: none;
+        stroke: #2b2838;
+        stroke-width: 2px;
+      }
+      .highlighted {
+        font-size: 22px;
+      }
+      .highlightedline {
+        stroke-width: 3px;
+      }
+      .white_fill {
+        fill: #fff;
+      }
+      .faded {
+        fill: #a09fa4;
+      }
+      .fadestroke {
+        stroke: #a09fa4;
+      }
+      .lightline{
+        stroke: #d3d0d4;
+        stroke-width: 3px;
+      }</style>
+<linearGradient id=linear-gradient x1=18 y1=250 x2=1007 y2=250 gradientTransform="matrix(1, 0, 0, 1, 0, 0)" gradientUnits=userSpaceOnUse>
+<stop offset=0 stop-color="#e6dcf4"/>
+<stop offset=1 stop-color="#ffd0be"/>
+</linearGradient>
+<linearGradient id=linear-gradient-2 x1="720.88" y1="337.91" x2="370.24" y2="74.18" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" gradientUnits=userSpaceOnUse>
+<stop offset=0 stop-color="#2b2838" stop-opacity=".24"/>
+<stop offset=1 stop-color="#45424d" stop-opacity=0 />
+</linearGradient>
+<linearGradient id=linear-gradient-3 x1="304.12" y1="162.09" x2="654.76" y2="425.82" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" gradientUnits=userSpaceOnUse>
+<stop offset=0 stop-color="#2b2838" stop-opacity=".24"/>
+<stop offset=1 stop-color="#45424d" stop-opacity=0 />
+</linearGradient>
+<path id=background fill="#fff" d="M 0,0 L 1025,0 L 1025,500 L 0,500"/><path id=upper_arc class="line fadestroke" d="M 0,250 a238,238 0 0,1 238,-238 L 787,12 a238,238 0 0,1 238,238"/><path id=lower_arc class="line fadestroke" d="M 0,250 a238,238 0 0,0 238,238 L 787,488 a238,238 0 0,0 238,-238"/><path id=clear_1 fill="#fff" d="M -3,190 L -3,310 L 1028,310 L 1028,190"/>
+<path id=clear_2 fill="#fff" d="M 422,0 L 603,0 L 603,500 L 422,500"/>
+<path id=loop fill="url(#linear-gradient)" d="M 512.5,181.18 L 370.24,74.18 a220,220 0 1,0 0,351.64 L 512.5,318.8 L 654.76,425.82 a220,220 0 1,0 0,-351.64"/>
+<path id=cutout_1 fill="#fff" d="M 421,250 L 304.12,162.09 a110,110 0 1,0 0,175.82"/>
+<path id=cutout_2 fill="#fff" d="M 604,250 L 720.88,162.09 a110,110 0 1,1 0,175.82"/>
+<path id=shadow_1 fill="url(#linear-gradient-2)" class=mix d="M 512.5,181.18 L 421,250 L 304.12,162.09 L 370.24,74.18"/>
+<path id=shadow_2 fill="url(#linear-gradient-3)" class=mix d="M 512.5,318.8 L 604,250 L 720.88,337.91 L 654.76,425.82"/><path id=deploy_operate class=line d="M 898,130 a165,165 0 0,1 0,240"/><path id=deploy_box fill="#2b2838" d="M 850,115 L 946,115 L 946,131 C 946,138 939,145 932,145 L 850,145Z"/><path id=operate_box fill="#2b2838" d="M 844,355 L 952,355 L 952,371 C 952,378 945,385 938,385 L 844,385Z"/><path class=lightline fill=none d="M 421,256 L 304.12,168.09 a104,104 0 1,0 -64.12,185.91 L 225,341"/>
+<path class=lightline fill=none d="M 604,256 L 720.88,168.09 a104,104 0 1,1 64.12,185.91 L 800,341"/>
+<path fill="#fff" class=lightline d="M 357,205 L 668,205 a45,45 0 0,1 0,90 L 357,295 a45,45 0 0,1 0,-90"/>
+<path d="M536.514 419L536.448 418.82L529.663 401.124C529.526 400.778 529.281 400.483 528.965 400.283C528.73 400.131 528.461 400.039 528.184 400.01C527.905 399.981 527.624 400.018 527.363 400.118C527.1 400.216 526.866 400.376 526.676 400.583C526.488 400.789 526.35 401.037 526.274 401.306L521.695 415.326H503.151L498.571 401.306C498.495 401.037 498.357 400.79 498.169 400.584C497.979 400.378 497.745 400.219 497.484 400.119C497.221 400.02 496.941 399.982 496.662 400.011C496.384 400.04 496.116 400.133 495.88 400.283C495.565 400.483 495.32 400.778 495.183 401.124L488.403 418.824L488.331 419C487.355 421.551 487.235 424.35 487.989 426.976C488.743 429.601 490.33 431.911 492.511 433.556L492.536 433.575L492.594 433.62L502.914 441.355L508.034 445.224L511.145 447.575C511.51 447.851 511.955 448 512.411 448C512.869 448 513.314 447.851 513.679 447.575L516.789 445.224L521.909 441.355L532.303 433.575L532.331 433.553C534.513 431.909 536.1 429.6 536.854 426.975C537.609 424.35 537.489 421.551 536.514 419Z" fill="#E24329"/>
+<path d="M536.514 419L536.448 418.82C533.141 419.499 530.028 420.899 527.328 422.923L512.431 434.186L521.916 441.355L532.309 433.575L532.339 433.553C534.517 431.908 536.104 429.599 536.858 426.974C537.61 424.349 537.49 421.55 536.514 419Z" fill="#FC6D26"/>
+<path d="M502.914 441.355L508.034 445.224L511.145 447.575C511.51 447.851 511.954 448 512.411 448C512.869 448 513.314 447.851 513.679 447.575L516.789 445.224L521.909 441.355L512.425 434.186L502.914 441.355Z" fill="#FCA326"/>
+<path d="M497.519 422.923C494.82 420.9 491.706 419.5 488.403 418.824L488.331 419C487.355 421.551 487.235 424.35 487.989 426.976C488.743 429.601 490.33 431.911 492.511 433.556L492.536 433.575L492.594 433.62L502.914 441.355L512.405 434.186L497.519 422.923Z" fill="#FC6D26"/>
+<text x="50%" y=255 class="text devsecops">DevSecOps</text><text x=353 y=131 class="text faded">Plan</text><text x=127 y=131 class="text faded">Code</text><text x=127 y=371 class="text faded">Build</text><text x=353 y=371 class="text faded">Test</text><text x=672 y=131 class="text faded">Release</text><text x=898 y=131 class="text highlighted white_fill">Deploy</text><text x=898 y=371 class="text highlighted white_fill">Operate</text><text x=672 y=371 class="text faded">Monitor</text><text x="50%" y=13 class="text text2 faded">Security</text><text x="50%" y=488 class="text text2 faded">Compliance</text></svg></div><div class=stages><div class=stage><div class=circle><svg id=Layer_1 data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46"><path d="M33,16.92H22.33a3.47,3.47,0,0,0-6.67,0H13a1,1,0,0,0,0,2h2.64a3.47,3.47,0,0,0,6.67,0H33a1,1,0,0,0,0-2Zm-14,2.5a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,19,19.42Z"/><path d="M33,27.08H30.34a3.47,3.47,0,0,0-6.67,0H13a1,1,0,1,0,0,2H23.67a3.47,3.47,0,0,0,6.67,0H33a1,1,0,0,0,0-2Zm-6,2.5a1.5,1.5,0,1,1,1.5-1.5A1.51,1.51,0,0,1,27,29.58Z"/><path d="M1,24a1,1,0,0,0,1-1,21.63,21.63,0,0,1,.17-2.67L6.6,18.71a1,1,0,0,0,.62-.64,16.31,16.31,0,0,1,1.14-2.73,1,1,0,0,0,0-.89l-2-4.28a21.25,21.25,0,0,1,3.79-3.79l4.28,2a1,1,0,0,0,.89,0,16.67,16.67,0,0,1,2.73-1.14,1,1,0,0,0,.64-.62l1.62-4.43a20.75,20.75,0,0,1,5.34,0L27.29,6.6a1,1,0,0,0,.64.62,16.67,16.67,0,0,1,2.73,1.14,1,1,0,0,0,.89,0l4.28-2a21.25,21.25,0,0,1,3.79,3.79l-2,4.28a1,1,0,0,0,0,.89,16.31,16.31,0,0,1,1.14,2.73,1,1,0,0,0,.62.64l5,1.82a1,1,0,1,0,.69-1.88L40.54,17a18.86,18.86,0,0,0-.9-2.15l2-4.38a1,1,0,0,0-.1-1,22.73,22.73,0,0,0-5-5,1,1,0,0,0-1-.1l-4.38,2A19.65,19.65,0,0,0,29,5.46L27.35.92a1,1,0,0,0-.79-.64,23,23,0,0,0-7.12,0,1,1,0,0,0-.79.64L17,5.46a19.65,19.65,0,0,0-2.15.9l-4.38-2a1,1,0,0,0-1,.1,22.73,22.73,0,0,0-5,5,1,1,0,0,0-.1,1l2,4.38A18.86,18.86,0,0,0,5.46,17L.92,18.65a1,1,0,0,0-.64.79A22.29,22.29,0,0,0,0,23,1,1,0,0,0,1,24Z"/><path d="M45,22a1,1,0,0,0-1,1,21.63,21.63,0,0,1-.17,2.67L39.4,27.29a1,1,0,0,0-.62.64,16.31,16.31,0,0,1-1.14,2.73,1,1,0,0,0,0,.89l2,4.28a21.25,21.25,0,0,1-3.79,3.79l-4.28-2a1,1,0,0,0-.89,0,16.67,16.67,0,0,1-2.73,1.14,1,1,0,0,0-.64.62l-1.62,4.43a20.75,20.75,0,0,1-5.34,0L18.71,39.4a1,1,0,0,0-.64-.62,16.67,16.67,0,0,1-2.73-1.14,1,1,0,0,0-.89,0l-4.28,2a21.25,21.25,0,0,1-3.79-3.79l2-4.28a1,1,0,0,0,0-.89,16.31,16.31,0,0,1-1.14-2.73,1,1,0,0,0-.62-.65l-5-1.81a1,1,0,1,0-.69,1.88L5.46,29a18.86,18.86,0,0,0,.9,2.15l-2,4.38a1,1,0,0,0,.1,1,22.73,22.73,0,0,0,5,5,1,1,0,0,0,1,.1l4.38-2a19.65,19.65,0,0,0,2.15.9l1.65,4.54a1,1,0,0,0,.79.64,22.77,22.77,0,0,0,7.12,0,1,1,0,0,0,.79-.64L29,40.54a19.65,19.65,0,0,0,2.15-.9l4.38,2a1,1,0,0,0,1-.1,22.73,22.73,0,0,0,5-5,1,1,0,0,0,.1-1l-2-4.38a19.65,19.65,0,0,0,.9-2.15l4.54-1.65a1,1,0,0,0,.64-.79A22.29,22.29,0,0,0,46,23,1,1,0,0,0,45,22Z"/></svg></div><div class=stagename>Configure</div></div><div class=stage><div class=circle><svg id=Layer_1 data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46"><path d="M43.29,26.4a3.49,3.49,0,0,0,0-6.8A20.54,20.54,0,0,0,26.52,2.81a3.5,3.5,0,0,0-6.86,0A20.51,20.51,0,0,0,2.89,19.56a3.49,3.49,0,0,0,0,6.88A20.44,20.44,0,0,0,10.3,39a1.06,1.06,0,0,0,.63.21,1,1,0,0,0,.62-1.78A18.34,18.34,0,0,1,4.89,26.21a3.49,3.49,0,0,0,0-6.42,18.52,18.52,0,0,1,15-15,3.49,3.49,0,0,0,6.48,0,18.55,18.55,0,0,1,15,14.93,3.48,3.48,0,0,0,0,6.54A18.55,18.55,0,0,1,23.09,41.5H6.84a3.5,3.5,0,1,0,0,2H23.09A20.55,20.55,0,0,0,43.29,26.4ZM3.5,24.5A1.5,1.5,0,1,1,5,23,1.5,1.5,0,0,1,3.5,24.5ZM23.09,5a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,23.09,5ZM42.5,21.5A1.5,1.5,0,1,1,41,23,1.5,1.5,0,0,1,42.5,21.5ZM3.5,44A1.5,1.5,0,1,1,5,42.5,1.5,1.5,0,0,1,3.5,44Z"/><path d="M45.92,42.12a1.15,1.15,0,0,0-.21-.33l-2.5-2.5a1,1,0,0,0-1.42,1.42l.8.79H35.75a1,1,0,0,0,0,2h6.84l-.8.79a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l2.5-2.5a1,1,0,0,0,.21-.33A1,1,0,0,0,45.92,42.12Z"/><path d="M21.35,28a1,1,0,0,0,.7-.29l6-6a1,1,0,0,0,0-1.41,1,1,0,0,0-1.41,0L21.35,25.6l-1.83-1.83a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42l2.53,2.53A1,1,0,0,0,21.35,28Z"/></svg></div><div class=stagename>Release</div></div></div></div>
+</p>
+<h2 id=overview>Overview</h2>
+
+<figure class=video_container>
+<iframe src="https://www.youtube-nocookie.com/embed/fvdqsmyxaHI" frameborder=0 allowfullscreen=true> </iframe>
+</figure>
+
+<p>The delivery direction covers the deployment and release functionality of GitLab. Users of both cloud-native and legacy infrastructures should benefit from the delivery direction. This direction brings them high-level automations that just work out of the box following GitLab conventions and low-level integration points that enable users to build their own flavor of deployment and release functionality. Legacy infrastructures are served through GitLab CI/CD, while cloud-native infrastructures, especially Kubernetes, are supported with the agent for Kubernetes.</p>
+<h3 id=what-is-delivery>What is Delivery?</h3>
+<p>Delivery is when you promote a coded, integrated, and built software application to a production environment. Once you deliver an application, users derive value from it. Delivery is composed of two parts, deployment and release. Deployment covers the processes and actions needed to deploy a new version of the software to a target infrastructure. This includes both production and non-production infrastructures. Release includes the processes and actions needed to make a deployed application available to the users. As delivery starts with a tested artifact, like a container, it might take several deployments into various environments and a final release or set of releases for the container to serve users.</p>
+<p>Delivery is difficult, however, with the competition in the market today, <a href="https://cloud.google.com/blog/products/devops-sre/using-the-four-keys-to-measure-your-devops-performance">increased velocity and stability are a necessity</a>. Delivery is where development and operations meet and the focus turns to operations. Delivery is a team sport. It requires empowered developers and it requires guardrails set by operators. In overcoming these hurdles, <strong>teams must</strong>:</p>
+<ul>
+<li><strong>Enable Developers</strong>: Delivery is simple when done alone. It's hard when done across even a small number of teams. Doing it well requires automation, orchestration, coordination, and collaboration. Doing delivery at scale requires enabling developers to self-serve while maintaining system integrity, security and compliance.</li>
+<li><strong>Increase Frequency</strong>: Release frequency is a competitive advantage. Products must deploy frequently to capture value sooner and receive feedback quicker. Increasing deployment and release frequency decreases risks and sets the team up for continuous improvements. Teams need fast, repeatable, compliant and safe ways to deliver software to their users.</li>
+<li><strong>Accommodate Target Variety</strong>: Deployment used to involve copying new files to a specific server. Today, deployment targets span environments (dev/staging/production), infrastructure types (VM and container). Adding to the complexity, some environments and their infrastructure are ephemeral. The release mechanisms differ by deployment targets. A release might take many forms, like switching a feature flag, reconfiguring a load-balancer, etc. Operations teams need to provide a consistent interface for deploying and releasing in different target environments.</li>
+</ul>
+<h3 id=organization-at-gitlab>Organization at GitLab</h3>
+<p>Ephemeral or declarative infrastructure blurs the line between infrastructure configuration, software development and software delivery. At GitLab, the Delivery direction belongs to <a href="/direction/ops/">the Ops section</a>, and it is primarily the responsibility of <a href="https://handbook.gitlab.com/handbook/product/categories/#environments-group">the Environments group</a>. At the same time, we acknowledge that Delivery does not exist in a vacuum. As already mentioned, Delivery is where the focus shifts from development to operations. As a result, the Delivery direction starts with a secure packaged artifact and should support and integrate well with Day-2 operations. These are covered by the <a href="https://about.gitlab.com/direction/supply-chain/">Secure</a>, <a href="https://about.gitlab.com/direction/package/">Package</a> and <a href="https://about.gitlab.com/direction/monitor/">Monitor</a> stages of GitLab, respectively.</p>
+<h3 id=relationship-to-continuous-delivery-and-deployment>Relationship to Continuous Delivery and Deployment</h3>
+<p>This direction is about delivery, in general. As a result, we speak about delivery overarching deployment and release functionalities. There are nevertheless two industry terms, "continuous delivery" and "continuous deployment" that might confuse the reader of this page. To remove this confusion, we provide here Martin Fowler's <a href="https://martinfowler.com/bliki/ContinuousDelivery.html">definition of these related terms</a>:</p>
+<div class=highlight><pre class="highlight plaintext"><code>Continuous Delivery is a software development discipline where you build software in such a way that the software can be released to production at any time. â¦ Continuous Deployment means that every change goes through the pipeline and automatically gets put into production, resulting in many production deployments every day. â¦ Continuous Integration usually refers to integrating, building, and testing code within the development environment. Continuous Delivery builds on this, dealing with the final stages required for production deployment.
+</code></pre></div>
+<p>The Delivery direction includes both Continuous Delivery and Continuous Deployment, while Continuous Integration is covered by the <a href="https://about.gitlab.com/direction/verify/">Verify</a> stage.</p>
+<h2 id=gitlabs-delivery-vision>GitLab's Delivery Vision</h2>
+<p>GitLab's Delivery vision is to enable your organization to be an elite performer in DevOps by providing your tools and frameworks to automatically turn the hardest part of DevOps - software delivery - easy, flexible and secure.</p>
+<p>We will accomplish this by</p>
+<ol>
+<li>Empowering <a href="https://handbook.gitlab.com/handbook/product/personas/#priyanka-platform-engineer">Priyanka (Platform Engineer)</a> and <a href="https://handbook.gitlab.com/handbook/product/personas/#allison-application-ops">Ingrid (Infrastructure Operator)</a> to define and automate DevOps practices that have security and compliance guard rails built directly into the process.</li>
+<li>Provide integrations, tools and frameworks for Priyanka and Ingrid that they can use without customizations or can fine-tune to provide a delivery platform for their users.</li>
+<li>The delivery platform managed by Priyanka and Ingrid should enable developers to own their specific deployment operations without toil, increase their confidence in their delivery processes and support Day-2 operations.</li>
+<li>Taking advantage of the data available in the connected GitLab platform, from planning input, artifact storage to observability and incident data, to make release operations, such as scaling rollouts or rollbacks automatic.</li>
+</ol>
+<h2 id=jobs-to-be-done>Jobs To Be done</h2>
+<ul>
+<li>When a developer is using the development platform, I want the developer to be more productive by not having to spend time figuring out how to deploy yet enable them to comply with security and compliance requirements.</li>
+<li>When operating the development platform, I do not want to slow down the development teams and limit what they need to do to improve and deploy their service so that there's no downside to using the platform.</li>
+<li>When operating the development platform, I empower engineers while retaining control with RBAC, Audit trails, secret management, progressive delivery, and auto-scaling deployments and rollbacks.</li>
+<li>When configuring my delivery pipelines, I can decide the people and teams with rights to deploy and release, so the pipeline can support the company culture and processes.</li>
+<li>When changing something in my organization's DevOps process, I do not want to create extra work for my development teams yet enable them to still benefit from the improvements in the process.</li>
+<li>When managing my environments, I want to see and understand what is currently running, so that I can make decisions on what I need to do.</li>
+<li>When delivering my application, it doesn't matter if I am delivering to legacy servers or to Kubernetes, it all just works.</li>
+<li>When releasing updates to my application, I feel confident my changes will not disrupt the existing environment and I know exactly what will be impacted.</li>
+<li>When releasing updates to my application, I feel confident about the delivery system and I know how I can recover from a failed delivery with minimal downtime.</li>
+<li>When looking for improvements in the delivery process, I can understand how my organization is performing, so that I can pinpoint actionable improvement areas.</li>
+<li>When delivering my application, I want to orchestrate the entire process, so that delivery pipeline users can use a well-functioning system.</li>
+</ul>
+<p>We created <a href="/direction/delivery/glossary.html">a glossary</a> to discuss related terms in a consistent way.</p>
+<h3 id=market>Market</h3>
+<p>The total addressable market (TAMkt) for DevOps tools targeting the Delivery scope was <a href="https://docs.google.com/spreadsheets/d/1LO57cmXHDjE4QRf6NscRilpYA1mlXHeLFwM_tWlzcwI/edit?ts=5ddb7489#gid=1474156035">$1.79B in 2020 and is expected to grow to $3.25B by 2024 (13.8% CAGR) (i)</a>. This analysis is considered conservative as it focuses only on developers and doesn't include other users. External market sizing shows even more potential. For example, continuous delivery alone, which does not include categories such as infrastructure as code, is estimated to have a <a href="https://www.verifiedmarketresearch.com/product/continuous-delivery-market/">market size of $1.62B in 2018 growing to $6B by 2026 (17.76% CAGR)</a>. This, like the <a href="https://about.gitlab.com/direction/ops/#market">Ops market</a> in general, is a deep value pool and represents a significant portion of GitLab's expanding addressable market.</p>
+<p>The delivery tooling market is evolving and expanding. There are now many more options than just adding a deployment job to your CI/CD pipeline. Release Orchestration, advanced releases, GitOps, infrastructure provisioning, platform as a service, progressive delivery, and feature flags are all methodologies that help teams deliver software more easily, frequently, and confidently. Completeness of feature sets from vendors is becoming increasingly important as teams want the benefits from all worlds; traditional, table stakes deployment features alongside modern, differentiating features.</p>
+<p>To increase deployment frequency and be competitive in the market, enterprises have turned to <a href="https://gitlab.com/gitlab-com/Product/-/issues/2287#note_526578502">centralized cloud teams or cloud center of excellence</a> that are responsible for helping <a href="https://gitlab.com/gitlab-com/Product/-/issues/2287#note_526579050">development teams be more efficient and productive</a>. These teams have centralized buying power for DevOps and delivery tools. They may also have organizational support to build a DIY DevOps platform. For cloud-native DIY platforms, we've found (through customer interviews) that open-source point deployment solutions (such as <a href="https://fluxcd.io/">Flux</a> or <a href="https://argoproj.github.io/argo-cd/">ArgoCD</a>) are the primary options because of their focus on cloud-native principles and early adoption of pull-based deployment. These tools often come with auxiliary tooling for release management, like <a href="https://fluxcd.io/flagger/">Flagger</a> and <a href="https://argoproj.github.io/argo-rollouts/">Argo Rollouts</a> Otherwise, enterprises, even existing GitLab customers, sometimes buy commercial tools for deployment, such as Octopus, Harness, and CloudBees electric flow.</p>
+<h2 id=product-principles>Product principles</h2>
+<h3 id=embrace-the-cloud-native-ecosystem>Embrace the cloud-native ecosystem</h3>
+<p>We want to be good cloud-native citizens, build on top of and contribute back into open source tools. We believe in the power of the open source community and GitLab's everyone can contribute ethos.</p>
+<h3 id=aim-for-experienced-cloud-users-but-make-it-easy-to-get-started-for-new-users>Aim for experienced cloud users, but make it easy to get started for new users</h3>
+<p>We understand that Infrastructure as Code and cluster management at scale are complex, and best of breed technologies and much customization is required to fulfill advanced workflows. We want to support such advanced use cases. At the same time, we believe that many new users will become advanced users, and we can support them as well by providing production ready, turn-key solutions that incorporate the best practices followed by experts.</p>
+<h3 id=provide-an-integrated-experience>Provide an integrated experience</h3>
+<p>At GitLab we build a single application for the whole Dev(Sec)Ops pipeline. Our solutions should integrate deeply with and should support other GitLab features. We are paying special attention to security and collaboration oriented features.</p>
+<h3 id=be-enterprise-ready>Be enterprise ready</h3>
+<p>While we want to provide supporting products for every company size, we expect enterprise users to have special needs that our integrated approach can serve well. Focusing on their use cases we can reduce their costs and enable faster go to market</p>
+<h2 id=strategy>Strategy</h2>
+<p>In Delivery, our primary persona is <a href="https://handbook.gitlab.com/handbook/product/personas/#priyanka-platform-engineer">Priyanka (Platform Engineer)</a>. They are responsible for setting up the systems that development teams use to develop, test, <strong>ship</strong>, and <strong>operate</strong> their applications.
+They - likely - work at an enterprise where there is a mix of delivery targets from VMs to Kubernetes and bare metal to cloud infrastructure.
+They also face the challenges of ever-increasing complexity; as more contributors, more services, more infrastructure, more databases, and a mix of technologies are added to their applications.
+They are looking for ways to create a system to manage the complexity at scale, and especially to present the necessary parts of this complexity to their users, the application operators.</p>
+<p>In line with Priyanka's users, our most important secondary persona is <a href="https://handbook.gitlab.com/handbook/product/personas/#allison-application-ops">Allison (Application Operator)</a>.</p>
+<p>As our primary target customers are enterprise customers, we want to make sure that regulatory and compliance requirements related to application delivery are covered from the start. As a result, we pay special attention to the needs of <a href="https://handbook.gitlab.com/handbook/product/personas/#cameron-compliance-manager">Cameron (Compliance Manager)</a> and <a href="https://handbook.gitlab.com/handbook/product/personas/#rachel-release-manager">Rachel (Release Manager)</a>.</p>
+<p>and <a href="https://handbook.gitlab.com/handbook/product/personas/#ingrid-infrastructure-operator">Ingrid (Infrastructure Operator)</a>.</p>
+<p>Our investment will focus on two strategic pillars.</p>
+<h3 id=kubernetes-first>Kubernetes First</h3>
+<p>In 2021, we have seen that <a href="https://www.cncf.io/wp-content/uploads/2022/02/CNCF-AR_FINAL-edits-15.2.21.pdf">Kubernetes has officially gone main stream</a>.</p>
+<p><a href="https://www.loom.com/share/bd6a6e5ffc1845f9ae751bd69ecfd838">There are two compelling reasons why we want to be Kubernetes first</a> (not Kubernetes only).</p>
+<p>First, we have seen that our customers are reaching out to GitLab after they have decided to modernize on Kubernetes as a platform. With the clear impetus to modernize, we want to meet our customers where they are at and provide capabilities that enable them to benefit from their modernization efforts.</p>
+<p>Second, targeting Kubernetes enables us to be more efficient. As Kubernetes becomes more and more ubiquitous, building against Kubernetes is a shortcut around building specific integrations with cloud vendors. We now also have the foundational tool, the <a href="https://docs.gitlab.com/ee/user/clusters/agent/">GitLab agent for Kubernetes</a> to take advantage of the Kubernetes ecosystem. Given that the agent has permission to act within the cluster, we can enable integration with the rich ecosystem of K8s tools to enable powerful workflows all from within GitLab, while following Kubernetes' <a href="https://kubernetes.io/docs/concepts/extend-kubernetes/operator/">operator pattern</a>. With it, we can do exciting things like <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/352186">connect GitLab environments to the actual environment of the running application</a>. Lastly but not least, Kubernetes is API driven. As such, we can move fast building on top of Kubernetes, instead of complicated undertakings such as figuring out how to connect with load balancers.</p>
+<h3 id=focus-on-environments>Focus on Environments</h3>
+<p>Deployments and releases always happen outside of GitLab, a target infrastructure that we call an environment. We want to make GitLab environments a central part of GitLab similar to merge requests.
+Environments should support automation, enable transparency and collaboration in each of the steps that lead up to a release across environments. We plan to focus on improving the connection between <a href="https://docs.gitlab.com/ee/user/project/releases/">releases</a>, <a href="https://docs.gitlab.com/ee/ci/environments/">environments</a>, <a href="https://docs.gitlab.com/ee/user/clusters/agent/">Kubernetes clusters</a>.
+We want to enrich the current environments views with all the related data from security scans, through Observability to DORA metrics.</p>
+<hr/>
+<p>Our strategy insights are captured in the following SWOT analysis</p>
+<h3 id=strengths>Strengths</h3>
+<ul>
+<li>GitLab's large and healthy user base provides a great user pool that's relatively easy to reach.
+There is plenty of potential for adoption within the existing user base.
+As existing users constantly modernize their processes, we can grow together.</li>
+<li>The fast adoption of the Infrastructure as Code product category showed that we can successfully address infrastructure teams' needs.</li>
+<li>Parts of the delivery features have strong foundations that further integrations can be built upon. Specifically, the Kuberentes and OpenTofu/Terraform integrations fall in this area.</li>
+<li>The single product group in the CD section managed to build up a high performing team with exceptional trust, openness, collaboration and willingness to act</li>
+</ul>
+<h3 id=weaknesses>Weaknesses</h3>
+<ul>
+<li>As many categories were built when GitLab focused on bredth over depth, and there was no continued investment, a lot of our offering is extremely minimal, and often can not meet the needs of our ideal customers, large enterprises.</li>
+<li>The current team size restricts our ability to improve existing features or build new ones as we barely cope with maintenance</li>
+</ul>
+<h3 id=opportunities>Opportunities</h3>
+<ul>
+<li>The application delivery market is currently maturing from custom tools to the product era. There are no clear winners or winning patterns yet.
+If we manage to play an active part in these trends, instead of just following them, we might be able to capture an outstanding part of the overall market.</li>
+<li>The CNCF ecosystem offers a large number of OSS that allow for integrations and partnerships. We should be careful though to offer a unified experience for GitLab users.</li>
+<li>As GitLab decided to pick FluxCD, a matured CNCF project, as its recommended GitOps tool, by playing a more active role in the FluxCD community, we can have an impact on its direction, overall future, and position GitLab as an examplary player in the CNCF ecosystem</li>
+<li>By offering competitive solutions, existing GitLab users are more likely to adopt GitLab features, than picking 3rd party tools.</li>
+</ul>
+<h3 id=threats>Threats</h3>
+<ul>
+<li>GitLab application delivery features were built as simple extensions of its CI capabilities.
+This often limits our ability to build CD oriented features as CI and CD have very different requirements.</li>
+<li>The majority of GitLab team members have a poor understanding of application delivery, its complexities and requirements.
+As a result it's often approached naively in external communications, positioning and investment decisions.
+Communications often simplifies the whole domain to "deploy" while other aspects of the DevSecOps lifecycle are discussed in detail.
+Investment decisions might not take into account the adoption patterns of the industry: It's much easier to switch a Planning, SCM or CI tool than a CD tool, because CD processes by definition affect a user's production infrastructure, thus changes are more risky.</li>
+<li>As the team is already extremely thin, losing any team members might require GitLab to reconsider its strategy immediately and reactively</li>
+<li>The CD section competes with its single product group competes with companies of 30-100 people who work on a smaller scope.</li>
+<li>Various parts of the GitLab offering are built on 3rd party solutions. Some of these integrations are very outdated (e.g Unleash for feature flags) and might be broken by upstream changes.
+GitLab does not play a central role in any of the related open source projects.</li>
+</ul>
+<h2 id=roadmap>Roadmap</h2>
+<h3 id=current-position>Current Position</h3>
+<p>GitLab has a market-leading CI/CD solution.
+Deployments and releases using GitLab's CI/CD pipelines work well for many use cases.
+GitLab users love the developer enablement provided by our robust pipeline definition language, but they find it painful to write and manage hundreds of lines of code to describe their custom delivery logic.
+Similarly, orchestrating large deployments across projects is painful with GitLab.
+This complexity is exacerbated by the complexity of infrastructure and the delivery domain.
+Customers today look for alternative solutions, like FluxCD to hide some of the complexity from software engineering teams.</p>
+<p><strong>Independent software deliveries</strong> - for the delivery of individual projects that can be deployed in an automated fashion without coordination, developers deploy using CI/CD pipelines in the following ways:</p>
+<ul>
+<li>Writing <a href="https://docs.gitlab.com/ee/ci/yaml/gitlab_ci_yaml.html">customized pipeline definitions</a>
+<ul>
+<li>Custom pipeline can take advantage of functionalities made available in containers, including <a href="https://about.gitlab.com/blog/deploy-aws/">ones published by GitLab</a></li>
+</ul>
+</li>
+<li><a href="https://docs.gitlab.com/ee/ci/yaml/includes.html">Including</a> pipeline definitions provided by their platform teams</li>
+<li>Using GitLab provided deployment <a href="https://docs.gitlab.com/ee/ci/examples/#cicd-templates">templates</a> (such as Pages, AWS, Fastlane, Serverless, 5 Minute App, etc)</li>
+<li>Utilizing GitLab's <a href="https://docs.gitlab.com/ee/topics/autodevops/">AutoDevOps</a> defined deployment process</li>
+<li>Relying on offered <a href="https://docs.gitlab.com/ee/user/infrastructure/iac/">Terraform support</a></li>
+</ul>
+<p><strong>Kubernetes deployments</strong> - for deployments to Kubernetes, we have support for pull-based GitOps via the <a href="https://docs.gitlab.com/ee/user/clusters/agent/">Kubernetes Agent and FluxCD</a>, while push-based GitOps is supported by <a href="https://docs.gitlab.com/ee/user/clusters/agent/ci_cd_workflow.html">CI/CD tunnel</a>. Supporting both push- and pull-based deployments, GitLab can be used to migrate to full GitOps approaches of Kubernetes management and can support even dynamic use cases that pull-based only approaches struggle supporting.</p>
+<p><strong>Visualising deployment status</strong> - once a deployment reaches its target infrastructure, application operators want to make sure that it's running smoothly and serves its users, and they want to be able to troubleshoot issues if needed. GitLab offers a minimal UI to show the status of deployments in Kubernetes.</p>
+<p><strong>Orchestrated delivery</strong> - for complex releases, particularly those that require <a href="https://about.gitlab.com/direction/release/release_orchestration/">orchestration</a> across multiple projects, release managers use <a href="https://docs.gitlab.com/ee/user/project/releases/">Releases</a> to gather artifacts. Sometimes release managers collaborate on the delivery process using GitLab's release.</p>
+<p><strong>Continuous Delivery</strong> - many industries have strict regulatory requirements to follow that direct them to Continuous Delivery practices. GitLab supports Continuous Delivery via <a href="https://docs.gitlab.com/ee/ci/environments/protected_environments.html">Protected environments</a> and <a href="https://docs.gitlab.com/ee/ci/environments/deployment_approvals.html">Deployment approval rules</a>.</p>
+<p>None of these methods are duplicative and each serves different use cases.</p>
+<h3 id=focus-for-fy25>Focus for FY25</h3>
+<p>The FY25 financial year runs from February 2024 to the end of January 2025. We will continue our focus on maintenance of existing functionality to ensure the stability of our offerings.</p>
+<p>We plan a major redesign of the Environment pages.
+The current design was built iteratively and information got sometimes added where it was easy not where it made sense.
+We are rethinking the current layout to fix the suboptimal results of the aforementioned iteration and provide the foundations for more information to be highlighted on these pages in the future.</p>
+<p>We continue building out visualisations for Kubernetes in the GitLab UI.
+We want to reach to a state where application operators can debug their applications in non-production environments through the GitLab UI.
+Production environments are in scope as a cross-section collaboration with <a href="https://handbook.gitlab.com/handbook/product/categories/#observability-group">the Analytics Observability group</a> who own historical log storage and querying.</p>
+<p>To further integrate Flux, we plan to simplify Flux management by using the agent for Kubernetes to manage all tokens needed by Flux.</p>
+<p>We are looking into shipping AI support for troubleshooting Kubernetes issues with Duo Chat, and into shipping an opinionated application delivery framework, the successor of the Deploy component of Auto DevOps.</p>
+<h4 id=integrating-flux-with-the-agent-for-kubernetes>Integrating Flux with the agent for Kubernetes</h4>
+<p>We decided to <a href="https://about.gitlab.com/blog/why-did-we-choose-to-integrate-fluxcd-with-gitlab/">drop our in-house GitOps solution in favor of a Flux integration</a>. Our plan is to provide value-add on top of a stand-alone Flux installation by:</p>
+<ul>
+<li>integrating access management to avoid the management of deploy keys and tokens with Flux;</li>
+<li>providing graphical insights into Flux deployments as part of the GitLab UI;</li>
+<li>integrating GitOps with GitLab pipelines for smooth pre- and post deployment jobs.</li>
+</ul>
+<p>Together with some other changes, we want to reach a point where we can finally remove the deprecated certificate-based integration.</p>
+<h4 id=turn-environments-a-central-place-for-delivery-data>Turn environments a central place for delivery data</h4>
+<p>Environments today are a light-weight and hidden mirror of your infrastructure status. We want to make them central for DevOps people to rely on when they start their day, want to understand whatâs running where or want to change the state of an environment.</p>
+<ul>
+<li>Integrate with GitLab DORA metrics for deployment frequencies and lead time to change.</li>
+<li>Integrating GitLab Observability into environments should provide the entry points to metrics, logs and tracing and improve the user experience to get an overview about the status of an environment.</li>
+<li>Make core environments data available widely across GitLab.</li>
+</ul>
+<h4 id=building-out-a-flexible-delivery-framework>Building out a flexible delivery framework</h4>
+<p>While today users can use GitLab CI to code their delivery pipelines, they have to maintain the custom logic. We want to offer a fully declarative and flexible definition to describe delivery pipelines. We call this the GitLab Delivery Framework.</p>
+<p>The framework is currently in the planning phase. More details are shared on<a href="/direction/delivery/deployment_management/#gitlab-delivery"> the Deployment management direction</a>. In line with our Kubernetes first strategy, first, we want to add support for delivery pipelines targeting Kubernetes, later followed by other deployment and release targets.</p>
+<p>The framework should:</p>
+<ul>
+<li>integrate applications for core use cases (e.g. ingress, certificate manager);</li>
+<li>provide a code-based deployment framework that allows describing the desired state of environments and how envrionments are promoted in a fully-automated way;</li>
+<li>provide a GUI to make the code-based deployment framework accessible to everyone;</li>
+<li>add support for advanced deployment and release strategies;</li>
+<li>expand our solution beyond Kubernetes to other strategic deployment targets.</li>
+</ul>
+<h3 id=what-we-arent-focused-on-now>What we aren't focused on now</h3>
+<p>There are important things we won't work on to focus on our one year plan.</p>
+<ol>
+<li><strong>Auto DevOps Deployments</strong> - While we will enable the creation of Auto DevOps style templates and experiences for the developers in their organization by platform teams, we will not be making significant strides to make Auto DevOps deployments cover a broader set of delivery targets at this time.</li>
+<li><strong>Progressive Delivery</strong> - By focusing on where platform teams are today, we'll forgo pushing further on our current progressive delivery capabilities like Feature Flags and A/B Testing.</li>
+<li><strong>Cost Optimization</strong> - We should first improve adoption of our Kubernetes Management capabilities before focusing more on cluster costs. Enterprises want views into costs beyond clusters. Building capabilities like environment management precedes cost optimization tooling.</li>
+<li><strong>Non-Kubernetes Cloud-native</strong> - Distinguishing from <a href="https://cloudark.medium.com/towards-a-kubernetes-native-future-3e75d7eb9d42">Kubernetes-native</a>, which is our initial focus area. We will not be focused on other cloud-native solutions, such as Docker Swarm, Apache Mesos, and Amazon ECS, because they're not nearly as successful as Kubernetes. We might expand into these directions (especially AWS) as a follow-up.</li>
+<li><strong>Building more Deployment Methods</strong> - Actively adding templates or improving existing templates is not our main focus. Nor is building customized images for deploying to cloud providers. The CI/CD pipeline is flexible and enables GitLab users to create what they need as is. It is worthwhile to examine how we can enable the wider GitLab community, including our customer success teams, to share and reuse similar templates and treat them as lego blocks that can be adopted and put to use quickly. These will be most beneficial for common deployment targets, such as Fargate and Lambda.</li>
+<li>**Non-cloud native: **We think that GitLab CI/CD pipelines are mature to support most non-cloud native deployment targets. We donât plan to invest in these because of their low ROI.</li>
+</ol>
+<p>At the same time, we are looking into extending GitLab functionality in some of these areas through partner integrations.</p>
+<h2 id=key-capabilities-for-delivery>Key Capabilities for Delivery</h2>
+<p>Enterprises are increasingly choosing to have a <a href="https://gitlab.com/gitlab-com/Product/-/issues/2287#note_526573920">cloud-first strategy</a>. Furthermore, with the increasing adoption of microservices architecture and infrastructure as code, traditional release tools are inadequate. This, coupled with the traditional delivery requirements of governance, compliance, and security, means that delivery tools have to meet a high bar and address a set of evolving technology and compliance requirements. The primary themes for these capabilities are that first organizations need <strong>collaboration and transparency</strong>, then <strong>control and compliance</strong> and before requiring <strong>measurement and advanced patterns</strong>. We list these key capabilities of deployment platforms in <strong>priority order of user need</strong>:</p>
+<p><strong>Collaboration and Transparency</strong></p>
+<ol>
+<li><strong>Environment management:</strong> Organizations typically operate multiple <a href="https://docs.gitlab.com/ee/ci/environments/">environments</a>, each serving different needs. Delivery tools should help to make managing environments easy and intuitive.</li>
+<li><strong>Everything as code:</strong> Delivery tooling, including pipelines, releases, infrastructure, environments, and monitoring tools, are constantly evolving. If they can be stored as code and version-controlled, it will enable organizations to more effectively collaborate and avoid costly mistakes.</li>
+</ol>
+<p><strong>Control and Compliance</strong></p>
+<ol>
+<li><strong>GitOps:</strong> Simply checking code into a repository will not prevent drift to occur between code and what is deployed. <a href="https://about.gitlab.com/topics/gitops/">GitOps</a> solves this problem by automatically managing changes using the single source of truth reflected in the source repository providing more control by preventing drift.</li>
+<li><strong>Release Orchestration &amp; Quality gates:</strong> Organizations need to control what can be deployed and in which sequence. Enabling reviews and approvals built right into the deployment workflow and supporting policy tools is a critical requirement. The ability to perform automatic rollback, environment freeze, and scaling deployment also enables organizations to be more in control.</li>
+</ol>
+<p><strong>Measurement and Advanced Patterns</strong></p>
+<ol>
+<li><strong>Feedback:</strong> Delivery is a critical part of the DevOps feedback loop. A successful release depends on immediate feedback from Monitoring and Observability tools to ensure a healthy rollout. Furthermore, knowing that a delivery was successful is not just about knowing whether the application deployed is healthy, it also requires understanding the impact to downstream neighbors and the environment as a whole.</li>
+<li><strong>Reporting:</strong> Understanding how the DevOps team and the entire organization is performing, such as using the DORA metrics, is important to enable iteration towards stronger performance.</li>
+<li><strong>Progressive delivery:</strong> Delivery can be risky. To mitigate risks, progressive delivery techniques, such as using feature flags, canary and rolling deployments can help mitigate the risk by limiting the impact until the delivery teams are confident that their changes are good to go.</li>
+</ol>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/delivery/index.html.md.erb" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/delivery/index.html.md.erb" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=e389f0af'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/scripts.js?cacheBust=e389f0af"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Stage Direction - AI-powered
+|
+GitLab
+</title>
+<meta content='AI-powered workflows boost efficiency and reduce cycle times with the help of AI.' name=description />
+<meta content='AI-powered workflows boost efficiency and reduce cycle times with the help of AI.' name='twitter:description'/>
+<meta content='AI-powered workflows boost efficiency and reduce cycle times with the help of AI.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Stage Direction - AI-powered' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/ai-powered/template.html.md.erb' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/ai-powered/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Stage Direction - AI-powered' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=e389f0af'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/ai-powered/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v6.6.0/css/all.css' integrity='sha384-h/hnnw1Bi4nbpD6kE7nYfCXzovi622sY5WBxww8ARKwpdLj5kUWjRuyiXaD1U2JT' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=e389f0af" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=e389f0af" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=e389f0af'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Stage Direction - AI-powered
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/tmccaslin'>
+<img
+src='/images/team/taylormccaslin-crop.jpg'
+class=codeowner-avatar-img
+alt='Taylor McCaslin'
+title='Taylor McCaslin'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/gl-product-leadership'>
+<div class=codeowner-avatar-group title='@gl-product-leadership'>
+<span>G</span>
+</div>
+</a>
+<a class=codeowner href='https://gitlab.com/david'>
+<img
+src='/images/team/ddesanto-crop.jpg'
+class=codeowner-avatar-img
+alt='David DeSanto'
+title='David DeSanto'
+>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/ai-powered/template.html.md.erb" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li>Stage Direction - AI-powered</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<h2 class=no_toc id=on-this-page>On this page</h2>
+<ul id=markdown-toc>
+<li><a href="#overview" id=markdown-toc-overview>Overview</a> <ul>
+<li><a href="#goal" id=markdown-toc-goal>Goal</a> <ul>
+<li><a href="#omniscient" id=markdown-toc-omniscient>Omniscient</a></li>
+<li><a href="#ever-present" id=markdown-toc-ever-present>Ever Present</a></li>
+<li><a href="#private--secure" id=markdown-toc-private--secure>Private &amp; Secure</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#groups" id=markdown-toc-groups>Groups</a></li>
+<li><a href="#whats-next--why" id=markdown-toc-whats-next--why>What's Next &amp; Why</a></li>
+<li><a href="#what-weve-recently-completed" id=markdown-toc-what-weve-recently-completed>What we've recently completed</a> <ul>
+<li><a href="#2024" id=markdown-toc-2024>2024</a></li>
+<li><a href="#2023" id=markdown-toc-2023>2023</a></li>
+<li><a href="#2022" id=markdown-toc-2022>2022</a></li>
+<li><a href="#2021" id=markdown-toc-2021>2021</a> <ul>
+<li><a href="#smarter-code-reviewer-suggestions" id=markdown-toc-smarter-code-reviewer-suggestions>Smarter Code Reviewer suggestions</a></li>
+<li><a href="#automatic-issue-labeling" id=markdown-toc-automatic-issue-labeling>Automatic Issue Labeling</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#analyst-landscape" id=markdown-toc-analyst-landscape>Analyst Landscape</a> <ul>
+<li><a href="#internal-resources" id=markdown-toc-internal-resources>Internal resources</a></li>
+</ul>
+</li>
+</ul>
+<h2 id=overview>Overview</h2>
+<p>GitLab is embracing AI/ML technologies within the software development lifecycle, as the most comprehensive AI-powered DevSecOps platform. Since mid 2021, We've been leveraging AI/ML technologies to enrich features on our platform. We're calling these AI-powered capabilities, <a href="https://about.gitlab.com/gitlab-duo/">GitLab Duo</a>.</p>
+<p>The name GitLab Duo is rooted in You + GitLab AI = the AI dynamic duo. GitLab Duo goes beyond just being an AI pair programmer: It is an expanding toolbox of features integrated into the DevSecOps Platform to help teams across the entire software development environment become more efficient.</p>
+<p>Duo improves team collaboration and reduces the security and compliance risks of AI adoption by bringing the entire software development lifecycle into a single AI-powered application. At GitLab, we believe everyone can contribute. By bringing GitLab Duo capabilities to every persona who uses GitLab, everyone can benefit from AI-powered workflows and organizations can ship secure software faster.</p>
+<figure class=video_container>
+<iframe width=560 height=315 src="https://www.youtube-nocookie.com/embed/LifJdU3Qagw?si=A4kl6d32wPYC4168" title="YouTube video player" frameborder=0 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</figure>
+<h3 id=goal>Goal</h3>
+<p>As we continue building GitLab Duo, there are some high level goals that drive our development process.</p>
+<p><strong>AI-powered workflows</strong></p>
+<ul>
+<li>Harness the power of AI to enhance and boost efficiency to reduce cycle times in <a href="https://about.gitlab.com/platform/">every phase of the software development lifecycle</a>.
+Privacy-first</li>
+<li>GitLab <a href="https://docs.gitlab.com/ee/user/gitlab_duo/data_usage.html#training-data">we ensures AI model vendors don't use customer data to train their models</a>.
+Transparent</li>
+<li>Our <a href="https://docs.gitlab.com/ee/user/gitlab_duo/index.html">publicly available documentation</a> describes all AI models used by GitLab Duo and understand exactly how your code base is utilized.
+Best AI Model powering each capability</li>
+<li>We aren't in exclusive agreements with any one AI vendor. We use the best AI model for each task.
+AI in all distributions</li>
+<li>While we innovate with AI first on GitLab.com, our multitenant SaaS platform; we're committed to bringing Duo capabilities to <a href="https://about.gitlab.com/install/">all GitLab distributions</a> including self-managed, Dedicated instances, and even air-gapped environments.</li>
+</ul>
+<h4 id=omniscient>Omniscient</h4>
+<p>We want GitLab Duo to be as knowledgeable as your most seasoned and tenured employee. That person who you can ask anything to and they are an encyclopedia of knowledge. We don't want to replace that person, but instead help scale them, to every employee in your organization. GitLab Duo will help everyone answer their own questions, learn on the fly, and become more efficient.</p>
+<p>GitLab can't do this on our own. While we are working to allow Duo to access data and information across the software development lifecycle, we also rely on our third-party AI model vendors to provide widely knowledgeable foundation models. Together general knowledge and GitLab specific data about your software creates an AI-assistant that truly knows all.</p>
+<h4 id=ever-present>Ever Present</h4>
+<p>What's an assistant, if not always at your side, ready to help at a moments notice. We're building GitLab Duo to meet you wherever you work: the GitLab web UI, the WebIDE, your local IDE, and even your CLI. Infusing the software development lifecycle with AI-powered features means Duo is primed and ready to help, from summarizing content, generating code, reviewing your code, troubleshooting failed CI jobs, or even resolving vulnerabilities. You can do more, faster, with Duo at your side wherever your software development journey takes you.</p>
+<h4 id=private--secure>Private &amp; Secure</h4>
+<p>It's amazing to have a helpful assistant, but not if they are going to tell everyone all your deep dark secrets. GitLab Duo is designed to be private by default and secure. Leveraging modern security techniques, all data in encrypted in transit and at rest with GitLab Duo. Further we have worked with our third-party AI vendors to ensure <a href="#">they do not retain your data nor use it to train AI models</a>. Your data is yours. Period.</p>
+<p>We take Duo a step further than most other AI assistant solutions, Duo can function in an offline/air-gapped environment with Duo Enterprise, allowing organizations to host their own models within their own networks to power Duo functionality. Learn more about <a href="">self-hosted models</a>.</p>
+<p>Learn more about <a href="">Duo data privacy</a></p>
+<h2 id=groups>Groups</h2>
+<p>The AI-powered stage consists of the following product led groups:</p>
+<ul>
+<li><a href="/direction/ai-powered/duo_workflow">Duo Workflow</a>: GitLab's autonomous AI agent .</li>
+<li><a href="/direction/ai-powered/duo_chat/">Duo Chat</a>: GitLab's AI-powered DevSecOps assistant.</li>
+<li><a href="/direction/ai-powered/custom_models/">Custom Models</a>: Dedicated to empowering GitLab users with the flexibility to deploy and customize GitLab Duo Features within their local networks.</li>
+<li><a href="/direction/ai-powered/ai_framework/">AI Framework</a>: Building common tools to support GitLab teams integrating AI/ML technologies into GitLab features.</li>
+<li><a href="/direction/ai-powered/ai_model_validation/">AI Model Validation</a>: Research and Evaluate AI/ML models for use to enrich the GitLab product with Generative AI.</li>
+</ul>
+<h2 id=whats-next--why>What's Next &amp; Why</h2>
+<p>We're actively building many AI-powered features into GitLab Duo, some of our upcoming milestones include:</p>
+<ul>
+<li><strong>Maturing Duo Enterprise features</strong> ensuring that all our AI-powered features across the software development lifecycle are available to all our customers regardless of their deployment type.</li>
+<li><strong>Duo Workflow experiment</strong> introducing our vision for the future of software development with automonous AI Agents</li>
+<li><strong>Expanded and Additional context</strong> to enrich the data that Duo can access and improve it's holistic knowledge of your software projects.</li>
+<li><strong>Self Hosted Models</strong> to power GitLab Duo in the most restrictive and controlled environments like airgaps and private networks.</li>
+<li><strong>Inline-chat</strong> for improved user experience while using Duo Chat in code files.</li>
+</ul>
+<h2 id=what-weve-recently-completed>What we've recently completed</h2>
+<p>The wider AI industry is moving at light speed, and so are we. We are quickly building to keep up with the rapid innovations in the wider AI/ML market improving our existing Duo capabilities but also introducing new ones.</p>
+<p>You can keep up with our latest releases by following our <a href="https://docs.gitlab.com/ee/user/gitlab_duo/index.html">AI Features documentation</a></p>
+<h3 id=2024>2024</h3>
+<p>Major achievements include:</p>
+<ul>
+<li><a href="#">Duo Pro GA</a></li>
+<li><a href="#">Duo Chat GA</a></li>
+<li><a href="#">Duo Enterprise GA</a></li>
+<li><a href="#">Self-hosted Models Beta</a></li>
+<li><a href="#">Announced GitLab Workflow</a></li>
+</ul>
+<h3 id=2023>2023</h3>
+<p>Major achievements include:</p>
+<ul>
+<li><a href="/direction/create/code_creation/code_suggestions/#short-term-3-6-months-strategy">Code Suggestions Experimental, Beta, and GA release</a></li>
+<li>Experimental and Beta release of <a href="https://docs.gitlab.com/ee/user/gitlab_duo_chat/index.html">Duo Chat</a></li>
+<li>Experimental and Beta release of 15 Generative AI capabilities that we're calling <a href="https://about.gitlab.com/gitlab-duo/">GitLab Duo</a>. Read about these capabilities in our <a href="https://about.gitlab.com/blog/gitlab-ai-assisted-features/">April AI Fireside chat</a></li>
+<li>Initial design and implementation of our <a href="https://docs.gitlab.com/ee/user/gitlab_duo/index.html">AI Architecture</a> to support Generative AI use cases.</li>
+</ul>
+<h3 id=2022>2022</h3>
+<ul>
+<li>GA of Suggested Reviewers</li>
+<li>Experimental Code Suggestions</li>
+</ul>
+<h3 id=2021>2021</h3>
+<ul>
+<li>Established the ModelOps stage (later split to create the AI-powered stage)</li>
+<li><a href="#smarter-code-reviewer-suggestions">Acquisition of UnReview</a></li>
+<li>Internal beta of <a href="#automatic-issue-labeling">Automatic Issue Labeling</a></li>
+</ul>
+<h4 id=smarter-code-reviewer-suggestions>Smarter Code Reviewer suggestions</h4>
+<blockquote>
+<p><a href="https://techcrunch.com/2021/06/02/gitlab-acquires-unreview-as-it-looks-to-bring-more-ml-tools-to-its-platform/">GitLab acquires UnReview as it looks to bring more ML tools to its platform</a></p>
+</blockquote>
+<p>Integrating <a href="https://about.gitlab.com/press/releases/2021-06-02-gitlab-acquires-unreview-machine-learning-capabilities/">UnReviewâs technology</a> into the GitLab platform marks our first step in building GitLabâs AI Assisted features for DevOps.</p>
+<h4 id=automatic-issue-labeling>Automatic Issue Labeling</h4>
+<p>We are currently actively working on an ML model that automatically labels GitLab internal issues based on issue content. <a href="https://gitlab.com/gitlab-org/gitlab/-/issues?label_name[]=automation%3Aml">You'll see GitLab issues</a> with the <code>automation:ml</code> label that have been automatically labeled by our model. You can also provide training feedback to the model if it is incorrect by applying the <code>automation:ml wrong</code> label. GitLab team members can view a feed of these issues with probability data in Slack in the <a href="https://gitlab.slack.com/archives/C01HM3RA2RE">#feed-tanuki-stan</a> channel.</p>
+<p>We pursued this feature first as a way to get a data science workload working within GitLab's existing CI/CD as well as running on top of production GitLab data and interacting with the GitLab data model. This will set the foundation for work in our MLOps group and our other AI Assisted categories listed above.</p>
+<h2 id=analyst-landscape>Analyst Landscape</h2>
+<p>Based on <a href="https://about.gitlab.com/developer-survey/#ai">GitLabâs 2023 What's Next in DevSecOps survey,</a></p>
+<ul>
+<li>AI is becoming more and more embedded in software development.
+<ul>
+<li>The vast majority (83%) of respondents agreed that it is essential to implement AI in their software development processes to avoid falling behind, and this was consistent across development, operations, and security</li>
+</ul>
+</li>
+<li>Organizations are using AI across the software development lifecycle â and that means more than code generation.
+<ul>
+<li>Developers spend 25% of their time writing new code. That means three quarters of developersâ time is taken up with other tasks beyond code generation.</li>
+</ul>
+</li>
+<li>Respondents expressed concerns around data privacy, intellectual property, and security.
+<ul>
+<li>There is concern around introducing AI into the software development lifecycle, but itâs not extreme: 32% of respondents were âveryâ or âextremelyâ concerned about AI being introduced into the software development lifecycle, while 23% were ânot veryâ or ânot at allâ concerned. The largest proportion, 45%, were âsomewhat concernedâ</li>
+</ul>
+</li>
+</ul>
+<p>These statistics validate the importance of GitLabâs AI Assisted features for DevOps, and integrating automation and machine learning technology like UnReview into the GitLab platform.</p>
+<p>Industry analyst research into successful operationalization of machine learning outlines the many challenges organizations face by adopting point solution technologies. This is contrasted with the business value provided by integrating AI Assisted features, DataOps, MLOps, and ModelOps into existing DevOps processes.</p>
+<blockquote>
+<p>"With the rapid increase in cloud adoption, spurred by the COVID-19 pandemic, weâre seeing increased demand for cloud-enabled DevOps solutions," said Jim Mercer, research director DevOps and DevSecOps at IDC. "DevOps teams who can capitalize on cloud solutions that provide innovative technologies, such as machine learning, to remove friction from the DevOps pipeline while optimizing developer productivity are better positioned to improve code quality and security driving improved business outcomes."</p>
+</blockquote>
+<ul>
+<li>Forrester - [State of TuringBots, 2023](https://www.forrester.com/report/the-state-of-turingbots-2023/RES179746
+<ul>
+<li>Accompanying blog post: []"AI And Generative AI For The Software Development Lifecycle"](https://www.forrester.com/blogs/ai-and-generative-ai-in-the-software-development-lifecycle/)</li>
+</ul>
+</li>
+<li>Forrester - <a href="https://www.forrester.com/report/the-future-of-turingbots/RES179600">Future of TuringBots, 2023</a></li>
+<li>Gartner - <a href="https://www.gartner.com/en/topics/generative-ai">What is Generative AI</a></li>
+<li>Gartner - <a href="https://www.gartner.com/en/articles/what-it-takes-to-make-ai-safe-and-effective">Tackling Trust, Risk and Security in AI Models</a></li>
+<li>McKinsey - <a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier#introduction">The economic potential of generative AI: The next productivity frontier</a></li>
+<li><a href="https://retool.com/reports/state-of-ai-2023">Retool's 2023 State of AI in Production</a></li>
+</ul>
+<h3 id=internal-resources>Internal resources</h3>
+<p>GitLab team members can learn more in our internal handbook:</p>
+<ul>
+<li>Slack: #ai_strategy</li>
+<li><a href="https://internal.gitlab.com/handbook/product/ai-strategy/">AI Strategy</a></li>
+</ul>
+<p align=center>
+<i><br/>
+Last Reviewed: 2024-10-05<br/>
+Last Updated: 2024-10-05
+</i>
+</p>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/ai-powered/template.html.md.erb" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/ai-powered/template.html.md.erb" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=e389f0af'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/scripts.js?cacheBust=e389f0af"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

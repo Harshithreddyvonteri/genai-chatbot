@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Product Section Direction - Core Platform
+|
+GitLab
+</title>
+<meta content='GitLab&#39;s Core Platform section is responsible for the features and tools our customers use to operate GitLab at all scales. Learn more here!' name=description />
+<meta content='GitLab&#39;s Core Platform section is responsible for the features and tools our customers use to operate GitLab at all scales. Learn more here!' name='twitter:description'/>
+<meta content='GitLab&#39;s Core Platform section is responsible for the features and tools our customers use to operate GitLab at all scales. Learn more here!' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Product Section Direction - Core Platform' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/core_platform/template.html.md.erb' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/core_platform/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Product Section Direction - Core Platform' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/core_platform/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v6.6.0/css/all.css' integrity='sha384-h/hnnw1Bi4nbpD6kE7nYfCXzovi622sY5WBxww8ARKwpdLj5kUWjRuyiXaD1U2JT' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=e389f0af" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=e389f0af" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target=".qnav">
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=e389f0af'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Product Section Direction - Core Platform
+</h1>
+</div>
+</div>
+<div class="wrapper sidebar-layout-wrapper clearfix">
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/fzimmer'>
+<img
+src='/images/team/fabianzimmer-crop.jpg'
+class=codeowner-avatar-img
+alt='Fabian Zimmer'
+title='Fabian Zimmer'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/mflouton'>
+<img
+src='/images/team/mikeflouton-crop.jpg'
+class=codeowner-avatar-img
+alt='Mike Flouton'
+title='Mike Flouton'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/david'>
+<img
+src='/images/team/ddesanto-crop.jpg'
+class=codeowner-avatar-img
+alt='David DeSanto'
+title='David DeSanto'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/gl-product-leadership'>
+<div class=codeowner-avatar-group title='@gl-product-leadership'>
+<span>G</span>
+</div>
+</a>
+</div>
+</div>
+</aside>
+<div class=" container md-page">
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li>Product Section Direction - Core Platform</li>
+</ol>
+<div class="hidden-md hidden-lg">
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/fzimmer'>
+<img
+src='/images/team/fabianzimmer-crop.jpg'
+class=codeowner-avatar-img
+alt='Fabian Zimmer'
+title='Fabian Zimmer'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/mflouton'>
+<img
+src='/images/team/mikeflouton-crop.jpg'
+class=codeowner-avatar-img
+alt='Mike Flouton'
+title='Mike Flouton'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/david'>
+<img
+src='/images/team/ddesanto-crop.jpg'
+class=codeowner-avatar-img
+alt='David DeSanto'
+title='David DeSanto'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/gl-product-leadership'>
+<div class=codeowner-avatar-group title='@gl-product-leadership'>
+<span>G</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#core-platform-section-overview" id=markdown-toc-core-platform-section-overview>Core Platform section overview</a> <ul>
+<li><a href="#mission" id=markdown-toc-mission>Mission</a></li>
+<li><a href="#impact-on-gitlabs-addressable-market" id=markdown-toc-impact-on-gitlabs-addressable-market>Impact on GitLab's addressable market</a> <ul>
+<li><a href="#self-managed" id=markdown-toc-self-managed>Self-managed</a></li>
+<li><a href="#saas" id=markdown-toc-saas>SaaS</a></li>
+</ul>
+</li>
+<li><a href="#resourcing-and-investment" id=markdown-toc-resourcing-and-investment>Resourcing and investment</a></li>
+<li><a href="#metrics" id=markdown-toc-metrics>Metrics</a></li>
+<li><a href="#competitive-space-and-position" id=markdown-toc-competitive-space-and-position>Competitive space and position</a></li>
+</ul>
+</li>
+<li><a href="#challenges" id=markdown-toc-challenges>Challenges</a></li>
+<li><a href="#3-year-strategy" id=markdown-toc-3-year-strategy>3-year strategy</a></li>
+<li><a href="#themes" id=markdown-toc-themes>Themes</a> <ul>
+<li><a href="#saas-first" id=markdown-toc-saas-first>SaaS First</a> <ul>
+<li><a href="#gitlabcom" id=markdown-toc-gitlabcom>GitLab.com</a></li>
+<li><a href="#gitlab-dedicated" id=markdown-toc-gitlab-dedicated>GitLab Dedicated</a></li>
+</ul>
+</li>
+<li><a href="#gitlab-is-easy-to-deploy-and-operate" id=markdown-toc-gitlab-is-easy-to-deploy-and-operate>GitLab is easy to deploy and operate</a> <ul>
+<li><a href="#cloud-native-is-the-future-of-gitlab-deployments" id=markdown-toc-cloud-native-is-the-future-of-gitlab-deployments>Cloud native is the future of GitLab deployments</a></li>
+</ul>
+</li>
+<li><a href="#consistently-great-user-experience-regardless-of-location-or-scale" id=markdown-toc-consistently-great-user-experience-regardless-of-location-or-scale>Consistently great user experience regardless of location or scale</a></li>
+<li><a href="#achieve-enterprise-compliance-needs" id=markdown-toc-achieve-enterprise-compliance-needs>Achieve enterprise compliance needs</a></li>
+<li><a href="#reduce-cycle-time-by-providing-tools-to-explore-complexity" id=markdown-toc-reduce-cycle-time-by-providing-tools-to-explore-complexity>Reduce cycle time by providing tools to explore complexity</a></li>
+</ul>
+</li>
+<li><a href="#one-year-plan" id=markdown-toc-one-year-plan>One-year plan</a> <ul>
+<li><a href="#distribution" id=markdown-toc-distribution>Distribution</a> <ul>
+<li><a href="#goals" id=markdown-toc-goals>Goals</a></li>
+</ul>
+</li>
+<li><a href="#geo" id=markdown-toc-geo>Geo</a> <ul>
+<li><a href="#disaster-recovery" id=markdown-toc-disaster-recovery>Disaster Recovery</a></li>
+<li><a href="#geo-replication" id=markdown-toc-geo-replication>Geo Replication</a></li>
+</ul>
+</li>
+<li><a href="#global-search" id=markdown-toc-global-search>Global Search</a> <ul>
+<li><a href="#code-search" id=markdown-toc-code-search>Code Search</a></li>
+<li><a href="#code-navigation" id=markdown-toc-code-navigation>Code Navigation</a></li>
+</ul>
+</li>
+<li><a href="#cloud-connector" id=markdown-toc-cloud-connector>Cloud Connector</a></li>
+<li><a href="#database" id=markdown-toc-database>Database</a></li>
+<li><a href="#tenant-scale" id=markdown-toc-tenant-scale>Tenant Scale</a></li>
+<li><a href="#infrastructure" id=markdown-toc-infrastructure>Infrastructure</a></li>
+<li><a href="#project-horse" id=markdown-toc-project-horse>Project Horse</a></li>
+<li><a href="#git" id=markdown-toc-git>Git</a></li>
+<li><a href="#gitaly" id=markdown-toc-gitaly>Gitaly</a></li>
+</ul>
+</li>
+<li><a href="#what-were-not-doing" id=markdown-toc-what-were-not-doing>What we're not doing</a></li>
+<li><a href="#pricing" id=markdown-toc-pricing>Pricing</a> <ul>
+<li><a href="#free" id=markdown-toc-free>Free</a></li>
+<li><a href="#premium" id=markdown-toc-premium>Premium</a></li>
+<li><a href="#ultimate" id=markdown-toc-ultimate>Ultimate</a></li>
+</ul>
+</li>
+<li><a href="#group-direction-review" id=markdown-toc-group-direction-review>Group direction review</a></li>
+<li><a href="#categories" id=markdown-toc-categories>Categories</a> <ul>
+<li><a href="#systems" id=markdown-toc-systems>Systems</a></li>
+<li><a href="#data-stores" id=markdown-toc-data-stores>Data Stores</a></li>
+</ul>
+</li>
+<li><a href="#whats-next" id=markdown-toc-whats-next>What's Next</a> <ul>
+<li><a href="#184-2025-09-18" id=markdown-toc-184-2025-09-18>18.4 (2025-09-18)</a> <ul>
+<li><a href="#footnotes" id=markdown-toc-footnotes>Footnotes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Last reviewed: 2022-11-01</p>
+<h2 id=core-platform-section-overview>Core Platform section overview</h2>
+<p>The Core Platform section is responsible for the features and tools our customers use to explore and operate GitLab at all scales. Core Platform supports customers from initial deployment of GitLab to ongoing operation, as well as cross-stage end user features.</p>
+<p>The Core Platform section is made up of one eponymous non-DevOps stage, Core Platform, and eight groups:</p>
+<ul>
+<li><a href="#distribution">Distribution::Build</a> - Packages, Containers, Dependencies</li>
+<li><a href="#distribution">Distribution::Deploy</a> - Installation, upgrades, maintenance</li>
+<li><a href="#geo">Geo</a> - Disaster recovery and worldwide performance</li>
+<li><a href="#global-search">Global Search</a> - Global search and ElasticSearch integration</li>
+<li><a href="#cloud-connector">Cloud Connector</a> - Make it easy to build a feature across multiple types of deployment</li>
+<li><a href="#database">Database</a> - Database architecture and best practices</li>
+<li><a href="#tenant-scale">Tenant Scale</a> - Ensuring GitLab self-managed and SaaS deployments can scale for years to come</li>
+<li><a href="#git">Git</a> - Build Git upstream and provide expertise on how to use Git effectively and efficiently</li>
+<li><a href="#gitaly">Gitaly</a> - Providing fast access to repository data</li>
+</ul>
+<h3 id=mission>Mission</h3>
+<blockquote>
+<p>Provide <strong>users</strong> with a consistently great experience and achieve customer business requirements by making GitLab easy to deploy, operate, scale, and use.</p>
+</blockquote>
+<p>GitLab delivers value by enabling organizations to build better software, faster. The most important success metric for the Core Platform group is therefore the broader success of the user base of GitLab, rather than its administrators. We need to provide the software necessary to make it easy for an administrator to provide a delightful and productive GitLab experience to their users.</p>
+<p>Within the single platform, users as well as contributors need a common set of cross-stage features and frameworks. End users need a set of common cross-stage features to make the broad array of features and content easily consumable. Contributors need a set of frameworks and developer tools to efficiently and safely contribute to GitLab's growing code base and data sets.</p>
+<h3 id=impact-on-gitlabs-addressable-market>Impact on GitLab's addressable market</h3>
+<p>There is no traditional addressable market for Core Platform due to its foundational, GitLab-specific nature. Every GitLab user is directly impacted, however, by the work Core Platform delivers.</p>
+<p>In light of this, we think of Core Platform's addressable market as that of GitLab's larger addressable market. By working to ensure we can meet the operational, compliance, and usability requirements of GitLab's enterprise customers, we can capture increasingly larger percentages of GitLab's total addressable market opportunity.</p>
+<p>There are two primary segments within the broader "GitLab" market: organizations that would like to operate their own GitLab instances (self-managed) and those who prefer to utilize a SaaS service (such as GitLab.com). SaaS revenue within the DevOps space is predicted to <a href="dotcom/#market-opportunity">overtake self-managed in 2022</a>, with our key competitors already capitalizing on this shift. This is confirmed by <a href="https://docs.google.com/spreadsheets/d/1bwv2FpP34UHdCGDqZyvoeUzG7rahCc06/edit?usp=sharing&amp;ouid=104246595813126297495&amp;rtpof=true&amp;sd=true">analysts reports (GitLab confidential)</a> as well as <a href="https://www.forbes.com/sites/robertdefrancesco/2019/08/31/atlassian-turns-its-focus-to-the-rapidly-expanding-cloud-business/?sh=338eea558803">others in the DevOps space</a>.</p>
+<h4 id=self-managed>Self-managed</h4>
+<p>Today, we are able to capture most of the self-managed segment with our mature <a href="https://docs.gitlab.com/omnibus/README.html">linux packages</a> and more recently our <a href="../distribution/cloud_native_installation/">cloud-native deployment options</a> for Kubernetes and OpenShift. A proof point is GitLab's <a href="https://about.gitlab.com/blog/whats-next-for-gitlab-ci/">two-thirds market share</a> in the self-managed Git market. While this speaks to the competitiveness of GitLab's overall product, a critical enabling factor is the high-quality, flexible, and scalable software and operational tools.</p>
+<p>While we are able to meet the requirements of most organizations, there are some unmet needs:</p>
+<ul>
+<li>Unsupported deployment targets for the GitLab Server, such as <a href="https://gitlab.com/groups/gitlab-org/-/epics/2176">Linux on Z</a> and Power9</li>
+<li>Difficulty in deploying a topology to meet the most demanding <a href="https://en.wikipedia.org/wiki/Service-level_objective">service level objectives</a></li>
+<li>Effort required to deploy and operate is higher than desired, typically resulting in the adoption of a SaaS service or lighter-weight solution</li>
+</ul>
+<h4 id=saas>SaaS</h4>
+<p>Today, GitLab is underperforming compared to our peers in the SaaS segment. While GitLab's SaaS revenue is accelerating faster than self-managed, our revenue mix is heavily weighted towards self-managed. IDC predicts that the market for public cloud SaaS-based DevOps tools (currently 52% of the market in 2021) will continue to accelerate and account for <strong>$20.0B in revenue</strong> (or 61% of DevOps software tools market) by 2026.<sup>1</sup>(#footnotes) This represents both a significant growth opportunity if we can better serve this segment, or risk if we fail to execute.</p>
+<p>There are a larger number of unmet needs on GitLab.com than self-managed, which primarily fall into two buckets:</p>
+<ul>
+<li>Service level indicators, primarily <a href="https://handbook.gitlab.com/handbook/engineering/infrastructure/performance-indicators/#gitlab-com-performance">performance</a> and <a href="https://handbook.gitlab.com/handbook/engineering/infrastructure/performance-indicators/#gitlab-com-availability">availability</a></li>
+<li>Product <a href="https://about.gitlab.com/features/">feature gaps compared to self-managed</a>, most importantly in the realm of <a href="https://about.gitlab.com/direction/core_platform/dotcom/#top-strategy-items">authentication and compliance</a></li>
+</ul>
+<p>For GitLab's FY23, <a href="https://about.gitlab.com/direction/#1-year-plan">SaaS First</a> continues to be a key theme, driving the closure of these gaps. From an Core Platform perspective, much of our work is on improving the performance, reliability, scalability, and efficiency of our SaaS services. The GitLab.com strategy is <a href="/direction/core_platform/dotcom/">available here</a>, and a high level overview of GitLab Dedicated is <a href="https://docs.gitlab.com/ee/subscriptions/gitlab_dedicated/">available here</a>.</p>
+<h3 id=resourcing-and-investment>Resourcing and investment</h3>
+<p>The existing team members and open vacancies for the Core Platform section can be found in the links below:</p>
+<ul>
+<li><a href="https://about.gitlab.com/company/team/?department=enablement-section">Development</a></li>
+<li><a href="https://about.gitlab.com/company/team/?department=enablement-ux-team">User Experience</a></li>
+<li><a href="https://about.gitlab.com/company/team/?department=enablement-pm-team">Product Management</a></li>
+</ul>
+<h3 id=metrics>Metrics</h3>
+<p>All Core Platform section metrics can be found on the <a href="https://internal.gitlab.com/handbook/company/performance-indicators/product/core-platform-section/">Core Platform Performance Indicator (internal only)</a> page.</p>
+<h3 id=competitive-space-and-position>Competitive space and position</h3>
+<p>As noted above, GitLab's competitive position is a tale of two cities. We are the leading self-managed Git solution but are third in SaaS. Our success in self-managed has driven the majority of the company's growth, however it is at risk of being disrupted by growing trends in the market. IDC forecasts that by 2026, 61% of the worldwide DevOps software tools market will be delivered as public cloud services.1(#footnotes) Our SaaS services represents both a large opportunity and risk depending on our execution.</p>
+<p>We need to achieve what could be considered opposing goals: making GitLab efficient and easy to run at <a href="https://docs.gitlab.com/omnibus/settings/rpi.html">small scales</a> and improving the scalability and reliability at internet-scale.</p>
+<h2 id=challenges>Challenges</h2>
+<ul>
+<li>Due to much of GitLab's code being written by other groups, Core Platform relies largely on influence by defining best practices, policies, and frameworks to achieve stability and performance goals</li>
+<li>Rapidly increasing feature surface area, driving increased demand for compute resources and operational complexity</li>
+<li>Breadth of deployment targets (bare metal, VM, container, Kubernetes, cloud-specific, etc.) and configuration matrixes</li>
+<li>Increasing scale of GitLab.com, we are pushing the limits of our software and dependencies</li>
+</ul>
+<h2 id=3-year-strategy>3-year strategy</h2>
+<p>In three years we expect:</p>
+<ul>
+<li>SaaS to be the strongly preferred delivery mechanism for IT services</li>
+<li>DevOps platforms to be business-critical applications with very high SLA's required</li>
+<li>Kubernetes adoption to continue to accelerate for IT services, including GitLab</li>
+<li>Continued improvement of open source Git projects like <a href="https://gitea.io/en-us/">gitea</a> and <a href="https://gogs.io">gogs</a></li>
+<li>DevOps platforms like GitLab to become deeply interwoven into organizational workflows and processes</li>
+<li>Competition in the DevOps space to continue to consolidate and intensify, as more companies adopt modern tools</li>
+<li>Single platforms becoming the preferred DevOps toolchain</li>
+<li>The global regulatory framework for cloud to continue to fragment</li>
+</ul>
+<p>As a result, in three years, GitLab will:</p>
+<ul>
+<li>Generate more ARR on SaaS (such as GitLab.com) than self-managed</li>
+<li>Demonstrate market-leading service availability for both GitLab.com and self-managed</li>
+<li>Set the bar for IT apps delivered on Kubernetes</li>
+<li>Enable users to get started with self-managed GitLab in under 10 minutes at both 5 and 50,000 user scales</li>
+<li>Automatically highlighting similar content within large organizations</li>
+<li>Make it quick and easy to find the desired content across the platform</li>
+<li>Refine SaaS services that meet the regulatory requirements of major markets throughout the world, like <a href="https://docs.gitlab.com/ee/subscriptions/gitlab_dedicated/">Dedicated</a> or <a href="https://internal.gitlab.com/handbook/engineering/fedramp-compliance/">FedRAMP (internal only)</a></li>
+</ul>
+<h2 id=themes>Themes</h2>
+<h3 id=saas-first>SaaS First</h3>
+<p>Woven throughout all of the below themes is a focus on improving our competitiveness in the <a href="#saaS">SaaS</a> segment. As this is critical outcome for the company, it is worth highlighting individually our efforts to contribute.</p>
+<h4 id=gitlabcom>GitLab.com</h4>
+<p>We are improving the service levels and efficiency of GitLab.com, our multi-tenant SaaS service. A multi-tenant cloud service is the best solution for most customers, combining low cost of ownership and fast time to value. Core Platform is specifically focused on a few key outcomes:</p>
+<ul>
+<li>Improving the responsiveness of the platform, and providing data for other groups to further target their own performance efforts</li>
+<li>Increasing the availability of the platform, achieving our 99.95% goal</li>
+<li>Improving the cost efficiency of the platform, from a cloud spend perspective as well as reducing the human maintenance burden</li>
+</ul>
+<h4 id=gitlab-dedicated>GitLab Dedicated</h4>
+<p>To serve the large enterprise and highly regulated SaaS market, we have recently launched <a href="https://docs.gitlab.com/ee/subscriptions/gitlab_dedicated/">GitLab Dedicated</a>, a single-tenant SaaS offering. Core Platform will be focusing on improving the efficiency of operating individual GitLab tenants, by improving underlying tools like the <a href="https://gitlab.com/gitlab-org/gitlab-environment-toolkit">GitLab Environment Toolkit</a>, and our <a href="https://docs.gitlab.com/operator/">Operator</a>. By building in automation and self-healing capabilities, we can reduce the maintenance overhead required per instance, improving the efficiency and reliability of not just Dedicated but also self-managed deployments who also use these tools.</p>
+<h3 id=gitlab-is-easy-to-deploy-and-operate>GitLab is easy to deploy and operate</h3>
+<p>Deploying and maintaining GitLab should be as frictionless as possible for organizations of all sizes. This is critical for GitLab at multiple points in the customer journey.</p>
+<p>GitLab starts as a personal or side project at many organizations, representing an important driver of initial adoption and awareness. Delighting future champions by providing a thoughtfully designed out-of-the-box experience that runs well on hardware they have lying around pays dividends in future growth.</p>
+<p>Once a company is ready to adopt GitLab enterprise wide, it is similarly important to ensure the GitLab instance is set up for success with minimal effort. Consider our <a href="https://docs.gitlab.com/ee/administration/reference_architectures/5k_users.html">5,000-user reference architecture</a> which recommends setting up at minimum 27 different instances, and that our <a href="https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/files/gitlab-config-template/gitlab.rb.template">GitLab configuration file is over 2,000 lines long</a>. This is a significant upfront investment to ask a company to make, prior to seeing value returned. It can also be error prone given the complexity, with the only practical solution to ongoing management being <a href="https://en.wikipedia.org/wiki/Infrastructure_as_code">infrastructure as code</a>, which requires further investment.</p>
+<p><a href="https://dzone.com/articles/defining-day-2-operations">Day 2 operations</a> like backups, scaling, and upgrades are equally important. GitLab is a <a href="#consistently-great-user-experience-regardless-of-location-or-scale">business critical application</a>, so events like upgrades need to be routine and <a href="https://docs.gitlab.com/omnibus/update/README.html#zero-downtime-updates">seamless</a>. The easier we make it for our customers to upgrade, the faster our users will be able to leverage our new features and provide feedback. Currently it takes <a href="https://app.periscopedata.com/app/gitlab/406972/Version-Upgrade-Rate">over 3 months</a> after release for a majority of our users to feel the impact of our work.</p>
+<p>By reducing the deployment/operating costs and packaging best practices, we will see the following benefits:</p>
+<ul>
+<li>Increased downloads and trials of GitLab</li>
+<li>Shortened sales cycles as a result of quicker <a href="https://en.wikipedia.org/wiki/Time_to_value">time to value</a> and lower <a href="https://en.wikipedia.org/wiki/Total_cost_of_ownership">total cost of ownership</a></li>
+<li>Improved typical end-user experience across all GitLab instances, with services more likely to be deployed optimally and on a recent version</li>
+<li>Further penetrate the SaaS-leaning market segment with self-managed for those where GitLab.com does not currently meet their needs</li>
+<li>Improved customer deployment security, productivity, and satisfaction due to a higher population of users on recent versions</li>
+</ul>
+<p>To support these goals, we are:</p>
+<ul>
+<li>Standardizing on a common automation framework for deploying and operating GitLab, the <a href="https://gitlab.com/gitlab-org/gitlab-environment-toolkit">GitLab Environment Toolkit</a>, which is available to customers and utilized by GitLab.</li>
+<li>Shifting more of our focus to the <a href="https://docs.gitlab.com/operator/">GitLab Operator</a>, which is able to continuously monitor a GitLab deployment and automatically take proactive and reactive action to optimally run a GitLab instance. Over the long term, we expect our Omnibus-based packages to be used only for single-node installs, with our Operator the primary installation path.</li>
+<li>Standardizing on a common orchestration framework to coordinate the provisioning and operations of all instances which GitLab operates, including GitLab.com. These tools will include the Operator, GitLab Environment Toolkit, and <a href="https://gitlab.com/gitlab-com/gl-infra/gitlab-dedicated/team#cross-reference-to-gitlab-dedicated-projects">Switchboard (internal only)</a>.</li>
+<li>Improving our backup and restore functionality, through incremental and streaming backups, and the ability to <a href="https://gitlab.com/groups/gitlab-org/-/epics/12043">restore to a particular point in time across all stateful services</a>.</li>
+</ul>
+<h4 id=cloud-native-is-the-future-of-gitlab-deployments>Cloud native is the future of GitLab deployments</h4>
+<p>We are moving towards a cloud-native deployment of GitLab. Cloud-native will become the strongly recommended architecture for all deployments beyond small single-node instances.</p>
+<p>The outcomes we hope to achieve with this effort are:</p>
+<ul>
+<li>Majority of customers on recent, supported, versions of GitLab delivering improved security and customer value</li>
+<li>Significantly reduced operational burden and complexity (total cost of ownership)</li>
+<li>Ability to achieve shorter RPO and RTO times</li>
+<li>Declarative operations, for example: backup frequency, upgrade frequency, and more</li>
+<li>Proactive maintenance, for example: automatic provisioning of more repository space, self-healing a Gitaly Cluster deployment, and more</li>
+</ul>
+<p>We plan to achieve this by delivering a few key projects:</p>
+<ul>
+<li>Deploying all GitLab-built components in Kubernetes. Kubernetes offers a standardized control plane to discover and operate the various aspects of a GitLab deployment. The GitLab operator provides a control plane which continuously analyzes the deployment and can take action when required. In order to achieve this:
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/6127">Gitaly will need to be able to run in Kubernetes</a>.</li>
+<li>The GitLab Operator needs to <a href="https://gitlab.com/gitlab-org/cloud-native/gitlab-operator/-/issues/1033">mature to recommend production use for Day 1 operations</a>.</li>
+<li>The GitLab Operator needs to be expanded to automate Day 2 operations</li>
+</ul>
+</li>
+<li>Streaming backups of all stateful data.
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/8911">Gitaly Write-ahead Logging</a></li>
+<li>Backup integration with hyperscaler managed services, like SQL and object storage (to configure backup policies and trigger restorations)</li>
+</ul>
+</li>
+<li>Unified, point in time restoration of data
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11635">Common backup interface</a></li>
+<li>Ability to trigger stateful restores at a specific timestamp (SQL, Gitaly, object storage)</li>
+</ul>
+</li>
+<li>Upgrades based on a target release channel (e.g. N-1)
+<ul>
+<li>Automated upgrade support within the Operator with zero downtime (as possible depending on managed services in use)</li>
+<li>Automatic recovery of failed upgrade</li>
+<li>Proactive notifications of deprecations and removals that affect instance</li>
+</ul>
+</li>
+</ul>
+<p>By automating and standardizing more of the operations of Gitlab, we can help our customers (both SaaS and self-managed) operate highly reliable, secure, and up-to-date deployments. This will allow end users and customers to maximize the value and potential of the GitLab platform.</p>
+<h3 id=consistently-great-user-experience-regardless-of-location-or-scale>Consistently great user experience regardless of location or scale</h3>
+<p>As customers roll out and adopt additional stages of GitLab to realize the benefits of a <a href="https://about.gitlab.com/topics/single-application/">single application</a>, the service availability and performance requirements increase as well. Additional departments within the business utilize the service on a daily basis to accomplish their jobs, such as design, security, and operations teams. People around the world collaborate together. Work that may have been done manually is now automated using CI/CD, including delivering the latest update or bug fix to their customer facing application/website. For these reasons, GitLab is increasingly being identified as a business-critical application with attendant requirements. It is therefore important for GitLab to be a consistently reliable, performant service for all users to fulfill its potential.</p>
+<p>By providing market-leading reliability and performance, we will see the following benefits:</p>
+<ul>
+<li>Establish the trust required for customers to adopt additional stages and consolidate on GitLab</li>
+<li>Further penetrate the large enterprise by displacing incumbents with unsatisfactory stability/performance</li>
+<li>Improve our market share of the <a href="#saas">SaaS DevOps segment</a> by improving the <a href="https://handbook.gitlab.com/handbook/engineering/infrastructure/performance-indicators/#gitlab-com-availability">service level of GitLab.com</a></li>
+<li>Increase customer satisfaction by improving responsiveness and availability</li>
+</ul>
+<h3 id=achieve-enterprise-compliance-needs>Achieve enterprise compliance needs</h3>
+<p>Organizations in regulated industries, the <a href="https://en.wikipedia.org/wiki/Public_sector">public sector</a>, and large enterprises often have a variety of standards and processes that they must adhere to.</p>
+<p>In the public sector, there are standards like <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r4.pdf">NIST 800-53</a> and <a href="https://www.fedramp.gov/">FedRAMP</a>. For companies handling credit card transactions, there is <a href="https://www.pcisecuritystandards.org/">PCI DSS</a>. These are just two examples. While some of these standards are not directly aimed at services like GitLab, they have a broad reach, and the requirements generally cannot be waived, as the penalties for non-compliance can be severe. Many enterprises have also developed their own internally driven processes and policies that can be important to support, rather than requiring changes prior to the adoption of GitLab.</p>
+<p>For published standards, it is important that GitLab offers the required features and configuration to enable our customers to be in compliance. This includes changes to our code base; for example, fully encrypting all traffic between GitLab nodes, selection of specific cryptographic modules, availability via our <a href="https://docs.gitlab.com/ee/administration/reference_architectures/">Reference Architectures</a>, and <a href="https://docs.gitlab.com/ee/administration/geo/disaster_recovery/">disaster recovery</a>, among others. Additionally, some standards like <a href="https://internal.gitlab.com/handbook/engineering/fedramp-compliance/">FedRAMP (internal only)</a> can also impact the operational and governance processes of GitLab.com, as well as where data can be stored and processed. The more that we can do to be compliant out of the box or provide documentation on recommended settings, the less work our customers will be required to do during evaluation and implementation.</p>
+<p>By enabling our customers to meet their compliance requirements and reducing the required effort, we will see the following benefits:</p>
+<ul>
+<li>Increased penetration of these segments: large enterprise, regulated industries, and the public sector</li>
+<li>Shortened sales cycles by reducing the amount of evaluation and implementation work required to ensure they can remain compliant</li>
+<li>Increased adoption of GitLab by organization whom prefer SaaS but have compliance requirements we cannot meet today</li>
+</ul>
+<h3 id=reduce-cycle-time-by-providing-tools-to-explore-complexity>Reduce cycle time by providing tools to explore complexity</h3>
+<p>All parts of the software development process grow over time: the code base, its dependencies, data stores, the historical context, the organization, and more. This accretion leads to an increase in complexity, creating a drag on development velocity. At the outset of a project, changes can be quick to land as the code base and its impact is well understood. Fast forward 5 to 10 years and that same change will require significantly more effort, investigating where the change needs to happen across the code base, understanding why the code was written that way in the first place, determining the potential downstream impact, validating the performance, refreshing documentation, and more. GitLab, at 10 years old, is experiencing these challenges as well.</p>
+<p>As a single platform, GitLab is uniquely positioned to minimize these effects by providing tools to better explore and manage complexity. We plan to achieve this by:</p>
+<ul>
+<li>Providing a robust global search function across all content within GitLab, and allowing exploration of related content. From an identified code snippet, one could learn the merge request which landed the changes, the issue which discussed the problem, the CVE which is being resolved, the CI pipeline which validated the changes, and ultimately the deployment job to production.</li>
+<li>Testing all database changes on production data, prior to production. Changes which impact databases, whether it is a complex migration, a schema change, or a perceived simple query, can require an extensive period of review. GitLab aims to make this self-service, by executing all queries and database changes on a thin clone of the production database, and presenting the performance and impact directly to the developer in the merge request as they commit changes.</li>
+<li>Providing guidance on which data store to use for a given change.</li>
+<li>Exposing granular performance data for libraries and applications where this could be a challenge, like Ruby monoliths.</li>
+</ul>
+<h2 id=one-year-plan>One-year plan</h2>
+<p>Over the next 12 months, each group in the Core Platform section will play an integral part in this strategy.</p>
+<p>Please see the <a href="https://handbook.gitlab.com/handbook/product/categories/#core_platform-section">categories page</a> for a more detailed look at Core Platforms's plan by exploring <code>Direction page</code> links in areas of interest.</p>
+<h3 id=distribution>Distribution</h3>
+<p>In FY23 (CY 2022), the Distribution team will focus on several main themes:</p>
+<ul>
+<li>Improve the upgrade rate of instances, by polishing the upgrade experience</li>
+<li>Reduce the time it takes to deploy and operate GitLab, especially for large-scale deployments</li>
+<li>Achieve Loveable maturity of our Cloud Native installation</li>
+<li>Complete maturity of the GitLab Operator according to the <a href="https://operatorframework.io/operator-capabilities/">Operator Framework capabilities</a>.</li>
+</ul>
+<p>You can learn more about Distribution group plans on the <a href="/direction/distribution/">Distribution Direction page</a>.</p>
+<h4 id=goals>Goals</h4>
+<ol>
+<li>Improve the upgrade rate of instances
+<ul>
+<li>For single-node instances, <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/15993">automatically upgrade based on user preferences</a></li>
+<li>For mult-node Omnibus instances, <a href="https://gitlab.com/gitlab-org/gitlab-environment-toolkit">make it easy to perform zero downtime upgrades</a> with minimal risk</li>
+<li>For cloud native, add support for <a href="https://gitlab.com/gitlab-org/gl-openshift/gitlab-operator/-/issues/59">automated zero-downtime upgrades</a> in the Operator</li>
+</ul>
+</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab-environment-toolkit">Reduce the time it takes to deploy and operate scaled GitLab</a>
+<ul>
+<li>Automated deployments of reference architectures on AWS, GCP, and Azure</li>
+<li>Automated zero downtime upgrades</li>
+<li>Automated Geo promotions and demotions</li>
+</ul>
+</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/5796">Achieve Loveable maturity of our Cloud Native installation</a>
+<ul>
+<li>Achieve feature parity between Omnibus and Chart based deployment options. New features are launched simultaneously on both Omnibus and Cloud Native</li>
+<li>Clear and concise documentation for cloud-native installs so that configuration options are easily discoverable and users can more easily deploy in Kubernetes without relying on support from internal GitLab teams.</li>
+<li>Test the Helm chart and Operator install at different scales, develop reference architectures, and offer best in class solution for installing GitLab in a cloud environment.</li>
+</ul>
+</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/6958">Complete maturity of the GitLab Operator</a>
+<ul>
+<li>Offer a Red Hat certified Operator</li>
+<li>Make it easy for our existing Charts users to migrate to the Operator</li>
+<li>Cloud Native users utilize Operator for more frequent upgrades</li>
+</ul>
+</li>
+</ol>
+<h3 id=geo>Geo</h3>
+<p>You can read the Geo group plan on the <a href="/direction/geo/">Geo Direction page</a>.</p>
+<p>In FY23, the Geo group is focused on delivering <a href="https://gitlab.com/groups/gitlab-org/-/epics/3574">Complete maturity for Disaster Recovery</a>. Disaster Recovery is a common, must-have, requirement for large enterprises, allowing them to feel comfortable that GitLab can remain available for their developers to be productive throughout a variety of disaster scenarios.</p>
+<p>In FY23, Geo also plans to deliver <a href="https://gitlab.com/groups/gitlab-org/-/epics/1508">Complete maturity for Geo Replication</a>, another key feature for large enterprises with multiple offices, or the growing number of businesses embracing remote work. Geo-replication enables organizations to set up additional GitLab nodes throughout the world, enabling these users to work efficiently by reducing the latency and time it takes to perform common tasks like cloning or pulling container images.</p>
+<p>In Q1 FY23, we will re-evaluate the priority of the backup and restore category and are going to assess <a href="https://gitlab.com/gitlab-org/gitlab/issues?scope=all&amp;utf8=%E2%9C%93&amp;state=opened&amp;label_name[]=Category%3ABackup%2FRestore%20of%20GitLab%20instances">all currently open issues</a> to define the priorities further.</p>
+<h4 id=disaster-recovery>Disaster Recovery</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/5285">Verification of blob data types</a>.</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/3131">Simplify promoting a secondary</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/2153">Simplify demoting a secondary site</a></li>
+<li><a href="https://about.gitlab.com/company/team/structure/working-groups/disaster-recovery/">Working with Infrastructure to enable Geo on GitLab.com</a>.</li>
+</ul>
+<h4 id=geo-replication>Geo Replication</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/1465">Geo should be easy to setup</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/1530">Publish the metrics to a preconfigured Grafana dashboard</a>.</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/1527">Geo sites for CI/CD</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/2610">Geo supports an advanced caching mode</a> with the following properties:</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/6388">Enable or disable replication by data type in the Geo Administrator UI</a>.</li>
+</ul>
+<h3 id=global-search>Global Search</h3>
+<p>You can read the Global Search group plan on the <a href="/direction/global-search/">Global Search Direction page</a>.</p>
+<p>For FY23 - Global Search provides a search experience across the entire GitLab Instance.
+The focus is on expanding the userâs needs to include new scopes as GitLab features.
+Vulnerabilities search will include multiple ways for sort and filter allowing users to quickly map find Vulnerabilities across groups and projects.
+Pipelines and Jobs Search will make it easier to find CI/CD components across multiple groups.
+Snippets Search will make it easier for users to share snippets across their organization.<br/>
+Along with adding these additional scopes, we will be enhancing the Advanced Search experience to include additional ways to sort and filter results.
+Adding new content into its own search verticals puts pressure on the user to discover these sections and look at each one individually. To Improve this we will be adding an All results default view that will combine all scopes.</p>
+<h5 id=code-search>Code Search</h5>
+<p>Code Search will focus on addressing the needs of Big Code, Which includes several key areas of focus.</p>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/6221">Federated Search - Search that can include Self-managed and SaaS instances</a>. Better would be the ability to source content from Non-GitLab Repos</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/6222">Elasticsearch Integration for Core/Free</a> - This would provide faster results and have a much smaller footprint if not including code.</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/6223">Local Editor Functionality</a>
+<ul>
+<li>Exact Match</li>
+<li>More than one line of results per file.</li>
+<li>RegEx Syntax for Variable specified in code search</li>
+<li>Case Sensitivity</li>
+</ul>
+</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/6236">Code Language Filtering</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/22553">Relevancy Improvements 2</a> - This would be also include Sorting options.</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/223150">LSIF for Code Structure to be Specified in the Search.</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/6248">Infrastructure investment</a>- 400% over 2 years. Scaling needs to be flexible.</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/339121">Platform change- (This might be required to solve these problems. ) Like zoekt</a></li>
+</ul>
+<h5 id=code-navigation>Code Navigation</h5>
+<p>Growing out of the early delivery of Code Intelligence, Code Navigation will bring more Local IDE style use cases to your Web IDE and across multiple Groups and Projects.
+Details specific to this delivery are in Discovery currently.</p>
+<h3 id=cloud-connector>Cloud Connector</h3>
+<p>GitLab Cloud Connector is a way to access services common to multiple GitLab deployments, instances, and cells. GitLab customers can choose between the following deployment options:</p>
+<ul>
+<li>GitLab.comâs multi-tenant SaaS offering.</li>
+<li>Deploying their own self-managed GitLab instance.</li>
+<li>Signing up for GitLab Dedicated, our managed single-tenant solution.
+The goal of GitLab Cloud Connector is to ensure that GitLab features can work equally across all three. This aligns with Core Platformâs mission of accelerating other product groups by reducing the friction of developing for multiple deployments.</li>
+</ul>
+<p>In FY25, we will work to formalize the technical boundaries for Cloud Connector by integrating at least two different services: AI gateway and TanuKey. This experience will help us iterate towards a framework-like solution where new feature teams can self-service their own Cloud Connector integration.</p>
+<p>You can learn more about Cloud Connector group plans on the <a href="/direction/cloud-connector/">Cloud Connector Direction page</a>.</p>
+<h3 id=database>Database</h3>
+<p>The Database group is focused on improving the scalability, performance, and resilience of GitLab's database layer as well as instituting best practices across the wider development organization.</p>
+<p>You can learn more about Database group plans on the <a href="/direction/database/">Database Direction page</a>.</p>
+<p>For FY23, the group is working on the following key themes:</p>
+<ul>
+<li>Ensuring that the database continues to scale
+<ul>
+<li>Update the <a href="https://gitlab.com/groups/gitlab-org/-/epics/6841">database tooling</a> and our <a href="https://gitlab.com/groups/gitlab-org/-/epics/6840">framework for executing background migrations</a> to support multiple databases</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/6211">Reduce tables sizes to &lt; 100 GB per physical table</a> (<a href="https://docs.gitlab.com/ee/architecture/blueprints/database_scaling/size-limits.html">analysis</a>)</li>
+</ul>
+</li>
+<li>Improving the efficiency and reliability of making database changes
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/6751">Batched Background Migrations - General Availability</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/database-team/-/epics/10">Automated database testing using production clones: Advanced database testing features</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/3928">Database Schema Validation</a></li>
+</ul>
+</li>
+</ul>
+<h3 id=tenant-scale>Tenant Scale</h3>
+<p>You can read the Tenant Scale Group plan on the <a href="/direction/enablement/tenant-scale/">Tenant Scale Direction page</a>.</p>
+<p>The Tenant Scale Group is concerned with delivering application changes that allow GitLab and GitLab.com to scale to millions of users and implement the strategies defined in the <a href="https://about.gitlab.com/company/team/structure/working-groups/database-scalability/">Database Scalability Working Group</a>.</p>
+<p>In FY23, we expect GitLab.com will transition to run on multiple databases that are decomposed by feature. We expect that at least two independent databases exist: <code>main</code> and <code>ci</code>. This will provide significant headroom and will allow the Tenant Scale group to transition towards validating proposals for scaling GitLab even further.</p>
+<p>Decomposition is only a first step to unlocking further scalability for GitLab. By the end of FY23, the Tenant Scale Group will have evaluated and implemented other scalability options for GitLab. There are several possible options that will have to be evaluated, including but not limited to sharding GitLab's database using existing PostgreSQL tooling, adopting <a href="https://vitess.io/">Vitess</a>, moving towards a Cell-like architecture and utilizing different datastores that fit specific use cases.</p>
+<h3 id=infrastructure>Infrastructure</h3>
+<p>See the 1 year <a href="/direction/enablement/dotcom/">GitLab.com infrastructure strategy</a></p>
+<h3 id=project-horse>Project Horse</h3>
+<p>The one year Project Horse direction page can be found <a href="https://internal.gitlab.com/handbook/direction/platforms/horse">in the internal handbook here</a>.</p>
+<h3 id=git>Git</h3>
+<p>You can read the Git group plan on the <a href="/direction/git/">Git Direction Page</a>.</p>
+<h3 id=gitaly>Gitaly</h3>
+<p>You can read the Gitaly group plan on the <a href="/direction/gitaly/">Gitaly Direction Page</a>.</p>
+<p>In FY23, the Gitaly group is focused on improving the performance and availability of the Gitaly product. We have completed a <a href="https://gitlab.com/groups/gitlab-org/-/epics/7376">prioritization effort</a> and have coordinated on our near term focus on improving data safety and improving stability for large repositories.</p>
+<p>More detailed plans can be found by read the <a href="/direction/gitaly/#where-we-are-headed">Where we are headed</a> section of our direction page, linked above.</p>
+<h2 id=what-were-not-doing>What we're not doing</h2>
+<p>Choosing to invest in these areas in 2021 means we will choose not to:</p>
+<ul>
+<li>Invest in marketplaces other than AWS.
+<ul>
+<li>To date we have not seen much customer traction via these deployment options, and providing a high quality experience can be a significant undertaking. If we learn how to make the AWS Marketplace successful, we can consider replicating the model elsewhere.</li>
+</ul>
+</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/issues/6468">Federated GitLab</a>
+<ul>
+<li>Connecting multiple GitLab instances together for a unified workflow is a frequent request, but is technically challenging and there are many different desired use cases.</li>
+</ul>
+</li>
+<li>Invest further in improving our bespoke backup/recovery tools this year. Many of our larger customers already have established enterprise backup tools, or can use snapshots, and the current tool works for small instances. We are currently focused on improving our Disaster Recovery and Geo Replication features.</li>
+</ul>
+<h2 id=pricing>Pricing</h2>
+<p>The Core Platform pricing strategy's aim is to ensure that the widest possible audience can benefit from GitLab through our free tier, and that we can meet the unique needs of large organizations through our paid tiers.</p>
+<p>At the free tier, we want to provide an open-core product for everyone. To achieve this GitLab needs to be incredibly easy to try and adopt, for a wide variety of deployment methods. Today we support SaaS with GitLab.com, and self-managed on all major cloud providers as well as on-prem. This model helps keep our <a href="../../company/strategy/#dual-flywheels">open core flywheel</a> spinning, and is a key factor in our organic growth by being a go-to DevOps application with a low time and effort investment required to see value.</p>
+<p>As adoption across an organization grows, additional business and scale requirements may need to be met, these are particularly common for large enterprise and regulated industries. We aim to meet these more complex operational needs with features in our paid tiers, so that these organizations can adopt GitLab at scale.</p>
+<h3 id=free>Free</h3>
+<p>From an operational standpoint, we believe GitLab should be easy to deploy and operate, and that all users should have a great user experience. To achieve this, we invest significantly in automating as much of the deployment and day 2 operations as we can, and embedding as many best practices into the product as possible. We want to set up administrators for success, so they can delight their users. We don't believe application performance, or ease of use, should be a paid-for feature. This helps to ensure that GitLab is easy to try, and that when deployed, provides a good user experience.</p>
+<p>For the user-facing features that we build, we align with our overall <a href="https://handbook.gitlab.com/handbook/company/pricing/#four-tiers">pricing strategy</a>, focusing Free on individual developers. Presently this includes basic search, which provides a search experience across projects and groups.</p>
+<h3 id=premium>Premium</h3>
+<p>Operationally, this tier is where the majority of paid features are located, as Director-level buyers are typically more concerned about meeting wider business, compliance, and scale requirements. We focus features that relate to meeting these needs, typically found in larger enterprises or regulated industries, in this tier. Examples include meeting business continuity needs with <a href="https://docs.gitlab.com/ee/administration/geo/disaster_recovery/">disaster recovery</a> and horizontally-scaled instances, as well as multi-region performance requirements with <a href="https://docs.gitlab.com/ee/administration/geo/index.html">geo-replication</a>. The <a href="https://gitlab.com/gitlab-org/gitlab-environment-toolkit">GitLab Environment Toolkit</a> is also available at this tier, providing a great starting point for customers to develop their own deployment automation further.</p>
+<p>For users, <a href="https://docs.gitlab.com/ee/user/search/advanced_search.html">Advanced Search</a> provides cross-project code search as well as <a href="https://docs.gitlab.com/ee/user/search/advanced_search.html">advanced search syntax</a> to help users more effectively locate content within larger organizations.</p>
+<h3 id=ultimate>Ultimate</h3>
+<p>Currently there are no Core Platform features in this tier. We would introduce new features in this tier that target highly specialized requirements typically seen at the executive level. For example companies who may operate multiple independent businesses, but still want to provide a unified experience across the organization through some type of <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/6468">federation</a>.</p>
+<h2 id=group-direction-review>Group direction review</h2>
+<p>The Core Platform PM team reviews one of the groups direction every other week. Prior recordings and the upcoming schedule can be viewed <a href="reviews/">here</a>.</p>
+<h2 id=categories>Categories</h2>
+<h3 id=systems>Systems</h3>
+<h3 id=data-stores>Data Stores</h3>
+<h2 id=whats-next>What's Next</h2>
+<h3 id=184-2025-09-18>18.4 (2025-09-18)</h3>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11398">Direct Transfer General Availability</a></li>
+</ul>
+<h4 id=footnotes>Footnotes</h4>
+<ol>
+<li>IDC, Worldwide DevOps Software Tools Forecast, 2022â2026, Doc # US48599322, July 2022</li>
+</ol>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/core_platform/template.html.md.erb" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/core_platform/template.html.md.erb" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=e389f0af'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/scripts.js?cacheBust=e389f0af"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

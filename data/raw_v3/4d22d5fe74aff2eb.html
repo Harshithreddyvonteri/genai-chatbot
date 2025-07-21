@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Product Section Direction - Dev
+|
+GitLab
+</title>
+<meta content='The Dev Section is made up of the Manage, Plan, and Create stages of the DevOps lifecycle and encompasses a number of analyst categories' name=description />
+<meta content='The Dev Section is made up of the Manage, Plan, and Create stages of the DevOps lifecycle and encompasses a number of analyst categories' name='twitter:description'/>
+<meta content='The Dev Section is made up of the Manage, Plan, and Create stages of the DevOps lifecycle and encompasses a number of analyst categories' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Product Section Direction - Dev' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/dev/template.html.md.erb' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/dev/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Product Section Direction - Dev' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/dev/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v6.6.0/css/all.css' integrity='sha384-h/hnnw1Bi4nbpD6kE7nYfCXzovi622sY5WBxww8ARKwpdLj5kUWjRuyiXaD1U2JT' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=e389f0af" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=e389f0af" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target=".qnav">
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=e389f0af'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Product Section Direction - Dev
+</h1>
+</div>
+</div>
+<div class="wrapper sidebar-layout-wrapper clearfix">
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/mflouton'>
+<img
+src='/images/team/mikeflouton-crop.jpg'
+class=codeowner-avatar-img
+alt='Mike Flouton'
+title='Mike Flouton'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/david'>
+<img
+src='/images/team/ddesanto-crop.jpg'
+class=codeowner-avatar-img
+alt='David DeSanto'
+title='David DeSanto'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/gl-product-leadership'>
+<div class=codeowner-avatar-group title='@gl-product-leadership'>
+<span>G</span>
+</div>
+</a>
+</div>
+</div>
+</aside>
+<div class=" container md-page">
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li>Product Section Direction - Dev</li>
+</ol>
+<div class="hidden-md hidden-lg">
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/mflouton'>
+<img
+src='/images/team/mikeflouton-crop.jpg'
+class=codeowner-avatar-img
+alt='Mike Flouton'
+title='Mike Flouton'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/david'>
+<img
+src='/images/team/ddesanto-crop.jpg'
+class=codeowner-avatar-img
+alt='David DeSanto'
+title='David DeSanto'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/gl-product-leadership'>
+<div class=codeowner-avatar-group title='@gl-product-leadership'>
+<span>G</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#dev-section-overview" id=markdown-toc-dev-section-overview>Dev Section Overview</a> <ul>
+<li><a href="#accomplishments-news-and-updates" id=markdown-toc-accomplishments-news-and-updates>Accomplishments, News, and Updates</a> <ul>
+<li><a href="#section-news--team-member-updates" id=markdown-toc-section-news--team-member-updates>Section News &amp; Team Member Updates</a></li>
+<li><a href="#important-pi-highlights" id=markdown-toc-important-pi-highlights>Important PI Highlights</a></li>
+<li><a href="#recent-accomplishments" id=markdown-toc-recent-accomplishments>Recent Accomplishments</a></li>
+<li><a href="#whats-ahead" id=markdown-toc-whats-ahead>What's Ahead</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#dev-section-fy24-themes" id=markdown-toc-dev-section-fy24-themes>Dev Section FY24 Themes</a> <ul>
+<li><a href="#world-class-devsecops-experience" id=markdown-toc-world-class-devsecops-experience>World-class DevSecOps experience]</a></li>
+<li><a href="#advanced-security-and-compliance" id=markdown-toc-advanced-security-and-compliance>Advanced security and compliance</a></li>
+<li><a href="#observability-analytics--feedback" id=markdown-toc-observability-analytics--feedback>Observability, analytics, &amp; feedback</a></li>
+<li><a href="#gitlab-for-data-science" id=markdown-toc-gitlab-for-data-science>GitLab for Data Science</a> <ul>
+<li><a href="#stage-focus" id=markdown-toc-stage-focus>Stage focus</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#who-is-the-dev-section-targeting" id=markdown-toc-who-is-the-dev-section-targeting>Who is the Dev section targeting?</a> <ul>
+<li><a href="#today" id=markdown-toc-today>Today</a></li>
+<li><a href="#medium-term-1-2-years" id=markdown-toc-medium-term-1-2-years>Medium Term (1-2 years)</a></li>
+</ul>
+</li>
+<li><a href="#3-year-strategy" id=markdown-toc-3-year-strategy>3 Year Strategy</a></li>
+<li><a href="#3-year-themes" id=markdown-toc-3-year-themes>3 Year Themes</a> <ul>
+<li><a href="#efficient-and-automated-code-review" id=markdown-toc-efficient-and-automated-code-review>Efficient and Automated Code Review</a></li>
+<li><a href="#measurement-and-increased-efficiency-of-the-value-stream" id=markdown-toc-measurement-and-increased-efficiency-of-the-value-stream>Measurement and Increased Efficiency of the Value Stream</a></li>
+<li><a href="#devops-for-more-personas" id=markdown-toc-devops-for-more-personas>DevOps for More Personas</a></li>
+<li><a href="#enterprise-compliance" id=markdown-toc-enterprise-compliance>Enterprise Compliance</a></li>
+<li><a href="#project-to-product" id=markdown-toc-project-to-product>Project to Product</a></li>
+<li><a href="#workspaces" id=markdown-toc-workspaces>Workspaces</a></li>
+<li><a href="#user-management-for-enterprises" id=markdown-toc-user-management-for-enterprises>User Management for Enterprises</a></li>
+</ul>
+</li>
+<li><a href="#1-year-plan-whats-next-for-dev" id=markdown-toc-1-year-plan-whats-next-for-dev>1 Year Plan: Whatâs Next for Dev</a> <ul>
+<li><a href="#personal-productivity" id=markdown-toc-personal-productivity>Personal productivity</a></li>
+<li><a href="#plan" id=markdown-toc-plan>Plan</a></li>
+<li><a href="#whats-next-for-us" id=markdown-toc-whats-next-for-us>What's Next For Us</a></li>
+<li><a href="#what-were-not-doing" id=markdown-toc-what-were-not-doing>What We're Not Doing</a></li>
+<li><a href="#create" id=markdown-toc-create>Create</a></li>
+<li><a href="#what-we-recently-completed" id=markdown-toc-what-we-recently-completed>What we recently completed</a></li>
+<li><a href="#what-we-are-currently-working-on" id=markdown-toc-what-we-are-currently-working-on>What we are currently working on</a></li>
+<li><a href="#what-is-next-for-us" id=markdown-toc-what-is-next-for-us>What is next for us</a></li>
+<li><a href="#themes-that-cross-all-dev-stages" id=markdown-toc-themes-that-cross-all-dev-stages>Themes that cross all Dev stages</a></li>
+<li><a href="#what-were-not-currently-focusing-on" id=markdown-toc-what-were-not-currently-focusing-on>What we're not currently focusing on</a></li>
+</ul>
+</li>
+<li><a href="#stages--categories" id=markdown-toc-stages--categories>Stages &amp; Categories</a> <ul>
+<li><a href="#manage" id=markdown-toc-manage>Manage</a></li>
+<li><a href="#plan-1" id=markdown-toc-plan-1>Plan</a></li>
+<li><a href="#create-1" id=markdown-toc-create-1>Create</a></li>
+</ul>
+</li>
+<li><a href="#whats-next" id=markdown-toc-whats-next>What's Next</a> <ul>
+<li><a href="#183-2025-08-21" id=markdown-toc-183-2025-08-21>18.3 (2025-08-21)</a> <ul>
+<li><a href="#plan-2" id=markdown-toc-plan-2>Plan</a></li>
+<li><a href="#create-2" id=markdown-toc-create-2>Create</a></li>
+</ul>
+</li>
+<li><a href="#185-2025-10-16" id=markdown-toc-185-2025-10-16>18.5 (2025-10-16)</a> <ul>
+<li><a href="#plan-3" id=markdown-toc-plan-3>Plan</a></li>
+</ul>
+</li>
+<li><a href="#188-2026-01-15" id=markdown-toc-188-2026-01-15>18.8 (2026-01-15)</a> <ul>
+<li><a href="#plan-4" id=markdown-toc-plan-4>Plan</a></li>
+</ul>
+</li>
+<li><a href="#189-2026-02-19" id=markdown-toc-189-2026-02-19>18.9 (2026-02-19)</a> <ul>
+<li><a href="#plan-5" id=markdown-toc-plan-5>Plan</a></li>
+</ul>
+</li>
+<li><a href="#190-2026-05-21" id=markdown-toc-190-2026-05-21>19.0 (2026-05-21)</a> <ul>
+<li><a href="#plan-6" id=markdown-toc-plan-6>Plan</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Last Reviewed: 2023-2-22</p>
+<p>
+<style>.diagramwrapper *{box-sizing:border-box}.diagramwrapper{width:100%;display:flex}.diagramwrapper .box{width:calc(100% - 240px);padding:10px;display:flex;background-color:#fff}.diagramwrapper .box svg{width:100%}.diagramwrapper .circle{width:80px;height:80px;margin-right:20px;border:#999 1px solid;border-radius:50%;display:inline-block;background-color:#fff;padding:0}.diagramwrapper .circle svg{fill:#524684;width:50px;margin:15px}.diagramwrapper .stages{display:flex;width:210px;margin-left:30px;flex-wrap:wrap}.diagramwrapper .stage{width:210px;display:flex;margin:auto 0}.diagramwrapper .stagename{display:inline-block;font-family:Source Sans Pro,sans-serif;font-weight:bold;font-size:20px;line-height:40px}</style><div class=diagramwrapper><div class=box><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1025 500" role=img aria-label="GitLab DevSecOps Lifecycle">
+<style>
+      .text {
+        font-family: Inter,Source Sans Pro,sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        fill: #2b2838;
+        letter-spacing: .02em;
+        dominant-baseline: middle;
+        text-anchor: middle;
+      }
+      .text2 {
+        font-size: 26px;
+        fill: #2b2838;
+      }
+      .devsecops {
+        font-size: 56px;
+        fill: black;
+      }
+      .mix {
+        mix-blend-mode: color-burn;
+      }
+      .line {
+        fill: none;
+        stroke: #2b2838;
+        stroke-width: 2px;
+      }
+      .highlighted {
+        font-size: 22px;
+      }
+      .highlightedline {
+        stroke-width: 3px;
+      }
+      .white_fill {
+        fill: #fff;
+      }
+      .faded {
+        fill: #a09fa4;
+      }
+      .fadestroke {
+        stroke: #a09fa4;
+      }
+      .lightline{
+        stroke: #d3d0d4;
+        stroke-width: 3px;
+      }</style>
+<linearGradient id=linear-gradient x1=18 y1=250 x2=1007 y2=250 gradientTransform="matrix(1, 0, 0, 1, 0, 0)" gradientUnits=userSpaceOnUse>
+<stop offset=0 stop-color="#e6dcf4"/>
+<stop offset=1 stop-color="#ffd0be"/>
+</linearGradient>
+<linearGradient id=linear-gradient-2 x1="720.88" y1="337.91" x2="370.24" y2="74.18" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" gradientUnits=userSpaceOnUse>
+<stop offset=0 stop-color="#2b2838" stop-opacity=".24"/>
+<stop offset=1 stop-color="#45424d" stop-opacity=0 />
+</linearGradient>
+<linearGradient id=linear-gradient-3 x1="304.12" y1="162.09" x2="654.76" y2="425.82" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" gradientUnits=userSpaceOnUse>
+<stop offset=0 stop-color="#2b2838" stop-opacity=".24"/>
+<stop offset=1 stop-color="#45424d" stop-opacity=0 />
+</linearGradient>
+<path id=background fill="#fff" d="M 0,0 L 1025,0 L 1025,500 L 0,500"/><path id=upper_arc class="line fadestroke" d="M 0,250 a238,238 0 0,1 238,-238 L 787,12 a238,238 0 0,1 238,238"/><path id=lower_arc class="line fadestroke" d="M 0,250 a238,238 0 0,0 238,238 L 787,488 a238,238 0 0,0 238,-238"/><path id=clear_1 fill="#fff" d="M -3,190 L -3,310 L 1028,310 L 1028,190"/>
+<path id=clear_2 fill="#fff" d="M 422,0 L 603,0 L 603,500 L 422,500"/>
+<path id=loop fill="url(#linear-gradient)" d="M 512.5,181.18 L 370.24,74.18 a220,220 0 1,0 0,351.64 L 512.5,318.8 L 654.76,425.82 a220,220 0 1,0 0,-351.64"/>
+<path id=cutout_1 fill="#fff" d="M 421,250 L 304.12,162.09 a110,110 0 1,0 0,175.82"/>
+<path id=cutout_2 fill="#fff" d="M 604,250 L 720.88,162.09 a110,110 0 1,1 0,175.82"/>
+<path id=shadow_1 fill="url(#linear-gradient-2)" class=mix d="M 512.5,181.18 L 421,250 L 304.12,162.09 L 370.24,74.18"/>
+<path id=shadow_2 fill="url(#linear-gradient-3)" class=mix d="M 512.5,318.8 L 604,250 L 720.88,337.91 L 654.76,425.82"/><path id=plan_code class=line d="M 353,130 L 337.18,118.135 a165,165 0 0,0 -210.18,11.86"/><path id=plan_box fill="#2b2838" d="M 318,115 L 388,115 L 388,131 C 388,138 381,145 374,145 L 318,145Z"/><path id=code_box fill="#2b2838" d="M 87,115 L 167,115 L 167,131 C 167,138 160,145 153,145 L 87,145Z"/><path class=lightline fill=none d="M 421,256 L 304.12,168.09 a104,104 0 1,0 -64.12,185.91 L 225,341"/>
+<path class=lightline fill=none d="M 604,256 L 720.88,168.09 a104,104 0 1,1 64.12,185.91 L 800,341"/>
+<path fill="#fff" class=lightline d="M 357,205 L 668,205 a45,45 0 0,1 0,90 L 357,295 a45,45 0 0,1 0,-90"/>
+<path d="M536.514 419L536.448 418.82L529.663 401.124C529.526 400.778 529.281 400.483 528.965 400.283C528.73 400.131 528.461 400.039 528.184 400.01C527.905 399.981 527.624 400.018 527.363 400.118C527.1 400.216 526.866 400.376 526.676 400.583C526.488 400.789 526.35 401.037 526.274 401.306L521.695 415.326H503.151L498.571 401.306C498.495 401.037 498.357 400.79 498.169 400.584C497.979 400.378 497.745 400.219 497.484 400.119C497.221 400.02 496.941 399.982 496.662 400.011C496.384 400.04 496.116 400.133 495.88 400.283C495.565 400.483 495.32 400.778 495.183 401.124L488.403 418.824L488.331 419C487.355 421.551 487.235 424.35 487.989 426.976C488.743 429.601 490.33 431.911 492.511 433.556L492.536 433.575L492.594 433.62L502.914 441.355L508.034 445.224L511.145 447.575C511.51 447.851 511.955 448 512.411 448C512.869 448 513.314 447.851 513.679 447.575L516.789 445.224L521.909 441.355L532.303 433.575L532.331 433.553C534.513 431.909 536.1 429.6 536.854 426.975C537.609 424.35 537.489 421.551 536.514 419Z" fill="#E24329"/>
+<path d="M536.514 419L536.448 418.82C533.141 419.499 530.028 420.899 527.328 422.923L512.431 434.186L521.916 441.355L532.309 433.575L532.339 433.553C534.517 431.908 536.104 429.599 536.858 426.974C537.61 424.349 537.49 421.55 536.514 419Z" fill="#FC6D26"/>
+<path d="M502.914 441.355L508.034 445.224L511.145 447.575C511.51 447.851 511.954 448 512.411 448C512.869 448 513.314 447.851 513.679 447.575L516.789 445.224L521.909 441.355L512.425 434.186L502.914 441.355Z" fill="#FCA326"/>
+<path d="M497.519 422.923C494.82 420.9 491.706 419.5 488.403 418.824L488.331 419C487.355 421.551 487.235 424.35 487.989 426.976C488.743 429.601 490.33 431.911 492.511 433.556L492.536 433.575L492.594 433.62L502.914 441.355L512.405 434.186L497.519 422.923Z" fill="#FC6D26"/>
+<text x="50%" y=255 class="text devsecops">DevSecOps</text><text x=353 y=131 class="text highlighted white_fill">Plan</text><text x=127 y=131 class="text highlighted white_fill">Code</text><text x=127 y=371 class="text faded">Build</text><text x=353 y=371 class="text faded">Test</text><text x=672 y=131 class="text faded">Release</text><text x=898 y=131 class="text faded">Deploy</text><text x=898 y=371 class="text faded">Operate</text><text x=672 y=371 class="text faded">Monitor</text><text x="50%" y=13 class="text text2 faded">Security</text><text x="50%" y=488 class="text text2 faded">Compliance</text></svg></div><div class=stages><div class=stage><div class=circle><svg id=Layer_1 data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46"><path d="M45,35.19H34.28a3.48,3.48,0,0,0-6.68,0H16.5a2.87,2.87,0,0,1,0-5.74H29.07a4.87,4.87,0,1,0,0-9.73L18,19.67a3.47,3.47,0,0,0-6.67,0H5.22V12.08a2,2,0,0,1,2-2H10.5v2.5a1,1,0,0,0,1,1h3.82a1,1,0,0,0,1-1v-2.5H31v2.5a1,1,0,0,0,1,1h3.82a1,1,0,0,0,1-1v-2.5h2.49a2,2,0,0,1,2,2V31.19a1,1,0,1,0,2,0V12.08a4,4,0,0,0-4-4H36.83V5.58a1,1,0,0,0-1-1H32a1,1,0,0,0-1,1v2.5H16.32V5.58a1,1,0,0,0-1-1H11.5a1,1,0,0,0-1,1v2.5H7.22a4,4,0,0,0-4,4v7.58H1a1,1,0,0,0,0,2H11.3a3.48,3.48,0,0,0,6.67,0l11.1,0a2.87,2.87,0,1,1,0,5.73H16.5a4.87,4.87,0,0,0,0,9.74H27.6a3.48,3.48,0,0,0,6.68,0h7V42a2,2,0,0,1-2,2H7.22a2,2,0,0,1-2-2V25.72a1,1,0,0,0-2,0V42a4,4,0,0,0,4,4h32.1a4,4,0,0,0,4-4V37.19H45a1,1,0,0,0,0-2ZM33,6.58h1.82v2.5h0v2.49H33Zm-20.51,0h1.82v5H12.5Zm2.13,15.58a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,14.63,22.16ZM30.94,37.69a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,30.94,37.69Z"/></svg></div><div class=stagename>Plan</div></div><div class=stage><div class=circle><svg id=Layer_1 data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46"><path d="M44.76,5.4,40.6,1.24a4.26,4.26,0,0,0-6,0L30.77,5.07,15,20.88a1,1,0,0,0,0,1.41,1,1,0,0,0,.7.3,1,1,0,0,0,.71-.3l15.1-15.1,8,8a1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29l3.83-3.84A4.24,4.24,0,0,0,44.76,5.4ZM43.34,10l-3.12,3.13L32.89,5.78,36,2.65a2.25,2.25,0,0,1,3.17,0l4.15,4.16A2.23,2.23,0,0,1,43.34,10Z"/><path d="M13,23.84l-.18-.08-.08,0a.34.34,0,0,0-.1,0,.74.74,0,0,0-.21,0,.57.57,0,0,0-.18,0l-.17.07-.17.11s-.06,0-.09.06,0,.05,0,.07a.62.62,0,0,0-.11.17.71.71,0,0,0-.08.18s0,0,0,.08L9.33,35a1,1,0,0,0,1,1.21h.15l11-1.72.1,0,.19-.07a.88.88,0,0,0,.17-.12l.09-.06L36.94,19.21a1,1,0,0,0-1.41-1.41L21.29,32l-8-8L13.19,24Zm.12,2.87,6.05,6L11.59,34Z"/><path d="M40.06,21.38a1,1,0,0,0-1,1v19h-32a3.58,3.58,0,0,0-.9-1.55A3.38,3.38,0,0,0,4.6,39v-32H24a1,1,0,0,0,0-2H3.6a1,1,0,0,0-1,1V39a3.39,3.39,0,0,0-1.54.87,3.6,3.6,0,1,0,6,3.55h33a1,1,0,0,0,1-1v-20A1,1,0,0,0,40.06,21.38ZM4.74,43.53a1.61,1.61,0,1,1,0-2.27,1.63,1.63,0,0,1,.47,1.14A1.59,1.59,0,0,1,4.74,43.53Z"/></svg></div><div class=stagename>Create</div></div></div></div>
+</p>
+<h2 id=dev-section-overview>Dev Section Overview</h2>
+<p>The Dev Section is made up of the <a href="https://handbook.gitlab.com/handbook/product/categories/#plan-stage">Plan</a> and <a href="https://handbook.gitlab.com/handbook/product/categories/#create-stage">Create</a> stages of the DevOps lifecycle. The scope for the Dev section is wide and encompasses a number of analyst categories including <a href="/solutions/value-stream-management/">Value Stream Management (VSM)</a>, Project Portfolio Management (PPM), Enterprise Agile Planning Tools (EAP), Source Code Management (SCM), Integrated Development Environments (IDEs) and Design Management. It is difficult to truly estimate Total Available Market (TAMkt) for the Dev Section, as our scope includes so many components from various industries, but market research from the analyst firm <a href="https://www.idc.com/about">IDC</a> indicates the estimated <a href="https://docs.google.com/spreadsheets/d/1LO57cmXHDjE4QRf6NscRilpYA1mlXHeLFwM_tWlzcwI/edit?ts=5ddb7489#gid=1474156035">TAM</a> in 2022 was roughly ~$4.1B, growing to ~$7.6B in 2026 (13.14% CAGR). Analysis: <a href="https://docs.google.com/spreadsheets/d/1357Zwbf0yTjcFBuCdX2HnNLBaF9uWnW7Auv4F94aoSo/edit#gid=1753604861">Manage</a>, <a href="https://docs.google.com/spreadsheets/d/1dDNSR_mE4peeOc_3Xhqm_VLoTyk4gSbcbiGfuMrOg6g/edit#gid=982966394">Plan</a> and <a href="https://docs.google.com/spreadsheets/d/1KSwTVPIvMO8IXkMqA40Ms1rL-glmo-w7MjZvUrjMFGA/edit#gid=697056429">Create</a>.
+Nearly <a href="https://drive.google.com/file/d/17ZSI2hGg3RK168KHktFOiyyzRA93uMbd/view?usp=sharing">half of organizations</a> still have not adopted DevOps methodologies, despite <a href="https://drive.google.com/file/d/17MNecg84AepxWlSDB5HjNBrCJggaS9tP/view?usp=sharing">data</a> that indicates far higher revenue growth for organizations that do so. Migrating a code base to a modern, Git-backed source control platform like GitLab can often be the first step in a DevOps transformation. As such, we must provide industry-leading solutions in source code and code review, as this is not only the entry into DevOps for our customers, but typically the entry into the GitLab platform. Once a user has begun utilizing repositories and code review features like Merge Requests, they often shift âleftâ and ârightâ to explore and utilize other capabilities in GitLab, such as CI and project management features.</p>
+<p>Per our <a href="https://internal.gitlab.com/handbook/company/performance-indicators/product/#stage-monthly-active-users-smau">Stage Monthly Active User data</a> (internal access only), we know that Create and Manage have the highest usage amongst GitLab stages. As such, these stages must focus on security fixes, bug fixes, performance improvements, UX improvements, and depth more than other areas of GitLab.</p>
+<h3 id=accomplishments-news-and-updates>Accomplishments, News, and Updates</h3>
+<p>The following are the updates from the Dev Section for December 2022 (as presented in the monthly
+<a href="https://handbook.gitlab.com/handbook/key-review/">Product Key Review</a>). A complete list of released features
+can be found on the <a href="https://gitlab-com.gitlab.io/cs-tools/gitlab-cs-tools/what-is-new-since/?tab=features&amp;selectedStages=create&amp;selectedStages=manage&amp;selectedStages=plan">Release Feature Overview</a>
+page and a complete list of upcoming features can be found on the <a href="https://about.gitlab.com/upcoming-releases/">Upcoming Releases</a> page.</p>
+<h4 id=section-news--team-member-updates>Section News &amp; Team Member Updates</h4>
+<ul>
+<li>The Organization group has been consolidated with the Pods group and moved to the Enablement section</li>
+<li>The Import &amp; Integration groups have been merged together</li>
+<li>The Knowledge group that owns Wiki, Pages &amp; content editor has moved from the Create stage to the Plan stage</li>
+<li>Plan:Optimize - Exec Dashboard: Beta - Beta program to validate and test the design, performance, and MVC readiness with real customers data.</li>
+<li>Manage:Personal productivity - Navigation Left side bar Experiment <a href="https://about.gitlab.com/releases/2023/02/22/gitlab-15-9-released/#your-work-sidebar">Your work sidebar</a></li>
+<li>Manage:Auth - [Users with the Guest role can view private repositories](https://about.gitlab.com/releases/2023/02/22/gitlab-15-9-released/#users-with-the-guest-role-can-view-private-repositories</li>
+<li>Create:Source Code - Improving Forking experience: <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/330243">Fetch new upstream contents when fork is behind</a></li>
+<li>Create:Source Code <a href="https://about.gitlab.com/releases/2023/02/22/gitlab-15-9-released/#require-multiple-approvals-from-code-owners">Require multiple approvals from Code Owners</a></li>
+<li>Manage:Integrations - <a href="https://about.gitlab.com/releases/2023/02/22/gitlab-15-9-released/#notifications-now-available-in-the-gitlab-for-slack-app">Notifications now available in the GitLab for Slack app</a></li>
+<li>Create:Source Code - <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/335451">Allow multiple approvals per CODEOWNER</a></li>
+</ul>
+<h4 id=important-pi-highlights>Important PI Highlights</h4>
+<ul>
+<li>Plan: Project Management - Congrats on a recorded MoM Paid new all time high!</li>
+<li>Plan::Optimiae - Congratulations on reaching an all time high MAU.</li>
+<li>Create Stage - Congratulations for reaching an all time high for SMAU &amp; Paid SMAU!</li>
+<li>Create:: Congrats on reaching an all time high for VS Code extension, continuing to see steady adoption!</li>
+</ul>
+<h4 id=recent-accomplishments>Recent Accomplishments</h4>
+<ul>
+<li><a href="https://about.gitlab.com/releases/2023/01/22/gitlab-15-8-released/#migrating-gitlab-projects-by-direct-transfer-beta">Migrating GitLab projects by direct transfer Beta</a></li>
+<li><a href="https://about.gitlab.com/releases/2023/01/22/gitlab-15-8-released/#scim-support-for-self-managed-gitlab">SCIM support for self-managed GitLab</a></li>
+<li><a href="https://about.gitlab.com/releases/2023/01/22/gitlab-15-8-released/#selective-sso-enforcement-for-group-members">Selective SSO enforcement for group members</a></li>
+<li><a href="https://about.gitlab.com/releases/2022/12/22/gitlab-15-7-released/#introducing-the-gitlab-cli">GitLab CLI</a></li>
+<li><a href="https://about.gitlab.com/releases/2022/12/22/gitlab-15-7-released/#sign-commits-with-your-ssh-key">Sign commits with your SSH key</a></li>
+<li><a href="https://about.gitlab.com/releases/2022/12/22/gitlab-15-7-released/#experience-the-web-ide-beta-and-workspaces">Web IDE &amp; Workspaces Beta</a></li>
+<li><a href="https://about.gitlab.com/releases/2022/12/22/gitlab-15-7-released/#self-managed-support-for-the-gitlab-for-jira-cloud-app">Self-managed support for the GitLab for Jira Cloud app</a></li>
+<li><a href="https://about.gitlab.com/releases/2022/10/22/gitlab-15-5-released/#autocomplete-suggestions-in-the-content-editor">Autocomplete suggestions in the Content Editor</a></li>
+<li><a href="https://about.gitlab.com/releases/2022/10/22/gitlab-15-5-released/#email-notification-when-two-factor-otp-attempt-is-wrong">Email notification when two-factor OTP attempt is wrong</a></li>
+<li><a href="https://about.gitlab.com/releases/2022/10/22/gitlab-15-5-released/#add-labels-and-dates-to-a-task">Add labels and dates to a task</a></li>
+</ul>
+<h4 id=whats-ahead>What's Ahead</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/5650">Jira Cloud App proxy for Self-managed GitLab users</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/354749">API Support for user management - Max role</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/7684">Create a custom source control module for VS Code</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/7146">Highlight source code syntax on the frontend using HighlightJS</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/9675">Enterprise Users - MVC: Claim management of existing users</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/7920">Pages internal API caching</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/8578#release-post">MVC: Branch Rules Overview</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/5038">Restructure merge requests</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/1812">Real-time merge request updates</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/385100">Allow users to delete comments that they authored within Design Management</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/382496">Consolidate Value Stream Analytics Group &amp; Project into a single workspace</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/330243">Fetch new upstream contents when fork is behind</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/389967">Adding emoji reactions to work items</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/384879">New exploration sidebar where users can go and discover various things within GitLab</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/372895">Enterprise Users Badging</a></li>
+</ul>
+<h2 id=dev-section-fy24-themes>Dev Section FY24 Themes</h2>
+<p>The primary <a href="https://about.gitlab.com/direction/#fy24-product-investment-themes">themes</a> for the Product department in FY24 are:</p>
+<ol>
+<li><a href="https://about.gitlab.com/direction/#world-class-devsecops-experience">World-class DevSecOps experience</a></li>
+<li><a href="https://about.gitlab.com/direction/#advanced-security-and-compliance">Advanced security and compliance</a></li>
+<li><a href="https://about.gitlab.com/direction/#observability-analytics--feedback">Observability, analytics, &amp; feedback</a></li>
+<li><a href="https://about.gitlab.com/direction/#gitlab-for-data-science">GitLab for Data Science</a></li>
+</ol>
+<p>The Dev Section will primarily focus on <a href="https://about.gitlab.com/direction/#world-class-devsecops-experience">World-class DevSecOps experience</a> which also includes improving our user experieince and better support for our Enterprise users.</p>
+<h4 id=world-class-devsecops-experience>World-class DevSecOps experience]</h4>
+<p>The Dev Section has the highest TMAU of all sections. Because of this, the Dev section will be highly focused on creating a lovable experience for several core workflows throughout the product. We'll also be focused on product architecture improvements, like simplifying groups/projects, which will enable efficiency gains of GitLab product teams as well as an easier to understand user experience for new users of GitLab. Here are the jobs to be done the Dev section will focus on to improve adoption through usability:</p>
+<ol>
+<li>Easily understand how to set up and manage my organization and projects in GitLab - solved for via <a href="https://gitlab.com/groups/gitlab-org/-/epics/2885">groups and projects moving to namespaces</a></li>
+<li>Easily find exactly what I'm looking for in GitLab - solved for via <a href="https://gitlab.com/groups/gitlab-org/-/epics/4831">improving settings and navigation</a></li>
+<li>Provide an out of the box experience that requires little to no configuration - solved for via enabling all possible Dev section features to be <a href="https://handbook.gitlab.com/handbook/product/product-principles/#configuration-principles">working by default</a></li>
+<li>Ensure I'm always looking at the most up to date information - solved for by focusing on realtime experiences</li>
+<li>Conduct an efficient code review - solved for via code review usability improvements and MR reviewers</li>
+<li>Easily manage my portfolio - solved for by work items, epic boards, roadmap improvements, and workflow automation</li>
+<li>Reduce my development cycle time and time managing local environments - solved for by investing in Workspaces tools</li>
+<li>Feature parity between groups and projects</li>
+<li>New Navigation flow</li>
+</ol>
+<h4 id=advanced-security-and-compliance>Advanced security and compliance</h4>
+<p>The Dev section will be focused on providing a more secure development experience.</p>
+<ol>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/4035">Customizable Roles and Permisisons</a></li>
+</ol>
+<h4 id=observability-analytics--feedback>Observability, analytics, &amp; feedback</h4>
+<p>The Dev section will be creating a better holistic experience that ties the entire SDLC together connecting planning, source code, deployment and more. This will allow a unique view into the Software Delivery process, allowing you to tie OKRs and other business metrics into you feature development. This will also allow you to identify bottle necks as well as allow team to experiment with different processes to find what boosts their productivity and allow them to practice continuous improvement. DORA4 metrics will help create observability into deployments and production stability. Custom analytics reports will allow to tailor different views for different users of the platform.</p>
+<ol>
+<li>Executive dashboards and Value Stream Analytics</li>
+</ol>
+<h3 id=gitlab-for-data-science>GitLab for Data Science</h3>
+<ul>
+<li>AI assisted code suggestions</li>
+</ul>
+<h4 id=stage-focus>Stage focus</h4>
+<p>Within each stage, the listed items below are in <strong>order of priority</strong>. The top priority for each stage or group is:</p>
+<ul>
+<li>Manage: <a href="https://gitlab.com/groups/gitlab-org/-/epics/7536">Slack Integration</a></li>
+<li>Manage: <a href="https://gitlab.com/groups/gitlab-org/-/epics/4035">Customizable Roles &amp; Permissions</a></li>
+<li>Plan: <a href="https://gitlab.com/groups/gitlab-org/-/epics/6033">Work Items</a></li>
+<li>Plan: <a href="https://gitlab.com/groups/gitlab-org/-/epics/7864">Support OKRs in GitLab</a></li>
+<li>Plan: <a href="https://gitlab.com/groups/gitlab-org/-/epics/8335">Value Streams Dashboard for Executive</a></li>
+<li>Create: <a href="https://gitlab.com/groups/gitlab-org/-/epics/7948">Workspaces</a></li>
+<li>Create: <a href="https://gitlab.com/groups/gitlab-org/-/epics/8578#release-post">Branch Rules Overview</a></li>
+</ul>
+<h2 id=who-is-the-dev-section-targeting>Who is the Dev section targeting?</h2>
+<p>We identify the <a href="https://handbook.gitlab.com/handbook/product/personas/#user-personas">personas</a> the Dev section features are built for. In order to be transparent about personas we support today and personas we aim to support in the future we use the following categorization of personas listed in priority order.</p>
+<ul>
+<li>ð©- Targeted with strong support</li>
+<li>ð¨- Targeted but incomplete support</li>
+<li>â¬ï¸- Not targeted but might find value</li>
+</ul>
+<h3 id=today>Today</h3>
+<p>To capitalize on the <a href="#opportunities">opportunities</a> listed above, the Dev section has features that make it useful to the following personas today.</p>
+<ul>
+<li>ð© <a href="https://handbook.gitlab.com/handbook/product/personas/#sasha-software-developer">Sasha - Software Developer</a></li>
+<li>ð© <a href="https://handbook.gitlab.com/handbook/product/personas/#devon-devops-engineer">Devon - DevOps Engineer</a></li>
+<li>ð© <a href="https://handbook.gitlab.com/handbook/product/personas/#delaney-development-team-lead">Delaney - Development Team Lead</a></li>
+<li>ð© <a href="https://handbook.gitlab.com/handbook/product/personas/#parker-product-manager">Parker - Product Manager</a></li>
+<li>ð© <a href="https://handbook.gitlab.com/handbook/product/personas/#cameron-compliance-manager">Cameron - Compliance Manager</a></li>
+<li>ð¨ <a href="https://handbook.gitlab.com/handbook/product/personas/#sam-security-analyst">Sam - Security Analyst</a></li>
+<li>ð¨ <a href="https://handbook.gitlab.com/handbook/product/personas/#presley-product-designer">Presley - Product Designer</a></li>
+<li>ð¨ <a href="https://handbook.gitlab.com/handbook/product/personas/#rachel-release-manager">Rachel - Release Manager</a></li>
+<li>ð¨ <a href="https://handbook.gitlab.com/handbook/product/personas/#simone-software-engineer-in-test">Simone - Software Engineer in Test</a></li>
+<li>ð¨ <a href="https://handbook.gitlab.com/handbook/product/personas/#allison-application-ops">Allison - Application Ops</a></li>
+<li>ð¨ <a href="https://handbook.gitlab.com/handbook/product/personas/#priyanka-platform-engineer">Priyanka - Platform Engineer</a></li>
+<li>ð¨ <a href="https://handbook.gitlab.com/handbook/product/personas/#sidney-systems-administrator">Sidney - Systems Administrator</a></li>
+</ul>
+<h3 id=medium-term-1-2-years>Medium Term (1-2 years)</h3>
+<p>As we execute our <a href="#3-year-strategy">3-year strategy</a>, our medium term (1-2 year) goal is to provide a single application that enables collaboration between cloud native development and platform teams.</p>
+<ul>
+<li>ð© <a href="https://handbook.gitlab.com/handbook/product/personas/#sasha-software-developer">Sasha - Software Developer</a></li>
+<li>ð© <a href="https://handbook.gitlab.com/handbook/product/personas/#devon-devops-engineer">Devon - DevOps Engineer</a></li>
+<li>ð© <a href="https://handbook.gitlab.com/handbook/product/personas/#delaney-development-team-lead">Delaney - Development Team Lead</a></li>
+<li>ð© <a href="https://handbook.gitlab.com/handbook/product/personas/#parker-product-manager">Parker - Product Manager</a></li>
+<li>ð© <a href="https://handbook.gitlab.com/handbook/product/personas/#presley-product-designer">Presley - Product Designer</a></li>
+<li>ð© <a href="https://handbook.gitlab.com/handbook/product/personas/#cameron-compliance-manager">Cameron - Compliance Manager</a></li>
+<li>ð© <a href="https://handbook.gitlab.com/handbook/product/personas/#simone-software-engineer-in-test">Simone - Software Engineer in Test</a></li>
+<li>ð¨ <a href="https://handbook.gitlab.com/handbook/product/personas/#rachel-release-manager">Rachel - Release Manager</a></li>
+<li>ð¨ <a href="https://handbook.gitlab.com/handbook/product/personas/#allison-application-ops">Allison - Application Ops</a></li>
+<li>ð¨ <a href="https://handbook.gitlab.com/handbook/product/personas/#priyanka-platform-engineer">Priyanka - Platform Engineer</a></li>
+<li>ð¨ <a href="https://handbook.gitlab.com/handbook/product/personas/#sidney-systems-administrator">Sidney - Systems Administrator</a></li>
+</ul>
+<h2 id=3-year-strategy>3 Year Strategy</h2>
+<p>In three years, the Dev Section market will:</p>
+<ul>
+<li>Centralize around Git as the version control of choice for design assets, gaming, silicon designs, and AI/ML models.</li>
+<li>Have a market leader emerge in the value stream management space. Currently, the market is fragmented with most players focused on integrations into various DevOps tools.</li>
+<li>Adopt a mindset shift from project management to product management.</li>
+<li>Recognize the value of a single platform for all software creation activities, including product management.</li>
+<li>See an uptick in startups, applications, and internal business logic being built on the backs of low or no-code platforms, which will give rise to the <a href="https://www.gartner.com/en/information-technology/glossary/citizen-developer">citizen developer</a></li>
+<li>See an increase in developer tools built on AI technology aimed at increasing efficiency, productivity, and security in code via automatic recommendations offered in-line in code editors</li>
+<li>Coalesce around the notion of a single platform for DevOps, also known as Value Stream Delivery Platforms.</li>
+</ul>
+<p>As a result, in three years, GitLab will:</p>
+<ul>
+<li>Provide a next-generation, highly performant Git-backed version control system for large assets, such as ML models. Our goal in three years should be to host the most repositories of these non-code assets.</li>
+<li>Emerge as the leader in VSM and be recognized in the industry by customers and analysts as such. Our goal in three years should be to provide the best insights into the product development process that no other tool can come close to, as we have a <a href="https://www.ca.com/en/blog-itom/what-is-a-unified-data-model-and-why-would-you-use-it.html">unified data model</a> due to GitLab being a single platform.</li>
+<li>Develop an industry-leading product management platform where multiple features and products can be measured and managed easily.</li>
+<li>Provide an exellent developer experience via a robust Web IDE, browser-based IDE, support for the citizen developer via a low-code offering, and features that offer AI assistance to developers</li>
+<li>Ensure we are the best VSDP on the market.</li>
+</ul>
+<h2 id=3-year-themes>3 Year Themes</h2>
+<p>Our direction for the Dev section is to provide the worldâs best product creation and management platform.
+We believe we have a massive opportunity to change how cross-functional, multi-level teams collaborate by
+providng a solution that breaks down organizational silos and enables maximum value delivery.
+We want to provide a solution that enables higher-quality products to be quickly iterated upon. We also want to make it effortless for companies to migrate to GitLab. In order to obtain adoption from incumbent tools, GitLab has to provide <em>substantially more value</em>
+than our competitors, but do so by maintaining simplicity. The following themes listed below represent how we believe we will deliver this value
+and is our view of what will be important to the market and to GitLab over the next 3 to 5 years. As such,
+they will be the cornerstone of our 3-year strategy, and all activities in the 1-year plan should advance
+GitLab in one or more of these areas.</p>
+<h3 id=efficient-and-automated-code-review>Efficient and Automated Code Review</h3>
+<p>Code review should be a delightful experience for all involved in the process. Over time, we expect the code review process to evolve from where it is today to become a more automated process in the future. Along the way, incremental improvements will occur, where developer platforms like GitLab will focus on performance and usability of the code review tools. Code review should be an efficient process, and the easier GitLab can make code review, the more efficient dev teams become. <a href="https://blog.semmle.com/code-review-metrics/">Research</a> has shown that better code review should reduce the number of bugs and increase the amount of higher-quality features an organization can ship. The code review process will continue to provide a venue for developers to learn and collaborate together.</p>
+<p>As examples, GitLab will:</p>
+<ul>
+<li>Load large, multi-file diffs faster than any other comparable product on the market.</li>
+<li>Provide tailored insights to the code reviewer, alerting them to the most important areas to review.</li>
+<li>Provide ways to reduce the wait time in the code review process.</li>
+<li>Make the experience when browsing multi-file diffs delightful for the code reviewer.</li>
+<li>Provide a code review experience inside of VS Code to help devs stay in flow.</li>
+</ul>
+<h3 id=measurement-and-increased-efficiency-of-the-value-stream>Measurement and Increased Efficiency of the Value Stream</h3>
+<p>Peter Drucker has stated âIf you canât measure it, you canât improve it.â Many software development teams have no way of measuring their efficiency, and even if they do, there is not enough feedback, information, or actionable insights to improve the efficiency of their team. Even then, once efficiency is improved, it can be difficult to tell if a teamâs performance is good or bad, as there is often no point of comparison. Even the best performing team in an organization could be worse than the competition. Increasing efficiency is paramount to companies increasing their <strong>time to value</strong> and helping organizations answer <strong>âIs my DevOps transformation working?â</strong></p>
+<p>We believe efficiency can be improved in two ways. The first way is to reduce cycle times for existing value stream activities. The second is to question and optimize the value stream into higher value-added activities at each step. GitLabâs vision is to help answer both of these questions: âAm I doing things fast enough?â and âAm I doing the right things?â These two questions are intertwined because the faster an organization can ship, the quicker feedback will come in from users, creating a virtuous cycle of shipping things quickly as well as ensuring the things shipped are the right things.</p>
+<p>Today, value stream management is largely focused on visualizing the value chain through deployment. GitLab is uniquely positioned to also visualize, track, and measure value chain activities from the strategic initiative level all the way to captured value from an organization's customer. For example, the value created by post launch activities, such as press releases, blog posts, marketing campaigns, and customer engagement should funnel into value stream management; providing the business with insights and data to continuously improve each step of their value chain.</p>
+<p>The market for value stream tools has begun to bifurcate into value stream delivery platforms and value stream management platforms. GitLab can solve for both of the use cases of these markets. In order to become a more successful VSMP platform, we'll need to ensure that we provide support for calculating VSM metrics on 3rd party tools, for example, Jira issues.</p>
+<p>As examples, GitLab will provide:</p>
+<ul>
+<li>Easy-to-use and customizable tools that measure the efficiency of the DevOps lifecycle.</li>
+<li>Insight into areas of waste where teams can improve.</li>
+<li>Recommendations based on large data sets of other teams using GitLab for comparison.</li>
+<li>A visual experience for value stream management that goes beyond code deployment.</li>
+<li>Provide VSM flow metric calculations based on 3rd party tools/integrations.</li>
+</ul>
+<h3 id=devops-for-more-personas>DevOps for More Personas</h3>
+<p>DevOps started with the merging of Development and Operations and has since been augmented to include Security, highlighting DevSecOps as the next trend. There are many other personas that are involved in software development, such as product managers, project managers, product designers, finance, marketing, legal, procurement, etc. These personas will continue to expand until nearly every role at knowledge-work companies touches some facet of the DevOps lifecycle. Over time, organizations will realize that teams who work out of the same platform/set of tools are more efficient and deliver faster business and customer value.</p>
+<p>Because of this trend, each persona of the DevOps lifecycle should ultimately be treated as a first-class citizen in GitLab.</p>
+<p>As examples, GitLab will provide:</p>
+<ul>
+<li>A better experience for project management workflows.</li>
+<li>A space for product designers to design and collaborate on designs with product managers and engineers.</li>
+<li>Financial reporting for things like resource allocation, capacity planning, and P &amp; L analysis.</li>
+</ul>
+<h3 id=enterprise-compliance>Enterprise Compliance</h3>
+<p>Most enterprise customers have custom requirements that need to be implemented inside of GitLab. Examples of these are controls that spans systems such as permissions, approvals, compliance, governance, workflows, and requirements mapping. It is our belief these needs will exist for many years to come, and we will need to incorporate these to truly become a complete DevOps platform that serves enterprise segments. We will strive to do this in ways that are modern and, where possible, adhere to a <a href="https://handbook.gitlab.com/handbook/product/product-principles/#convention-over-configuration">âconvention over configurationâ</a> approach.</p>
+<p>Additionally, compliance, auditing, and surfacing evidence of security/compliance posture to auditors will become more important as more GDPR-like legislation is enacted and passed into law. GitLab should make it easy to not only surface and deliver evidence for GitLab controls (i.e. who has access to GitLab, who did what on what group, etc.), but also to track and manage compliance requirements for various legislation our customers may be bound to for the applications they create inside of GitLab.</p>
+<p>As examples, GitLab will provide:</p>
+<ul>
+<li>Customizable workflows and checkpoints, unlocking enforcement, approvals, and insight into these workflows.</li>
+<li>More customizable and fine-grained permissions.</li>
+<li>Logs for everything that happens within GitLab and allow those events to be accessible via the API and UI.</li>
+<li>Alerting on GitLab audit events.</li>
+<li>Providing a great requirements and quality management experience.</li>
+<li>Deliver chain of custody reporting.</li>
+<li>Provide simple compliance reporting and dashboarding views.</li>
+</ul>
+<h3 id=project-to-product>Project to Product</h3>
+<p>Product Managers often struggle with answering the question, "Is the product or feature I just launched successful?" There are many sensing mechanisms to help answer this question, including revenue, users, customer feedback, NPS, etc., but no product currently helps product managers exhaustively manage the product development lifecycle from end-to-end. Many products assist with planning, delivery of code, and deployment, but feedback and iteration are equally as important to product managers as shipping the first iteration. Getting the first iteration out is traditionally celebrated, but is only one of many steps to true product development lifecycle management.</p>
+<p>Imagine an experience where product managers can log in and view the "health" of their entire portfolio on one dashboard. It is clear which features have the most value to customers (and by extension to the business) as measured by key metrics, assisting PMs with priortization activities. PMs can quickly identify features or products within their portfolio that need more attention and drill into them, identifying the correct next action to take, whether it's iteration on the feature or perhaps sunsetting it. PMs can quickly create an issue for the next iteration, version control features, view security incidents, respond to customer feedback, drill down into analytics, control A/B tests of the feature, and even interact with users of the feature or product directly by creating ad-hoc surveys or questions for users to answer. Additionally, the experience should allow for ROI analysis and tracking of the ROI after capital has been expended.</p>
+<p>Within three years, project management tools will begin evolving to provide this experience and help PMs answer tough product questions. These tools will also assist with measuring and predicting value to the organization before a feature is prioritized by the PM. The ideal solution most likely uses data science, natural language processing (NPL), machine learning, and predictive analytics to assist product managers with decisions both before and after a feature is launched.</p>
+<p>As examples, by integrating with GitLab's <a href="/direction/analytics/">Analytics</a> and <a href="/direction/plan/">Plan</a> capabilities GitLab will provide:</p>
+<ul>
+<li>Feature management capabilities, including the ability to link a feature to a specific point in the user's journey. These live on after an issue is closed and contain rich meta-data about user interactions, business KPIs, and the value exchange system.</li>
+<li>An experience where PMs can quickly analyze the health of all relevant features.</li>
+<li>A framework that helps PMs with prioritization decisions.</li>
+<li>A framework for ROI analysis and measurement.</li>
+</ul>
+<h3 id=workspaces>Workspaces</h3>
+<p>Local dev environments can be tricky to set up and often require hours to troubleshoot to set up development kits. Even when successfully configured, the "works on my machine" problem can arise as there are likely many differences between production and local environments.</p>
+<p>We believe Workspaces will become a more popular development paradigm over the next few years and will manifest itself in this way: devs will code in places they are comfortable, such as local IDEs and will run code in Kubernetes environments that their IDE is connected to. <a href="https://okteto.com/">Okteto</a> is an interesting tool that is solving for this right now.</p>
+<p>GitLab is uniquely positioned to serve Workspaces as a remote environment as we have a tight integration with Kubernetes as well as a VSCode Plugin in addition to an in-app editing experience in our Web IDE.</p>
+<p>As examples, GitLab will provide:</p>
+<ul>
+<li>Workspaces environments powered by Kubernetes</li>
+<li>Workspaces environments that can be connected to a local VSCode editor</li>
+<li>Workspaces environments that can be connected to the Web IDE or a GitLab project</li>
+</ul>
+<h3 id=user-management-for-enterprises>User Management for Enterprises</h3>
+<p>Enterprise customers on Gitlab.com want to be able to fully manage the entire lifecycle of users in their groups. This desire is for efficiency, increased security protocols, and to protect their intellectual property. Typically, these customers will have centralized user management for their enterprise through an IdP like Okta or Azure and use GitLab SSO/SCIM.</p>
+<p>We will provide group maintainers administrative control over users whose e-mail address matches a domain that they have proved ownership for. Today, any user provisioned through SCIM and/or an IdP are automatically Enterprise Users. The user claim process allows group owners to find any users that use their company e-mail address but have opened their accounts outside of the provisioning process, and exert ownership over them.</p>
+<p>Once users are Enterprise Users, we will provide enhanced management to group owners, for example:</p>
+<ul>
+<li>Enterprise Users do not have to validate their e-mail addresses</li>
+<li>Disable passworth Auth - Enterprise Users can sign in via IdP only</li>
+<li>Ability to block inviting users from outside the organization</li>
+<li>Prevent users from changing or adding e-mail addresses</li>
+<li>Policies for credential rotation for any user within the enterprise</li>
+<li>Ability for group owner impersonate enterprise user</li>
+<li>Login settings (Password Complexity, Auto log out, two factor authentication and more)</li>
+</ul>
+<h2 id=1-year-plan-whats-next-for-dev>1 Year Plan: Whatâs Next for Dev</h2>
+<p>Please see the <a href="https://handbook.gitlab.com/handbook/product/categories/#dev-section">categories page</a> for a more detailed look at Dev's plan by exploring <code>Direction</code> links in areas of interest. This page will highight direction themes for both one year and three year timelines.</p>
+<h3 id=personal-productivity>Personal productivity</h3>
+<p>Note, at GitLab we plan aggressively and we can make changes to this at any time!</p>
+<details>
+<summary>View screenshot of roadmap - update Aug 11, 2023</summary>
+<p><img src="/direction/foundations/personal_productivity/foundations-roadmap-snapshot.png" alt="foundations-roadmap-screenshot.png"/></p>
+</details>
+<h3 id=plan>Plan</h3>
+<h3 id=whats-next-for-us>What's Next For Us</h3>
+<p>Over the next year, we are focused on the following:</p>
+<ul>
+<li><strong><a href="https://gitlab.com/groups/gitlab-org/-/epics/12320">Group issues</a></strong>. Issues can be created within groups without depending on a project within the group. This will optionally allow teams to consolidate their planning workflows within a single location instead of spreading them across a group and a project.</li>
+<li><strong><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/387224">Work items open in a drawer within boards and lists</a></strong>. Reduce the context switching and tab fatique when drilling down into a work item detail view.</li>
+<li><strong><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/368290">Customizable work item statuses</a></strong>. Provide a foundation for building a more robust work item lifecycle management solution, and enable teams to mark work items as done or cancelled.</li>
+<li><strong><a href="https://gitlab.com/groups/gitlab-org/-/epics/435">Report on iteration velocity and volatility</a></strong> â Helps teams have meaningful discussions about trade-offs and estimations when planning upcoming iterations. Issues and tasks can be assigned to iterations, so our next step is <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/457538">showing parent/child relationships in the iteration report</a>, followed by <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/457094">displaying velocity and volatility</a>.</li>
+<li><strong><a href="https://gitlab.com/groups/gitlab-org/-/epics/8308">Work items are natively supported within Groups</a></strong> â Eliminate the need to maintain projects under groups solely for agile planning purposes, allow teams to consolidate their planning activities at the group level, and enable issues and epics to be migrated to work items. We're currently working on <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/458986">the remaining blockers</a> to feature parity between legacy issues and work item issues. Once issues are migrated to work items, we will be able to turn on native Group Issues.</li>
+</ul>
+<ul>
+<li><strong>Surface additional AI Impact Analytics metrics to help customers better understand the impact and ROI for using GitLab Duo Pro and Duo Enterpise</strong> â In addition to metrics for code suggestions and chat, we will provide insight into productivity gains from:
+<ul>
+<li>Adoption of <a href="https://gitlab.com/groups/gitlab-org/-/epics/15025">pipeline root cause analysis</a>.</li>
+<li>Adoption of <a href="https://gitlab.com/groups/gitlab-org/-/epics/15024">vulnerability explanation/resolution</a>.</li>
+<li>Adding <a href="https://gitlab.com/groups/gitlab-org/-/epics/15906">AI vs. Non-AI Cohort Analysis</a>.</li>
+<li>Adding insight into <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/454809">"language usage" of Code Suggestions</a>.</li>
+<li>Working on an update <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/505532">UX vision for AI adoption dashboard</a>.</li>
+</ul>
+</li>
+<li>Mature <a href="https://gitlab.com/groups/gitlab-org/-/epics/9317">Value Streams Dashboard for Executives</a> to enable decision-makers to identify trends, patterns, and opportunities for digital transformation improvements.In the next 1-3 milestones, we will focus on the following:
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13801">Consolidate Group::Optimize dashboards</a> into the <a href="https://gitlab.com/groups/gitlab-org/-/epics/13801">Cross-stage Dashboards framework</a>. With the new framework, customers can visualize their DevSecOps data using built-in dashboards provided by GitLab or by creating custom dashboards with custom visualizations.</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/8925">Customizable widgets</a> to show data that is relevant to user's goals and needs. Adding the <a href="https://gitlab.com/groups/gitlab-org/-/epics/8925">"Platform Insights" customizable UI capabilities</a>. Integrate the Value streams dashboard page into the <a href="https://docs.gitlab.com/ee/user/analytics/analytics_dashboards.html">Platform Insights schema driven UI</a>.</li>
+</ul>
+</li>
+<li>
+<p>Adding <a href="https://gitlab.com/groups/gitlab-org/-/epics/9129">VSA settings</a> with label filters configuration. In a similar way to boards, teams want to use saved filtered labels with value streams.</p>
+</li>
+<li>Moving DORA charts from the <a href="https://gitlab.com/groups/gitlab-org/-/epics/16117">CI/CD Analytics into the new dashboarding framework</a></li>
+<li><strong>Add a new <a href="https://gitlab.com/groups/gitlab-org/-/epics/9317">Dashboard for Executive</a></strong> to enable decision-makers to identify trends, patterns, and opportunities for digital transformation improvements. In the next phases, we will focus on the following:
+<ul>
+<li>Adding a <a href="https://gitlab.com/-/project/278964/uploads/9def9ff31b9812ad216043a40bdee5f9/DORA_metrics_-_Option_D.png">new DORA Metrics Overview page</a> in the Value Stream Dashboard. This is related to https://gitlab.com/gitlab-org/gitlab/-/issues/453958.</li>
+<li>Adding a <a href="https://gitlab.com/-/project/278964/uploads/11d6be804f65814c8ba9fe049338d4cc/DORA_metrics_-_Option_E.png">new DORA Metrics Analytics page</a> in the Value Stream Dashboard. This is related to https://gitlab.com/gitlab-org/gitlab/-/issues/453958.</li>
+<li>Adding <a href="https://gitlab.com/groups/gitlab-org/-/epics/11490">Custom Metrics Calculation Rules</a> for DORA, to <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/358385">support multiple environment branches</a> (with GitLab flow), and <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/444295">improve the metric calculation</a> to effectively track incidents and deployments.</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/451752">Move DORA metrics to ClickHouse</a> to provide best experience and robust indicators for measuring the metrics.</li>
+<li>Adding the Fifth DORA Metric - <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/393003">Reliability - Operational performance</a></li>
+</ul>
+</li>
+<li>Enhancing our ability to <a href="https://gitlab.com/groups/gitlab-org/-/epics/5516">visualize data</a> by providing a singular hub for accessing and presenting information, adaptable to different visualization preferences.</li>
+<li>Maturing our Wiki to satisfy more <a href="https://gitlab.com/groups/gitlab-org/-/epics/12826">jobs to be done</a>.</li>
+</ul>
+<h3 id=what-were-not-doing>What We're Not Doing</h3>
+<ul>
+<li>GitLab will not provide extensive configuration options that complicate collaboration and increase the maintenance burden. Examples are:
+<ul>
+<li>Blocking users from editing work items due to field-level configuration.</li>
+<li>Creation of state workflows with transition rules.</li>
+<li>Configuring screen field layouts.</li>
+</ul>
+</li>
+<li>Plan functionality will be generic enough to allow its use by many personas and use cases. However, we will focus on optimizing for use cases for DevSecOps workflows in the immediate future. Our long-term vision is to become the system of record for planning across any function, but we are starting with DevSecOps teams as our target. Example use cases that we are not focused on include:
+<ul>
+<li>Marketing</li>
+<li>HR</li>
+<li>Legal</li>
+<li>Service Desk</li>
+</ul>
+</li>
+<li>In order to meet the vision described in this page, we will decrease investment in our Requirements Management, Test Management, DevOps Reports, Design Management and Time Tracking categories. We will continue to address defects and support community contributions but we are not planning to make significant improvements.</li>
+</ul>
+<h3 id=create>Create</h3>
+<h3 id=what-we-recently-completed>What we recently completed</h3>
+<p>The Create stage has been actively delivering updates to help your development teams collaborate faster and more effectively. Here are some highlights from recent releases:</p>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/514741">Workspace extensions now support proposed APIs</a> - Workspace extensions now support enabling proposed APIs, improving compatibility and reliability in production environments. This update allows extensions that depend on proposed APIs to run without errors, including critical development tools like the Python Debugger.</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/editor-extensions/-/epics/97">Add project files to Duo Chat in VS Code and JetBrains IDEs</a> - Add your project files directly to Duo Chat in VS Code and JetBrains to unlock more powerful, context-aware AI assistance.</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/452464">Workspaces container support with Sysbox</a> - GitLab workspaces now supports building and running containers directly in your development environment. When your workspace runs on a Kubernetes cluster configured with Sysbox, you can build and run containers without additional configuration.</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/14644">Create workspaces without a custom devfile</a> - GitLab now provides you with a default file that includes common development tools. This enhancement removes configuration barriers, enables you to create a workspace quickly from any project, includes common development tools pre-configured and ready to use, and lets you focus on development instead of configuration.</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/282438">Use roles to define project members as Code Owners</a> - You can now use roles as Code Owners in your CODEOWNERS file to manage role-based expertise and approvals more efficiently.</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/462122">New <code>/help</code> command in GitLab Duo Chat</a> - A new, powerful feature for Duo Chat! Just type /help in the chat message field to explore everything it can do for you.</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/14380">Merge at a scheduled date and time</a> - When you create or edit a merge request you can specify a merge after date. This date will be used to prevent the merge request from being merged until it has passed. Using this new capability with our previously released improvements to auto-merge gives you the flexibility to schedule merge requests to merge in the future.</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/14100">Automated Repository X-Ray</a> - When a new commit is pushed to the default branch of your project, Repository X-Ray automatically triggers a background job that scans and parses the applicable configuration files in your repository.</li>
+</ul>
+<h3 id=what-we-are-currently-working-on>What we are currently working on</h3>
+<ul>
+<li>Source Code Management - <a href="https://gitlab.com/groups/gitlab-org/-/epics/15327">Branch rules for squash settings</a> - This is the next iteration of the larger effort to establish a framework for source code rules. Now that rules are co-located, we are working on enabling the editing of additional settings from that interface.</li>
+<li>Code Review Workflow - <a href="https://gitlab.com/groups/gitlab-org/-/epics/13008">Duo Code Review</a> and <a href="https://gitlab.com/groups/gitlab-org/-/epics/13808">Improved DevSecOps experience in merge requests</a></li>
+<li>GitLab CLI - <a href="https://gitlab.com/groups/gitlab-org/-/epics/12025">Stacked Diffs via the GitLab CLI</a></li>
+<li>Workspaces - <a href="https://gitlab.com/groups/gitlab-org/-/epics/14186">Workspaces Settings Configuration Infrastructure in GitLab</a></li>
+<li>Web IDE - <a href="https://gitlab.com/groups/gitlab-org/-/epics/11770">Enable the Web IDE Extension Marketplace for Self-managed</a> and <a href="https://gitlab.com/groups/gitlab-org/-/epics/11972">Hosting the Web IDE on a new domain or subdomain</a></li>
+<li>Editor Extensions - <a href="https://gitlab.com/groups/gitlab-org/-/epics/14984">Remote SAST Scanning in VS Code</a> and <a href="https://gitlab.com/groups/gitlab-org/editor-extensions/-/epics/94">Adding Duo Quick Chat into the Visual Studio extension</a>.</li>
+</ul>
+<h3 id=what-is-next-for-us>What is next for us</h3>
+<p>The Create stage will focus on the following this year:</p>
+<ul>
+<li>Source Code Management - <a href="https://gitlab.com/groups/gitlab-org/-/epics/15327">Branch rules for Merge Methods</a></li>
+<li>Code Review Workflow - <a href="https://gitlab.com/groups/gitlab-org/-/epics/9577">Duo Code Review</a></li>
+<li>GitLab CLI - Expand AI capabilities of glab ask - The GitLab CLI currently supports asking questions about how to accomplish some tasks with the usage of git. We will look for more ways to expand this and potentially leverage GitLab Duo Chat in the future.</li>
+<li>Workspaces - <a href="https://gitlab.com/groups/gitlab-org/-/epics/10635">Support additional editors for workspaces</a> and <a href="https://gitlab.com/groups/gitlab-org/-/epics/10710">Automatically suspend a workspace after a period of inactivity</a></li>
+<li>Web IDE - <a href="https://gitlab.com/groups/gitlab-org/-/epics/9466">Search across all files in a project from within the Web IDE</a> and <a href="https://gitlab.com/groups/gitlab-org/-/epics/2707">1st Class Editing Experiences for GitLab features</a></li>
+<li>Editor Extensions - <a href="https://gitlab.com/groups/gitlab-org/-/epics/9679">Deepen the integration with the core DevSecOps workflows of GitLab</a> and <a href="https://gitlab.com/groups/gitlab-org/editor-extensions/-/epics/96">Continue to improve the usability, quality, and maturity of GitLab Duo features</a></li>
+</ul>
+<h3 id=themes-that-cross-all-dev-stages>Themes that cross all Dev stages</h3>
+<p><strong>Performance and availability:</strong> We must invest in the performance, stability, and availability of our application. We will do this by focusing on <a href="https://gitlab.com/groups/gitlab-org/-/epics/1737">application limits</a>, <a href="https://gitlab.com/groups/gitlab-org/-/epics/1816">diff load times</a>, and ensuring <a href="https://handbook.gitlab.com/handbook/product/product-processes/#how-we-prioritize-work">availability</a> is top of mind.</p>
+<p>Growth driver: Retention</p>
+<h3 id=what-were-not-currently-focusing-on>What we're not currently focusing on</h3>
+<p>Choosing to invest in the above areas in 2022 means we will choose not to:</p>
+<ul>
+<li>Efficiency recommendations: Provide recommendations where customers can improve their efficiency in the DevOps lifecycle. This will likely require comparisons amongst many GitLab users and an AI engine to make intelligent recommendations. We won't be working on features that help companies answer, âAm I doing the right activities?â These improvements will come in years two and three of the VSM plan.</li>
+<li>Feature objects: Creating first class feature objects per the project management morphs into product management block below. While we think this is important, we must spend this year building a better foundation in portfolio management by making our groups/projects structure more simple and delivering epic boards.</li>
+<li>Wikis: Investments in wikis such as WYSIWYG editing or real time collaboration ala Notion.</li>
+</ul>
+<h2 id=stages--categories>Stages &amp; Categories</h2>
+<h3 id=manage>Manage</h3>
+<p><a href="/direction/foundations/">Learn more about our vision for the Foundations stage</a>.</p>
+<h3 id=plan-1>Plan</h3>
+<p><a href="/direction/plan/">Learn more about our vision for the Plan stage</a>.</p>
+<h3 id=create-1>Create</h3>
+<p><a href="/direction/create/">Learn more about our vision for the Create stage</a>.</p>
+<h2 id=whats-next>What's Next</h2>
+<h3 id=183-2025-08-21>18.3 (2025-08-21)</h3>
+<h4 id=plan-2>Plan</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/15008">Embedded Views - General Availability</a></li>
+</ul>
+<h4 id=create-2>Create</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13008">Duo Code Review</a> <kbd>Ultimate</kbd></li>
+</ul>
+<h3 id=185-2025-10-16>18.5 (2025-10-16)</h3>
+<h4 id=plan-3>Plan</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/14795">Work item statuses - Iteration 4 (Multiple lifecycles)</a></li>
+</ul>
+<h3 id=188-2026-01-15>18.8 (2026-01-15)</h3>
+<h4 id=plan-4>Plan</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/17530">Enhanced List View</a></li>
+</ul>
+<h3 id=189-2026-02-19>18.9 (2026-02-19)</h3>
+<h4 id=plan-5>Plan</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11918">WI lists stage 4 - Consolidated list (group and project)</a></li>
+</ul>
+<h3 id=190-2026-05-21>19.0 (2026-05-21)</h3>
+<h4 id=plan-6>Plan</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/18309">Enhanced listing page follow-up items</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/12532">Nested listing views for efficient workflows within SDLC and OKR workflows</a> <kbd>Ultimate</kbd></li>
+</ul>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/dev/template.html.md.erb" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/dev/template.html.md.erb" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=e389f0af'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/scripts.js?cacheBust=e389f0af"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

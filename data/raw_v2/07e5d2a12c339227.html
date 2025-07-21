@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+GitLab Direction
+|
+GitLab
+</title>
+<meta content='Our vision is to replace disparate DevSecOps toolchains with a single application that is pre-configured to work by default across the entire DevSecOps lifecycle.' name=description />
+<meta content='Our vision is to replace disparate DevSecOps toolchains with a single application that is pre-configured to work by default across the entire DevSecOps lifecycle.' name='twitter:description'/>
+<meta content='Our vision is to replace disparate DevSecOps toolchains with a single application that is pre-configured to work by default across the entire DevSecOps lifecycle.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='GitLab Direction' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/template.html.md.erb' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='GitLab Direction' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=e389f0af'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v6.6.0/css/all.css' integrity='sha384-h/hnnw1Bi4nbpD6kE7nYfCXzovi622sY5WBxww8ARKwpdLj5kUWjRuyiXaD1U2JT' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet />
+
+<link href="/stylesheets/maturity.css?cacheBust=e389f0af" rel=stylesheet />
+<link href="/stylesheets/direction.css?cacheBust=e389f0af" rel=stylesheet />
+<link href="/stylesheets/slippers.css?cacheBust=e389f0af" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=e389f0af" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=e389f0af'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+GitLab Direction
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/david'>
+<div class=codeowners-single>
+<img
+src='/images/team/ddesanto-crop.jpg'
+class=codeowner-avatar-img
+alt='David DeSanto'
+title='David DeSanto'
+>
+<div class=codeowners-single-labels>
+<div class=codeowners-description>
+David DeSanto
+</div>
+<div class=codeowners-handle>
+@david
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/template.html.md.erb" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li>GitLab Direction</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<h2 class=no_toc id=on-this-page>On this page</h2>
+<ul id=markdown-toc>
+<li><a href="#3-year-strategy" id=markdown-toc-3-year-strategy>3-year strategy</a> <ul>
+<li><a href="#situation" id=markdown-toc-situation>Situation</a></li>
+<li><a href="#strategic-challenges" id=markdown-toc-strategic-challenges>Strategic challenges</a></li>
+<li><a href="#product-strategy" id=markdown-toc-product-strategy>Product Strategy</a></li>
+</ul>
+</li>
+<li><a href="#fiscal-year-product-investment-themes" id=markdown-toc-fiscal-year-product-investment-themes>Fiscal year product investment themes</a> <ul>
+<li><a href="#fy26" id=markdown-toc-fy26>FY26</a> <ul>
+<li><a href="#key-principles-driving-themes" id=markdown-toc-key-principles-driving-themes>Key Principles Driving Themes</a></li>
+<li><a href="#rd-investment-themes" id=markdown-toc-rd-investment-themes>R&amp;D Investment Themes</a> <ul>
+<li><a href="#win-with-devsecops-platform-completeness" id=markdown-toc-win-with-devsecops-platform-completeness>Win with DevSecOps platform completeness</a></li>
+<li><a href="#differentiate-with-ai-across-the-sdlc" id=markdown-toc-differentiate-with-ai-across-the-sdlc>Differentiate with AI across the SDLC</a></li>
+<li><a href="#lead-with-sdlc-insights-and-reporting" id=markdown-toc-lead-with-sdlc-insights-and-reporting>Lead with SDLC insights and reporting</a></li>
+<li><a href="#elevate-customer-centricity-to-customer-obsession" id=markdown-toc-elevate-customer-centricity-to-customer-obsession>Elevate customer-centricity to customer obsession</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#fy25" id=markdown-toc-fy25>FY25</a> <ul>
+<li><a href="#key-principles-driving-themes-1" id=markdown-toc-key-principles-driving-themes-1>Key Principles Driving Themes</a></li>
+<li><a href="#rd-investment-themes-1" id=markdown-toc-rd-investment-themes-1>R&amp;D Investment Themes</a> <ul>
+<li><a href="#enable-aiml-efficiencies-across-devsecops" id=markdown-toc-enable-aiml-efficiencies-across-devsecops>Enable AI/ML Efficiencies Across DevSecOps</a></li>
+<li><a href="#drive-use-case-adoption-to-fully-realize-value" id=markdown-toc-drive-use-case-adoption-to-fully-realize-value>Drive Use Case Adoption to Fully Realize Value</a></li>
+<li><a href="#differentiate-on-devsecops-platform" id=markdown-toc-differentiate-on-devsecops-platform>Differentiate on DevSecOps Platform</a></li>
+<li><a href="#strengthen-our-saas-deployments--capabilities" id=markdown-toc-strengthen-our-saas-deployments--capabilities>Strengthen Our SaaS Deployments &amp; Capabilities</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#devsecops-stages" id=markdown-toc-devsecops-stages>DevSecOps stages</a> <ul>
+<li><a href="#your-contributions" id=markdown-toc-your-contributions>Your contributions</a></li>
+</ul>
+</li>
+<li><a href="#personas" id=markdown-toc-personas>Personas</a></li>
+<li><a href="#mitigating-low-end-disruption" id=markdown-toc-mitigating-low-end-disruption>Mitigating low-end disruption</a></li>
+<li><a href="#maturity" id=markdown-toc-maturity>Maturity</a></li>
+<li><a href="#scope" id=markdown-toc-scope>Scope</a></li>
+<li><a href="#quarterly-objectives-and-key-results-okrs" id=markdown-toc-quarterly-objectives-and-key-results-okrs>Quarterly Objectives and Key Results (OKRs)</a></li>
+<li><a href="#how-we-plan-releases" id=markdown-toc-how-we-plan-releases>How we plan releases</a></li>
+<li><a href="#previous-releases" id=markdown-toc-previous-releases>Previous releases</a></li>
+<li><a href="#upcoming-releases" id=markdown-toc-upcoming-releases>Upcoming releases</a></li>
+<li><a href="#mlai-at-gitlab" id=markdown-toc-mlai-at-gitlab>ML/AI at GitLab</a></li>
+<li><a href="#cross-stage-efforts" id=markdown-toc-cross-stage-efforts>Cross-Stage efforts</a> <ul>
+<li><a href="#footnotes" id=markdown-toc-footnotes>Footnotes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id=3-year-strategy>3-year strategy</h1>
+<h2 id=situation>Situation</h2>
+<p>GitLab competes in a large market space, with a <a href="https://internal.gitlab.com/handbook/product/investment/">CSM</a> estimated at ~$18B in 2024. GitLab has recently surpassed the $150M ARR milestone, with unusually high revenue growth and retention rates. GitLab is uniquely positioned in the market with a vision to offer a single application for the entire DevSecOps lifecycle. GitLab competes across numerous market segments and aims to deliver value in <a href="https://handbook.gitlab.com/handbook/product/categories/">80+ market categories</a>. GitLabâs product vision is uniquely ambitious, as we were the first DevSecOps player to take a <a href="/topics/single-application/">single application approach</a>. From idea to production, GitLab helps teams improve cycle time from weeks to minutes, reduce development process costs, and enable a faster time to market while increasing developer productivity. With software âeating the world,â this is widely viewed as a mission-critical value proposition for customers. We also have a number of <a href="https://handbook.gitlab.com/handbook/leadership/biggest-tailwinds/">tailwinds</a> in the form of cloud adoption, Kubernetes adoption, and DevSecOps tool consolidation, which are helping fuel our rapid growth. Finally, GitLab has an open source community and distribution model, which has exposed the value of GitLab to millions of developers and has sped up the maturation of our product through <a href="https://gitlab.biterg.io/goto/937475d38035f496df3501c9b30af5ef">more than 200 monthly improvements</a> to the GitLab codebase from our users.</p>
+<h2 id=strategic-challenges>Strategic challenges</h2>
+<ol>
+<li><strong>Tension between Breadth and Depth:</strong> Our ambitious single-application product vision means we need to build out feature function value across a very large surface area. With so much to deliver in a single application, it is a big UX challenge to keep the experience simple, consistent, and seamless between DevSecOps phases. Our challenge is to drive the right balance between breadth and depth by retaining a <a href="https://handbook.gitlab.com/handbook/company/strategy/">seed then nurture</a> approach in new product areas while simultaneously improving existing product areas that generate usage and revenue. Shifting more focus to product depth will allow us to win and retain sophisticated enterprise customers.</li>
+<li><strong>GitLab.com and Self-Managed:</strong> Another challenge we face is the balance between our self-managed and GitLab.com offerings. GitLab's early paying customers were more interested in self-managed, and the majority of our customers use this offering today. As a result, we focused heavily on delivering a great self-managed customer experience. However, as the market shifts toward cloud adoption, we are seeing an increasing demand for our GitLab.com offering. We now need to rapidly meet the same enterprise-grade security, reliability, and performance expectations our paying customers have come to expect from self-managed in our SaaS (.com offering).</li>
+<li><strong>Wide Customer Profile:</strong> We also serve a wide range of customers, from individual contributor developers to large enterprises, across all vertical markets. This range of deployment options and customer sizes makes our business complex and makes it hard to optimize the customer experience for all customer sizes. Over the past few years, we have prioritized enabling our direct sales channel, but in the process have not focused enough on great customer experiences around self-service purchase workflows, onboarding, and cross-stage adoption.</li>
+<li><strong>Competition:</strong> Finally, we have formidable competition from much larger companies, including Microsoft, Atlassian, and Synopsys to name a few. Microsoft is starting to mimic our single application positioning, and while behind us in the journey, have substantial resources to dedicate to competing with GitLab.</li>
+</ol>
+<h2 id=product-strategy>Product Strategy</h2>
+<ul>
+<li><strong>Focus on increasing Stages per Organization <a href="https://handbook.gitlab.com/handbook/product/performance-indicators/#stages-per-organization-spo">(SpO)</a>:</strong> There is a strong correlation between the number of stages customers use and their propensity to upgrade to a paid package. In fact, <strong>adding a stage triples conversion!</strong> Each product group should be laser-focused on driving adoption and regular usage of their respective stages, as it should lead to higher <a href="https://handbook.gitlab.com/handbook/sales/sales-term-glossary/arr-in-practice/#net-arr">Net ARR</a>, reduced churn, and higher customer satisfaction. As outlined in this <a href="https://handbook.gitlab.com/handbook/product/product-principles/#multi-feature-usage-adoption-journey">user journey</a>, the most important additional stages for customers to adopt are Create to Verify and Verify to Release, as each of these adoption steps open up three additional stages to users.</li>
+<li><strong>Harness the unique power of a single application:</strong> GitLabâs primary point of differentiation is our single application approach. As we continue to drive value in any given stage or category, our first instinct should be to connect that feature or product experience to other parts of the GitLab product. These <a href="#cross-stage-efforts">cross-stage connections</a> will drive differentiated customer value and will be impossible for point product competitors to imitate. Recognizing this opportunity, we have grown our R&amp;D organization significantly over the past two years, and plan to invest an outsized amount on R&amp;D for the next 2-3 years to extend our lead in executing against the single application product vision.</li>
+<li><strong>Increase wider-community contributions:</strong> To achieve this ambitious vision more quickly, we will leverage our powerful open source community. Each stage should have a clear strategy for tiering the value of the stage. When stages are early in maturity, we will bias toward including as much functionality in our Core open source version as possible, to drive more rapid adoption and greater community contributions, which will help us mature new stages faster. Once stage adoption is achieved, we can then layer on additional value in paid tiers to encourage upgrades.</li>
+<li><strong>Make our core journey categories complete:</strong> We want to ensure the core product usage experience is great, which will lead to more paying customers and improved customer retention. We intend to maintain our market-leading depth in stages with complete categories, which currently are Verify (Continuous Integration) and Create (Source Code Management and Code Review). Beyond that, we will endeavor to rapidly mature our offering to complete in Plan (3rd most used stage), Release (4th most used stage), and Secure (important element of our Ultimate tier).</li>
+<li><strong>GitLab-hosted first:</strong> Most customers don't want to run GitLab themselves (self-managed), so we should build out the offerings where we do it for them (GitLab-hosted). GitLab-hosted includes our SaaS (GitLab.com), any single-tenant offerings, and other GitLab hosted services that self-managed installations can use. Our customer and revenue growth rate for our SaaS offering is faster than our self-managed offering. To meet growing customer demand, our SaaS offering needs to have enterprise-grade security, availability, and performance. We must also ensure <a href="/features/">feature parity between self-managed and SaaS</a> and that customers have an easy migration path from self-managed to SaaS. Going forward, all new features should be available on SaaS when they are available on self-managed, if not before. We will also begin offering GitLab-hosted services to self-managed customers to provide additional value that may not be feasible to deliver in a self-managed environment, e.g. automated cloud backups. Finally, we expect to offer different GitLab-hosted deployment options for single tenant customers and specific geographic regions to meet the regulatory, security, and data residency requirements of various customer segments.</li>
+</ul>
+<h1 id=fiscal-year-product-investment-themes>Fiscal year product investment themes</h1>
+<p>Every year at GitLab, we choose some specific areas of emphasis to help guide the teams on the areas of our product that we want to accentuate. This section is used to highlight that emphasis. It is not a comprehensive list of everything we plan to do this year. Direction for each stage and category can be found at the respective <a href="https://handbook.gitlab.com/handbook/product/categories/">direction pages</a>. We are not asking the teams to deviate from their core mission.</p>
+<p>Many teams will see themselves contributing to these areas of emphasis directly. The other teams will continue to execute on their mission - that is also important.</p>
+<p>The themes are to help facilitate cross-team collaboration when invariably teams working on the 1-year themes may need to collaborate with others. Our guidance is: if any team approaches you to prioritize something that is thematic for this year, consider that as a higher priority than you would normally - as it is in service of the broader product-wide goal that we, as a company, have deemed important to accomplish this year.</p>
+<p>See <a href="https://internal.gitlab.com/handbook/product/investment/">Product Investment</a> (<em>internal handbook page</em>) for how we allocate our R&amp;D investment across our <a href="https://handbook.gitlab.com/handbook/product/categories/#hierarchy">product hierarchy</a>.</p>
+<h2 id=fy26>FY26</h2>
+<h3 id=key-principles-driving-themes>Key Principles Driving Themes</h3>
+<ol>
+<li>Usability: Users are telling us that we need to better meet their expectations and make the experience more intuitive.</li>
+<li>Depth: We need to stop doing some of the things we are doing today. Customers are asking us to improve core functionality through usability improvements and remove half-completed features.</li>
+<li>Data Quality: Without more visibility, we cannot make as many data-driven decisions. And neither can our customers. We need to complete our data unification effort to make this easier.</li>
+<li>Deployment Parity: All three deployments (GitLab.com, GitLab Dedicated, Self-Managed) will have feature parity (with the exception of âadmin areaâ topics on .com and Dedicated).</li>
+</ol>
+<h3 id=rd-investment-themes>R&amp;D Investment Themes</h3>
+<p>For FY26, the four key R&amp;D investment themes we are focused on are:</p>
+<ol>
+<li><a href="#win-with-devsecops-platform-completeness">Win with DevSecOps platform completeness</a></li>
+<li><a href="#differentiate-with-ai-across-the-sdlc">Differentiate with AI across the Software Development Life Cycle (SDLC)</a></li>
+<li><a href="#lead-with-sdlc-insights-and-reporting">Lead with SDLC insights and reporting</a></li>
+<li><a href="#elevate-customer-centricity-to-customer-obsession">Elevate customer-centricity to customer obsession</a></li>
+</ol>
+<h4 id=win-with-devsecops-platform-completeness>Win with DevSecOps platform completeness</h4>
+<p>We will focus primarily on core DevSecOps platform capabilities across SCM, CI, CD, security, compliance, and enterprise agile planning with the goal to achieve a leadership position or extend our existing leadership position. We will drive Premium and Ultimate value by helping propel free-to-paid conversion through product-led growth / feature discovery moments.</p>
+<h4 id=differentiate-with-ai-across-the-sdlc>Differentiate with AI across the SDLC</h4>
+<p>We will introduce new as well as improve existing GitLab Duo AI capabilities within our core DevSecOps platform capabilities. We will also bring ModelOps features to general availability, including a focus on enabling customers to work with native data science workloads within GitLab.</p>
+<h4 id=lead-with-sdlc-insights-and-reporting>Lead with SDLC insights and reporting</h4>
+<p>We will focus on deepening the types, and quality of metrics, as well as pulling metrics from third party integrations, with the goal of making GitLab the central component to understanding SDLC insights. We will also provide reporting of feature usage enabling customers to understand what features and capabilities are being used by their teams as well as what usage is connected to Premium and Ultimate tiers, or are features and capabilities included in add-ons.</p>
+<h4 id=elevate-customer-centricity-to-customer-obsession>Elevate customer-centricity to customer obsession</h4>
+<p>We will focus on addressing use case adoption issues as well as improving user experience within onboarding to improve our customer's time-to-value for core DevSecOps platform capabilities. We will improve customer experience improve ease-of-use for SMB/commercial customers with license management and self-service workflows. Based upon and informed by the pricing research completed in FY25, we will also implement an updated pricing strategy.</p>
+<h2 id=fy25>FY25</h2>
+<h3 id=key-principles-driving-themes-1>Key Principles Driving Themes</h3>
+<ol>
+<li>Depth over Breadth: For the past several years we have focused on breadth over depth. This has allowed us to show our direction as a company and define the DevOps Platform market. In FY24, we pivoted to depth over breadth as product depth allows us to win and retain sophisticated enterprise customers. We will continue our focus on depth throughout FY25.</li>
+<li>Drive Adoption of Ultimate: Due to the increasing demands for security and compliance in software development, GitLab Ultimate continues to gain popularity with our customers. We will focus on increasing the value of Ultimate by not only improving security and compliance functionality but also adding value from other key areas within our platform like Plan, Verify, and Data Science.</li>
+<li>Differentiate: Our primary point of differentiation is our <a href="https://handbook.gitlab.com/handbook/product/categories/gitlab-the-product/single-application/">single application</a> approach: all aspects of our <a href="/platform/">DevSecOps platform</a> work seamlessly together, right out of the box, and can be tailored to the specific needs of each organization.</li>
+</ol>
+<h3 id=rd-investment-themes-1>R&amp;D Investment Themes</h3>
+<p>For FY25, the four key R&amp;D investment themes we are focused on are:</p>
+<ol>
+<li><a href="#enable-aiml-efficiencies-across-devsecops">Enable AI/ML Efficiencies Across DevSecOps</a></li>
+<li><a href="#drive-use-case-adoption-to-fully-realize-value">Drive Use Case Adoption to Fully Realize Value</a></li>
+<li><a href="#differentiate-on-devsecops-platform">Differentiate on DevSecOps Platform</a></li>
+<li><a href="#strengthen-our-saas-deployments--capabilities">Strengthen Our SaaS Deployments &amp; Capabilities</a></li>
+</ol>
+<h4 id=enable-aiml-efficiencies-across-devsecops>Enable AI/ML Efficiencies Across DevSecOps</h4>
+<p>AI as part of software development has continued to mature and has become the number one topic in our customer discussions. To meet our customersâ needs and the evolving market landscape, we will take a three pronged approach to AI (GitLab Duo, ModelOps, AI agents) as part of our DevSecOps platform providing us differentiation in the market.</p>
+<h4 id=drive-use-case-adoption-to-fully-realize-value>Drive Use Case Adoption to Fully Realize Value</h4>
+<p>CI and CD are critical to the success of Premium, while security and governance drives value in Ultimate. We will increase our focus on adoption of these areas - ensuring that customers realize the value of the capabilities they have paid for. This will continue to reduce churn, drive free-to-paid conversion, and increase up-tiering from Premium to Ultimate.</p>
+<h4 id=differentiate-on-devsecops-platform>Differentiate on DevSecOps Platform</h4>
+<p>Toolchain consolidation continues to come up with customers as well as in our annual DevSecOps survey. We will capitalize on our position as the enterprise DevSecOps platform by continuing to expand our planning capabilities, continuing to mature our metrics and reporting, and bring new SCM capabilities to general availability.</p>
+<h4 id=strengthen-our-saas-deployments--capabilities>Strengthen Our SaaS Deployments &amp; Capabilities</h4>
+<p>GitLab.com and GitLab Dedicated continue to grow in popularity as more organizations need to undergo digital transformations however do not want the overhead of self-hosting their DevSecOps platform. We expect this trend to continue in FY25 and will invest in our SaaS deployments to ensure they meet our customersâ expectations.</p>
+<h2 id=devsecops-stages>DevSecOps stages</h2>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1025 500" role=img aria-label="GitLab DevSecOps Lifecycle">
+<style>
+      .text {
+        font-family: Inter,Source Sans Pro,sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        fill: #2b2838;
+        letter-spacing: .02em;
+        dominant-baseline: middle;
+        text-anchor: middle;
+      }
+      .text2 {
+        font-size: 26px;
+        fill: #2b2838;
+      }
+      .devsecops {
+        font-size: 56px;
+        fill: black;
+      }
+      .mix {
+        mix-blend-mode: color-burn;
+      }
+      .line {
+        fill: none;
+        stroke: #2b2838;
+        stroke-width: 2px;
+      }
+      .highlighted {
+        font-size: 22px;
+      }
+      .highlightedline {
+        stroke-width: 3px;
+      }
+      .white_fill {
+        fill: #fff;
+      }
+      .faded {
+        fill: #a09fa4;
+      }
+      .fadestroke {
+        stroke: #a09fa4;
+      }
+      .lightline{
+        stroke: #d3d0d4;
+        stroke-width: 3px;
+      }</style>
+<linearGradient id=linear-gradient x1=18 y1=250 x2=1007 y2=250 gradientTransform="matrix(1, 0, 0, 1, 0, 0)" gradientUnits=userSpaceOnUse>
+<stop offset=0 stop-color="#e6dcf4"/>
+<stop offset=1 stop-color="#ffd0be"/>
+</linearGradient>
+<linearGradient id=linear-gradient-2 x1="720.88" y1="337.91" x2="370.24" y2="74.18" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" gradientUnits=userSpaceOnUse>
+<stop offset=0 stop-color="#2b2838" stop-opacity=".24"/>
+<stop offset=1 stop-color="#45424d" stop-opacity=0 />
+</linearGradient>
+<linearGradient id=linear-gradient-3 x1="304.12" y1="162.09" x2="654.76" y2="425.82" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" gradientUnits=userSpaceOnUse>
+<stop offset=0 stop-color="#2b2838" stop-opacity=".24"/>
+<stop offset=1 stop-color="#45424d" stop-opacity=0 />
+</linearGradient>
+<path id=background fill="#fff" d="M 0,0 L 1025,0 L 1025,500 L 0,500"/><path id=upper_arc class=line d="M 0,250 a238,238 0 0,1 238,-238 L 787,12 a238,238 0 0,1 238,238"/><path id=lower_arc class=line d="M 0,250 a238,238 0 0,0 238,238 L 787,488 a238,238 0 0,0 238,-238"/><path id=clear_1 fill="#fff" d="M -3,190 L -3,310 L 1028,310 L 1028,190"/>
+<path id=clear_2 fill="#fff" d="M 422,0 L 603,0 L 603,500 L 422,500"/>
+<path id=loop fill="url(#linear-gradient)" d="M 512.5,181.18 L 370.24,74.18 a220,220 0 1,0 0,351.64 L 512.5,318.8 L 654.76,425.82 a220,220 0 1,0 0,-351.64"/>
+<path id=cutout_1 fill="#fff" d="M 421,250 L 304.12,162.09 a110,110 0 1,0 0,175.82"/>
+<path id=cutout_2 fill="#fff" d="M 604,250 L 720.88,162.09 a110,110 0 1,1 0,175.82"/>
+<path id=shadow_1 fill="url(#linear-gradient-2)" class=mix d="M 512.5,181.18 L 421,250 L 304.12,162.09 L 370.24,74.18"/>
+<path id=shadow_2 fill="url(#linear-gradient-3)" class=mix d="M 512.5,318.8 L 604,250 L 720.88,337.91 L 654.76,425.82"/><path class=lightline fill=none d="M 421,256 L 304.12,168.09 a104,104 0 1,0 -64.12,185.91 L 225,341"/>
+<path class=lightline fill=none d="M 604,256 L 720.88,168.09 a104,104 0 1,1 64.12,185.91 L 800,341"/>
+<path fill="#fff" class=lightline d="M 357,205 L 668,205 a45,45 0 0,1 0,90 L 357,295 a45,45 0 0,1 0,-90"/>
+<path d="M536.514 419L536.448 418.82L529.663 401.124C529.526 400.778 529.281 400.483 528.965 400.283C528.73 400.131 528.461 400.039 528.184 400.01C527.905 399.981 527.624 400.018 527.363 400.118C527.1 400.216 526.866 400.376 526.676 400.583C526.488 400.789 526.35 401.037 526.274 401.306L521.695 415.326H503.151L498.571 401.306C498.495 401.037 498.357 400.79 498.169 400.584C497.979 400.378 497.745 400.219 497.484 400.119C497.221 400.02 496.941 399.982 496.662 400.011C496.384 400.04 496.116 400.133 495.88 400.283C495.565 400.483 495.32 400.778 495.183 401.124L488.403 418.824L488.331 419C487.355 421.551 487.235 424.35 487.989 426.976C488.743 429.601 490.33 431.911 492.511 433.556L492.536 433.575L492.594 433.62L502.914 441.355L508.034 445.224L511.145 447.575C511.51 447.851 511.955 448 512.411 448C512.869 448 513.314 447.851 513.679 447.575L516.789 445.224L521.909 441.355L532.303 433.575L532.331 433.553C534.513 431.909 536.1 429.6 536.854 426.975C537.609 424.35 537.489 421.551 536.514 419Z" fill="#E24329"/>
+<path d="M536.514 419L536.448 418.82C533.141 419.499 530.028 420.899 527.328 422.923L512.431 434.186L521.916 441.355L532.309 433.575L532.339 433.553C534.517 431.908 536.104 429.599 536.858 426.974C537.61 424.349 537.49 421.55 536.514 419Z" fill="#FC6D26"/>
+<path d="M502.914 441.355L508.034 445.224L511.145 447.575C511.51 447.851 511.954 448 512.411 448C512.869 448 513.314 447.851 513.679 447.575L516.789 445.224L521.909 441.355L512.425 434.186L502.914 441.355Z" fill="#FCA326"/>
+<path d="M497.519 422.923C494.82 420.9 491.706 419.5 488.403 418.824L488.331 419C487.355 421.551 487.235 424.35 487.989 426.976C488.743 429.601 490.33 431.911 492.511 433.556L492.536 433.575L492.594 433.62L502.914 441.355L512.405 434.186L497.519 422.923Z" fill="#FC6D26"/>
+<text x="50%" y=255 class="text devsecops">DevSecOps</text><text x=353 y=131 class=text>Plan</text><text x=127 y=131 class=text>Code</text><text x=127 y=371 class=text>Build</text><text x=353 y=371 class=text>Test</text><text x=672 y=131 class=text>Release</text><text x=898 y=131 class=text>Deploy</text><text x=898 y=371 class=text>Operate</text><text x=672 y=371 class=text>Monitor</text><text x="50%" y=13 class="text text2">Security</text><text x="50%" y=488 class="text text2">Compliance</text></svg>
+<p>DevSecOps is a broad space with a lot of complexity. To manage this within GitLab,
+we break down the <a href="/solutions/devops-platform/">DevSecOps lifecycle</a>
+into a few different <a href="https://handbook.gitlab.com/handbook/product/categories/#hierarchy">sections</a>, each with its own direction page you can review.</p>
+<ul>
+<li><strong><a href="/direction/dev/">Dev Section Direction</a></strong> - Includes the <a href="/direction/dev/#plan">Plan</a> and <a href="/direction/dev/#create">Create</a> stages</li>
+<li><strong><a href="/direction/ci/">CI Section Direction</a></strong> - Includes the <a href="/direction/ops/#verify">Verify</a> and <a href="/direction/package/">Package</a> stages</li>
+<li><strong><a href="">CD Section Direction</a></strong> - Includes the <a href="/direction/delivery/">Deploy</a> stage, which includes the <a href="">Environments</a> group</li>
+<li><strong><a href="/direction/security/">Sec Section Direction</a></strong> - Includes the <a href="/direction/supply-chain/">Software Supply Chain Security Direction</a> and the <a href="/direction/application_security_testing/">Application Security Testing</a>, <a href="/direction/software_supply_chain_security/">Software Supply Chain Security</a>, and <a href="/direction/security_risk_management/">Security Risk Management</a> stages</li>
+<li><strong><a href="/direction/data-science/">Data Science Section Direction</a></strong> - Includes the <a href="/direction/modelops/">ModelOps</a> and <a href="/direction/ai-powered/">AI-powered</a> stages</li>
+<li><strong><a href="/direction/analytics/">Analytics Section Direction</a></strong> - Includes the <a href="/direction/monitor/">Monitor</a> stage, which includes the <a href="/direction/monitor/analytics-instrumentation/">Analytics Instrumentation</a> and <a href="/direction/monitor/platform_insights">Platform Insights</a> groups</li>
+<li><strong><a href="/handbook/marketing/growth/">Growth Section Direction</a></strong> - Includes the <a href="/handbook/marketing/growth/">Growth</a> stage, which includes the <a href="/handbook/marketing/growth/">Acquisition</a> and <a href="/handbook/marketing/growth/">Activation</a> groups</li>
+<li><strong><a href="/direction/fulfillment/">Fulfillment Section Direction</a></strong> - Includes the <a href="/direction/fulfillment/">Fulfillment</a> stage, which includes the <a href="">Provision</a>, <a href="">Utilization</a>, <a href="">Fulfillment Platform</a>, <a href="">Subscription Management</a>, and <a href="">Seat Management</a> groups</li>
+<li><strong><a href="/direction/core_platform/">Core Platform Section Direction</a></strong> - Includes the <a href="/direction/foundations">Foundations</a> stage, which includes the <a href="">Personal Productivity</a>, <a href="">Design System</a>, and <a href="">UX Paper Cuts</a> groups</li>
+<li><strong><a href="/direction/saas-platforms/">Infrastructure Platforms Section Direction</a></strong> - Includes the <a href="/direction/gitlab_delivery/">GitLab Delivery</a>, <a href="/direction/production_engineering/">Production Engineering</a>, <a href="">Data Access</a>, <a href="/direction/tenant_scale/">Tenant Scale</a>, <a href="/direction/gitlab_dedicated/">GitLab Dedicated</a>, and <a href="">Developer Experience</a> stages</li>
+</ul>
+<h3 id=your-contributions>Your contributions</h3>
+<p>In addition to addressing the <a href="/solutions/devops-platform/">DevSecOps lifecycle</a> internally through the above sections, <a href="/community/contribute/">contributions from the community</a> also help increase our rate of innovation, which <a href="https://handbook.gitlab.com/handbook/company/strategy/#seed-then-nurture">helps mature</a> the stages of our <a href="/platform/">DevSecOps platform</a>. These community contributions are an important part our <a href="https://handbook.gitlab.com/handbook/company/mission/#contribute-to-gitlab-application">company mission</a> and <a href="https://handbook.gitlab.com/handbook/company/strategy/#assumptions">strategy</a>.</p>
+<p><a href="https://gitlab.com/gitlab-org/gitlab/issues">Our issue tracker</a> contains requests made for features and changes to GitLab. Contributing is the best way to
+get a feature you want included as we continually merge code to be released in the next version. Please see our <a href="/community/contribute/">Contribute to GitLab page</a> for more details such as guides to get started contributing, areas looking for contributions, and contribution
+acceptance criteria.</p>
+<h2 id=personas>Personas</h2>
+<p><a href="https://handbook.gitlab.com/handbook/product/personas/">Personas</a> are the people we design for. Developers, security professionals, and operations professionals are currently the primary personas we focus on, and we tailor our user experience to their needs. We want GitLab to be the main interface for people in these roles, so they can show up at work, start their day, and load up GitLab. And thatâs already happening.</p>
+<p>But there are a lot of other roles involved with the development and delivery of software. That is the ultimate GitLab goal - where everyone involved with software development and delivery uses a single application so they are on the same page with the rest of their team. We are rapidly expanding our user experience for <a href="https://handbook.gitlab.com/handbook/product/personas/#presley-product-designer">Designers</a>, <a href="https://handbook.gitlab.com/handbook/product/personas/#cameron-compliance-manager">Compliance Managers</a>, <a href="https://handbook.gitlab.com/handbook/product/personas/#parker-product-manager">Product Managers</a>, and <a href="https://handbook.gitlab.com/handbook/product/personas/#rachel-release-manager">Release Managers</a>. Weâll also be expanding to the business side, with Executive visibility and reporting. While weâre still calling it DevSecOps, weâre really expanding the definition of DevSecOps and delivering it all as a single application.</p>
+<h2 id=mitigating-low-end-disruption>Mitigating low-end disruption</h2>
+<p>GitLab is not immune to disruption. In some ways, it is a sign of success that GitLab is now at a scale where we have to think about low-end disruption. Arguably, a few years ago, GitLab was a low-end disruptor.</p>
+<p>Clayton Christensen defines <a href="https://online.hbs.edu/blog/post/4-keys-to-understanding-clayton-christensens-theory-of-disruptive-innovation">low-end-disruption</a> as follows:</p>
+<p><em>Low-end disruption refers to businesses that come in at the bottom of the market and serve customers in a way that is "good enough." These are generally the lower profit markets for the incumbent and thus, when these new businesses enter, the incumbents move further "upstream." In other words, they put their focus on where the greater profit margins are.</em></p>
+<p>Our perspective is that low-end disruption is an additional and critical sensing mechanism. This is especially true for the DevSecOps market. We look at the following attributes to figure out if a low-end disruption has anything close to potential product-market resonance. This list is an adaptation of the <a href="https://a16z.com/2019/12/09/product-zeitgeist-fit/">Product Zeitgeist Fit</a>.</p>
+<ul>
+<li><strong>Builder Enthusiasm</strong>: Are the most talented, hardest working, or most-in-demand people - the engineers, the developers - so intrigued by the approach that they are working on it, excited by it, and trying to make it a thing? If that is the case, then there is a good chance that they will eventually make it happen, moving beyond the fringes to the mainstream. Number of stars, forks, and contributions in the repo are some metrics to look for here.</li>
+<li><strong>Despite Test</strong>: When people are using a product despite the fact that itâs not the best thing out there, or, in some cases, that itâs straight-up terrible, itâs a great sign. It shows that the product has a line into something emotional, not solely functional. Wanted, not just needed. In the early days, these products can often feel misunderstood or controversial. At first blush, the conceit may even raise a few eyebrows. But to the people who have been working on those products, theyâre so clearly elegant, if temporarily imperfect, solutions to big and important problems that they seem almost obvious once they recognize it. Google Trends and posts on Hacker News are some things to monitor here.</li>
+<li><strong>T-shirt Test</strong>: If people with no connection to the company are wearing their t-shirts or putting their stickers on their laptops or wearing their socks, that desire to associate with the idea indicates as much a movement as a product.</li>
+</ul>
+<p>A reason low-end disruptors are able to enter the market is that the feature-absorption by users is lower than the feature-velocity of the established vendor. To address this we are focused on a <a href="https://handbook.gitlab.com/handbook/product/product-principles/#configuration-principles">working-by-default configuration principle</a>.</p>
+<h2 id=maturity>Maturity</h2>
+<p>As we add new categories and stages to GitLab, some areas of the product will be deeper and more mature than others. We publish a
+list of the categories, what we think their maturity levels are, and our plans to improve on our <a href="https://handbook.gitlab.com/handbook/product/categories/">categories page</a>.</p>
+<p>We strive to be the best product in the market and to be complete. As the market, customer needs, competitive landscape, and technology change, we should expect our maturities to also change, including changing to a lower maturity rating. By embracing a <a href="https://handbook.gitlab.com/handbook/values/#focus-on-improvement">focus on improvement</a> and <a href="https://handbook.gitlab.com/handbook/values/#low-level-of-shame">low level of shame</a>, we encourage moving a maturity down. This is a strong indicator that we are realists about our product with an eye on achieving the best results for our customers.</p>
+<h2 id=scope>Scope</h2>
+<p>We try to prevent maintaining functionality that is language or platform
+specific, because they slow down our ability to get results. Examples of how we
+handle it instead are:</p>
+<ol>
+<li>We don't make native mobile clients. Instead, we make sure our mobile web pages are great.</li>
+<li>We don't make native clients for desktop operating systems. We make our web application greatâfor example, GitLab was the first to have merge conflict resolution in our web application. People can also use <a href="https://www.git-tower.com/">Tower</a> or other clients.</li>
+<li>For language translations, we <a href="https://docs.gitlab.com/ee/development/i18n/translation.html">rely on the wider community</a>.</li>
+<li>For code navigation, we're hesitant to introduce navigation improvements that only work for a subset of languages.</li>
+<li>For building and testing with <a href="https://docs.gitlab.com/ee/topics/autodevops/">Auto DevOps</a>, we use Heroku Buildpacks.</li>
+</ol>
+<p>Outside our scope are Kubernetes and everything it depends on:</p>
+<ol>
+<li><strong>Network</strong> (fabric) <a href="https://github.com/coreos/flannel/">Flannel</a>, Openflow, VMware NSX, Cisco ACI</li>
+<li><strong>Proxy</strong> (layer 7) <a href="https://www.envoyproxy.io/">Envoy</a>, <a href="https://nginx.org/en/">nginx</a>, <a href="http://www.haproxy.org/">HAProxy</a>, <a href="https://traefik.io/">traefik</a></li>
+<li><strong>Ingress</strong> <a href="https://networkengineering.stackexchange.com/a/18877">(north/south)</a> <a href="https://github.com/heptio/contour">Contour</a>, <a href="https://www.getambassador.io/">Ambassador</a>,</li>
+<li><strong>Service mesh</strong> <a href="https://networkengineering.stackexchange.com/a/18877">(east/west)</a> <a href="https://istio.io/">Istio</a>, <a href="https://linkerd.io/">Linkerd</a></li>
+<li><strong>Container Scheduler</strong> we mainly focus on Kubernetes, other container schedulers are: CloudFoundry, OpenStack, OpenShift, Mesos DCOS, Docker Swarm, Atlas/Terraform, <a href="https://nomadproject.io/">Nomad</a>, <a href="http://deis.io/">Deis</a>, <a href="http://www.convox.com/">Convox</a>, <a href="https://flynn.io/">Flynn</a>, <a href="https://www.tutum.co/">Tutum</a>, <a href="https://giantswarm.io/">GiantSwarm</a>, <a href="https://github.com/rancher/rancher/blob/master/README.md">Rancher</a></li>
+<li><strong>Package manager</strong> <a href="https://github.com/kubernetes/helm">Helm</a>, <a href="https://ksonnet.io/">ksonnet</a></li>
+<li><strong>Operating System</strong> Ubuntu, CentOS, <a href="https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux">RHEL</a>, <a href="https://coreos.com/">CoreOS</a>, <a href="https://alpinelinux.org/about/">Alpine Linux</a></li>
+</ol>
+<p>During a presentation of Kubernetes, Brendan Burns talks about the four Ops layers
+at <a href="https://youtu.be/WwBdNXt6wO4?t=120">the 2:00 mark</a>:</p>
+<ol>
+<li>Application Ops</li>
+<li>Cluster Ops</li>
+<li>Kernel/OS Ops</li>
+<li>Hardware Ops</li>
+</ol>
+<p>GitLab helps you mainly with application ops. And where needed, we also allow you
+to monitor clusters and link them to application environments. But we intend to
+use vanilla Kubernetes, instead of something specific to GitLab.</p>
+<p>Also outside our scope are products that are not specific to developing,
+securing, or operating applications and digital products.</p>
+<ol>
+<li>Identity management: Okta and Duo, you use this mainly with SaaS applications
+you don't develop, secure, or operate.</li>
+<li>SaaS integration: Zapier and IFTTT</li>
+<li>Ecommerce: Shopify</li>
+</ol>
+<p>In scope are things that are not mainly for SaaS applications:</p>
+<ol>
+<li>Network security, since it overlaps with application security to some extent.</li>
+<li>Security information and event management (SIEM), since that measures
+applications and network.</li>
+<li>Office productivity applications, since
+<a href="https://handbook.gitlab.com/handbook/company/strategy/#why">"We believe that all digital products should be open to contributions, from legal documents to movie scripts and from websites to chip designs"</a></li>
+</ol>
+<p>We expect GitLab to continue to grow, and we have several ideas for <a href="https://handbook.gitlab.com/handbook/product/categories/#possible-future-stages">possible future stages</a></p>
+<h2 id=quarterly-objectives-and-key-results-okrs>Quarterly Objectives and Key Results (OKRs)</h2>
+<p>To make sure our goals are clearly defined and aligned throughout the
+organization, we make use of OKRs (Objectives and Key Results). Our <a href="/company/okrs/">quarterly Objectives and Key Results</a>
+are publicly viewable.</p>
+<h2 id=how-we-plan-releases>How we plan releases</h2>
+<p>At GitLab, we strive to be <a href="https://handbook.gitlab.com/handbook/product/product-principles/#how-this-impacts-planning">ambitious</a>,
+maintain a strong sense of urgency, and set aspirational targets with every
+release. The direction items we highlight in our <a href="https://handbook.gitlab.com/handbook/product/product-processes/#kickoff-meetings">kickoff</a>
+are a reflection of this ambitious planning. When it comes to execution, we aim
+for
+<a href="https://handbook.gitlab.com/handbook/engineering/development/principles/#velocity-over-predictability">velocity over predictability</a>.
+This way, we optimize our planning time to focus on the top of the queue and
+deliver things fast. We schedule 100% of what we can accomplish based on past <a href="https://handbook.gitlab.com/handbook/engineering/development/performance-indicators/#development-department-mr-rate">Development Department merge request rate</a>
+and availability factors (vacation, contribute, etc.).</p>
+<p>See our <a href="https://handbook.gitlab.com/handbook/product/product-processes/#how-we-prioritize-work">product handbook on how we prioritize</a>.</p>
+<h2 id=previous-releases>Previous releases</h2>
+<p>On our <a href="/releases/">releases page</a>, you can find an overview of the most
+important features of recent releases and links to the blog posts for each
+release.</p>
+<h2 id=upcoming-releases>Upcoming releases</h2>
+<p>GitLab releases a new version <a href="/blog/why-we-shift-objectives-and-not-release-dates-at-gitlab/">every single month</a>. You can find the
+major planned features for upcoming releases on our <a href="/upcoming-releases/">upcoming releases page</a> or see the <a href="/direction/paid_tiers/">upcoming features for paid tiers</a>.</p>
+<p>Note that we often move things around, do things that are not listed, and cancel
+things that <em>are</em> listed.</p>
+<h2 id=mlai-at-gitlab>ML/AI at GitLab</h2>
+<p>With Gitlab 15.4, Suggested Reviewers was released as our first customer-facing ML/AI technology in production features. We have additional ambitions <a href="/direction/modelops/ai_assisted/">in the near future</a> for several types of problems. This is the focus of our new <a href="/direction/modelops/">ModelOps stage</a>.</p>
+<h2 id=cross-stage-efforts>Cross-Stage efforts</h2>
+<p>GitLab consistently strives to deliver a cohesive experience that enables workflows that span the DevSecOps loop. We have a number of existing capabilities and planned improvements that do just that:</p>
+<ul>
+<li>TBA</li>
+</ul>
+<h4 id=footnotes>Footnotes</h4>
+<ol>
+<li>IDC, Worldwide DevOps Software Tools Forecast, 2020â2024, Doc # US45188520, July 2020</li>
+</ol>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/template.html.md.erb" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/template.html.md.erb" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=e389f0af'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/scripts.js?cacheBust=e389f0af"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

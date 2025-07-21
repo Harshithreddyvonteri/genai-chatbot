@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Category Direction - GitLab Dedicated
+|
+GitLab
+</title>
+<meta content='GitLab Dedicated is GitLab&#39;s single-tenant, Software as a Service (SaaS) offering' name=description />
+<meta content='GitLab Dedicated is GitLab&#39;s single-tenant, Software as a Service (SaaS) offering' name='twitter:description'/>
+<meta content='GitLab Dedicated is GitLab&#39;s single-tenant, Software as a Service (SaaS) offering' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Category Direction - GitLab Dedicated' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/gitlab_dedicated/template.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/gitlab_dedicated/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Category Direction - GitLab Dedicated' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=e389f0af'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/gitlab_dedicated/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v6.6.0/css/all.css' integrity='sha384-h/hnnw1Bi4nbpD6kE7nYfCXzovi622sY5WBxww8ARKwpdLj5kUWjRuyiXaD1U2JT' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=e389f0af" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=e389f0af" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=e389f0af'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Category Direction - GitLab Dedicated
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/fzimmer'>
+<img
+src='/images/team/fabianzimmer-crop.jpg'
+class=codeowner-avatar-img
+alt='Fabian Zimmer'
+title='Fabian Zimmer'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/cbalane'>
+<img
+src='/images/team/cbalane-crop.jpg'
+class=codeowner-avatar-img
+alt='Chris Balane'
+title='Chris Balane'
+>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/gitlab_dedicated/template.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li>Category Direction - GitLab Dedicated</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#overview" id=markdown-toc-overview>Overview</a> <ul>
+<li><a href="#solution" id=markdown-toc-solution>Solution</a></li>
+<li><a href="#background" id=markdown-toc-background>Background</a></li>
+</ul>
+</li>
+<li><a href="#why-is-this-important" id=markdown-toc-why-is-this-important>Why is this important?</a> <ul>
+<li><a href="#challenges-to-address" id=markdown-toc-challenges-to-address>Challenges to address</a> <ul>
+<li><a href="#migration" id=markdown-toc-migration>Migration</a></li>
+<li><a href="#security-and-compliance" id=markdown-toc-security-and-compliance>Security and Compliance</a></li>
+<li><a href="#observability" id=markdown-toc-observability>Observability</a></li>
+<li><a href="#scalability" id=markdown-toc-scalability>Scalability</a></li>
+<li><a href="#availability" id=markdown-toc-availability>Availability</a></li>
+<li><a href="#performance" id=markdown-toc-performance>Performance</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#positioning" id=markdown-toc-positioning>Positioning</a> <ul>
+<li><a href="#target-customer" id=markdown-toc-target-customer>Target Customer</a> <ul>
+<li><a href="#target-user-persona" id=markdown-toc-target-user-persona>Target User Persona</a></li>
+<li><a href="#target-buyer" id=markdown-toc-target-buyer>Target Buyer</a></li>
+</ul>
+</li>
+<li><a href="#shared-responsibility" id=markdown-toc-shared-responsibility>Shared Responsibility</a></li>
+<li><a href="#comparison-to-other-deployment-options" id=markdown-toc-comparison-to-other-deployment-options>Comparison to other Deployment Options</a></li>
+</ul>
+</li>
+<li><a href="#where-we-are-headed" id=markdown-toc-where-we-are-headed>Where we are Headed</a> <ul>
+<li><a href="#prioritization-framework" id=markdown-toc-prioritization-framework>Prioritization Framework</a></li>
+<li><a href="#currently-available-features" id=markdown-toc-currently-available-features>Currently Available Features</a></li>
+<li><a href="#what-is-not-planned-right-now" id=markdown-toc-what-is-not-planned-right-now>What is Not Planned Right Now</a></li>
+</ul>
+</li>
+<li><a href="#roadmap" id=markdown-toc-roadmap>Roadmap</a> <ul>
+<li><a href="#fy25" id=markdown-toc-fy25>FY25</a> <ul>
+<li><a href="#q1" id=markdown-toc-q1>Q1</a></li>
+<li><a href="#q2" id=markdown-toc-q2>Q2</a></li>
+<li><a href="#q3" id=markdown-toc-q3>Q3</a></li>
+<li><a href="#q4" id=markdown-toc-q4>Q4</a></li>
+<li><a href="#future" id=markdown-toc-future>Future</a> <ul>
+<li><a href="#theme-disaster-recovery" id=markdown-toc-theme-disaster-recovery>Theme: Disaster Recovery</a></li>
+<li><a href="#theme-feature-parity" id=markdown-toc-theme-feature-parity>Theme: Feature Parity</a></li>
+<li><a href="#theme-global-availability" id=markdown-toc-theme-global-availability>Theme: Global availability</a></li>
+<li><a href="#theme-customer-experience" id=markdown-toc-theme-customer-experience>Theme: Customer experience</a></li>
+<li><a href="#hosted-runners-for-gitlab-dedicated" id=markdown-toc-hosted-runners-for-gitlab-dedicated>Hosted runners for GitLab Dedicated</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#supporting-ai-features-on-gitlab-dedicated" id=markdown-toc-supporting-ai-features-on-gitlab-dedicated>Supporting AI Features on GitLab Dedicated</a> <ul>
+<li><a href="#parity-between-self-managed-multi-tenant-saas-and-dedicated" id=markdown-toc-parity-between-self-managed-multi-tenant-saas-and-dedicated>Parity between self-managed, multi-tenant SaaS and Dedicated</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#go-to-market-plans" id=markdown-toc-go-to-market-plans>Go-to-market plans</a> <ul>
+<li><a href="#guidelines-for-engaging-customers-at-ga" id=markdown-toc-guidelines-for-engaging-customers-at-ga>Guidelines for Engaging Customers at GA</a> <ul>
+<li><a href="#qualify-the-customer" id=markdown-toc-qualify-the-customer>Qualify the customer:</a></li>
+<li><a href="#create-the-opportunity-in-salesforce" id=markdown-toc-create-the-opportunity-in-salesforce>Create the opportunity in Salesforce:</a></li>
+<li><a href="#when-to-engage-the-dedicated-team" id=markdown-toc-when-to-engage-the-dedicated-team>When to engage the Dedicated team</a></li>
+<li><a href="#additional-public-facing-gitlab-dedicated-materials" id=markdown-toc-additional-public-facing-gitlab-dedicated-materials>Additional public-facing GitLab Dedicated materials:</a></li>
+</ul>
+</li>
+<li><a href="#channel-partner-role-in-gitlab-dedicated" id=markdown-toc-channel-partner-role-in-gitlab-dedicated>Channel Partner Role in GitLab Dedicated</a></li>
+<li><a href="#pricing" id=markdown-toc-pricing>Pricing</a> <ul>
+<li><a href="#more-details-on-pricing" id=markdown-toc-more-details-on-pricing>More details on pricing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#user-success-metrics" id=markdown-toc-user-success-metrics>User success metrics</a></li>
+<li><a href="#competitive-landscape" id=markdown-toc-competitive-landscape>Competitive Landscape</a> <ul>
+<li><a href="#footnotes" id=markdown-toc-footnotes>Footnotes</a></li>
+</ul>
+</li>
+</ul>
+<p>This page outlines the Direction for the GitLab Dedicated category and belongs to the <a href="https://handbook.gitlab.com/handbook/product/categories/#gitlab-dedicated-group">GitLab Dedicated</a> group. To provide feedback or ask questions about this product category, reach out to the <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#099;&#098;&#097;&#108;&#097;&#110;&#101;&#064;&#103;&#105;&#116;&#108;&#097;&#098;&#046;&#099;&#111;&#109;">Product Manager</a>.</p>
+<p>This document and linked pages contain information related to upcoming products, features, and functionality. It is important to note that the information presented is for informational purposes only. Please do not rely on this information for purchasing or planning purposes. As with all projects, the items mentioned in this document and linked pages are subject to change or delay. The development, release, and timing of any products, features, or functionality remain at the sole discretion of GitLab Inc.</p>
+
+<p>You can contribute to this category by:</p>
+<ul>
+<li>Commenting on a relevant epic or issue in <a href="https://gitlab.com/gitlab-com/gl-infra/gitlab-dedicated/team">our project</a>(GitLab internal), or opening a new issue in the <a href="https://gitlab.com/gitlab-com/gl-infra/gitlab-dedicated/team/-/issues/new?issue%5Bmilestone_id%5D=">GitLab Dedicated issue tracker</a>.</li>
+<li>Joining the discussion in the <a href="https://gitlab.slack.com/archives/C01S0QNSYJ2">#f_gitlab_dedicated</a> Slack channel</li>
+</ul>
+<h2 id=overview>Overview</h2>
+
+<h3 id=solution>Solution</h3>
+<p>GitLab Dedicated combines the low overhead and efficiency of a SaaS platform with the flexibility and privacy benefits of self hosting. A single-tenant SaaS instance, fully managed and hosted by GitLab in any cloud region, is updated regularly to give you access to our latest product improvements â without the need to manage security, scalability, availability, and performance on your own. It's the offering of choice for enterprises and organizations in highly regulated industries that have complex regulatory, compliance, and data residency requirements. If you're a customer that's interested in Dedicated, make sure to also check-out <a href="/single-tenant-saas/">the website for Dedicated</a>.</p>
+<h3 id=background>Background</h3>
+<p>GitLab Dedicated's objective is to provide a GitLab SaaS offering to large enterprises and customers in industries with strict security and compliance requirements. When adopting DevOps tools, customers <a href="https://about.gitlab.com/direction/enablement/dotcom/#market-opportunity">increasingly prefer SaaS</a> to reduce operational cost, but customers in highly-regulated industries (e.g. Healthcare, Finance, and Public sectors) can't compromise on their security and compliance requirements when moving to SaaS. These requirements (e.g. isolated storage of source code IP) often dictate the need to be on separate Cloud Infrastructure from other tenants. This makes it challenging for these customers to adopt a shared-tenancy SaaS solution like GitLab.com.</p>
+<p>Additionally, customers in regulated industries often require the ability to connect users or services running in their corporate network to their source code repositories running in the cloud via a private network connection. As a public-facing SaaS service, GitLab.com can't support this type of private connectivity easily by default. Finally, large, globally-distributed enterprises need the ability to control the location and number of Geo Replica sites to reduce latency for their workforce around the world. Some of our Self-Managed customers have 5+ Geo sites, and for them to consume SaaS they may need more global coverage than <a href="https://about.gitlab.com/direction/enablement/dotcom/#overview">what we offer on GitLab.com today</a>.</p>
+<p>For these customers, a higher level of tenant isolation and deployment customization is required. While some customers may be satisfied leveraging a <a href="#channel-partner-role-in-gitlab-dedicated">partner MSP</a>, customers may prefer to consume the service directly from GitLab so that they have a single-point of contact for operational accountability.</p>
+<p>GitLab Dedicated will solve these needs by offering a fully isolated, private GitLab instance, deployed in the customer's cloud regions of choice. The instance is fully hosted and managed by GitLab Inc., enabling customers to offload operational overhead and focus on more business-critical tasks. GitLab Dedicated tenant operators (e.g. a system administrator) will retain the ability to quickly make changes to their Dedicated tenant's configurations in the course of their daily work using the <a href="https://about.gitlab.com/direction/platforms/switchboard/">Switchboard</a> portal.</p>
+<p>In addition to delivering customer value, GitLab Dedicated will also benefit internal GitLab teams. We envision the tooling we build for Dedicated being used as the single method going forward for running all of GitLab Inc.'s SaaS services. This will allow us to achieve even greater returns on our initial investment by enabling any future SaaS services to quickly get started with a robust and standardized foundation.</p>
+<h2 id=why-is-this-important>Why is this important?</h2>
+
+<p>There are two major trends emerging when it comes to the delivery of Cloud based solutions:</p>
+<ul>
+<li>Move to SaaS <a href="https://about.gitlab.com/direction/enablement/dotcom/#market-opportunity">as detailed in the .com strategy</a> (IDC predicts that the market for SaaS-based DevOps tools (52% of the market in 2021) will continue to accelerate and account for <strong>$20.0B in revenue</strong> (or 61% of DevOps software tools market) by 2026).<a href="#footnotes"><sup>1</sup></a></li>
+<li>Adoption of Private Cloud, which makes it easier for enterprises to meet their security and compliance needs. Increasing fragmentation of global policy <a href="https://insights.comforte.com/13-countries-with-gdpr-like-data-privacy-laws">regarding data protection</a> drives new compliance requirements, which can be better met with Private Cloud deployments. 16% of cloud services are expected to be delivered as a hosted private cloud offering <a href="https://www.reportlinker.com/p05826094/Global-Private-Cloud-Server-Market.html?utm_source=PRN">by 2025</a>.</li>
+</ul>
+<p>GitLab Dedicated is for organizations that want to benefit from both SaaS and Private Cloud. By delivering this offering we will set ourselves up to achieve customer success as these two trends further accelerate in 2025.</p>
+
+<h3 id=challenges-to-address>Challenges to address</h3>
+
+<p>Overall, the main challenge our target customer has is maintaining an up-to-date GitLab instance that fulfills their security and compliance requirements. More granular customer needs are documented in the sections below.</p>
+<p>Note, this section does not reflect the list of currently available features within the GitLab Dedicated offering; rather, it contains the needs we're hearing from our customer base. The list of currently supported features in GitLab Dedicated is documented here: <a href="https://docs.gitlab.com/ee/subscriptions/gitlab_dedicated/#available-features">https://docs.gitlab.com/ee/subscriptions/gitlab_dedicated/#available-features</a>.</p>
+<h4 id=migration>Migration</h4>
+<ul>
+<li>Users want to seamlessly migrate their data, which can exceed many TBs in size, to GitLab Dedicated in a timely and reliable fashion from their existing DevOps solution, whether it's a third-party offering like BitBucket, a self-managed GitLab instance, or GitLab.com.</li>
+</ul>
+<h4 id=security-and-compliance>Security and Compliance</h4>
+<ul>
+<li>Our <a href="#target-customer">target customer base</a>, large enterprises and customers in highly-regulated industries, expect the offering to implement security best practices including encryption of data at rest and in transit, periodic encryption key rotation, ability to specify their own encryption key, integration with their own identity management systems, protection against DDoS attacks, intrusion detection, role-based access control for operators, segregation of duties with least privilege access configured among operator accounts, and approved escalation in order to access customer environments during break-glass scenarios.</li>
+<li>Upgrades: Customers want regular, zero-downtime upgrades to their instance along with timely security patches for high-sev issues when necessary.</li>
+<li>Data residency/data sovereignty: Customers want their Dedicated instance and data (including logs and backups) to be hosted in their cloud region of choice to help meet their security and compliance requirements.</li>
+<li>Private Networking: Customers want to be able to securely connect applications running in their VPC including their Runner pool to GitLab Dedicated via a private connection without the traffic leaving the Cloud Provider backbone.</li>
+<li>Public Networking: Some customers work with third-parties (e.g. contractors), who do not authenticate through their main network and thus need to access the GitLab Dedicated instance over the public internet. In this scenario, customers need the ability to restrict access to their instance based on an allowlist of trusted IP ranges.</li>
+</ul>
+<h4 id=observability>Observability</h4>
+<ul>
+<li>Customer admins want to access telemetry data including health metrics and application/system logs so that they can monitor their instance and keep their internal teams informed regarding an outage or performance degradations with their DevOps environment. Users also want access to audit logs to achieve compliance requirements and the ability to monitor network flow (e.g. VPC flow logs) to ensure outbound connections are made to only known/trusted hosts.</li>
+</ul>
+<h4 id=scalability>Scalability</h4>
+<ul>
+<li>Large enterprises want their chosen DevOps solution to automatically scale based on their number of users and usage patterns.</li>
+</ul>
+<h4 id=availability>Availability</h4>
+<p>Large enterprises demand strict uptime SLAs (at least 'three-nines') and expect the following capabilities related to system availability:</p>
+<ul>
+<li>High Availability Deployment (especially their code repositories) including leveraging multiple availability zones within a region to mitigate against an AZ outage.</li>
+<li>Disaster Recovery: Failovers to the included secondary site in case the primary instance experiences an unrecoverable outage and guaranteed recovery times.</li>
+<li>Backups: customers expect their data to be backed up on a regular basis in case of a data loss event and to meet committed recovery point and time objectives during restoration.</li>
+</ul>
+<h4 id=performance>Performance</h4>
+<ul>
+<li>Customers want replicas of their instance to be deployed in multiple regions around the globe to reduce latency for their global user base.</li>
+</ul>
+<h2 id=positioning>Positioning</h2>
+<h3 id=target-customer>Target Customer</h3>
+<p><u>Customer Requirements</u></p>
+<p>To be a good fit for Dedicated a customer <strong>must</strong> have the characteristics below:</p>
+<ol>
+<li>Require at least 1000 seats. Note: 500 seat opportunities will be considered on a case-by-case basis.</li>
+<li>Require the security and compliance features offered in the Ultimate tier.</li>
+<li>Require a single-tenant solution or has compliance requirements around data residency.</li>
+</ol>
+<p>In addition to customers looking to solve the above <a href="#challenges-to-address">challenges</a>, below are some additional characteristics of customers we are targeting with this offering:</p>
+<div class="panel panel-gitlab-purple">
+<p class=panel-heading><strong>Target Customer Characteristics</strong></p>
+<div class=panel-body>
+<ol>
+<li><strong>Industries</strong> - Regulated industries with complex security and compliance requirements like:
+<ol>
+<li>Healthcare</li>
+<li>Finance (Banking and Insurance)</li>
+<li>Public sectors</li>
+<li>Public Utility</li>
+<li>Transportation</li>
+<li>Manufacturing</li>
+</ol>
+</li>
+<li>
+<p><strong>Good fit characteristics</strong></p>
+<ol>
+<li>Looking for Ultimate tier features and is comfortable with 500 Ultimate seat minimum order â plus an <a href="#pricing">additional fee</a> - otherwise GitLab Dedicated is cost prohibitive.</li>
+<li>Highly value a secure SCM foundation; have concerns around leaks and the inability to isolate repositories within the enterprise.</li>
+<li>Aim to improve developer productivity and user experience translating to unparalleled collaboration with observability.</li>
+<li>Want SaaS but object to GitLab.com. The customer would prefer single-tenant SaaS due to strict security and compliance requirements</li>
+<li>Have data residency compliance requirements where instance and data (including logs and backups) need to be hosted in customer's cloud region of choice.</li>
+<li>Is looking for all the benefits of SaaS with the security/compliance rigor of self-managed.</li>
+<li>Looking for savings on costs and operational efficiencies; do not want to manage the DevSecOps platform. The customer sees the benefit of regular updates and infrastructure maintenance are managed by GitLab.
+8.Looking for an isolated, single tenant deployment</li>
+<li>Looking for a proven product with <a href="https://handbook.gitlab.com/handbook/engineering/infrastructure/team/gitlab-dedicated/slas/">high availability</a> - GitLab has multiple large customers that have been using Dedicated for over a year (ie: <a href="https://about.gitlab.com/press/releases/2022-11-30-gitlab-dedicated-launches-to-meet-complex-compliance-requirements/">NatWest</a></li>
+<li>Want replicas of their instance to be deployed in multiple regions around the globe to meet disaster recovery requirements.</li>
+<li>Require access to logs and backups.</li>
+<li>Require advanced scale of GitLabâs distributed architecture, managed by subject matter experts.
+Companies that want options for deploying GitLab without sacrificing feature parity.</li>
+</ol>
+</li>
+<li>
+<p><strong>May not be a good fit</strong></p>
+<ol>
+<li>Open to (or required to) undertaking the operational costs and management of a fully self-managed solution and related infrastructure.</li>
+<li>Would like more control over upgrades - e.g. needing to review and approve ahead of time.</li>
+<li><em>Do not</em> have a need for:
+<ul>
+<li>Ultimate OR</li>
+<li>A single tenant SaaS offering OR</li>
+<li>Strict data residency, compliance and heightened security requirements OR</li>
+<li>The minimum 1,000 User count threshold</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+<h4 id=target-user-persona>Target User Persona</h4>
+<ul>
+<li><a href="https://handbook.gitlab.com/handbook/product/personas/#sidney-systems-administrator">Sidney (Systems Administrator)</a></li>
+</ul>
+<h4 id=target-buyer>Target Buyer</h4>
+<ul>
+<li>CTO/CIO - Goals (Minimize OpEx while enhancing compliance &amp; security, with near zero downtime)</li>
+<li>VP of Application Development - Goals (Shifting security left and focus on development vs. hosting, upgrading, securing, patching, etc. GitLab)</li>
+<li>CISO - Goals (Embedding application security early in the SDLC, while minimizing risk &amp; cost from infrastructure security &amp; compliance)</li>
+<li><a href="https://handbook.gitlab.com/handbook/marketing/brand-and-product-marketing/product-and-solution-marketing/roles-personas/buyer-persona/#tech-exec-tristan">Tech Exec Tristan</a> - CIO/ CTO</li>
+<li><a href="https://handbook.gitlab.com/handbook/marketing/brand-and-product-marketing/product-and-solution-marketing/roles-personas/buyer-persona/#platform-perry">Platform Perry</a> - Typical roles - Infrastructure Engineering, Platform Engineering</li>
+<li><a href="https://handbook.gitlab.com/handbook/marketing/brand-and-product-marketing/product-and-solution-marketing/roles-personas/buyer-persona/#back-office-blake">Back Office Blake</a> - Typical roles - Head of Procurement</li>
+</ul>
+<h3 id=shared-responsibility>Shared Responsibility</h3>
+<p>As a SaaS solution, our customers should not have to worry about the details of operating GitLab. The goal is for them to have minimal management overhead. Having said that, the successful operation of GitLab Dedicated still requires a shared responsibility.</p>
+<p><em>GitLab Dedicated Responsibility</em></p>
+<ol>
+<li>Managing updates of underlying software such as PostgreSQL, Kubernetes, Redis, OpenSearch, and GitLab itself</li>
+<li>Infrastructure operational monitoring and incident response</li>
+<li>Capacity planning based on historical trends</li>
+<li>Ensuring the Security of the Infrastructure and Network layer</li>
+</ol>
+<p><em>Customer Responsibility</em></p>
+<ol>
+<li>Adhering to performance GitLab practices, including but not limited to:</li>
+<li>Only storing <a href="https://docs.gitlab.com/ee/user/project/repository/monorepos/#large-blobs">large blobs</a> with <a href="https://docs.gitlab.com/ee/topics/git/lfs/index.html"><em>Large File Storage (LFS) objects</em></a></li>
+<li>For large <a href="https://docs.gitlab.com/ee/user/project/repository/monorepos/index.html">monorepos</a> (larger than several gigabytes), reducing concurrent clones wherever possible, especially in CI/CD pipelines, to avoid potential bandwidth saturation</li>
+<li>Avoiding large spikes in concurrent CI jobs (e.g. hundreds launching at the same time of day)</li>
+<li>Limiting hundreds of concurrent CI jobs for <a href="https://docs.gitlab.com/ee/user/project/repository/monorepos/index.html">large repositories</a></li>
+<li>Optimizing custom scripts that run at high frequency</li>
+<li>Managing <a href="https://docs.gitlab.com/ee/integration/index.html">integrations</a> in many large projects</li>
+<li>Properly configuring <a href="https://docs.gitlab.com/ee/administration/server_hooks.html">server hooks</a></li>
+<li>Carefully implementing <a href="https://docs.gitlab.com/ee/administration/system_hooks.html">system hooks</a></li>
+<li>Implementing best practices for Security at the <a href="https://about.gitlab.com/blog/security-hygiene-best-practices-for-gitlab-users/">application layer</a> such as least privilege access</li>
+</ol>
+<h3 id=comparison-to-other-deployment-options>Comparison to other Deployment Options</h3>
+<p>On GitLab Dedicated, customers are the administrators of their instance with full access to the <a href="https://docs.gitlab.com/ee/administration/">Admin area</a> of their tenant. This is different from GitLab.com, where administration is owned by the GitLab Infrastructure team.</p>
+<p>Availability will not be a point of differentiation between GitLab Dedicated and GitLab.com as both offerings target a 99.95% Availability SLA.</p>
+<p><strong>See below for a comparison of the different ways to deploy GitLab:</strong></p>
+<p><img src="/direction/gitlab_dedicated/Deployment_Options_GitLab_Dedicated.png" alt="alt text" title="GitLab Deployment Options"/></p>
+<h2 id=where-we-are-headed>Where we are Headed</h2>
+
+<p>Now that GitLab Dedicated has graduated from Limited Availability to General Availability, it can scale to meet the expected customer demand of the service. Customers who want a production-quality GitLab Dedicated instance and are willing to pay for it can now get one.</p>
+<p>Next, we plan to focus on improving the onboarding and configuration management experiences by delivering the Switchboard management console. Additionally, we plan to add several highly requested features that were deferred in the lead up to GA. See the roadmap section below for more details.</p>
+<h3 id=prioritization-framework>Prioritization Framework</h3>
+<p>Because Dedicated is a SaaS offering, we prioritize "Keep the lights on" activities (e.g. operating customer environments, tech debt, and corrective actions) above all else to ensure we provide customers a high level of service that continually meets our <a href="https://handbook.gitlab.com/handbook/engineering/infrastructure/team/gitlab-dedicated/slas/#current-service-level-objective">platform SL0</a>.</p>
+<p>When it comes to customer feature requests, we prioritize features that <a href="https://handbook.gitlab.com/handbook/product/product-processes/#using-the-rice-framework">will benefit the most customers</a>. As a result, we will not build any custom capabilities or one-off features for individual customers. This includes not making modifications to individual tenants. Feature requests that meet our prioritization criteria but are not currently on the roadmap will be slotted in <a href="#roadmap">after other committed roadmap items</a> have been delivered. For more information about feature requests for Dedicated, see the <a href="https://gitlab.com/gitlab-com/Product/-/issues/13856">feature request tracking issue</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th>Category</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>KTLO - On Call</td>
+<td>Operating Tenant Production Environments, Handling new tenant onboarding and config change requests</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Security, Reliability, Performance</td>
+<td>Initiatives tied to increasing overall security (e.g. third party compliance certifications and addressing security findings), reliability (including improvements to Availability SLAs and disaster recovery procedures and targets), and scalability (ability to better scale underlying tenant infrastructure to support new customers as well as existing tenants ad their workloads and usage patterns increase)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Automation</td>
+<td>Reduce toil required to operate the GitLab Dedicated platform and improve internal developer experience</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Customer Feature Requests</td>
+<td>Delivering new customer-facing platform capabilities as well as enabling GitLab functionality such as Pages, advanced search, reply-by email, service desk</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Technical Debt</td>
+<td>Initiatives tied to increasing speed of development, overall efficiency</td>
+</tr>
+</tbody>
+</table>
+<h3 id=currently-available-features>Currently Available Features</h3>
+<p>Please see list of <a href="https://docs.gitlab.com/ee/subscriptions/gitlab_dedicated/#available-features">Available Features</a> in our documentation.</p>
+<h3 id=what-is-not-planned-right-now>What is Not Planned Right Now</h3>
+
+<p>Please see list of <a href="https://docs.gitlab.com/ee/subscriptions/gitlab_dedicated/#features-that-are-not-available">Features that are not available</a> in our documentation. While the most requested of these have been incorporated into the <a href="#roadmap">roadmap</a> below, we are not currently focused on delivering the other features mentioned in that list. These will be considered for next year based on customer demand.</p>
+<h2 id=roadmap>Roadmap</h2>
+<p>The key capabilities we plan to deliver in Environment Automation for the first half of FY25 are summarized below. The roadmap for Switchboard can be found on the <a href="https://about.gitlab.com/direction/platforms/switchboard/#where-are-we-headed">Switchboard Direction Page</a>.</p>
+<h3 id=fy25>FY25</h3>
+<h4 id=q1>Q1</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-com/gl-infra/gitlab-dedicated/-/epics/325">RTO and RPO improvements</a> - Complete</li>
+<li><a href="https://gitlab.com/groups/gitlab-com/gl-infra/gitlab-dedicated/-/epics/324">Next Iteration of Dedicated Runners Beta</a> - Complete</li>
+<li><a href="https://gitlab.com/groups/gitlab-com/gl-infra/gitlab-dedicated/-/epics/244">Support Bring your own Domain on Tenant Instances</a> - Complete</li>
+</ul>
+<h4 id=q2>Q2</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-com/gl-infra/gitlab-dedicated/-/epics/324">Next Iteration of Dedicated Runners Beta</a> (continued)</li>
+<li><a href="https://gitlab.com/groups/gitlab-com/gl-infra/gitlab-dedicated/-/epics/446">RTO and RPO improvements</a> (continued) - Complete</li>
+<li>GitLab 17.0 upgrade - Complete</li>
+</ul>
+<h4 id=q3>Q3</h4>
+<ul>
+<li>RTO and RPO improvements - Will continue</li>
+<li>OIDC Auth when using IP AllowLists - Complete</li>
+<li>Multiple SAML providers - Complete</li>
+</ul>
+<h4 id=q4>Q4</h4>
+<ul>
+<li>Web application firewall MVC - Complete</li>
+<li>SCIM Auth when using IP AllowLists - Complete</li>
+<li>OpenSSL v3 preparation - Complete</li>
+</ul>
+<h4 id=future>Future</h4>
+<h5 id=theme-disaster-recovery>Theme: Disaster Recovery</h5>
+<ul>
+<li>Point in time restore</li>
+<li>RTO and RPO improvements</li>
+</ul>
+<h5 id=theme-feature-parity>Theme: Feature Parity</h5>
+<ul>
+<li>Multiple login providers</li>
+</ul>
+<h5 id=theme-global-availability>Theme: Global availability</h5>
+<ul>
+<li>Additional region support</li>
+<li>Geo for global acceleration</li>
+</ul>
+<h5 id=theme-customer-experience>Theme: Customer experience</h5>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-com/gl-infra/gitlab-dedicated/-/epics/317">Pre-production instances</a> (pricing and packaging, version n)</li>
+<li>Log sharing notifications for customers</li>
+<li>Improved SLAs</li>
+<li><a href="https://gitlab.com/groups/gitlab-com/gl-infra/gitlab-dedicated/-/epics/33">Make Dedicated Repos Public</a></li>
+</ul>
+<h5 id=hosted-runners-for-gitlab-dedicated>Hosted runners for GitLab Dedicated</h5>
+<p>The following features are currently planned for FY26</p>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-com/gl-infra/gitlab-dedicated/-/epics/382">Hosted runners on Linux - General Availability</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-com/gl-infra/gitlab-dedicated/-/epics/583">Hosted runners outbound network control</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-com/gl-infra/gitlab-dedicated/-/epics/392">Hosted runners on macOS - Beta</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-com/gl-infra/gitlab-dedicated/-/epics/397">Hosted runners on Windows - Beta</a></li>
+</ul>
+<h3 id=supporting-ai-features-on-gitlab-dedicated>Supporting AI Features on GitLab Dedicated</h3>
+<p>GitLab <a href="https://docs.gitlab.com/ee/user/gitlab_duo/index.html">AI features</a> improve DevSecOps workflow efficiency and velocity by applying AI assisted workflows to all teams involved in delivering software value.</p>
+<p>As a cloud-based Saas service, GitLab Dedicated is a natural fit to deliver cloud-based AI services to customers. However, as a single-tenant service we need to design a solution that maintains single-tenancy and does not compromise on customer compliance requirements like data residency and isolation, and predictability.</p>
+<p>Short term, our goal is to bring AI features to GitLab Dedicated starting with Code Suggestions, followed by Suggested Reviewers. That effort can be tracked <a href="https://gitlab.com/groups/gitlab-org/-/epics/10516">via this epic</a>.</p>
+<p>Long term, our vision is to design native AI capbilities for single-tenant SaaS deployments. This may include training models inside tenant environments to generate tailored insights and suggestions while keeping data private. This will allow enterprises and regulated industries to more easily adopt AI-assisted workflows while maintaining compliance requirements around data residency, privacy, and isolation.</p>
+<p>While we don't have any specific timelines to share for bringing all AI features to GitLab Dedicated at this time, as these features become Generally Available, we will be working on a plan to enable them in GitLab Dedicated.</p>
+<h4 id=parity-between-self-managed-multi-tenant-saas-and-dedicated>Parity between self-managed, multi-tenant SaaS and Dedicated</h4>
+<p>GitLab strives to maintain <a href="https://handbook.gitlab.com/handbook/product/product-principles/#parity-between-saas-and-self-managed-deployments">parity between self-managed and SaaS</a>. This can be challenging for certain features, like AI. From a Dedicated perspective, we adhere to the following principles:</p>
+<ol>
+<li>We intend to make all AI features available to all platforms. We want to solve customer problems on all platforms.</li>
+<li>In line, with our <a href="https://handbook.gitlab.com/handbook/product/product-principles/#saas-first">SaaS First</a> principle, GitLab Dedicated may support certain features before self-managed.</li>
+<li>GitLab Dedicated may offer additional features if there are technical or other limitiations that don't allow us to release them for self-managed customers.</li>
+</ol>
+<h2 id=go-to-market-plans>Go-to-market plans</h2>
+<h3 id=guidelines-for-engaging-customers-at-ga>Guidelines for Engaging Customers at GA</h3>
+<h4 id=qualify-the-customer>Qualify the customer:</h4>
+<ol>
+<li>Review the <a href="#target-customer">target customer profile</a> to ensure it is a good fit</li>
+<li>Ensure that the customer meets the minimum seat count of 1000</li>
+<li>Review the <a href="https://internal.gitlab.com/handbook/engineering/horse/technical-qualification-evaluation-questionnaire/">Technical Qualification guidelines</a> to ensure there is a technical fit.</li>
+<li>Review <a href="#pricing">pricing</a>, as this will cost more than our other offerings</li>
+</ol>
+<h4 id=create-the-opportunity-in-salesforce>Create the opportunity in Salesforce:</h4>
+<ol>
+<li>In your SFDC opportunity, set the Intended Product Tier to Dedicated Ultimate OR include Dedicated in the Opportunity name. This is the most important step to ensure we have visibility into the Dedicated pipeline.</li>
+<li>Include number of Ultimate seats somewhere easily referenceable in your SFDC opportunity (such as the opportunity title) to make it clear that the deal is <a href="#qualify-the-customer">qualified</a>.</li>
+</ol>
+<h4 id=when-to-engage-the-dedicated-team>When to engage the Dedicated team</h4>
+<p><em>Account teams (Sales leads and SAs) should give the initial pitch of Dedicated to their customers using the materials on the <a href="https://gitlab.highspot.com/items/636ea5092603d0ca437fcae1">Dedicated Page in Highspot</a>. This allows the Product team to spend more time supporting Dedicated deals that are further along in the sales cycle.</em></p>
+<ol>
+<li>Technical questions and unique customer requirements
+<ul>
+<li>After the account team gives the initial pitch, if the opportunity progresses and the customer has technical questions or requirements for the service that cannot be answered by <a href="https://docs.gitlab.com/ee/subscriptions/gitlab_dedicated/">the documentation</a> or the <a href="https://internal.gitlab.com/handbook/engineering/horse/technical-qualification-evaluation-questionnaire/">technical qualification guidelines</a>, please reach out to the Dedicated team in the <code>#f_gitlab_dedicated</code> channel so that they can help answer these questions. After that, if the questions are still not resolved and a sync meeting is needed, please open an issue in the <a href="https://gitlab.com/gitlab-com/gl-infra/gitlab-dedicated/team/-/issues/">Dedicated issue tracker</a> using the <a href="https://gitlab.com/gitlab-com/gl-infra/gitlab-dedicated/team/-/blob/main/.gitlab/issue_templates/customer_meeting_request.md">Customer Meeting Template</a> to request a call with the Dedicated team.</li>
+</ul>
+</li>
+<li>Pricing Calculator Review
+<ul>
+<li>Once the customer has been <a href="#qualify-the-customer">qualified</a> and they have expressed interest in moving forward with pricing, please use the <a href="https://internal.gitlab.com/handbook/engineering/horse/field-enablement/index.html#pricing">pricing calculator</a> (internal only) to come up with a pricing estimate for the customer. Once you have completed the steps in the pricing calculator, reach out to the Dedicated Product team in the <code>#f_gitlab_dedicated</code> channel requesting a review. Also provide the <a href="#create-the-opportunity-in-salesforce">SFDC link</a> for this opportunity.</li>
+</ul>
+</li>
+</ol>
+<p class="alert alert-warning">Note: <em>you must receive approval from the Dedicated Product team before sharing any pricing numbers with the customer and before creating a formal quote via Salesforce</em></p>
+<h4 id=additional-public-facing-gitlab-dedicated-materials>Additional public-facing GitLab Dedicated materials:</h4>
+<p>We have the following public facing pages available for those interested in learning more:</p>
+<ol>
+<li>Documentation: <a href="https://docs.gitlab.com/ee/subscriptions/gitlab_dedicated/">https://docs.gitlab.com/ee/subscriptions/gitlab_dedicated/</a></li>
+<li>Blog post: <a href="/blog/introducing-gitlab-dedicated/">https://about.gitlab.com/blog/introducing-gitlab-dedicated/</a></li>
+<li>GitLab Dedicated webpage (and waitlist signup): <a href="/dedicated/">https://about.gitlab.com/dedicated/</a></li>
+</ol>
+<h3 id=channel-partner-role-in-gitlab-dedicated>Channel Partner Role in GitLab Dedicated</h3>
+<p>GitLab Dedicated creates a business opportunity for both GitLab and GitLab channel partners who offer hosted GitLab services. We are creating this offering to meet the needs of customers who want to consume hosted solutions directly from the DevOps vendor (in this case GitLab, Inc.) to more closely align operational and DevOps application needs. Customers who are interested in purchasing hosting services that include value-add managed services (for example, helping meet industry-specific specific requirements like HIPAA) would benefit from working with a Managed Service Provider (MSP) <a href="https://partners.gitlab.com/English/directory/">Partner</a> Additionally, many customers have existing relationships with Channel Partners. Per the <a href="https://handbook.gitlab.com/handbook/sales/selling-professional-services/">services ROE</a>, these customers should continue consuming GitLab through their Channel Partner. By following the segmentation laid out above, we can minimize any disruption to existing <a href="https://gitlab.my.salesforce.com/00O4M000004aqhB">channel-sourced ARR</a>(GitLab internal).</p>
+<p>With this effort, we also see an opportunity to grow the overall market for GitLab-hosted services through collaboration with partners. In the short-term we plan to enable MSP partners with <a href="https://gitlab.com/groups/gitlab-com/gl-infra/gitlab-dedicated/-/epics/1">design guidance and certifications</a> (GitLab Internal) so that they can offer better hosted GitLab solutions for their customers. We will work with the GitLab Channel Partner team to create a partner certification that will provide MSP partners with technical certifications, training, deployment and maintenance guidelines, and access to some of the same underlying tooling that powers GitLab Dedicated (e.g. GitLab Environment Toolkit and official Reference Architectures). We plan to keep the other underlying services (e.g. Switchboard and Amp) as well as the <code>GitLab Dedicated</code> branding proprietary to GitLab, Inc. Longer-term opportunities for consideration include enabling partners <a href="https://gitlab.com/gitlab-com/gl-infra/gitlab-dedicated/team/-/issues/499">to resell GitLab Dedicated</a>(GitLab internal). These partners would provide customers value-added services or integrated vendor stacks while the GitLab Dedicated team would still host the GitLab instance on behalf of the partner.</p>
+<h3 id=pricing>Pricing</h3>
+<p>The pricing for GitLab Dedicated is comprised of the following components:</p>
+<ul>
+<li>Ultimate licenses (1000 seat minimum)</li>
+<li>Infrastructure &amp; Management fee (which covers our costs of operating and hosting the service)
+<ul>
+<li>Fixed fee that varies based on the Infrastructure Size (e.g. S, M, L, XL, XXL, XXXL)</li>
+<li>The Infrastructure &amp; Management fee covers the following costs:
+<ul>
+<li>The cloud provider costs incurred when deploying the selected Infrastructure Size to two sites (the primary and secondary regions)</li>
+<li>Engineering costs needed to operate the environment (e.g. perform ongoing tasks such as upgrading the instance, applying security patches, and achieving the stated SLAs)</li>
+<li>Customer Support costs</li>
+<li>Annual pentests, audits, and security software costs</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Storage
+<ul>
+<li>Amount of GB the customer wants to buy for their projects. <a href="https://docs.gitlab.com/ee/user/usage_quotas.html">Free storage quota</a> applies.</li>
+<li>The storage fee covers the following costs:
+<ul>
+<li>Cloud provider storage costs for all data stored in object storage and on disk</li>
+<li>Networking costs</li>
+<li>Cost of the data stored in the Geo secondary</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id=more-details-on-pricing>More details on pricing</h4>
+<p>We've priced GitLab Dedicated to align with likely buyers based on minimums and the complexities of their deployments. As mentioned above, the pricing for GitLab Dedicated is comprised of the following components: the <a href="/pricing/">cost for Ultimate Licenses</a>, plus additional fees for instance infrastructure &amp; management, the amount of storage needed, and the customer's infrastructure size (e.g. S, M, L, XL, XXL). As we scale and introduce GitLab Dedicated to more and more customer cohorts we'll share further details on pricing options.</p>
+<h2 id=user-success-metrics>User success metrics</h2>
+
+<ul>
+<li>Primary Performance Indicator
+<ul>
+<li>Paid GMAU</li>
+</ul>
+</li>
+<li>Secondary Indicators
+<ul>
+<li>Customer Satisfaction</li>
+<li>Uplift revenue: defined as revenue the offerings contributes beyond licenses. This includes the infra+management fee plus revenue from consumption pricing.</li>
+<li>Gross Margin</li>
+</ul>
+</li>
+</ul>
+<h2 id=competitive-landscape>Competitive Landscape</h2>
+
+<p>The main competitor to GitLab Dedicated is <a href="https://docs.github.com/en/github-ae@latest/admin/overview/about-github-ae">GitHub AE</a>, which offers a fully-managed GitHub Enterprise instance in the customer's desired region on Azure. Other competitors offering single-tenant, fully-managed devops solutions include AWS CodeCommit, Azure Devops, and GitLab Host.</p>
+<h4 id=footnotes>Footnotes</h4>
+<ol>
+<li>IDC, Worldwide DevOps Software Tools Forecast, 2022â2026, Doc # US48599322, July 2022</li>
+</ol>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/gitlab_dedicated/template.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/gitlab_dedicated/template.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=e389f0af'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=e389f0af"></script>
+<script src="/javascripts/scripts.js?cacheBust=e389f0af"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

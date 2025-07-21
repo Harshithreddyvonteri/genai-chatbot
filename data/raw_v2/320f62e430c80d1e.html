@@ -1,0 +1,992 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<link rel="manifest" href="https://handbook.gitlab.com/manifest.json">
+
+<link rel="shortcut icon" href="https://handbook.gitlab.com/favicons/favicon-32x32.ico" >
+
+<link rel="icon" type="image/png" href="https://handbook.gitlab.com/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="https://handbook.gitlab.com/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://handbook.gitlab.com/favicons/favicon-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="https://handbook.gitlab.com/favicons/favicon-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="https://handbook.gitlab.com/favicons/favicon-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="https://handbook.gitlab.com/favicons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="https://handbook.gitlab.com/favicons/favicon-128x128.png" sizes="128x128">
+<link rel="icon" type="image/png" href="https://handbook.gitlab.com/favicons/favicon-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="https://handbook.gitlab.com/favicons/favicon-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="https://handbook.gitlab.com/favicons/favicon-256x256.png" sizes="256x256">
+<link rel="icon" type="image/png" href="https://handbook.gitlab.com/favicons/favicon-512x512.png" sizes="512x512">
+
+<link rel="apple-touch-icon" href="https://handbook.gitlab.com/favicons/favicon-1024x1024.png">
+<link rel="favicon" href="https://handbook.gitlab.com/favicons/favicon-152x152.png" sizes="152x152">
+<link rel="favicon" href="https://handbook.gitlab.com/favicons/favicon-167x167.png" sizes="167x167">
+<link rel="favicon" href="https://handbook.gitlab.com/favicons/favicon-180x180.png" sizes="180x180">
+<link rel="favicon" href="https://handbook.gitlab.com/favicons/favicon-128x128.png" sizes="128x128">
+<link rel="favicon" href="https://handbook.gitlab.com/favicons/favicon-256x256.png" sizes="256x256">
+<link rel="favicon" href="https://handbook.gitlab.com/favicons/favicon-512x512.png" sizes="512x512">
+<link rel="favicon" href="https://handbook.gitlab.com/favicons/favicon-1024x1024.png" sizes="512x512@2x">
+
+<meta name="theme-color" content="#6e49cb">
+<meta name="theme-color" content="#6e49cb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#6e49cb" media="(prefers-color-scheme: dark)">
+
+<title>Handbook Development | The GitLab Handbook</title>
+<meta name="description" content="Development environment and processes for maintaining the handbook">
+
+<meta property="og:title" content="Handbook Development" />
+<meta property="og:description" content="Development environment and processes for maintaining the handbook" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://handbook.gitlab.com/docs/development/" /><meta property="og:image" content="https://handbook.gitlab.com/images/gitlab-cover.png"/><meta property="og:site_name" content="The GitLab Handbook" />
+
+  <meta itemprop="name" content="Handbook Development">
+  <meta itemprop="description" content="Development environment and processes for maintaining the handbook">
+  <meta itemprop="wordCount" content="2945">
+  <meta itemprop="image" content="https://handbook.gitlab.com/images/gitlab-cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://handbook.gitlab.com/images/gitlab-cover.png">
+  <meta name="twitter:title" content="Handbook Development">
+  <meta name="twitter:description" content="Development environment and processes for maintaining the handbook">
+      <meta name="twitter:site" content="@GitLab">
+
+
+
+
+<link rel="preload" href="https://handbook.gitlab.com/scss/main.min.df32c201b407f1712b3c610fa03537735b1c9c7b74bac8c7d2a2b5cd0d9d4d6a.css" as="style">
+<link href="https://handbook.gitlab.com/scss/main.min.df32c201b407f1712b3c610fa03537735b1c9c7b74bac8c7d2a2b5cd0d9d4d6a.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3.6.0"
+  integrity="sha512-AyDFDkYyALC5qoao077IqAOV7UC4oKCBTp+mJfjIt306AIRoBxoEZYDo0kAx/R7RbT+3EYEky1po/F1w1eQt7g=="
+  crossorigin="anonymous" />
+
+<link rel="canonical" href="https://handbook.gitlab.com/docs/development/">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    gtag('consent', 'default', {
+        'analytics_storage': 'granted',
+        'ad_storage': 'granted',
+        'functionality_storage': 'granted',
+        'wait_for_update': 500
+    });
+
+    gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'functionality_storage': 'denied',
+        'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','RU','GB','PE','CO','KR','CA-QC'],
+        'wait_for_update': 500
+    });
+    </script>
+    
+
+    
+    <script src="https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js"></script>
+    <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-domain-script="7f944245-c5cd-4eed-a90e-dd955adfdd08"></script>
+    <script>
+    function OptanonWrapper() { }
+    </script>
+    
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NJXWQL');</script>
+    
+<script type="text/javascript">
+;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+ p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+ };p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
+ n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","https://gitlab.com/assets/snowplow/sp-bc5b4b4067898d2d20c35fec045d91d032cb739c3deab5f42607edbeca08323a.js","snowplow"));
+
+ window.snowplow('newTracker', 'cf', 'snowplowprd.trx.gitlab.net', {
+   appId: 'about',
+   cookieDomain: '.gitlab.com',
+   userFingerprint: false,
+   respectDoNotTrack: true,
+   forceSecureTracker: true,
+   post: true,
+   contexts: {
+       webPage: true,
+   },
+   stateStorageStrategy: "cookie"
+ });
+
+ window.snowplow('enableActivityTracking', 30, 30);
+ window.snowplow('trackPageView');
+ window.snowplow('enableFormTracking');
+ window.snowplow('enableLinkClickTracking');
+</script>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<link rel="preconnect" href="https://3IIMMA8IDY-dsn.algolia.net" crossorigin />
+
+
+
+
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="td-navbar js-navbar-scroll" data-bs-theme="dark">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="https://handbook.gitlab.com/"><span class="navbar-brand__logo navbar-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1e3 1e3"><path d="M339.867 12.18c-23.77 2.74-48.01 8.23-70.87 16.23-62.41 22.17-101.5 56.24-123.22 107.45l-5.94 14.4V897.8l8.46 17.37c18.97 38.64 56.69 59.67 126.19 69.96 22.18 3.2 59.9 3.89 303.36 4.57 208.26.69 280.73.23 288.04-1.6 20.8-5.72 33.84-28.8 27.43-48.46-3.43-10.06-15.55-21.95-25.6-24.69-4.8-1.6-121.39-3.2-309.54-4.8-295.82-2.29-301.99-2.52-315.48-7.09-26.52-9.14-41.38-24.69-40.69-42.29.69-18.06 14.17-32.46 39.32-41.84 11.2-4.34 23.09-4.57 310.68-7.08 164.37-1.37 299.25-3.43 299.93-4.12.69-.92 5.94-4.34 11.89-7.77 5.71-3.43 13.72-10.51 17.6-15.77 14.86-20.12 14.17 1.6 13.49-377.89l-.69-345.2-6.4-13.03c-6.86-13.94-17.83-24.46-31.32-30.4-4.34-2.06-9.83-4.57-11.89-5.71-5.01-2.76-480.51-2.53-504.75.22" style="fill:#a989f5;fill-opacity:1;stroke-width:.1"/><path d="m781.144 348.852-.734-1.874-71.005-185.31a18.5 18.5.0 00-7.307-8.8 19.01 19.01.0 00-21.73 1.168 19 19 0 00-6.302 9.561L626.122 310.28H431.985l-47.943-146.683a18.63 18.63.0 00-6.302-9.588 19.01 19.01.0 00-21.73-1.168 18.66 18.66.0 00-7.308 8.8l-71.14 185.228-.707 1.874a131.85 131.85.0 0043.733 152.387l.245.19.652.462 108.164 81.001 53.512 40.5 32.596 24.61a21.92 21.92.0 0026.512.0l32.596-24.61 53.512-40.5 108.816-81.49.272-.217a131.906 131.906.0 0043.679-152.224" style="fill:#fff;stroke-width:2.71634"/></svg></span><span class="navbar-brand__name">The GitLab Handbook</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="https://about.gitlab.com/" target="_blank" rel="noopener"><i class="fab fa-gitlab"></i><span>GitLab</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://about.gitlab.com/teamops" target="_blank" rel="noopener"><i class="fa-solid fa-arrows-spin"></i><span>TeamOps</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://handbook.gitlab.com/handbook/"><i class="fa-solid fa-book"></i><span>Handbook</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://handbook.gitlab.com/job-families/"><i class="fa-solid fa-users"></i><span>Job Families</span></a>
+      </li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    <div class="td-search">
+  <div class="td-search--algolia" id="docsearch-1"></div>
+</div>
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+  <script>
+    $(function() {
+    $("#td-section-nav a").removeClass("active");
+    $("#td-section-nav #m-docsdevelopment").addClass("active"); 
+    $("#td-section-nav #m-docsdevelopment-li span").addClass("td-sidebar-nav-active-item"); 
+    $("#td-section-nav #m-docsdevelopment").parents("li").addClass("active-path"); 
+    $("#td-section-nav li.active-path").addClass("show"); 
+    $("#td-section-nav li.active-path").children("input").prop('checked', true);
+    $("#td-section-nav #m-docsdevelopment-li").siblings("li").addClass("show");  
+    $("#td-section-nav #m-docsdevelopment-li").children("ul").children("li").addClass("show");  
+    $("#td-sidebar-menu").toggleClass("d-none"); 
+    });
+  </script>
+  <div id="td-sidebar-menu" class="td-sidebar__inner d-none">
+  <form class="td-sidebar__search d-flex align-items-center">
+    <div class="td-search">
+  <div class="td-search--algolia" id="docsearch-0"></div>
+</div>
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="td-sidebar-nav collapse foldable-nav" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pe-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docs-li">
+  <a href="https://handbook.gitlab.com/docs/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Contributing Guidelines</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsdevelopment-li">
+  <input type="checkbox" id="m-docsdevelopment-check"/>
+  <label for="m-docsdevelopment-check"><a href="https://handbook.gitlab.com/docs/development/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsdevelopment"><span class="">Handbook Development</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdevelopmentmaintenance-li">
+  <input type="checkbox" id="m-docsdevelopmentmaintenance-check"/>
+  <label for="m-docsdevelopmentmaintenance-check"><a href="https://handbook.gitlab.com/docs/development/maintenance/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsdevelopmentmaintenance"><span class="">Handbook Maintenance</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdevelopmentrunning-in-docker-li">
+  <input type="checkbox" id="m-docsdevelopmentrunning-in-docker-check"/>
+  <label for="m-docsdevelopmentrunning-in-docker-check"><a href="https://handbook.gitlab.com/docs/development/running-in-docker/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsdevelopmentrunning-in-docker"><span class="">Running the Handbook in Docker</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdevelopmentrunning-locally-li">
+  <input type="checkbox" id="m-docsdevelopmentrunning-locally-check"/>
+  <label for="m-docsdevelopmentrunning-locally-check"><a href="https://handbook.gitlab.com/docs/development/running-locally/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsdevelopmentrunning-locally"><span class="">Running the Handbook Locally</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsfrontmatter-li">
+  <input type="checkbox" id="m-docsfrontmatter-check"/>
+  <label for="m-docsfrontmatter-check"><a href="https://handbook.gitlab.com/docs/frontmatter/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsfrontmatter"><span class="">Handbook frontmatter</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsmarkdown-guide-li">
+  <input type="checkbox" id="m-docsmarkdown-guide-check"/>
+  <label for="m-docsmarkdown-guide-check"><a href="https://handbook.gitlab.com/docs/markdown-guide/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsmarkdown-guide"><span class="">Handbook Markdown Guide</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docssearch-li">
+  <input type="checkbox" id="m-docssearch-check"/>
+  <label for="m-docssearch-check"><a href="https://handbook.gitlab.com/docs/search/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docssearch"><span class="">Handbook Search</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docspartials-li">
+  <input type="checkbox" id="m-docspartials-check"/>
+  <label for="m-docspartials-check"><a href="https://handbook.gitlab.com/docs/partials/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docspartials"><span class="">Partials</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsshortcodes-li">
+  <input type="checkbox" id="m-docsshortcodes-check"/>
+  <label for="m-docsshortcodes-check"><a href="https://handbook.gitlab.com/docs/shortcodes/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsshortcodes"><span class="">Shortcodes</span></a></label>
+  
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            
+
+
+
+  
+  
+
+
+<div class="td-page-meta ml-2 pb-3 pt-2 mb-0">
+  <a
+    href="https://gitlab.com/gitlab-com/content-sites/docsy-gitlab/-/tree/main/content/docs/development/_index.md"
+    class="td-page-meta--view" target="_blank" rel="noopener">
+    <i class="fa fa-file-code fa-fw"></i> View page source
+  </a>
+  <a
+    href="https://gitlab.com/-/ide/project/gitlab-com/content-sites/docsy-gitlab/edit/main/-/content/docs/development/_index.md"
+    class="td-page-meta--edit" target="_blank" rel="noopener">
+    <i class="fa fa-edit fa-fw"></i> Edit this page
+  </a>
+</div>
+
+
+<h5 class="td-sidebar-link tree-root">Maintainers</h5>
+
+<h5 class="td-sidebar-link tree-root">On This Page</h5>
+
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#support">Support</a></li>
+    <li><a href="#edit-the-handbook-in-your-browser">Edit the handbook in your browser</a></li>
+    <li><a href="#architecture-overview">Architecture Overview</a>
+      <ul>
+        <li><a href="#templates-and-partials">Templates and Partials</a></li>
+        <li><a href="#access-tokens">Access tokens</a></li>
+        <li><a href="#handbook-monitoring">Handbook monitoring</a></li>
+      </ul>
+    </li>
+    <li><a href="#run-the-handbook-locally-for-edits">Run the handbook locally for edits</a>
+      <ul>
+        <li><a href="#requirements">Requirements</a></li>
+        <li><a href="#clone-the-handbook-git-repository">Clone the handbook Git repository</a></li>
+        <li><a href="#set-up-the-repository">Set up the repository</a></li>
+        <li><a href="#running-hugo">Running Hugo</a></li>
+        <li><a href="#parameters-for-hugo">Parameters for Hugo</a></li>
+        <li><a href="#build-static-files">Build static files</a></li>
+        <li><a href="#permissions">Permissions</a></li>
+      </ul>
+    </li>
+    <li><a href="#linting-content">Linting content</a>
+      <ul>
+        <li><a href="#handbook-lint">Handbook lint</a></li>
+        <li><a href="#hugo-lint">Hugo lint</a></li>
+        <li><a href="#markdownlint">markdownlint</a></li>
+        <li><a href="#vale">Vale</a></li>
+      </ul>
+    </li>
+    <li><a href="#docsy-gitlab-theme-development">Docsy GitLab Theme Development</a>
+      <ul>
+        <li><a href="#local-development">Local Development</a></li>
+        <li><a href="#testing-changes">Testing changes</a></li>
+        <li><a href="#releases">Releases</a></li>
+      </ul>
+    </li>
+    <li><a href="#dependencies">Dependencies</a>
+      <ul>
+        <li><a href="#updating-dependencies">Updating dependencies</a>
+          <ul>
+            <li><a href="#google-docsy">Google Docsy</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#redirects">Redirects</a></li>
+    <li><a href="#cicd-pipelines">CI/CD Pipelines</a>
+      <ul>
+        <li><a href="#handbook--internal-handbook">Handbook &amp; Internal Handbook</a>
+          <ul>
+            <li><a href="#build-stage"><code>build</code> stage</a></li>
+            <li><a href="#deploy-stage"><code>deploy</code> stage</a></li>
+            <li><a href="#notify-stage"><code>notify</code> stage</a></li>
+            <li><a href="#build_and_test_only-mode"><code>$BUILD_AND_TEST_ONLY</code> mode</a></li>
+            <li><a href="#gitlab_token"><code>$GITLAB_TOKEN</code></a></li>
+          </ul>
+        </li>
+        <li><a href="#gitlab-pages-deployment">GitLab Pages Deployment</a></li>
+        <li><a href="#docsy-gitlab">Docsy GitLab</a>
+          <ul>
+            <li><a href="#test-stage"><code>test</code> stage</a></li>
+            <li><a href="#build-stage-1"><code>build</code> stage</a></li>
+            <li><a href="#release-stage"><code>release</code> stage</a></li>
+          </ul>
+        </li>
+        <li><a href="#www-gitlab-com">www-gitlab-com</a></li>
+        <li><a href="#danger-review-and-reviewer-roulette">Danger review and reviewer roulette</a></li>
+        <li><a href="#code-quality-report-mr-commenter">Code quality report MR commenter</a></li>
+        <li><a href="#cicd-maintenance-tasks">CI/CD maintenance tasks</a></li>
+      </ul>
+    </li>
+    <li><a href="#triage-bot">Triage bot</a></li>
+  </ul>
+</nav>
+      </div>
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="https://handbook.gitlab.com/docs/">Contributing Guidelines</a></li>
+  <li class="breadcrumb-item active" aria-current="page">
+    Handbook Development</li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+  <h1>Handbook Development</h1>
+  <div class="lead">Development environment and processes for maintaining the handbook</div>
+  <header class="article-meta">
+    
+</header>
+  <p>The handbook site uses <a href="https://gohugo.io/">Hugo</a> for static page generation
+from Markdown.</p>
+<p>The handbook uses a base theme called <a href="https://www.docsy.dev/">Docsy</a>. A custom theme override
+is located in the <a href="https://gitlab.com/gitlab-com/content-sites/docsy-gitlab">Docsy GitLab Theme</a>
+project and automatically included in the handbook setup.</p>
+<h2 id="support">Support<a class="td-heading-self-link" href="#support" aria-label="Heading self-link"></a></h2>
+<p>For help and support with the development environment, please reach out in the public
+<a href="https://gitlab.slack.com/archives/C81PT2ALD">#handbook</a> Slack channel.</p>
+<p>If you encounter a problem or bug, please open an issue or MR in the respective handbook projects.</p>
+<h2 id="edit-the-handbook-in-your-browser">Edit the handbook in your browser<a class="td-heading-self-link" href="#edit-the-handbook-in-your-browser" aria-label="Heading self-link"></a></h2>
+<p>Follow the <a href="https://handbook.gitlab.com/handbook/about/editing-handbook/">editing the handbook</a> documentation.</p>
+<h2 id="architecture-overview">Architecture Overview<a class="td-heading-self-link" href="#architecture-overview" aria-label="Heading self-link"></a></h2>
+<p>The Markdown files get parsed by Hugo, and converted into static HTML files, including all assets (JS, CSS, images, etc.).
+The static files are uploaded to GitLab Pages.</p>
+<pre class="mermaid">flowchart TD
+    A(docsy) --&gt; B
+    B(docsy-gitlab) --&gt; H
+    B(docsy-gitlab) --&gt; I
+    C(www-gitlab-com) --&gt; H
+    C(www-gitlab-com) --&gt; I
+    D(handbook) --&gt; H
+    E(handbook-internal) --&gt; I
+    H{build} --&gt; |Deploy| F
+    I{build} --&gt; |Deploy| G
+    F[handbook.gitlab.com]
+    G[internal.gitlab.com]</pre>
+<p>There are four internal projects and one external project used in the process of building and deploying the internal and external handbooks.</p>
+<ol>
+<li><a href="https://github.com/google/docsy">Docsy</a> is the base theme used for both handbook sites.</li>
+<li><a href="https://gitlab.com/gitlab-com/content-sites/docsy-gitlab">Docsy GitLab</a> is an extension to the base Docsy theme with GitLab specific customizations and features. Docsy GitLab is included in both handbook sites.</li>
+<li><a href="https://gitlab.com/gitlab-com/www-gitlab-com/-/blob/master/data/README.md">www-gitlab-com</a> is the source repository of data files used by both handbook sites.</li>
+<li><a href="https://gitlab.com/gitlab-com/content-sites/handbook">handbook</a> is the public handbook site.</li>
+<li><a href="https://gitlab.com/gitlab-com/content-sites/internal-handbook">internal-handbook</a> is the internal handbook site.</li>
+</ol>
+<h3 id="templates-and-partials">Templates and Partials<a class="td-heading-self-link" href="#templates-and-partials" aria-label="Heading self-link"></a></h3>
+<p>Review the Hugo development documentation to learn more.</p>
+<ul>
+<li><a href="https://gohugo.io/templates/introduction/">https://gohugo.io/templates/introduction/</a></li>
+<li><a href="https://gohugo.io/functions/partials/">https://gohugo.io/functions/partials/</a></li>
+</ul>
+<p>There are some <a href="https://handbook.gitlab.com/docs/partials/">partials specific to GitLab</a>.</p>
+<h3 id="access-tokens">Access tokens<a class="td-heading-self-link" href="#access-tokens" aria-label="Heading self-link"></a></h3>
+<p>To minimize maintenance, a small number of group and project access tokens are used.
+This overview is not meant to be a comprehensive list. Search in this and other development documentation pages for details on the individual access tokens.</p>
+<ol>
+<li><a href="https://handbook.gitlab.com/docs/development/#gitlab_token"><code>GITLAB_TOKEN</code></a>, currently called <code>Docsy GitLab Release</code>. Used for various things, primarily:
+<ol>
+<li><a href="https://handbook.gitlab.com/docs/development/#releases"><code>docsy-theme</code> <code>release</code> job</a></li>
+<li><a href="https://handbook.gitlab.com/docs/development/#code-quality-report-mr-commenter"><code>notify</code> handbook jobs</a></li>
+</ol>
+</li>
+<li><a href="https://handbook.gitlab.com/docs/development/#triage-bot"><code>TRIAGE_BOT</code></a>, currently called <code>Triage bot</code>. Used for various maintenance tasks, primarily:
+<ol>
+<li><a href="https://handbook.gitlab.com/docs/development/#triage-bot">Triage</a></li>
+<li><a href="https://handbook.gitlab.com/docs/development/maintenance/">CI jobs in <code>maintenance-tasks</code></a></li>
+</ol>
+</li>
+<li>Project access tokens are sometimes created for project specific tasks, such as <a href="https://handbook.gitlab.com/docs/development/#danger-review-and-reviewer-roulette"><code>DANGER_GITLAB_API_TOKEN</code></a>.</li>
+</ol>
+<p><a href="https://zapier.com/app/zaps?search=handbook">A &ldquo;zap&rdquo;</a> (internal) (use shared 1Password sign in) has been configured with a group level webhook to notify the <code>#handbook-escalation</code> channel. Due to its reliability, you may want to consider creating an issue, or some other reminder.</p>
+<h3 id="handbook-monitoring">Handbook monitoring<a class="td-heading-self-link" href="#handbook-monitoring" aria-label="Heading self-link"></a></h3>
+<p>The <a href="https://gitlab.com/gitlab-com/content-sites/handbook-tools/handbook-monitor">handbook monitor project</a> runs a pipeline every 10 minutes (see pipeline schedule) to check if the handbook is &ldquo;up&rdquo; using <a href="https://hurl.dev/">hurl</a>.</p>
+<p>There is another scheduled monthly pipeline that will rebuild the image used in CI. This job will only run if there&rsquo;s an environment variable <code>REBUILD</code> set to <code>TRUE</code> to avoid rebuilding the image with every scheduled CI job.</p>
+<p>If the job fails, the pipeline will post to the <code>#handbook-escalation</code> Slack channel.</p>
+<p>Notices are also posted in that channel when pipelines fail on the <code>main</code> branch of the handbook projects.</p>
+<p>Note: Internal handbook is not monitored in this way as there is a blocking issue. See <a href="https://gitlab.com/gitlab-com/content-sites/internal-handbook/-/issues/90"><code>internal-handbook#90</code></a>.
+Similarly, the request for <a href="https://gitlab.com/gitlab-com/gl-infra/scalability/-/issues/3675">integrating the handbook to infra&rsquo;s monitoring</a> is pending. See <a href="https://gitlab.com/gitlab-com/content-sites/docsy-gitlab/-/issues/14"><code>docsy#14</code></a> for more information.</p>
+<h2 id="run-the-handbook-locally-for-edits">Run the handbook locally for edits<a class="td-heading-self-link" href="#run-the-handbook-locally-for-edits" aria-label="Heading self-link"></a></h2>
+<p>Supported methods:</p>
+<ol>
+<li>Docker or compatible runtime (all software preinstalled in a container image)</li>
+<li>Local installation (experienced users, more software dependencies, can break)</li>
+</ol>
+<h3 id="requirements">Requirements<a class="td-heading-self-link" href="#requirements" aria-label="Heading self-link"></a></h3>
+<ul>
+<li>Command line: <code>git</code>, <code>wget</code> (for syncing data). Additional requirements for local installation, see below.</li>
+<li>Docker or compatible runtime (for running the Hugo environment in a container)
+<ul>
+<li>On <a href="https://handbook.gitlab.com/handbook/tools-and-tips/mac/#docker-desktop">macOS</a>: Docker Desktop, Rancher Desktop, etc.</li>
+<li>On <a href="https://handbook.gitlab.com/handbook/tools-and-tips/linux/#production-engineering">Linux</a>: Docker engine, Podman, etc.</li>
+</ul>
+</li>
+</ul>
+<h3 id="clone-the-handbook-git-repository">Clone the handbook Git repository<a class="td-heading-self-link" href="#clone-the-handbook-git-repository" aria-label="Heading self-link"></a></h3>
+<p>Cloning the repository allows you to manually edit the handbook locally. If you prefer to use the Web IDE, please continue reading the <a href="https://handbook.gitlab.com/handbook/editing-handbook/">editing the handbook</a> documentation.</p>
+<p>We recommend using git to clone the repository and then editing the handbook with a text editor such
+as <a href="https://code.visualstudio.com/">Visual Studio Code</a>, <a href="https://typora.io/">Typora</a>,
+<a href="https://nova.app/">Nova</a> or <a href="https://www.sublimetext.com/">Sublime</a> to name a few.</p>
+<p>Clone the repository:</p>
+<p><a href="https://gitlab.com/gitlab-com/content-sites/handbook">Public handbook</a>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git clone git@gitlab.com:gitlab-com/content-sites/handbook.git
+</span></span></code></pre></div><p><a href="https://gitlab.com/gitlab-com/content-sites/internal-handbook">Internal handbook</a>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git clone git@gitlab.com:gitlab-com/content-sites/internal-handbook.git
+</span></span></code></pre></div><p><a href="https://gitlab.com/gitlab-com/content-sites/docsy-gitlab">Docsy GitLab theme</a>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git clone git@gitlab.com:gitlab-com/content-sites/docsy-gitlab.git
+</span></span></code></pre></div><h3 id="set-up-the-repository">Set up the repository<a class="td-heading-self-link" href="#set-up-the-repository" aria-label="Heading self-link"></a></h3>
+<p>After cloning the repository, sync the required data files from the
+data file location (currently the <a href="https://gitlab.com/gitlab-com/www-gitlab-com"><code>www-gitlab-com</code></a> repository).  Without this
+step, the handbook cannot be run locally.</p>
+<p>Open a terminal, navigate into the cloned handbook repository path, and run the <code>sync-data.sh</code> script.</p>
+<p>Example for the public handbook:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#204a87">cd</span> handbook
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>./scripts/sync-data.sh
+</span></span></code></pre></div><h3 id="running-hugo">Running Hugo<a class="td-heading-self-link" href="#running-hugo" aria-label="Heading self-link"></a></h3>
+<p>Hugo needs to be run to generate the static files from the handbook markdown content.</p>
+<p>When installing Hugo, review the CI file of the relevant handbook repository for the version of Hugo in use. The latest version may or may not work.</p>
+<p>There are two ways to run Hugo:</p>
+<ol>
+<li><a href="https://handbook.gitlab.com/docs/development/running-in-docker/">Running the Handbook in Docker</a></li>
+<li><a href="https://handbook.gitlab.com/docs/development/running-locally/">Running the Handbook Locally</a></li>
+</ol>
+<h3 id="parameters-for-hugo">Parameters for Hugo<a class="td-heading-self-link" href="#parameters-for-hugo" aria-label="Heading self-link"></a></h3>
+<p>The handbook is huge, and by default, the <code>hugo server</code> command loads everything to memory.</p>
+<p>The following options for the <code>hugo</code> command can be helpful for debugging or otherwise running locally:</p>
+<ul>
+<li><code>--environment=production</code>: generate a production build (asset minification, checksums, etc)
+<ul>
+<li><strong>Note:</strong> <code>hugo v0.x.x+extended</code> version must be installed, use <code>hugo version</code> to check</li>
+<li><strong>Note:</strong> <code>npm i</code> must be run as a prerequisite to install <code>postcss</code> and <code>autoprefixer</code> dependencies</li>
+</ul>
+</li>
+<li><code>--renderToDisk</code>: slower but requires less memory to run. Useful if you have less than 16GB allocated to docker machine</li>
+<li><code>--verbose</code>: enables verbose logging output</li>
+<li><code>--templateMetrics</code> and <code>--templateMetricsHints</code>: prints metrics related to how frequently templates are invoked and how much time is being spent evaluating them</li>
+<li><code>--printMemoryUsage</code>: periodically prints memory usage while the site is building</li>
+</ul>
+<h3 id="build-static-files">Build static files<a class="td-heading-self-link" href="#build-static-files" aria-label="Heading self-link"></a></h3>
+<p>To render the entire site to disk (and inspect the output in <code>${PWD}/public</code>),
+purge the generated files first, and then run Hugo.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>make clean
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>docker run --rm -v <span style="color:#204a87;font-weight:bold">$(</span><span style="color:#204a87">pwd</span><span style="color:#204a87;font-weight:bold">)</span>:<span style="color:#204a87;font-weight:bold">$(</span><span style="color:#204a87">pwd</span><span style="color:#204a87;font-weight:bold">)</span> -w <span style="color:#204a87;font-weight:bold">$(</span><span style="color:#204a87">pwd</span><span style="color:#204a87;font-weight:bold">)</span> hugomods/hugo:exts hugo
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># or</span>
+</span></span><span style="display:flex;"><span>hugo
+</span></span></code></pre></div><h3 id="permissions">Permissions<a class="td-heading-self-link" href="#permissions" aria-label="Heading self-link"></a></h3>
+<p>For some pages to render you may need a <a href="https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html">personal access token</a>.
+Generate one and export it as an environment variable prior to running <code>hugo</code> commands:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#204a87">export</span> <span style="color:#000">HUGOxPARAMSxGITLAB_API_KEY</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;&lt;token&gt;&#34;</span>
+</span></span><span style="display:flex;"><span>hugo ...
+</span></span></code></pre></div><p>If you need to make changes to the underlying theme you&rsquo;ll need to make changes in the <a href="https://gitlab.com/gitlab-com/content-sites/docsy-gitlab"><code>Gitlab-Docsy</code> module</a>.</p>
+<h2 id="linting-content">Linting content<a class="td-heading-self-link" href="#linting-content" aria-label="Heading self-link"></a></h2>
+<p>To enforce rules and guidelines, we use:</p>
+<ol>
+<li><a href="https://handbook.gitlab.com/docs/development/#handbook-lint">Custom Handbook lint</a></li>
+<li><a href="https://handbook.gitlab.com/docs/development/#hugo-lint">Hugo lint</a></li>
+<li><a href="https://handbook.gitlab.com/docs/development/#markdownlint"><code>markdownlint</code></a></li>
+<li><a href="https://handbook.gitlab.com/docs/development/#vale">Vale</a></li>
+</ol>
+<p>Once an error is encountered, the relevant job fails and a comment is added to the merge request with a list of errors, with guidance for the suggested fix.
+Warnings and suggestions are not reported in the comment, but are in the code quality report.</p>
+<p>Currently, all configuration and script files exist in each repository. See <a href="https://gitlab.com/gitlab-com/content-sites/docsy-gitlab/-/issues/15">configuration file sync issue</a>.</p>
+<h3 id="handbook-lint">Handbook lint<a class="td-heading-self-link" href="#handbook-lint" aria-label="Heading self-link"></a></h3>
+<p>The custom handbook lint script (<a href="https://gitlab.com/gitlab-com/content-sites/handbook/-/blob/main/scripts/handbook-lint.sh">handbook version</a>) is used to verify a number of the guidelines we have, including:</p>
+<ol>
+<li>Media files
+<ol>
+<li>Image location for new images.</li>
+<li>Image size for images in the MR.</li>
+<li>Video location for new videos.</li>
+</ol>
+</li>
+<li>Codeowners
+<ol>
+<li>Folder or file exists.</li>
+<li>A controlled document is listed in the <code>[Controlled documents]</code> section, and vice versa.</li>
+<li>A required approval includes the specified groups, such as <code>e-group</code>.</li>
+<li>Warns if a listed user is not in the <code>team.yml</code>.</li>
+</ol>
+<ul>
+<li>Note: If a user exists, but the job says they&rsquo;re not a team member, check the relevant <code>data/team-member.yml</code> file to see if the GitLab username matches.</li>
+</ul>
+</li>
+</ol>
+<h3 id="hugo-lint">Hugo lint<a class="td-heading-self-link" href="#hugo-lint" aria-label="Heading self-link"></a></h3>
+<p>We use <a href="https://gitlab.com/gitlab-com/content-sites/handbook-tools/hugolint">Hugo lint</a> to check for the validity of internal links. It supports relative linking to the markdown file, and the production path.</p>
+<p>Each job also outputs the top 30 incorrect links to assist in fixing them.</p>
+<p>See the ReadMe for more information about how Hugo lint works.</p>
+<h3 id="markdownlint">markdownlint<a class="td-heading-self-link" href="#markdownlint" aria-label="Heading self-link"></a></h3>
+<p>Refer to the <a href="https://handbook.gitlab.com/docs/markdown-guide/">markdown guide</a> for style guide information, and guidance on rules.</p>
+<p>We use <a href="https://github.com/DavidAnson/markdownlint-cli2"><code>markdownlint-cli2</code></a> in our pipelines with a slightly customized set of rules.
+Before pushing any changes, you can run <code>markdownlint-cli2</code> and fix any suggested changes to avoid pipeline failures.</p>
+<p>To run <code>markdownlint-cli2</code> using Docker, run:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>docker run --rm -v <span style="color:#204a87;font-weight:bold">$(</span><span style="color:#204a87">pwd</span><span style="color:#204a87;font-weight:bold">)</span>:<span style="color:#204a87;font-weight:bold">$(</span><span style="color:#204a87">pwd</span><span style="color:#204a87;font-weight:bold">)</span> -w <span style="color:#204a87;font-weight:bold">$(</span><span style="color:#204a87">pwd</span><span style="color:#204a87;font-weight:bold">)</span> davidanson/markdownlint-cli2 content/**/*.md
+</span></span></code></pre></div><p>If you have <a href="https://github.com/DavidAnson/markdownlint-cli2?tab=readme-ov-file#install"><code>markdownlint-cli2</code> installed locally</a>, you can run the command in the relevant repository.
+This method is recommended when editing the config file (look for the <code>markdownlint</code> file), and testing the changes. To have markdownlint automatically fix some errors,
+add the fix option:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>markdownlint-cli2 --fix <span style="color:#4e9a06">&#34;content/**/*.md&#34;</span>
+</span></span></code></pre></div><p>Rules are configured to be close to the <a href="https://docs.gitlab.com/ee/development/documentation/testing/markdownlint.html">GitLab documentation markdownlint</a>, without some of the stricter styling rules.
+The relevant rules are also noted in the <a href="https://handbook.gitlab.com/docs/markdown-guide/">markdown guide</a>.</p>
+<h3 id="vale">Vale<a class="td-heading-self-link" href="#vale" aria-label="Heading self-link"></a></h3>
+<p>We use <a href="https://vale.sh">Vale</a> to verify some of the rules in the <a href="https://handbook.gitlab.com/docs/markdown-guide/">Handbook Markdown Guide</a>.</p>
+<p>Vale errors will fail the pipeline and are included in the MR comment.
+Warnings are included in the job log, code quality, and MR diff.</p>
+<p>To run Vale using Docker, run:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>docker run --rm -v <span style="color:#204a87;font-weight:bold">$(</span><span style="color:#204a87">pwd</span><span style="color:#204a87;font-weight:bold">)</span>:<span style="color:#204a87;font-weight:bold">$(</span><span style="color:#204a87">pwd</span><span style="color:#204a87;font-weight:bold">)</span> -w <span style="color:#204a87;font-weight:bold">$(</span><span style="color:#204a87">pwd</span><span style="color:#204a87;font-weight:bold">)</span> jdkato/vale content
+</span></span></code></pre></div><p>If you have vale installed locally, you can test the changes. To limit the results, add the <code>minAlertLevel</code> option, such as:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>vale --no-wrap --minAlertLevel error --glob<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;{content,assets,layouts}/**/*.md&#39;</span> .
+</span></span></code></pre></div><p>Rules are configured to be close to the <a href="https://gitlab.com/gitlab-org/gitlab/-/tree/master/doc/.vale">GitLab documentation vale rules</a>.
+When the <code>gitlab_base</code> rules are exactly the same, they are included in the <code>gitlab_base</code> folder in the content sites repositories.
+When the rules differ, they are stored in the <code>handbook</code> folder.</p>
+<h2 id="docsy-gitlab-theme-development">Docsy GitLab Theme Development<a class="td-heading-self-link" href="#docsy-gitlab-theme-development" aria-label="Heading self-link"></a></h2>
+<p><a href="https://github.com/google/docsy">Docsy</a> is used as a base for the internal and public handbooks. Modifications
+and extensions have been added on top to ensure efficient handbook usage.</p>
+<p>All Hugo partials and shortcodes should be added to this repository, instead
+of duplicating them locally into the handbook projects.</p>
+<p>The <a href="https://gitlab.com/gitlab-com/content-sites/docsy-gitlab">Docsy GitLab theme</a>
+is integrated into the public/internal handbook repositories using a Go module in
+<a href="https://gitlab.com/gitlab-com/content-sites/docsy-gitlab/-/blob/main/go.mod?ref_type=heads">go.mod</a>.</p>
+<h3 id="local-development">Local Development<a class="td-heading-self-link" href="#local-development" aria-label="Heading self-link"></a></h3>
+<p>To develop on the Docsy GitLab theme locally build the handbook (or internal-handbook) project with the updated local copy of the docsy-gitlab theme following the steps below:</p>
+<ol>
+<li>
+<p>Add the following line to the bottom of the <code>go.mod</code> file in the handbook project:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#000">replace</span> <span style="color:#000">gitlab</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">com</span><span style="color:#ce5c00;font-weight:bold">/</span><span style="color:#000">gitlab</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">com</span><span style="color:#ce5c00;font-weight:bold">/</span><span style="color:#000">content</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">sites</span><span style="color:#ce5c00;font-weight:bold">/</span><span style="color:#000">docsy</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">gitlab</span> <span style="color:#000;font-weight:bold">=&gt;</span> <span style="color:#ce5c00;font-weight:bold">/</span><span style="color:#000">YOUR</span><span style="color:#ce5c00;font-weight:bold">/</span><span style="color:#000">LOCAL</span><span style="color:#ce5c00;font-weight:bold">/</span><span style="color:#000">PATH</span><span style="color:#ce5c00;font-weight:bold">/</span><span style="color:#000">TO</span><span style="color:#ce5c00;font-weight:bold">/</span><span style="color:#000">docsy</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">gitlab</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Run the Hugo server:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>hugo server
+</span></span></code></pre></div></li>
+<li>
+<p>Load the site locally:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>open http://localhost:1313/
+</span></span></code></pre></div></li>
+</ol>
+<p>Any changes made to files in local <code>docsy-gitlab</code> project will be rendered in the local instance.</p>
+<h3 id="testing-changes">Testing changes<a class="td-heading-self-link" href="#testing-changes" aria-label="Heading self-link"></a></h3>
+<p>When making changes that may have a user impact (not content only changes):</p>
+<ol>
+<li>Test the changes <a href="https://handbook.gitlab.com/docs/development/#local-development">locally</a> first by performing the upgrades to <code>gitlab-docsy</code>, <code>handbook</code>, and <code>internal-handbook</code> and running the builds locally. Manual testing locally will make it easy to spot any major issues.</li>
+<li>If there are no concerns, create a MR in the Docsy project with the changes, and have a maintainer review. Ensure that only the relevant changes you&rsquo;re testing are in the MR.
+<ul>
+<li>Note: At the moment, there is no review app for the <code>docsy</code> project. When relevant, include local testing notes in the MR.</li>
+</ul>
+</li>
+<li>With the new version of the theme available, create new MRs in <code>handbook</code> and <code>internal-handbook</code> with the changes and upgrade to the theme if needed. Use review apps for both MRs to test the dependency changes in a production-like environment.</li>
+<li>Apply the changes to the internal handbook first, and ensure changes are okay.</li>
+<li>Next, apply the changes to the public handbook.</li>
+<li>If there are any issues, revert the changes to the handbook projects.</li>
+</ol>
+<h3 id="releases">Releases<a class="td-heading-self-link" href="#releases" aria-label="Heading self-link"></a></h3>
+<p>Changes made to <code>docsy-gitlab</code> will be made available to the <code>handbook</code> and <code>internal-handbook</code> after the version is bumped and deployed to each project. This includes all theme updates with partials, shortcodes, and any changes to <code>/docs</code>. Much of this process has been automated, but a few manual steps are still required. To release a <code>docsy-gitlab</code> change follow these steps:</p>
+<ol>
+<li>After the merge request is merged, a pipeline on the <code>main</code> brach will kick off. After the pipeline succeeds, the <code>release</code> job can be triggered manually. For example: <a href="https://gitlab.com/gitlab-com/content-sites/docsy-gitlab/-/pipelines/1304430830">https://gitlab.com/gitlab-com/content-sites/docsy-gitlab/-/pipelines/1304430830</a></li>
+<li>The release job will do three things:
+<ol>
+<li>Create a release in the <code>docsy-gitlab</code> project. Example: <a href="https://gitlab.com/gitlab-com/content-sites/docsy-gitlab/-/releases/v0.3.25">https://gitlab.com/gitlab-com/content-sites/docsy-gitlab/-/releases/v0.3.25</a></li>
+<li>Create a merge request to <code>handbook</code>. Example: <a href="https://gitlab.com/gitlab-com/content-sites/handbook/-/merge_requests/6086">https://gitlab.com/gitlab-com/content-sites/handbook/-/merge_requests/6086</a></li>
+<li>Create a merge request to <code>internal-handbook</code>. Example: <a href="https://gitlab.com/gitlab-com/content-sites/internal-handbook/-/merge_requests/4771">https://gitlab.com/gitlab-com/content-sites/internal-handbook/-/merge_requests/4771</a></li>
+</ol>
+</li>
+<li>Assign a <a href="https://gitlab.com/gitlab-com/content-sites/handbook-backend/-/project_members?with_inherited_permissions=exclude&amp;sort=last_joined">handbook backend maintainer</a> or codeowner to each MR for review.</li>
+<li>Once the merge request to <code>handbook</code> and <code>internal-handbook</code> have been merged, the theme changes will be deployed to the sites.</li>
+</ol>
+<p>For more information on the release process, see the <a href="https://gitlab.com/gitlab-com/content-sites/docsy-gitlab/-/blob/main/scripts/create_release.rb">release script</a>.</p>
+<h2 id="dependencies">Dependencies<a class="td-heading-self-link" href="#dependencies" aria-label="Heading self-link"></a></h2>
+<h3 id="updating-dependencies">Updating dependencies<a class="td-heading-self-link" href="#updating-dependencies" aria-label="Heading self-link"></a></h3>
+<blockquote>
+<p>Note: Before updating dependencies, review the <code>go.mod</code> file in the target
+project for additional notes and requirements.</p>
+</blockquote>
+<p>Always update dependencies individually to isolate potential bugs and regressions. Never pull <code>latest</code>
+but pin the dependencies to a specific released version.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>hugo mod get server.com/project-name@version
+</span></span></code></pre></div><h4 id="google-docsy">Google Docsy<a class="td-heading-self-link" href="#google-docsy" aria-label="Heading self-link"></a></h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>hugo mod get github.com/google/docsy@v0.9.1
+</span></span></code></pre></div><blockquote>
+<p><strong>Do not bump Docsy versions without testing them extensively in MR review apps.</strong></p>
+</blockquote>
+<h2 id="redirects">Redirects<a class="td-heading-self-link" href="#redirects" aria-label="Heading self-link"></a></h2>
+<p>You can add redirects to the <code>layouts/index.redirects</code> file in the relevant repository.
+Refer to the <a href="https://docs.gitlab.com/ee/user/project/pages/redirects.html">GitLab Pages redirect documentation</a>
+for how these are formatted.</p>
+<p>Please add your redirect in chronological order with a removal date of:</p>
+<ul>
+<li>3 months for within a single handbook, from one relative path to another relative path,</li>
+<li>3-6 months when linking from one handbook to another (such as linking from <code>handbook.gitlab.com</code> to <code>internal.gitlab.com</code>), or</li>
+<li>3-12 months for external links, meaning not part of the <code>handbook.gitlab.com</code> or <code>internal.gitlab.com</code> domains.</li>
+</ul>
+<h2 id="cicd-pipelines">CI/CD Pipelines<a class="td-heading-self-link" href="#cicd-pipelines" aria-label="Heading self-link"></a></h2>
+<h3 id="handbook--internal-handbook">Handbook &amp; Internal Handbook<a class="td-heading-self-link" href="#handbook--internal-handbook" aria-label="Heading self-link"></a></h3>
+<p>The CI/CD pipelines for the <a href="https://gitlab.com/gitlab-com/content-sites/handbook/-/blob/main/.gitlab-ci.yml"><code>handbook</code></a> and <a href="https://gitlab.com/gitlab-com/content-sites/internal-handbook/-/blob/main/.gitlab-ci.yml"><code>internal-handbook</code></a> projects are roughly the same, and should remain that way.</p>
+<h4 id="build-stage"><code>build</code> stage<a class="td-heading-self-link" href="#build-stage" aria-label="Heading self-link"></a></h4>
+<p>The <code>build</code> stage performs a few linter and security jobs (<code>handbooklint</code>, <code>hugolint</code>, <code>markdownlint</code>, and <code>secret_detection</code>), and a <code>build</code> job which builds the whole site and saves it as CI artifacts.</p>
+<h4 id="deploy-stage"><code>deploy</code> stage<a class="td-heading-self-link" href="#deploy-stage" aria-label="Heading self-link"></a></h4>
+<p>The <code>deploy</code> stage uses the artifacts generated in the <code>build</code> stage to deploy the production site for changes to the <code>main</code> branch or review apps which can be deployed for MRs.</p>
+<h4 id="notify-stage"><code>notify</code> stage<a class="td-heading-self-link" href="#notify-stage" aria-label="Heading self-link"></a></h4>
+<p>The <code>notify</code> stage has two jobs that are triggered on specific events:</p>
+<ol>
+<li><code>post_comment_on_failure</code> posts a comment to the MR when the <code>markdownlint</code> or <code>handbooklint</code> jobs fail.</li>
+<li><code>notify_slack_on_build_failures</code> post a message to the #handbook-escalation Slack channel when there is a build failure on the <code>main</code> branch. This type of failure would indicate a broken CI pipeline.</li>
+</ol>
+<h4 id="build_and_test_only-mode"><code>$BUILD_AND_TEST_ONLY</code> mode<a class="td-heading-self-link" href="#build_and_test_only-mode" aria-label="Heading self-link"></a></h4>
+<p>The pipelines can be triggered to run in <code>$BUILD_AND_TEST_ONLY</code> mode which means they will run all the test and build jobs, but none of the deploy or notify jobs. A pipeline can be triggered in <code>$BUILD_AND_TEST_ONLY</code> mode by setting the <code>$BUILD_AND_TEST_ONLY</code> CI variable to <code>true</code>. This is used primarily by the downstream pipelines triggered from the <code>www-gitlab-com</code> project.</p>
+<h4 id="gitlab_token"><code>$GITLAB_TOKEN</code><a class="td-heading-self-link" href="#gitlab_token" aria-label="Heading self-link"></a></h4>
+<p>Tools or scripts that need to interact with the repositories to perform handbook tasks should use the <code>GITLAB_TOKEN</code> CI variable. This is <a href="https://gitlab.com/groups/gitlab-com/content-sites/-/settings/access_tokens">group level access token</a> called <code>Docsy GitLab Release</code> with a <code>developer</code> role and has <code>api</code> and <code>write_repository</code> scopes. This token will expire after a year and will need to be refreshed. Follow the steps below to refresh the token:</p>
+<ol>
+<li>Create a new developer group level access token in &lt;https://gitlab.com/groups/gitlab-com/content-sites/-/settings/access_tokens with api&gt; and <code>write_repository</code> scopes. Give it the name <code>GITLAB_TOKEN_YYYY_MM_DD</code> (replace the <code>YYYY_MM_DD</code> portion with the current date).</li>
+<li>Update the value of GITLAB_TOKEN in <a href="https://gitlab.com/gitlab-com/content-sites/docsy-gitlab/-/settings/ci_cd">docsy-gitlab</a>, <a href="https://gitlab.com/gitlab-com/content-sites/handbook/-/settings/ci_cd">handbook</a>, and <a href="https://gitlab.com/gitlab-com/content-sites/internal-handbook/-/settings/ci_cd">internal-handbook</a> with the new token value.</li>
+<li>Create a new release of the Docsy GitLab Theme and ensure the pipeline works correctly.</li>
+<li>Delete the old token.</li>
+</ol>
+<p>See above for more on <a href="https://handbook.gitlab.com/docs/development/#access-tokens">general management of access tokens</a>.</p>
+<h3 id="gitlab-pages-deployment">GitLab Pages Deployment<a class="td-heading-self-link" href="#gitlab-pages-deployment" aria-label="Heading self-link"></a></h3>
+<p>The deploy and review apps are configured in the <code>pages</code> job in the <code>.gitlab-ci.yml</code> configuration file.</p>
+<ul>
+<li>
+<p>Review app deploys can be run for merge requests by running the manual <code>pages</code> job, or by adding the <code>~&quot;deploy-review-app-always&quot;</code> label to the MR.</p>
+</li>
+<li>
+<p>Production deploys are only run from the <code>main</code> branch.</p>
+</li>
+<li>
+<p>Conditional CI variables are used to configure the environment for review apps using <a href="https://docs.gitlab.com/ee/user/project/pages/#create-multiple-deployments">GitLab Pages Multiple Deployments</a>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">variables</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">PAGES_PREFIX</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#39;mr$CI_MERGE_REQUEST_IID&#39;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">ENVIRONMENT</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#39;mr$CI_MERGE_REQUEST_IID&#39;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">HUGO_BASEURL</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;${CI_PAGES_URL}/${PAGES_PREFIX}&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></span></span></code></pre></div></li>
+</ul>
+<p>The <a href="https://docs.gitlab.com/ee/ci/review_apps/#route-maps">route map</a> is configured in the <code>.gitlab/route-map.yml</code>.</p>
+<h3 id="docsy-gitlab">Docsy GitLab<a class="td-heading-self-link" href="#docsy-gitlab" aria-label="Heading self-link"></a></h3>
+<p>The CI/CD pipeline for <a href="https://gitlab.com/gitlab-com/content-sites/docsy-gitlab/-/blob/main/.gitlab-ci.yml">docsy-gitlab</a> is responsible for building, testing, and releasing the Docsy GitLab theme used by both <code>handbook</code> and <code>internal-handbook</code>.</p>
+<h4 id="test-stage"><code>test</code> stage<a class="td-heading-self-link" href="#test-stage" aria-label="Heading self-link"></a></h4>
+<p>The <code>test</code> stage performs the <code>markdownlint</code>, and <code>secret_detection</code> jobs.</p>
+<h4 id="build-stage-1"><code>build</code> stage<a class="td-heading-self-link" href="#build-stage-1" aria-label="Heading self-link"></a></h4>
+<p>The <code>build</code> stage performs runs the <code>hugo</code> command to ensure the theme builds successfully.</p>
+<h4 id="release-stage"><code>release</code> stage<a class="td-heading-self-link" href="#release-stage" aria-label="Heading self-link"></a></h4>
+<p>The <code>release</code> stage performs one manual job to create a new release of the theme and merge requests to both <code>handbook</code> and <code>internal-handbook</code>. See the <a href="https://handbook.gitlab.com/docs/development/#releases">Releases</a> section for more details.</p>
+<h3 id="www-gitlab-com">www-gitlab-com<a class="td-heading-self-link" href="#www-gitlab-com" aria-label="Heading self-link"></a></h3>
+<p>The CI/CD pipeline for <a href="https://gitlab.com/gitlab-com/www-gitlab-com/-/blob/master/.gitlab-ci.yml">www-gitlab-com</a> is responsible for triggering downstream builds of both <code>handbook</code> and <code>internal-handbook</code> in <code>$BUILD_AND_TEST_ONLY</code> mode. This ensures that any changes to dependent data files in <code>www-gitlab-com</code> will build successfully for both <code>handbook</code> and <code>internal-handbook</code>.</p>
+<h3 id="danger-review-and-reviewer-roulette">Danger review and reviewer roulette<a class="td-heading-self-link" href="#danger-review-and-reviewer-roulette" aria-label="Heading self-link"></a></h3>
+<p>Right now the handbook projects doesn&rsquo;t use the <a href="https://docs.gitlab.com/ee/development/code_review.html#reviewer-roulette">Reviewer Roulette</a>
+feature of the <a href="https://gitlab.com/gitlab-org/components/danger-review/-/tree/main"><code>danger-review</code> CI/CD component</a>. See <a href="https://gitlab.com/gitlab-com/content-sites/handbook/-/issues/238">issue</a>.</p>
+<p>We use the <code>architecture</code> plugin to provide guidance on how to review MRs that contain changes to
+<a href="https://handbook.gitlab.com/handbook/engineering/architecture/workflow/#design-documents">architecture evolution design documents</a>.</p>
+<p>In order to make Danger post message to MRs we need to setup a project token (<code>api</code> scope with <code>Developer</code> role) and
+a CI/CD variable called <code>DANGER_GITLAB_API_TOKEN</code> to contain this project token (<code>Masked</code> but not <code>Protected</code>).
+See above for more on <a href="https://handbook.gitlab.com/docs/development/#access-tokens">general management of access tokens</a>.</p>
+<p>For more details, follow the <a href="https://gitlab.com/gitlab-org/ruby/gems/gitlab-dangerfiles/#ci-configuration">Danger documentation</a>
+and inspect the <a href="https://gitlab.com/gitlab-com/content-sites/handbook/-/merge_requests/4456">MR adding the reviewer roulette to the public handbook</a>.</p>
+<h3 id="code-quality-report-mr-commenter">Code quality report MR commenter<a class="td-heading-self-link" href="#code-quality-report-mr-commenter" aria-label="Heading self-link"></a></h3>
+<p>The CI/CD linting jobs generate code quality report artifacts for MR widget integration. If there are errors detected,
+a custom CI/CD job posts a Markdown table summary as MR comment, linking to helpful handbook editing resources.</p>
+<p>The <code>parse-codequality-report.sh</code> script in the <a href="https://gitlab.com/gitlab-com/content-sites/handbook/-/blob/main/scripts/parse-codequality-report.sh">handbook</a> and <a href="https://gitlab.com/gitlab-com/content-sites/internal-handbook/-/blob/main/scripts/parse-codequality-report.sh">internal-handbook</a> generates the code quality report posted in the MR. Changes to these reports need to be applied to both projects.</p>
+<p>The code quality report relies on the <code>GITLAB_TOKEN</code> to perform the reporting actions on any MRs.</p>
+<h3 id="cicd-maintenance-tasks">CI/CD maintenance tasks<a class="td-heading-self-link" href="#cicd-maintenance-tasks" aria-label="Heading self-link"></a></h3>
+<p>See <a href="https://handbook.gitlab.com/docs/development/maintenance/#dependencies">maintenance tasks</a>.</p>
+<h2 id="triage-bot">Triage bot<a class="td-heading-self-link" href="#triage-bot" aria-label="Heading self-link"></a></h2>
+<p>The <a href="https://gitlab.com/gitlab-com/content-sites/handbook-tools/triage-bot"><code>triage-bot</code></a> project is meant to help triage issues in the handbook, internal-handbook, and docsy-theme projects.
+It has two main goals:</p>
+<ol>
+<li>Ensure issues are triaged.</li>
+<li>Close stale issues and merge requests.</li>
+</ol>
+<p>Please see the <code>.triage-policies.yml</code> for rules.
+You can find more about how to create policies in the <a href="https://gitlab.com/gitlab-org/ruby/gems/gitlab-triage">GitLab triage gem project readme</a>.</p>
+<p>The triage bot is scheduled to run 3 times a week. See the project&rsquo;s pipeline schedule for details.</p>
+<p>Triage uses the <code>TRIAGE_BOT</code> access token to perform tasks. This must have the Developer role to take actions on merge requests.
+See above for more on <a href="https://handbook.gitlab.com/docs/development/#access-tokens">general management of access tokens</a>.</p>
+
+  <div class="section-index">
+  
+  
+  
+  
+  
+  
+  
+  <hr class="panel-line">
+      
+          
+          <div class="entry">
+              <h5 class="section-summary-header">
+                  <a href="https://handbook.gitlab.com/docs/development/maintenance/">Handbook Maintenance</a>
+              </h5><div class="section-summary-content">Documentation on how to carry out maintenance tasks.</div></div>
+      
+          
+          <div class="entry">
+              <h5 class="section-summary-header">
+                  <a href="https://handbook.gitlab.com/docs/development/running-in-docker/">Running the Handbook in Docker</a>
+              </h5><div class="section-summary-content">Instructions for running the Handbook projects in Docker</div></div>
+      
+          
+          <div class="entry">
+              <h5 class="section-summary-header">
+                  <a href="https://handbook.gitlab.com/docs/development/running-locally/">Running the Handbook Locally</a>
+              </h5><div class="section-summary-content">Instructions for running the Handbook projects locally</div></div>
+      
+  
+</div>
+
+
+
+
+  
+  
+
+
+<div class="text-muted pt-3">
+<a
+  href="https://gitlab.com/gitlab-com/content-sites/docsy-gitlab/-/tree/main/content/docs/development/_index.md"
+  class="td-page-meta--view" target="_blank" rel="noopener">
+  <i class="fa fa-file-code fa-fw"></i> View page source
+</a>
+-
+<a
+  href="https://gitlab.com/-/ide/project/gitlab-com/content-sites/docsy-gitlab/edit/main/-/content/docs/development/_index.md"
+  class="td-page-meta--edit" target="_blank" rel="noopener">
+  <i class="fa fa-edit fa-fw"></i> Edit this page
+</a>
+
+
+-
+please <a
+href="https://handbook.gitlab.com/handbook/about/contributing/">contribute</a>.
+<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+<img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" style="border-width: 0px;"></a>
+</div>
+
+</div>
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Slack" aria-label="Slack">
+    <a target="_blank" rel="noopener" href="https://gitlab.slack.com/archives/C81PT2ALD" aria-label="Slack">
+      <i class="fab fa-slack"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Repository" aria-label="Repository">
+    <a target="_blank" rel="noopener" href="https://gitlab.com/gitlab-com/content-sites/handbook" aria-label="Repository">
+      <i class="fa-solid fa-code-branch"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Edit the site" aria-label="Edit the site">
+    <a target="_blank" rel="noopener" href="https://handbook.gitlab.com/docs/development" aria-label="Edit the site">
+      <i class="fa-solid fa-edit"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-end text-xs-center order-sm-3">
+        
+
+        
+        
+        
+        
+      </div>
+      <div class="td-footer__copyright-etc col-12 col-sm-4 text-center py-2 order-sm-2">
+        <span>&copy; 2025 GitLab All Rights Reserved</span><br>
+        <span class="ms-1 me-1"><a href="https://about.gitlab.com/privacy/" target="_blank" rel="noopener"> Privacy Statement</a></span>
+          <i class="me-1 fa-solid fa-ellipsis-vertical"></i>
+          
+          <span class="ms-1"><a href="#" class="ot-sdk-show-settings">Cookie Settings</a></span>
+          
+          
+
+        
+      </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script src='https://handbook.gitlab.com/js/deflate.js'></script>
+<script type="module" async>
+  import mermaid from "https:\/\/cdn.jsdelivr.net\/npm\/mermaid@latest\/dist\/mermaid.esm.min.mjs";
+
+  (function ($) {
+    if ($('.mermaid').length == 0) {
+      mermaid.initialize({ startOnLoad: false });
+      return;
+    }
+
+    var params = {"enable":true};
+
+    
+    
+    var norm = function (defaultConfig, params) {
+      var result = {};
+      for (const key in defaultConfig) {
+        const keyLower = key.toLowerCase();
+        if (defaultConfig.hasOwnProperty(key) && params.hasOwnProperty(keyLower)) {
+          if (typeof defaultConfig[key] === "object") {
+            result[key] = norm(defaultConfig[key], params[keyLower]);
+          } else {
+            result[key] = params[keyLower];
+          }
+        }
+      }
+      return result;
+    };
+
+    var settings = norm(mermaid.mermaidAPI.defaultConfig, params);
+    settings.startOnLoad = true;
+    if ($('html[data-bs-theme="dark"]').length) {
+      settings.theme = 'dark';
+    }
+    mermaid.initialize(settings);
+
+    
+    const lightDarkModeThemeChangeHandler = function (mutationsList, observer) {
+      for (const mutation of mutationsList) {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'data-bs-theme') {
+          
+          
+          
+          location.reload();
+        }
+      }
+    };
+
+    const observer = new MutationObserver(lightDarkModeThemeChangeHandler);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-bs-theme']
+    });
+    
+
+  })(jQuery);
+</script>
+<script src="https://handbook.gitlab.com/js/main.min.afbd70da0de708a453d3896c4da65cc42a5dc6f1cde4b79f1928c749261f826d.js" integrity="sha256-r71w2g3nCKRT04lsTaZcxCpdxvHN5LefGSjHSSYfgm0=" crossorigin="anonymous"></script>
+<script defer src="https://handbook.gitlab.com/js/click-to-copy.min.73478a7d4807698aed7e355eb23f9890ca18fea3158604c8471746d046702bad.js" integrity="sha256-c0eKfUgHaYrtfjVesj&#43;YkMoY/qMVhgTIRxdG0EZwK60=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3.6.0"
+  integrity="sha512-FtDaTWf3IS29TLuYzTPlytjGqcXkwrzG9ivq7xXElnOZeiYTbcIy/hwXAgrrRNnI0+PfN+WFz4/+4phhJmuS8Q=="
+  crossorigin="anonymous" ></script>
+<script type="text/javascript">
+const containers = ['#docsearch-0', '#docsearch-1'];
+for (let c of containers) {
+  docsearch({
+    container: c,
+    appId: "3IIMMA8IDY",
+    apiKey: "71feb3efa6044f78ab6b8a7422e727b7",
+    indexName: "handbook-gitlab",
+  });
+}
+</script>
+<script src='https://handbook.gitlab.com/js/tabpane-persist.js'></script>
+<div id="toasts" class="toast-container position-fixed bottom-0 end-0 p-3">
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js" defer crossorigin="anonymous"></script>
+
+
+
+
+<script src="https://handbook.gitlab.com/js/custom.min.f8952214762921b4f64b73e2957b35e4d15f86bd8df6dba030b5f9d531681c67.js" integrity="sha256-&#43;JUiFHYpIbT2S3PilXs15NFfhr2N9tugMLX51TFoHGc=" crossorigin="anonymous" defer></script>
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script>
+    docsearch({
+      container: '#docsearch',
+      appId: '3IIMMA8IDY',
+      apiKey: '71feb3efa6044f78ab6b8a7422e727b7',
+      indexName: 'handbook-gitlab',
+      insights: true
+    });
+</script>
+
+
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJXWQL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+
+  </body>
+</html>
