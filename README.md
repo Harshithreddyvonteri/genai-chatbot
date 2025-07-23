@@ -127,3 +127,49 @@ Answer Displayed in Streamlit Chat UI
 - **GitLab Handbook** (Open documentation).
 - **Google Gemini API** for LLM reasoning.
 - **Streamlit** for quick web app prototyping.
+
+---
+
+## 📂 Project Files Overview
+
+Here’s a breakdown of the key files in this repository:
+
+- **`chatbot.py`**  
+  The main Streamlit app that powers the chatbot interface.
+
+- **`scraper.py`**  
+  Scrapes content from the GitLab Handbook and saves it into raw datasets (v1, v2, v3).
+
+- **`preprocessor.py`**  
+  Cleans and processes the raw scraped data:
+  - Removes HTML, duplicates, and irrelevant content.
+  - Chunks text into smaller segments for embeddings.
+
+- **`analyze_dataset.py`**  
+  Analyzes raw or processed datasets and generates statistics (word count, token count, etc.).
+
+- **`embedder.py`**  
+  Generates embeddings for the processed dataset using Sentence Transformers and stores them in a vector database (FAISS).
+
+- **`convert_to_faiss.py`**  
+  Converts embeddings from ChromaDB to FAISS format for easier hosting and retrieval.
+
+- **`verify_setup.py`**  
+  A helper script to ensure your environment and dependencies are correctly configured.
+
+- **`requirements.txt`**  
+  Lists all Python dependencies needed to run the chatbot.
+
+- **`stats_clean_v2.csv`, `stats_clean_v3.csv`, `stats_v3.csv`**  
+  Contain analysis results from `analyze_dataset.py` for different dataset versions.
+
+- **`README.md`**  
+  Main project documentation.
+
+- **`DESIGN_DECISIONS.md`**  
+  Detailed analysis of design decisions, data processing, and architecture.
+
+- **`data/` directory**  
+  - **`raw_v*` folders**: Contain raw scraped data (for reference).
+  - **`processed/`**: Contains cleaned and preprocessed data.
+  - **`vectorstore/`**: Contains FAISS index files used by the chatbot.
